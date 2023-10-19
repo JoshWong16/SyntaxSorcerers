@@ -1,10 +1,13 @@
 import app from './src/app.js';
+import dotenv  from "dotenv"
 
-const PORT = 8080;
-const server = app.listen(PORT, (error) => {
-        if(!error)
+dotenv.config()
+
+const PORT = process.env.PORT || 8080;
+const server = app.listen(PORT, async (error) => {
+        if(!error) {
             console.log("Server is Successfully Running, and App is listening on port "+ PORT)
-        else 
+        } else 
             console.log("Error occurred, server can't start", error);
     }
 );
