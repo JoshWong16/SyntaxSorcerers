@@ -1,6 +1,6 @@
 import { database } from '../db/db.js';
 
-class User {
+class UserForums {
     constructor() {
         this.collection = database.collection("userForums");
     }
@@ -18,4 +18,4 @@ class User {
     }
 }
 
-export default User;
+export default UserForums;
