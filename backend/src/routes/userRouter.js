@@ -2,16 +2,27 @@ import express from 'express';
 
 const router = express.Router();
 
-// Define User module routes and handlers
-router.get('/', (req, res) => {
-  res.send('User Module')
-});
-
+// Get user by ID
 router.get('/:id', (req, res) => {
   // Get user by ID
   res.send('getting user by ID')
 });
 
-// Define more routes for the User module
+// Create user
+router.post('/', (req, res) => {
+    // Create user
+  res.send('creating user')
+});
+
+// Post user by ID
+router.put('/:id', (req, res) => {
+    // Update user
+  res.send('updating user')
+});
+
+router.delete('/:id', (req, res) => {
+    // Delete user
+  res.send('deleting user')
+});
 
 export default router;
