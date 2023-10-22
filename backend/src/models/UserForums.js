@@ -2,18 +2,18 @@ import { database } from '../db/db.js';
 
 class User {
     constructor() {
-        this.collection = database.collection("users");
+        this.collection = database.collection("userForums");
     }
 
-    async getUser(id) {
+    async getUsersForums(userId) {
         // TODO: Implement
     }
 
-    async createUser(user) {
+    async addUserForum(userId, forumId) {
         // TODO: Implement
     }
 
-    async updateUser(userId, updateData) {
+    async removeUserForum(userId, forumId) {
         // TODO: Implement
     }
 }

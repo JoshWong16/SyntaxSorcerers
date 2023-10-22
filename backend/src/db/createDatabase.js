@@ -9,6 +9,7 @@ async function createDatabase() {
         await database.createCollection("posts");
         await database.createCollection("comments");
         await database.createCollection("likes");
+        await database.createCollection("userForums");
     
         console.log("Database and Collections created!");
         client.close();
