@@ -6,15 +6,26 @@ class Likes {
     }
 
     async getAllLikes(postId) {
-        // TODO: Implement
+        const likes = this.collection.find({ postId: postId }).toArray();
+        return likes;
     }
 
     async addLike(postId, userId) {
-        // TODO: Implement
+        const like = {
+            postId: postId,
+            userId: userId
+        };
+        const result = await this.collection.insertOne(like);
+        return result.insertedId;
     }
     
     async removeLike(postId, userId) {
-        // TODO: Implement
+        try {
+            const result = await this.collection.deleteOne({ postId: postId, userId: userId });
+            return result.deletedCount > 0;
+        } catch (error) {
+            throw error;
+        }
     }
 }
 

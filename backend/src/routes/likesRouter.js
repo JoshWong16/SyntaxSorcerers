@@ -1,20 +1,19 @@
 import express from 'express';
+import {
+    getLikes,
+    addLike,
+    removeLike
+} from '../controllers/likesController.js';
 
 const router = express.Router();
 
 // Get like
-router.get('/:post_id', (req, res) => {
-    res.send('getting like by post_id');
-});
+router.get('/:post_id', getLikes);
 
-// Create like
-router.post('/', (req, res) => {
-    res.send('creating like');
-});
+// Add a like
+router.post('/', addLike);
 
-// Delete like
-router.delete('/:post_id', (req, res) => {
-    res.send('deleting like by post_id');
-});
+// Removing a like
+router.delete('/:post_id', removeLike);
 
 export default router;
