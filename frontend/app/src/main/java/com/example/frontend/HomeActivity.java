@@ -6,6 +6,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
@@ -17,24 +19,14 @@ public class HomeActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
 
-        BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation);
-        bottomNavigationView.setSelectedItemId(R.id.action_home);
-        bottomNavigationView.setOnItemSelectedListener(new BottomNavigationView.OnItemSelectedListener() {
-            @Override
-            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-                switch (item.getItemId()) {
-                    case R.id.action_home:
-                        startActivity(new Intent(HomeActivity.this, HomeActivity.class));
-                        return true;
-                    case R.id.action_forums:
-                        startActivity(new Intent(HomeActivity.this, ForumActivity.class));
-                        return true;
-                    case R.id.action_profile:
-                        startActivity(new Intent(HomeActivity.this, ProfileActivity.class));
-                        return true;
-                }
-                return false;
-            }
-        });
+        Button searchCourseButton = findViewById(R.id.SearchCoursesButton);
+
+        BottomNavMenu.createBottomNavMenu(this, findViewById(R.id.bottom_navigation), R.id.action_home);
+    }
+
+
+    public void searchCourses(View view) {
+        Intent intent = new Intent(this, CourseSearchActivity.class);
+        startActivity(intent);
     }
 }
