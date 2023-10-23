@@ -1,25 +1,23 @@
 import express from 'express';
+import {
+    getComments,
+    addComment,
+    editComment,
+    deleteComment
+} from '../controllers/commentsController.js';
 
 const router = express.Router();
 
 // Get comment
-router.get('/:post_id', (req, res) => {
-    res.send('getting comment by post_id');
-});
+router.get('/:post_id', getComments);
 
 // Create comment
-router.post('/', (req, res) => {
-    res.send('creating comment');
-});
-
-// Delete comment
-router.delete('/:comment_id', (req, res) => {
-    res.send('deleting comment by post_id');
-});
+router.post('/', addComment);
 
 // Update comment 
-router.put('/:comment_id', (req, res) => {
-    res.send('updating comment by post_id');
-});
+router.put('/:comment_id', editComment);
+
+// Delete comment
+router.delete('/:comment_id', deleteComment);
 
 export default router;

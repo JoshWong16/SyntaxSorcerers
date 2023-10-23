@@ -24,14 +24,19 @@ router.post('/', createUser);
 // Post user by ID
 router.put('/', updateUser);
 
+// Delete user by ID
 router.delete('/', deleteUser);
 
+// Get favourite courses
 router.get('/favourite', getFavouriteCourses);
 
+// Add favourite course
 router.post('/favourite', addFavouriteCourse);
 
+// Remove favourite course
 router.delete('/favourite/:course_id', removeFavouriteCourse);
 
+// Get course keywords
 router.get('/courseKeywords', getCourseKeywords);
 
 /* req must contain a json body of keywords like {"keywords" : ["power", "wires"]} */
