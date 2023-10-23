@@ -14,8 +14,8 @@ async function getAllForums(req, res) {
 async function addForum(req, res) {
     const forumModel = new Forum();
     try {
-        await forumModel.addForum(req.body);
-        return res.send("created new forum");
+        const forumId = await forumModel.addForum(req.body.name, req.userId, req.body.course);
+        return res.json({forumId});
     } catch (error) {
         return res.status(500).send(error.message);
     }
@@ -25,11 +25,7 @@ async function removeForum(req, res) {
     const forumModel = new Forum();
     try {
         const result = await forumModel.deleteForum(req.userId, req.params.forumId);
-        if (result) {
-            return res.send("deleted forum");
-        } else {
-            return res.status(403).send("not authorized to delete forum");
-        }
+        return result ? res.send("deleted forum") : res.status(403).send("not authorized to delete forum");
     } catch (error) {
         return res.status(500).send(error.message);
     }

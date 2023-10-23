@@ -1,5 +1,6 @@
 import { database } from '../db/db.js';
 import Forums from './Forums.js';
+import manipulateForumOutput from '../helpers/manipulateForumOuput.js';
 
 class UserForums {
     constructor() {
@@ -11,15 +12,7 @@ class UserForums {
         const forumIds = forums.map(forum => forum.forumId);
         const model = new Forums();
         const userForums = await model.getForumsByIds(forumIds);
-        return userForums.map(forum => {
-            return {
-                forumId: forum._id.toString(),
-                name: forum.name,
-                createdBy: forum.createdBy,
-                dateCreated: forum.dateCreated,
-                course: forum.course
-            };
-        });;
+        return manipulateForumOutput(userForums);
     }
 
     async addUserForum(userId, forumId) {
