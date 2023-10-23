@@ -1,5 +1,6 @@
 import User from '../models/User.js';
 import UserCourses from '../models/UserCourses.js';
+import fs from 'fs';
 
 async function getUser(req, res) {
     const model = new User();
@@ -79,4 +80,72 @@ async function removeFavouriteCourse(req, res) {
     }
 }
 
-export { getUser, createUser, updateUser, deleteUser, addFavouriteCourse, getFavouriteCourses, removeFavouriteCourse };
+async function getCourseKeywords(req, res) {
+
+    /* User will communicate their interests by selecting a bunch of keywords */
+
+    fs.readFile('./src/jsonFiles/keywords.json', 'utf8', (err, data) => {
+        if (err) {
+            console.error('Error reading the JSON file: ' + err);
+            return;
+        }
+
+        res.send(data);
+        
+    });
+}
+
+async function getRecommendedCourses(req, res) {
+    const userKeywords = req.body["keywords"];
+
+    var categoriesArray = [];
+    var reccomendedCoursesArray = [];
+
+    fs.readFile('./src/jsonFiles/keywords.json', 'utf8', (err, data) => {
+        if (err) {
+            console.error('Error reading the JSON file: ' + err);
+            return;
+        }
+
+        const jsonData = JSON.parse(data);
+
+        Object.keys(jsonData).forEach(category => {
+            const keywordsArray = jsonData[category];
+
+            keywordsArray.forEach((keyword, index) => {
+
+                if (userKeywords.includes(keyword)) {
+                    
+                    categoriesArray.push(category);
+                }
+
+            })
+
+        });
+
+    fs.readFile('./src/jsonFiles/courseCategories.json', 'utf8', (err, data) => {
+        if (err) {
+            console.error('Error reading the JSON file: ' + err);
+            return;
+        }
+
+        const jsonData = JSON.parse(data);
+
+        Object.keys(jsonData).forEach(category => {
+            if (categoriesArray.includes(category)) {
+                
+                reccomendedCoursesArray.push(...jsonData[category]);
+
+            }
+        })
+
+        res.json(reccomendedCoursesArray);
+
+    })
+
+       
+    });
+
+}
+
+export { getUser, createUser, updateUser, deleteUser, addFavouriteCourse, getFavouriteCourses, removeFavouriteCourse, getCourseKeywords, getRecommendedCourses };
