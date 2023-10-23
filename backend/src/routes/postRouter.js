@@ -1,25 +1,22 @@
 import express from 'express';
+import {
+    getAllPosts,
+    getPostById,
+    addPost,
+    deletePost,
+    editPost
+} from '../controllers/postController.js';
 
 const router = express.Router();
 
-// Define User module routes and handlers
-router.get('/:forumId', (req, res) => {
-  res.send('Posts Module')
-});
+router.get('/:forumId', getAllPosts);
 
-router.post('/', (req, res) => {
-    // Create new post
-    res.send('creating new post');
-})
+router.get('/post/:postId', getPostById);
 
-router.delete('/:postId', (req, res) => {
-    // Delete post by ID
-    res.send('deleting post by ID');
-});
+router.post('/', addPost);
 
-router.put('/:postId', (req, res) => {
-    // Update post by ID
-    res.send('updating post by ID');
-});
+router.delete('/:postId', deletePost);
+
+router.put('/:postId', editPost);
 
 export default router;

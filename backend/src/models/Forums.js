@@ -1,5 +1,6 @@
 import { database } from '../db/db.js';
 import { ObjectId } from 'mongodb';
+import manipulateForumOutput from '../helpers/manipulateForumOuput.js';
 
 class Forums {
     constructor() {
@@ -8,24 +9,17 @@ class Forums {
 
     async getAllForums() {
         const forums = await this.collection.find({}).toArray();
-        return forums.map(forum => {
-            return {
-                forumId: forum._id.toString(),
-                name: forum.name,
-                createdBy: forum.createdBy,
-                dateCreated: forum.dateCreated,
-                course: forum.course
-            };
-        });
+        return manipulateForumOutput(forums);
     }
 
     async searchForums(searchTerm) {
-        // TODO: Implement
         const forums = await this.collection.find({ $or: [ { name: {'$regex': searchTerm} }, { course: {'$regex': searchTerm} } ] }).toArray();
+        return manipulateForumOutput(forums);
     }
 
-    async addForum(data) {
-        await this.collection.insertOne(data);
+    async addForum(name, userId, course) {
+        const result = await this.collection.insertOne({ name: name, createdBy: userId, course: course, dateCreated: new Date() });
+        return result.insertedId.toString();
     };
     
     async deleteForum(userId, forumId) {

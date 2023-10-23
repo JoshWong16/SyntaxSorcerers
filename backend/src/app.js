@@ -20,8 +20,8 @@ app.use(express.json());
 app.use('/users', getUserId, userRouter);
 app.use('/forums', getUserId, forumRouter);
 app.use('/posts', getUserId, postRouter);
-app.use('/likes', getUserId, likesRouter);
 app.use('/comments', getUserId, commentsRouter);
+app.use('/likes', getUserId, likesRouter);
 
 // Ping route
 app.get('/ping', (_, res) => {
