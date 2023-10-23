@@ -1,3 +1,5 @@
+import { MongoClient } from "mongodb";
+
 async function createDatabase() {
     try {
         const client = await new MongoClient("mongodb://127.0.0.1:27017/");

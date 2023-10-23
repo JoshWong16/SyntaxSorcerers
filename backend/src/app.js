@@ -16,13 +16,12 @@ import commentsRouter from './routes/commentsRouter.js';
 const app = express();
 app.use(cors());
 app.use(express.json());
-app.use(getUserId);
 
-app.use('/users', userRouter);
-app.use('/forums', forumRouter);
-app.use('/posts', postRouter);
-app.use('/likes', likesRouter);
-app.use('/comments', commentsRouter);
+app.use('/users', getUserId, userRouter);
+app.use('/forums', getUserId, forumRouter);
+app.use('/posts', getUserId, postRouter);
+app.use('/likes', getUserId, likesRouter);
+app.use('/comments', getUserId, commentsRouter);
 
 // Ping route
 app.get('/ping', (_, res) => {

@@ -6,15 +6,19 @@ class UserCourses {
     }
 
     async getUserCourses(userId) {
-        // TODO: Implement
+        const response = await this.collection.find({userId: userId}).toArray();
+        return response.map(course => {
+            return course.courseId
+        });
     }
 
     async addUserCourse(userId, courseId) {
-        // TODO: Implement
+        const doc = { userId: userId, courseId: courseId }
+        await this.collection.updateOne(doc, { $set: doc }, {upsert:true});
     }
 
     async removeUserCourse(userId, courseId) {
-        // TODO: Implement
+        await this.collection.deleteOne({userId: userId, courseId: courseId});
     }
 }
 
