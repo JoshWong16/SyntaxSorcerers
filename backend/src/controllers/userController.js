@@ -20,7 +20,8 @@ async function createUser(req, res) {
             email: req.body.email || "",
             year_level : req.body.year_level || "",
             major : req.body.major || "",
-            name : req.body.name || ""
+            name : req.body.name || "",
+            notification_token : req.body.notification_token || ""
         };
         await model.createUser(user);
         return res.json(user);
