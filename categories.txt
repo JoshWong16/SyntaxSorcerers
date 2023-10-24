@@ -405,7 +405,7 @@ XX. Arrangement and Description of Archives:
 
 XX. Management of Records and Archives:
 - ARST516 : Management of Current Records
-- ARST550 : Management of Audiovisual and Non-textual Archives
+- ARST550 : Management of : AUDIovisual and Non-textual Archives
 - ARST565 : Administering Records under Freedom of Information and Protection of Privacy Legislation
 - ARST570 : Management of Information Organizations
 - ARST573 : Archival Systems and the Profession
@@ -433,3 +433,771 @@ XX. Indigenous Initiatives and Protocols:
 
 XX. Archival Research and Scholarship:
 - ARST591 : Archival Research and Scholarship
+
+XX. Crisis and Contradiction in Art and Architecture:
+- ARTH102 : Crisis and Contradiction in Art and the Built Environment
+
+XX. Byzantine Art and Culture:
+- ARTH210 : Byzantium: Arts of an Empire
+
+XX. Medieval Art and Society:
+- ARTH225 : Art, Patrons, and : AUDIences in the Middle Ages
+
+XX. Modern Art:
+- ARTH227 : What is Modern Art?
+
+XX. Asian Arts and Architecture:
+- ARTH251 : Asian Arts: From Chinese Warriors to Bollywood Posters
+- ARTH253 : Asian Architecture: Sacred and Urban Spaces
+
+XX. Methods and Approaches in Art History:
+- ARTH300 : Seminar on Methods and Approaches in Art History
+
+XX. Archaeology of Ancient Iraq and Syria:
+- ARTH319 : The Archaeology of Ancient Iraq and Syria: Babylon and Beyond
+
+XX. Spain, Colonial Latin America, and Entangled Worlds:
+- ARTH320 : Entangled Worlds: Spain and Colonial Latin America (1500-1700)
+
+XX. Early Modern Italian Art and Culture:
+- ARTH322 : Early Modern Italian Art and Culture (ca.1550-1700)
+
+XX. Renaissance Art and Culture in Northern Europe:
+- ARTH323 : Heaven and Earth: Renaissance Art and Culture in Northern Europe
+
+XX. Urban and Courtly Arts in Early Modern Northern Europe:
+- ARTH324 : Urban and Courtly Arts in Early Modern Northern Europe (1600-1700)
+
+XX. Ancient Egypt: Art and Archaeology:
+- ARTH325 : Ancient Egypt: The Archaeology of the Land of the Pharaohs
+
+XX. Greek and Roman Art and Architecture:
+- ARTH331 : Greek Art and Architecture
+- ARTH332 : Roman Art and Architecture
+
+XX. Visual Culture in the Age of Enlightenment and Revolution:
+- ARTH338 : Visual Culture in the Age of Enlightenment and Revolution (1715-1830)
+
+XX. 19th-Century Art and Social Space:
+- ARTH339 : 19th-Century Art and Social Space
+
+XX. 20th Century Art and Culture:
+- ARTH340 : 20th Century Art and Culture: The Triumph and Demise of Modernism
+- ARTH341 : 20th Century Art and Culture: The Postmodern
+
+XX. Latin American Art:
+- ARTH342 : Latin American Art: Modern and Contemporary
+
+XX. Canadian Art:
+- ARTH343 : Inventing Canada Through Art
+- ARTH344 : Contemporary Conversations about Art in Kanata/Canada
+- ARTH443 : Seminar in Canadian Art
+
+XX. Photography and its History:
+- ARTH345 : History of Photography: Archive, Spectacle, Reality
+
+XX. Art and Urban Culture in the Islamic World:
+- ARTH351 : Art and Urban Culture in the Islamic World
+- ARTH450 : Seminar in Art in the Islamic World
+
+XX. Chinese Art and Culture:
+- ARTH358 : Chinese Art for the Afterlife
+- ARTH360 : Chinese Painting: Word and Image
+- ARTH459 : Seminar in Chinese Art
+
+XX. Japanese Art:
+- ARTH368 : Art in Japan: Print Media
+
+XX. Art and Technology:
+- ARTH380 : Art as Technology
+
+XX. African Art:
+- ARTH410 : Seminar in African Art
+
+XX. Middle Ages Art:
+- ARTH432 : Seminar in the Art of the Middle Ages
+
+XX. Early Modern Art:
+- ARTH436 : Seminar in Early Modern Art
+
+XX. 18th & 19th-Century Visual Culture:
+- ARTH439 : Seminar in 18th & 19th-Century Visual Culture
+
+XX. Modern and Contemporary Art:
+- ARTH440 : Seminar in Modern and Contemporary Art
+- ARTH540 : Studies in 20th Century Art
+- ARTH540 : Studies in 20th Century Art
+
+XX. North American Indigenous Art:
+- ARTH476 : Seminar in North American Indigenous Art
+
+XX. Visual and Digital Media Theory:
+- ARTH480 : Visual and Digital Media Theory
+
+XX. Renaissance Art:
+- ARTH535 : Early Modern: Renaissance
+
+XX. 19th-Century Art:
+- ARTH539 : Studies in 19th-Century Art
+
+XX. Methodology of Art History:
+- ARTH571 : The Methodology of Art History
+
+XX. Indigenous Arts of the Americas:
+- ARTH561 : Studies in the Indigenous Arts of the Americas
+
+XX. Arts One:
+- ARTS001 : Arts One
+
+XX. Introduction to Asian Cultures and Traditions:
+- ASIA100 : Introduction to Traditional Asia
+- ASIA101 : Introduction to Modern Asia
+- ASIA110 : Introduction to Religions in Asia
+- ASIA150 : Asian Internets
+
+XX. Cultural Foundations and History:
+- ASIA200 : Cultural Foundations of East Asia
+- ASIA208 : Cultural Foundations of South Asia
+- ASIA311 : Tibetan Buddhism
+- ASIA313 : Tibetan and Himalayan Culture and Society
+- ASIA314 : Premodern Japan
+- ASIA315 : Japan from Feudal to Modern State
+- ASIA317 : The Rise of Korean Civilization
+- ASIA320 : History of Early China
+- ASIA323 : History of Cantonese Worlds
+- ASIA324 : Literature of Hong Kong
+- ASIA325 : Hong Kong Cinema
+- ASIA328 : Modern Islam
+- ASIA330 : Islam in South Asia (1750 to present)
+- ASIA332 : Confucianism in China and Beyond: Reinventions of Tradition
+- ASIA338 : India in the Age of Revolutions
+- ASIA341 : Classical Chinese Literature in Translation
+- ASIA342 : Chinese Literature in Translation: The Vernacular Tradition
+- ASIA347 : Traditional Korean Literature in Translation
+- ASIA352 : Modern Chinese Fiction in Translation
+- ASIA356 : Korean Cinema
+- ASIA357 : Modern Korean Literature in Translation
+- ASIA370 : The Sanskrit Cosmopolis: India and the World, 200-1500 CE
+- ASIA384 : The Sikhs: Formations, Contexts, and Historical Development
+- ASIA390 : History of the Indian Ocean World
+- ASIA431 : Tibetan Literature, Genres, and Book Culture
+- ASIA428 : Mughal India
+- ASIA465 : Japanese Horror
+- ASIA484 : The History of the Choson Dynasty
+- ASIA491 : India and the Persianate World
+
+XX. Asian Religions and Philosophies:
+- ASIA210 : Traditions of Yoga
+- ASIA206 : Modern Islam
+- ASIA207 : Classical Islam
+- ASIA250 : Introduction to Buddhism
+- ASIA311 : Tibetan Buddhism
+- ASIA346 : Topics in Japanese Cultural History II: The Early Modern Age
+- ASIA381 : Daoist (Taoist) Religion and Its Philosophical Background
+- ASIA387 : Japanese Religions
+- ASIA412 : Pre-Modern Chinese Poetry (Pre-Qin to Tang)
+- ASIA413 : Pre-Modern Chinese Poetry (Tang to Qing)
+- ASIA451 : Modern Chinese Authors in Translation
+
+XX. Asian Literature, Film, and Media:
+- ASIA212 : Writing About Japan
+- ASIA254 : Sex, Gender, and Sexuality in Japanese Literature and Film
+- ASIA300 : Writing and Culture in East Asia
+- ASIA304 : Survey of South and Southeast Asian Performing Arts
+- ASIA305 : Asian Horror Cinema: National Nightmares and Specters of Trauma
+- ASIA324 : Literature of Hong Kong
+- ASIA325 : Hong Kong Cinema
+- ASIA326 : Critical Approaches to Manga and Anime
+- ASIA339 : The Construction of South Asian Communities in the Diaspora
+- ASIA344 : Topics in Japanese Cultural History I: Aristocrats and Warriors
+- ASIA345 : Chinese Film Classics
+- ASIA353 : Introduction to Hindi Film
+- ASIA354 : Introduction to Japanese Cinema
+- ASIA355 : History of Chinese Cinema
+- ASIA356 : Korean Cinema
+- ASIA361 : Modern Chinese Fiction in Translation II
+- ASIA363 : Fiction and Film from Modern Taiwan
+- ASIA364 : Modern Japanese Literature in Translation
+- ASIA397 : The Idea of India
+- ASIA398 : Narrative Literature in Premodern India
+- ASIA399 : Films of the South Asian Diaspora
+- ASIA443 : National Narratives in Chinese Literature and Film
+- ASIA444 : Topics in Modern Japanese Fiction and Cultural History
+- ASIA445 : Japanese Crime Fiction
+- ASIA447 : Korean Women's Literature
+- ASIA453 : Japanese Travel Literature
+- ASIA461 : Chinese Literature of the Ming and Qing Dynasties in Translation
+- ASIA463 : Japanese Documentary Media
+- ASIA464 : Japanese Women's Self-Writing
+- ASIA465 : Japanese Horror
+- ASIA484 : The History of the Choson Dynasty
+- ASIA492 : Asian Literature and Film
+
+XX. Asian History and Politics:
+- ASIA309 : South Asian Beyond South Asia
+- ASIA402 : Language, Writing, and Linguistic Thought in the History of the Sinographic Cosmopolis
+- ASIA410 : International Relations in Premodern East Asia
+- ASIA411 : Chinese Political Thought and Institutions
+- ASIA447 : Korean Women's Literature
+- ASIA456 : History and Culture of Taiwan
+- ASIA503 : Historical Chinese Dictionaries
+- ASIA510 : Indian Mahayana Buddhism and the Transcultural Formation of East Asian Buddhism
+- ASIA511 : Modern Tibet
+- ASIA515 : Ethnography and History in East Asia
+- ASIA516 : Race and Ethnicity in Asian Studies
+- ASIA551 : 20th Century China: The People's Republic
+- ASIA552 : Issues in International Relations of East Asia
+
+XX. South Asian Studies:
+- ASIA309 : South Asian Beyond South Asia
+- ASIA328 : Modern Islam
+- ASIA330 : Islam in South Asia (1750 to present)
+- ASIA336 : Sufi and Bhakti Devotional Literatures
+- ASIA337 : The Korean People in Modern Times (1600 to the present)
+- ASIA339 : The Construction of South Asian Communities in the Diaspora
+- ASIA360 : India in the Age of Revolutions
+- ASIA398 : Narrative Literature in Premodern India
+- ASIA399 : Films of the South Asian Diaspora
+- ASIA501 : Research Methods and Source Materials in Classical Chinese Studies
+- ASIA553 : Special Topics in South Asian Studies: Women and Asian Immigrant Communities
+
+XX. East Asian Studies:
+- ASIA518 : Contemporary Chinese Popular Cultures
+- ASIA361 : Modern Chinese Fiction in Translation II
+- ASIA396 : Chinese Grammar and Usage II
+- ASIA385 : Chinese Intellectual History
+- ASIA553 : Special Topics in East Asian Studies: Women and Asian Immigrant Communities
+- ASIA559 : Modern Chinese Fiction and Literary Theory
+- ASIA580 : Directed Readings
+
+XX. Comparative Studies:
+- ASIA305 : Asian Horror Cinema: National Nightmares and Specters of Trauma
+- ASIA325 : Hong Kong Cinema
+- ASIA399 : Films of the South Asian Diaspora
+- ASIA447 : Korean Women's Literature
+- ASIA516 : Race and Ethnicity in Asian Studies
+- ASIA592 : The Profession of Asian Studies
+- ASIA591 : Critical Issues in Asian Studies
+- ASIA498 : Asia in Museums/the Museum in Asia
+
+XX. ASIC stuff:
+- ASIC200 : Global Issues in the Arts and Sciences
+- ASIC220 : Introduction to Sustainability
+
+XX. Sign Language: 
+- ASL100 : American Sign Language and Deaf Culture I
+- ASL101 : American Sign Language and Deaf Culture II
+
+XX. Introduction to Astronomy:
+- ASTR101 : Introduction to the Solar System
+- ASTR102 : Introduction to Stars and Galaxies
+
+XX. Advanced Astronomy:
+- ASTR200 : Frontiers of Astrophysics
+- ASTR300 : Galaxies
+- ASTR403 : Cosmology
+
+XX. Stellar Science:
+- ASTR205 : Stars and Stellar Populations
+- ASTR311 : Exploring the Universe: Stars and Galaxies
+- ASTR505 : Galactic Astronomy
+
+XX. Planetary Science:
+- ASTR310 : Exploring the Universe: The Solar System
+- ASTR333 : Exoplanets and Astrobiology
+- ASTR407 : Planetary Science
+
+XX. Laboratory and Measurements:
+- ASTR404 : Astronomical and Astrophysical Measurements
+- ASTR405 : Astronomical Laboratory
+
+XX. Special Topics:
+- ASTR406 : High-Energy Astrophysics
+- ASTR514 : Observational Astronomy
+- ASTR506 : High-Energy Astrophysics
+
+XX. Honors Thesis:
+- ASTR449 : Honors Thesis in Astronomy
+
+XX. Writing in Social Sciences and Humanities:
+- ASTU101 : Writing for Research in the Social Sciences and the Humanities
+- ASTU160 : International Perspectives on Writing in the Social Sciences and Humanities
+
+XX. Cultural Studies:
+- ASTU201 : Canada, Japan and the Pacific: Cultural Studies
+
+XX. Political, Economic, and Geographical Perspectives:
+- ASTU202 : Canada, Japan and the Pacific: Political, Economic and Geographical Perspectives
+
+XX. Interdisciplinary Studies:
+- ASTU204 : Topics in Interdisciplinary Arts Studies
+- ASTU400 : Interdisciplinary Studies in Arts
+- ASTU401 : Special Topics in Arts Studies
+
+XX. Knowledge Dissemination:
+- ASTU260 : Knowledge Dissemination: Communicating Research to Public : AUDIences
+
+XX. Science and Society:
+- ASTU402 : Living Language: Science and Society
+
+XX. Unknown Theme:
+- ASTU460 : No Knowledge is Neutral
+
+XX. Meterology:
+- ATSC113 : Applied Meteorology
+- ATSC201 : Meteorology of Storms
+- ATSC301 : Atmospheric Radiation and Remote Sensing
+- ATSC303 : Methods in Atmospheric Science
+- ATSC404 : Dynamic Meteorology
+
+XX. Specialized Meteorology Courses:
+- ATSC313 : Renewable Energy Meteorology
+- ATSC448 : Directed Studies2. Introduction to Neurolinguistics
+
+XX. Neuroanatomy and Neurolinguistics:
+- AUDI402: Neuroanatomy for Audiology and Speech-Language Pathology
+- AUDI403: Introduction to Neurolinguistics
+
+XX. Phonetics and Acoustics:
+- AUDI513: Acoustic and Articulatory Phonetics
+
+XX. Hearing Science and Aural Rehabilitation:
+- AUDI514A: Hearing Science I
+- AUDI514B: Hearing Science I
+- AUDI515: Hearing Science II
+- AUDI528: Aural Rehabilitation I
+
+XX. Language and Communication Development:
+- AUDI516A: Discourse Analysis
+- AUDI516C: Discourse Analysis
+- AUDI520B: Phonological Development, Assessment and Intervention
+- AUDI522: Communication Development and Disorders
+
+XX. Speech Disorders and Language Disorders:
+- AUDI524: Disorders of Speech Production
+- AUDI526: Acquired Language Disorders
+
+XX. Research Methods:
+- AUDI530A: Research Methods
+- AUDI530B: Research Methods
+- AUDI530C: Research Methods
+
+XX. Cultural and Heritage Considerations:
+- AUDI540: Approaches to Audiology and Speech-Language Pathology for People of First Nations, Métis or Inuit Heritage
+
+XX. Clinical Practice and Externships:
+- AUDI545: Preparation for Clinical Practice and Externships
+
+XX. Advanced Communication Sciences and Disorders:
+- AUDI546A: Advanced Communication Sciences and Disorders
+- AUDI546B: Advanced Communication Sciences and Disorders
+Directed Reading and Advanced Topics:
+- AUDI547A: Directed Reading in Audiology and Speech Sciences
+- AUDI550A: Advanced Topics in Audiology
+
+XX. Audiology and Hearing Assessment:
+- AUDI551: Hearing and Noise
+- AUDI552: Diagnostic Audiology I
+- AUDI553: Diagnostic Audiology II
+
+XX. Amplification and : AUDItory Function:
+- AUDI556: Amplification I
+- AUDI557: Amplification II
+- AUDI558: Physiological Measurement of : AUDItory Function
+
+XX. Pediatric Audiology and Cochlear Implants:
+- AUDI562: Pediatric Audiology
+- AUDI563: Cochlear Implants: : AUDIological Assessment and Management Issues
+
+XX. Audiology Practicum:
+- AUDI565C: : Audiology Practicum I
+- AUDI566C: : Audiology Practicum II
+- AUDI567: : Audiology Practicum III
+- AUDI568: : Audiology Practicum IV
+
+XX. Aging and Developmental Disorders:
+- AUDI569: Hearing and Aging
+- AUDI570: Case Studies in Phonological Intervention and Aural (Re)habilitation
+- AUDI571: Developmental Language Disorders
+- AUDI572: Cognitive Processing and Acquired Language Disorders
+- AUDI575: Language Development and Disorders in the School Years
+
+XX. Speech and Swallowing Disorders:
+- AUDI576: Topics in Fluency Disorders
+- AUDI577: Advanced Studies in Acquired Speech and Swallowing Disorders
+
+XX. Perceptual, Cognitive, and Social-affective Aspects:
+- AUDI581: Perceptual, Cognitive, and Social-affective Issues in Communication Development, Assessment and Intervention
+
+XX. Advanced Speech Science:
+- AUDI583: Advanced Speech Science
+
+XX. Language Development Across the Lifespan:
+- AUDI585: Language Development Across the Lifespan
+
+XX. Advanced Language Disorders:
+- AUDI586: Acquired Language Disorders II
+
+XX. Speech-Language Pathology Practicum:
+- AUDI590C: Speech-Language Pathology Practicum I
+- AUDI591C: Speech-Language Pathology Practicum II
+- AUDI593C: Speech-Language Pathology Practicum III
+- AUDI593: Speech-Language Pathology Practicum III
+- AUDI594C: Speech-Language Pathology Practicum IV
+
+XX. Business Administration
+- BA501 : Professional Residency I: Leadership and Competitive Strategy
+- BA502 : Professional Residency II: Business Development and Negotiations
+- BA503 : Professional Residency III: Ethics, Sustainability and Managing Change
+- BA504 : Business Strategy Integration: Foundation
+- BA507 : Business Strategy Integration: Global
+- BA512 : Business Strategy Integration: Experiential Learning
+
+XX. Experiential Learning and Internship
+- BA509 : Experiential Learning: Business Analytics Internship
+- BA511 : Community Business Project
+
+XX. Management and Leadership Skills
+- BA514 : IMBA Residency - People, Culture and Organizations
+- BA563 : Decision Making for Managers
+- BA564 : Leadership Development
+
+XX. Analytics and Technology
+- BA515 : Fundamentals of Analytics and Tech
+
+XX. Ethics and Sustainability
+- BA560 : Ethics and Sustainability
+
+XX. Creativity
+- BA562 : Creativity
+
+XX. Miscellaneous Topics
+- BA550 : Business Immersion
+- BA580 : Topics in Business Administration
+
+XX. Financial Statement Analysis:
+- BAAC501 : Financial Statement Analysis I
+    
+XX. Managerial Accounting and Decision Making:
+- BAAC511 : Intermediate Managerial Accounting: Decision Making and Performance Evaluation
+
+XX. Foundations in Accounting:
+- BAAC550 : Foundations in Accounting
+- BAAC551 : Foundations in Accounting II
+
+XX. Business Accounting:
+- BABS502 - Forecasting and Time Series Prediction
+- BABS507 - Descriptive and Predictive Business Analysis
+
+XX. Analyzing and Modelling Uncertainty
+- BABS506 - Analyzing and Modelling Uncertainty
+
+XX. Predictive Business Analytics
+- BABS507 - Descriptive and Predictive Business Analysis
+- BABS508 - Advanced Predictive Business Analytics
+
+XX. Application of Statistics in Management
+- BABS550 - Application of Statistics in Management
+
+XX. Venture Growth and Exit
+1. BAEN502 - Growing and Exiting a Venture
+
+XX. Entrepreneurial Finance
+2. BAEN505 - Entrepreneurial Finance
+
+XX. Technology Entrepreneurship
+3. BAEN506 - Technology Entrepreneurship
+
+XX. Applied Methods in Technology Start-ups
+4. BAEN509 - Applied Methods in Technology Start-ups at CDL
+
+XX. Strategy and Innovation
+5. BAEN540 - Strategy & Innovation
+
+XX. Innovation and Sustainability
+6. BAEN549 - Innovation and Sustainability
+
+XX. Fundamentals of Entrepreneurship
+7. BAEN550 - Fundamentals in Entrepreneurship
+
+XX. Topics in Entrepreneurship
+8. BAEN580 - Topics in Entrepreneurship
+9. BAEN580 - Topics in Entrepreneurship
+10. BAEN580 - Topics in Entrepreneurship
+
+XX. Foundational Finance:
+BAFI500 - Introductory Finance
+BAFI550 - Fundamental Finance
+
+XX. Banking and Capital Markets:
+- BAFI501 - Banking and Capital Markets
+
+XX. Corporate Finance:
+- BAFI502 - Corporate Finance
+- BAFI503 - Topics in Corporate Finance
+
+XX. Investment Management and Asset Pricing:
+- BAFI507 - Mergers and Acquisitions
+- BAFI508 - Data-driven Investments
+- BAFI511 - Investment Theory and Asset Pricing
+- BAFI513 - Risk Management
+- BAFI519 - Topics in Investment Management
+- BAFI520 - Empirical Finance
+
+XX. International Finance:
+- BAFI532 - International Financial Management
+
+XX. Specialized Topics in Finance:
+- BAFI580 - Special Topics in Finance
+
+XX. Leadership and Management:
+- BAHR505 - Leadership
+- BAHR508 - Managing Change
+- BAHR550 - Organizational Behavior
+
+XX. Negotiation and Conflict Resolution:
+- BAHR507 - Two-Party Negotiations
+
+XX. Team Building and Performance:
+- BAHR560 - Building High Performance Teams and Organizations
+
+XX. Human Resources:
+- BAHR580 - Topics in Human Resources
+
+XX. Business Technology Management:
+- BAIT508 - Business Analytics Programming
+- BAIT518 - Data Visualization
+
+XX. Machine Learning and AI
+- BAIT509 - Business Applications of Machine Learning
+- BAIT515 - AI Commercialization
+
+XX. Business Solutions and Project Management
+- BAIT510 - Project Management in Delivering Business Solutions
+- BAIT513 - Managing e-Business
+
+XX. Technology and Industries
+- BAIT516 - Health and Technology
+- BAIT523 - FinTech
+
+XX. Topics in Information Technology Management
+- BAIT580 - Topics in Information Technology Management
+
+XX. Business Administration: Commercial Law
+- BALA503 : Commercial Law
+
+XX. Product Development
+- BAMA503 - New Product Development
+
+XX. Marketing Communication:
+- BAMA504 - Integrated Marketing Communication
+
+XX. Business Development:
+- BAMA505 - Business Development
+
+XX. Consumer Behavior:
+- BAMA506 - Consumer Behaviour
+
+XX. Marketing Research:
+- BAMA508 - Marketing Research
+
+XX. Pricing:
+- BAMA511 - Pricing Analytics
+
+XX. Digital Marketing:
+- BAMA513 - Digital Marketing
+
+XX. Brand Management:
+- BAMA514 - Brand Management
+
+XX. Data Driven Marketing:
+- BAMA517 - Data Driven Marketing
+
+XX. Purposeful Branding:
+- BAMA519 - Building Brands with Purpose
+
+XX. Customer Analytics:
+- BAMA520 - Customer Analytics
+
+XX. General Marketing:
+- BAMA550 - Marketing
+- BAMA580 - Topics in Marketing
+- BAMA580 - Topics in Marketing
+- BAMA580 - Topics in Marketing
+
+XX. Simulation Modelling:
+- BAMS503 - Simulation Modelling I: Data Processing and Monte Carlo Simulation
+- BAMS503 - Simulation Modelling
+- BAMS504 - Simulation Modelling II: Queuing and Discrete Event Simulation
+
+XX. Optimal Decision Making:
+- BAMS506 - Optimal Decision Making I
+- BAMS508 - Optimal Decision Making II
+
+XX. Decision Analysis and Uncertainty:
+- BAMS517 - Decision Analysis Under Uncertainty
+
+XX. Analytics Leadership:
+- BAMS521 - Analytics Leadership
+
+XX. Managerial Decisions Modelling and Analytics:
+- BAMS523 - Managerial Decisions Modelling and Analytics
+
+XX. Managerial Economics:
+- BAPA550 - Managerial Economics I
+- BAPA560 - Foundations of Managerial and Business Economics
+
+XX. Supply Chain Fundamentals
+- BASC500 - Process Fundamentals
+
+XX. Supply Chain Management:
+- BASC523 - Supply Chain Management
+
+XX. Supply Chain Analytics:
+- BASC524 - Supply Chain Analytics
+
+XX. Supply Chain Strategy and Analytics:
+- BASC525 - Supply Chain Strategy and Analytics
+
+XX. Operations (Assuming related to operations management):
+- BASC550 - Operations
+
+XX. Business Strategy:
+- BASM501 - Business Strategy
+- BASM502 - Corporate Strategy
+- BASM514 - Strategy in Organizations
+- BASM550 - Strategic Management
+
+XX. Consulting and Decision Support:
+- BASM510 - Consulting Simulation
+- BASM523 - Management Consulting and Corporate Decision Support
+
+XX. Innovation and Economics:
+- BASM516 - Economics and Strategy of Innovation
+
+XX. Multinational Management:
+- BASM530 - Multinational Strategic Management
+
+XX. Special Topics:
+- BASM580 - Topics in Strategic Management
+
+XX. Real Estate Finance:
+- BAUL500 : Real Estate Markets
+- BAUL501 - Real Estate Investment Analysis
+
+XX. Finance and Investment in Real Estate:
+- BAUL501 - Real Estate Investment Analysis
+
+XX. Real Estate Development and Management:
+- BAUL500 - Real Estate Markets
+
+XX. Real Estate Economics and Market Trends:
+- BAUL500 - Real Estate Markets
+
+XX. Real Estate Finance and Investments:
+- BAUL500 - Real Estate Markets
+- BAUL501 - Real Estate Investment Analysis
+
+XX. Bioproducts
+- BEST200 - Foundations in Bioproducts and the Bioeconomy
+- BEST300 - Biobased Polymers and Bioproducts
+- BEST303 - Applied Biotechnology for Bioproducts
+- BEST304 - Laboratory in Bioeconomy Technology (II)
+- BEST403 - Integrated Strategies for Bioproduct Innovation
+
+XX. Plants and the Environment:
+- BEST201 - Plants, Carbon, and Environment
+- BEST203 - Ecology of Managed Ecosystems
+
+XX. Alternative Energy:
+- BEST202 - Alternative Energy Systems
+- BEST301 - Bioenergy
+
+XX. Sustainable Technology and Manufacturing:
+- BEST302 - Laboratory in Bioeconomy Technology (I)
+- BEST308 - Land Use Management and Planning
+- BEST400 - Biomimicry and Biocomposites
+
+XX. Carbon and Energy Management:
+- BEST401 - Carbon and Energy Economics
+
+XX. Industrial Ecology and Sustainability:
+- BEST402 - Industrial Ecology
+
+XX. Biochemistry Intro
+- BIOC202 - Introductory Medical Biochemistry
+- BIOC203 - Fundamentals of Biochemistry
+
+XX. Biochemistry Laboratory:
+- BIOC301 - Biochemistry Laboratory
+
+XX. General Biochemistry:
+- BIOC302 - General Biochemistry
+
+XX. Molecular Biochemistry:
+- BIOC303 - Molecular Biochemistry
+
+XX. Contemporary Biochemical Research:
+- BIOC304 - Contemporary Biochemical Research
+
+XX. Protein Biochemistry:
+- BIOC402 - Proteins: Structure and Function
+
+XX. Enzymology:
+- BIOC403 - Enzymology
+
+XX. Biochemical Methods:
+- BIOC404 - Biochemical Methods
+
+XX. Nucleic Acids:
+- BIOC410 - Nucleic Acids-Structure and Function
+
+XX. Advanced Biochemical Techniques:
+- BIOC420 - Advanced Biochemical Techniques
+
+XX. Recombinant DNA Techniques:
+- BIOC421 - Recombinant DNA Techniques
+
+XX. Concepts in Molecular Biology:
+- BIOC440 - Concepts in Molecular Biology
+
+XX. Directed Studies and Honors Thesis:
+- BIOC448 - Directed Studies in Biochemistry
+- BIOC449 - Honors Thesis
+
+XX. Membrane Biochemistry:
+- BIOC450 - Membrane Biochemistry
+
+XX. Advanced Techniques in Biochemistry:
+- BIOC460 - Advanced Techniques in Biochemistry
+
+XX. Biochemistry & Society:
+- BIOC470 - Biochemistry & Society: Current Issues
+
+XX. Seminar in Biochemistry:
+- BIOC530 - Seminar in Biochemistry
+
+XX. Advanced Topics in Biochemistry and Molecular Biology:
+- BIOC551 - Advanced Topics in Biochemistry and Molecular Biology
+
+XX. Membrane Proteins:
+- BIOC552 - Membrane Proteins
+
+XX. Nucleic Acids Structure and Function:
+- BIOC554 - Nucleic Acids: DNA/RNA Structure and Function
+
+XX. Epigenetics:
+- BIOC555 - Epigenetics
+
+XX. Biochemical Aspects of Cellular Regulation:
+- BIOC556 - Biochemical Aspects of Cellular Regulation
+
+XX. Advanced Topics in Biochemistry:
+- BIOC557 - Advanced Topics in Biochemistry
+
+XX. Advanced Topics in Protein Chemistry:
+- BIOC558 - Advanced Topics in Protein Chemistry I
+- BIOC559 - Advanced Topics in Protein Chemistry II
+
+XX. Computational Approaches in Biochemistry:
+- BIOC560 - Computational Approaches in Biochemistry1
