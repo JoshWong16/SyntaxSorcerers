@@ -112,6 +112,7 @@ async function getRecommendedCourses(req, res) {
         Object.keys(jsonData).forEach(category => {
             const keywordsArray = jsonData[category];
 
+            /* loop through user keywords array, access key value directly */
             keywordsArray.forEach((keyword, index) => {
 
                 if (userKeywords.includes(keyword)) {
@@ -131,6 +132,7 @@ async function getRecommendedCourses(req, res) {
 
         const jsonData = JSON.parse(data);
 
+        /* loop through categories array, access key value directly */
         Object.keys(jsonData).forEach(category => {
             if (categoriesArray.includes(category)) {
                 
