@@ -5,7 +5,6 @@ import android.util.Log;
 import androidx.annotation.NonNull;
 
 import com.google.gson.JsonElement;
-import com.google.gson.JsonObject;
 
 import java.io.IOException;
 import java.io.UnsupportedEncodingException;
@@ -19,8 +18,10 @@ import retrofit2.Response;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 import retrofit2.http.Body;
+import retrofit2.http.DELETE;
 import retrofit2.http.GET;
 import retrofit2.http.POST;
+import retrofit2.http.PUT;
 import retrofit2.http.Url;
 
 public class ServerRequest {
@@ -53,30 +54,26 @@ public class ServerRequest {
     }
 
     public void makeGetRequest(String endpoint, final ServerRequest.ApiRequestListener listener) throws UnsupportedEncodingException {
-        Log.d(RequestTag, "Making GET request to " + endpoint);
         Call<JsonElement> call = apiService.getData(endpoint);
-        Log.d(RequestTag, call.request().url().toString());
-        call.enqueue(new Callback<JsonElement>() {
-            @Override
-            public void onResponse(Call<JsonElement> call, Response<JsonElement> response) {
-                if (response.isSuccessful()) {
-                    JsonElement jsonResponse = response.body();
-                    Log.d(RequestTag, jsonResponse.toString());
-                    listener.onApiRequestComplete(jsonResponse);
-                } else {
-                    listener.onApiRequestError("Error response: " + response.code());
-                }
-            }
-
-            @Override
-            public void onFailure(Call<JsonElement> call, Throwable t) {
-                listener.onApiRequestError(t.getMessage());
-            }
-        });
+        callHandler(listener, call);
     }
 
     public void makePostRequest(String endpoint, JsonElement body, final ServerRequest.ApiRequestListener listener) throws UnsupportedEncodingException {
         Call<JsonElement> call = apiService.postData(endpoint, body);
+        callHandler(listener, call);
+    }
+
+    public void makePutRequest(String endpoint, JsonElement body, final ServerRequest.ApiRequestListener listener) throws UnsupportedEncodingException {
+        Call<JsonElement> call = apiService.putData(endpoint, body);
+        callHandler(listener, call);
+    }
+
+    public void makeDeleteRequest(String endpoint, final ServerRequest.ApiRequestListener listener) throws UnsupportedEncodingException {
+        Call<JsonElement> call = apiService.deleteData(endpoint);
+        callHandler(listener, call);
+    }
+
+    private static void callHandler(ApiRequestListener listener, Call<JsonElement> call) {
         Log.d(RequestTag, call.request().url().toString());
         call.enqueue(new Callback<JsonElement>() {
             @Override
@@ -107,5 +104,11 @@ public class ServerRequest {
         Call<JsonElement> getData(@Url String endpoint);
         @POST
         Call<JsonElement> postData(@Url String endpoint, @Body JsonElement data);
+
+        @PUT
+        Call<JsonElement> putData(@Url String endpoint, @Body JsonElement data);
+
+        @DELETE
+        Call<JsonElement> deleteData(@Url String endpoint);
     }
 }

@@ -8,7 +8,7 @@ async function getUser(req, res) {
         const user = await model.getUser(req.userId);
         return res.json(user);
     } catch (error) {
-        return res.status(500).send(error.message);
+        return res.status(500).json({message: error.message});
     }
 }
 
@@ -26,7 +26,7 @@ async function createUser(req, res) {
         await model.createUser(user);
         return res.json(user);
     } catch (error) {
-        return res.status(500).send(error.message);
+        return res.status(500).json({message: error.message});
     }
 }
 
@@ -34,9 +34,9 @@ async function updateUser(req, res) {
     const model = new User();
     try {
         await model.updateUser(req.userId, req.body);
-        res.send('User updated');
+        res.json({message: 'User updated'});
     } catch (error) {  
-        return res.status(500).send(error.message);
+        return res.status(500).json({message: error.message});
     }
 }
 
@@ -44,9 +44,9 @@ async function deleteUser(req, res) {
     const model = new User();
     try {
         await model.deleteUser(req.userId);
-        res.send('User deleted');
+        res.json({message:'User deleted'});
     } catch (error) {
-        return res.status(500).send(error.message);
+        return res.status(500).json({message: error.message});
     }
 }
 
@@ -54,9 +54,9 @@ async function addFavouriteCourse(req, res) {
     const model = new UserCourses();
     try {
         const courses = await model.addUserCourse(req.userId, req.body.courseId);
-        return res.send('Course added');
+        return res.json({message:'Course added'});
     } catch (error) {
-        return res.status(500).send(error.message);
+        return res.status(500).json({message: error.message});
     }
 };
 
@@ -66,7 +66,7 @@ async function getFavouriteCourses(req, res) {
         const courses = await model.getUserCourses(req.userId);
         return res.json(courses);
     } catch (error) {
-        return res.status(500).send(error.message);
+        return res.status(500).json({message: error.message});
     }
 }
 
@@ -75,9 +75,9 @@ async function removeFavouriteCourse(req, res) {
     const course_id = req.params.course_id;
     try {
         await model.removeUserCourse(req.userId, course_id);
-        return res.send('Course removed');
+        return res.json({message: 'Course removed'});;
     } catch (error) {
-        return res.status(500).send(error.message);
+        return res.status(500).json({message: error.message});
     }
 }
 
@@ -91,7 +91,7 @@ async function getCourseKeywords(req, res) {
             return;
         }
 
-        res.send(data);
+        res.json({data: data});
         
     });
 }
