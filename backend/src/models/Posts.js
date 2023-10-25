@@ -1,6 +1,7 @@
 import { database } from '../db/db.js';
 import { ObjectId } from 'mongodb';
 import manipulatePostOutput from '../helpers/manipulatePostOutput.js';
+import { getSentiment } from '../helpers/sentimentHelper.js';
 
 class Posts {
     constructor() {
@@ -12,13 +13,18 @@ class Posts {
         return manipulatePostOutput(posts);
     }
 
+    async getFilteredPosts(forumId, category) {
+        const posts = await this.collection.find({forumId: forumId, category: category}).toArray();
+        return manipulatePostOutput(posts);
+    };
+
     async getPostById(postId) {
         const post = await this.collection.findOne(new ObjectId(postId));
         return manipulatePostOutput([post])[0];
     }
 
     async addPost(content, userId, forumId) {
-        const result = await this.collection.insertOne({ writtenBy: userId, forumId: forumId, dateWritten: new Date(), content: content });
+        const result = await this.collection.insertOne({ writtenBy: userId, forumId: forumId, dateWritten: new Date(), content: content, category: getSentiment(content) });
         return result.insertedId.toString();
     }
 

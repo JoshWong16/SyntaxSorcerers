@@ -3,7 +3,7 @@ import Posts from "../models/Posts.js";
 async function getAllPosts(req, res) {
     const model = new Posts();
     try {
-        const posts = await model.getAllPost(req.params.forumId);
+        const posts = req.query.category ? await model.getFilteredPosts(req.query.forumId, req.query.category) : await model.getAllPost(req.params.forumId);
         return res.json(posts);
     } catch (error) {
         return res.status(500).send(error.message);
