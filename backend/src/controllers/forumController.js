@@ -10,7 +10,7 @@ async function getAllForums(req, res) {
         const forums = req.query.search ? await forumModel.searchForums(req.query.search) : await forumModel.getAllForums();
         return res.json(forums);
     } catch (error) {
-        return res.status(500).send(error.message);
+        return res.status(500).json({message: error.message});
     }
 };
 
@@ -20,7 +20,7 @@ async function addForum(req, res) {
         const forumId = await forumModel.addForum(req.body.name, req.userId, req.body.course);
         return res.json({forumId});
     } catch (error) {
-        return res.status(500).send(error.message);
+        return res.status(500).json({message: error.message});
     }
 };
 
@@ -28,9 +28,9 @@ async function removeForum(req, res) {
     const forumModel = new Forum();
     try {
         const result = await forumModel.deleteForum(req.userId, req.params.forumId);
-        return result ? res.send("deleted forum") : res.status(403).send("not authorized to delete forum");
+        return result ? res.json({message: "deleted forum"}) : res.status(403).json({message: "not authorized to delete forum"});
     } catch (error) {
-        return res.status(500).send(error.message);
+        return res.status(500).json({message: error.message});
     }
 };
 
@@ -40,7 +40,7 @@ async function getUsersForums(req, res) {
         const forums = await userForumsModel.getUsersForums(req.userId);
         return res.json(forums);
     } catch (error) {
-        return res.status(500).send(error.message);
+        return res.status(500).json({message: error.message});
     }
 };
 
@@ -48,9 +48,9 @@ async function addUsersForum(req, res) {
     const userForumsModel = new UserForums();
     try {
         await userForumsModel.addUserForum(req.userId, req.body.forumId);
-        return res.send("added user to forum");
+        return res.json({message:"added user to forum"});
     } catch (error) {
-        return res.status(500).send(error.message);
+        return res.status(500).json({message: error.message});
     }
 }
 
@@ -58,9 +58,9 @@ async function removeUsersForum(req, res) {
     const userForumsModel = new UserForums();
     try {
         await userForumsModel.removeUserForum(req.userId, req.body.forumId);
-        return res.send("removed user from forum");
+        return res.json({message: "removed user from forum"});
     } catch (error) {
-        return res.status(500).send(error.message);
+        return res.status(500).json({message: error.message});
     }
 }
 
@@ -82,7 +82,7 @@ async function sendFirebaseNotification(req, res) {
         admin.messaging().sendToDevice(registrationToken, message, options)
         .then( response => {
     
-         res.status(200).send("Notification sent successfully")
+         res.status(200).json({message: "Notification sent successfully"});
          
         })
         .catch( error => {
