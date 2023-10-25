@@ -182,9 +182,6 @@ public class CourseSearchActivity extends AppCompatActivity {
     }
 
     private void displaySearchResults(CourseGradesModel data) {
-//        private TextView average;
-//        private TextView stats;
-//        private TextView teachers;
         courseName.setText(String.format("%s %s%s %s %s %s",
                 data.getCampus(), data.getYear(), data.getSession(),
                 data.getSubject(), data.getCourse(), data.getSection()));
