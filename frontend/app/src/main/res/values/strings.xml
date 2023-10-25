@@ -1,3 +1,149 @@
 <resources>
     <string name="app_name">UBC Course Connect</string>
+    <string name="login_button">Login</string>
+    <string name="signup_button">Sign Up</string>
+    <string name="submit_button">Submit</string>
+    <string-array name="majors_array">
+        <item>Select a Major</item>
+        <item>"Ancient Mediterranean and Near Eastern Studies"</item>
+        <item>"Anthropology"</item>
+        <item>"Applied Animal Biology"</item>
+        <item>"Archaeology"</item>
+        <item>"Architecture"</item>
+        <item>"Architecture, Landscape Architecture, and Urbanism"</item>
+        <item>"Art History"</item>
+        <item>"Asian Area Studies"</item>
+        <item>"Asian Language and Culture"</item>
+        <item>"Astronomy"</item>
+        <item>"Atmospheric Science"</item>
+        <item>"Bachelor + Master of Management Dual Degree"</item>
+        <item>"Bachelor of Indigenous Land StewardshipNew"</item>
+        <item>"Biochemistry"</item>
+        <item>"Bioeconomy Sciences and TechnologyNew"</item>
+        <item>"Biology"</item>
+        <item>"Biomedical EngineeringNew"</item>
+        <item>"Biophysics"</item>
+        <item>"Biotechnology"</item>
+        <item>"Business and Computer Science"</item>
+        <item>"Canadian Studies"</item>
+        <item>"Cellular, Anatomical, and Physiological Sciences"</item>
+        <item>"Chemical Engineering"</item>
+        <item>"Chemical and Biological Engineering"</item>
+        <item>"Chemistry"</item>
+        <item>"Cinema Studies"</item>
+        <item>"Civil Engineering"</item>
+        <item>"Cognitive Systems (BA)"</item>
+        <item>"Cognitive Systems (BSc)"</item>
+        <item>"Combined Major in Science"</item>
+        <item>"Combined Majors in Statistics"</item>
+        <item>"Commerce"</item>
+        <item>"Computer Engineering"</item>
+        <item>"Computer Science (BA)"</item>
+        <item>"Computer Science (BSc)"</item>
+        <item>"ConservationNew"</item>
+        <item>"Creative Writing"</item>
+        <item>"Dental Hygiene"</item>
+        <item>"Dentistry"</item>
+        <item>"Dietetics"</item>
+        <item>"Earth and Ocean Sciences"</item>
+        <item>"Economics"</item>
+        <item>"Education: Elementary and Middle Years"</item>
+        <item>"Education: Indigenous Teacher Education Program (NITEP)"</item>
+        <item>"Education: International Baccalaureate"</item>
+        <item>"Education: Secondary"</item>
+        <item>"Education: West Kootenay Teacher Education Program (WKTEP)"</item>
+        <item>"Electrical Engineering"</item>
+        <item>"Engineering Physics"</item>
+        <item>"English"</item>
+        <item>"Environmental Design"</item>
+        <item>"Environmental EngineeringNew"</item>
+        <item>"Environmental Engineering (joint UNBC/UBC)"</item>
+        <item>"Environmental Sciences"</item>
+        <item>"Film Production"</item>
+        <item>"First Nations and Endangered Languages"</item>
+        <item>"First Nations and Indigenous Studies"</item>
+        <item>"Food Science"</item>
+        <item>"Food and Nutritional Sciences"</item>
+        <item>"Food and Resource EconomicsNew"</item>
+        <item>"Food, Nutrition, and Health"</item>
+        <item>"Forest ManagementNew"</item>
+        <item>"Forest OperationsNew"</item>
+        <item>"Forest SciencesNew"</item>
+        <item>"French"</item>
+        <item>"Gender, Race, Sexuality, and Social Justice"</item>
+        <item>"Geographical Sciences"</item>
+        <item>"Geography: Environment and Sustainability"</item>
+        <item>"Geography: Human Geography"</item>
+        <item>"Geological Engineering"</item>
+        <item>"Geology"</item>
+        <item>"Geophysics"</item>
+        <item>"German"</item>
+        <item>"Global Resource Systems"</item>
+        <item>"History"</item>
+        <item>"Integrated Computer Science"</item>
+        <item>"Integrated Engineering"</item>
+        <item>"Integrated Sciences"</item>
+        <item>"Interdisciplinary Studies"</item>
+        <item>"International Economics"</item>
+        <item>"International Relations"</item>
+        <item>"Journalism"</item>
+        <item>"Kinesiology: Multidisciplinary Science"</item>
+        <item>"Kinesiology: Neuromechanical and Physiological Sciences"</item>
+        <item>"Kinesiology: Social and Behavioural Sciences"</item>
+        <item>"Latin American Studies"</item>
+        <item>"Law"</item>
+        <item>"Linguistics"</item>
+        <item>"Manufacturing EngineeringNew"</item>
+        <item>"Materials Engineering"</item>
+        <item>"Mathematical Sciences"</item>
+        <item>"Mathematics (BA)"</item>
+        <item>"Mathematics (BSc)"</item>
+        <item>"Mathematics and Economics"</item>
+        <item>"Mechanical Engineering"</item>
+        <item>"Media Studies"</item>
+        <item>"Medical Laboratory Science"</item>
+        <item>"Medicine"</item>
+        <item>"Medieval Studies"</item>
+        <item>"Microbiology and Immunology"</item>
+        <item>"Midwifery"</item>
+        <item>"Mining Engineering"</item>
+        <item>"Modern European Studies"</item>
+        <item>"Museum Studies"</item>
+        <item>"Music"</item>
+        <item>"Music: Advanced Performance"</item>
+        <item>"Music: Composition"</item>
+        <item>"Music: General Studies"</item>
+        <item>"Music: Scholarship"</item>
+        <item>"NeuroscienceNew"</item>
+        <item>"Nursing"</item>
+        <item>"Nutritional Sciences"</item>
+        <item>"Oceanography"</item>
+        <item>"Pharmaceutical SciencesNew"</item>
+        <item>"Pharmacology"</item>
+        <item>"Pharmacy"</item>
+        <item>"Philosophy"</item>
+        <item>"Physics"</item>
+        <item>"Political Science"</item>
+        <item>"Psychology"</item>
+        <item>"Religion"</item>
+        <item>"Romance Studies"</item>
+        <item>"Social Work"</item>
+        <item>"Sociology"</item>
+        <item>"Spanish"</item>
+        <item>"Speech Sciences"</item>
+        <item>"Statistics"</item>
+        <item>"Sustainable Agriculture and Environment"</item>
+        <item>"Theatre Studies"</item>
+        <item>"Theatre: Acting"</item>
+        <item>"Theatre: Design and Production"</item>
+        <item>"United States Studies"</item>
+        <item>"Urban ForestryNew"</item>
+        <item>"Urban StudiesNew"</item>
+        <item>"Vantage One: Applied Science (Engineering)"</item>
+        <item>"Vantage One: Science"</item>
+        <item>"Visual Art (BA)"</item>
+        <item>"Visual Art (BFA)"</item>
+        <item>"Wood ProductsNew"</item>
+    </string-array>
+    <string name="spinner_placeholder">Select your Major</string>
 </resources>
