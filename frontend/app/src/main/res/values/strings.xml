@@ -146,4 +146,6 @@
         <item>"Wood ProductsNew"</item>
     </string-array>
     <string name="spinner_placeholder">Select your Major</string>
+    <string name="edit_button">Edit</string>
+    <string name="favourite_courses">Favourite Courses</string>
 </resources>
