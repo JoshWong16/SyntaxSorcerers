@@ -2,24 +2,56 @@ import { database } from '../db/db.js';
 import { ObjectId } from 'mongodb';
 import manipulatePostOutput from '../helpers/manipulatePostOutput.js';
 import { getSentiment } from '../helpers/sentimentHelper.js';
+import Likes from './Likes.js';
+import Comments from './Comments.js';
+import User from './User.js';
 
 class Posts {
     constructor() {
         this.collection = database.collection("posts");
     }
 
-    async getAllPost(forumId) {
+    async getAllPost(forumId, userId) {
         const posts = await this.collection.find({forumId: forumId}).toArray();
-        return manipulatePostOutput(posts);
+        const res = [];
+        for (let post of posts) {
+            const likes = new Likes();
+            const postLikes = await likes.getAllLikes(post._id.toString());
+            const userLiked = await likes.userLikedPost(post._id.toString(), userId);
+            const comments = new Comments();
+            const postComments = await comments.getAllComments(post._id.toString());
+            const user =  new User();
+            const username = await user.getUser(post.writtenBy);
+            res.push({...post, likes_count: postLikes.length, comment_count: postComments.length, username: username.name, userLiked: userLiked});
+        }
+        return manipulatePostOutput(res);
     }
 
     async getFilteredPosts(forumId, category) {
         const posts = await this.collection.find({forumId: forumId, category: category}).toArray();
-        return manipulatePostOutput(posts);
+        const res = [];
+        for (let post of posts) {
+            const likes = new Likes();
+            const postLikes = await likes.getAllLikes(post._id.toString());
+            const userLiked = await likes.userLikedPost(post._id.toString(), userId);
+            const comments = new Comments();
+            const postComments = await comments.getAllComments(post._id.toString());
+            const user =  new User();
+            const username = await user.getUser(post.writtenBy);
+            res.push({...post, likes_count: postLikes.length, comment_count: postComments.length, username: username.name, userLiked: userLiked});
+        }
+        return manipulatePostOutput(res);
     };
 
     async getPostById(postId) {
-        const post = await this.collection.findOne(new ObjectId(postId));
+        const likes = new Likes();
+        const postLikes = await likes.getAllLikes(postId);
+        const userLiked = await likes.userLikedPost(postId, userId);
+        const comments = new Comments();
+        const postComments = await comments.getAllComments(post._id.toString());
+        const user =  new User();
+        const username = await user.getUser(post.writtenBy);
+        post.push({...post, likes_count: postLikes.length, comment_count: postComments.length, username: username.name, userLiked: userLiked});
         return manipulatePostOutput([post])[0];
     }
 

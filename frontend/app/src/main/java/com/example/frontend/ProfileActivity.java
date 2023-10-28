@@ -2,6 +2,7 @@ package com.example.frontend;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.text.SpannableStringBuilder;
@@ -18,6 +19,10 @@ import java.util.Objects;
 
 public class ProfileActivity extends AppCompatActivity {
 
+    private String name;
+    private String major;
+    private String yearLevel;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -27,9 +32,12 @@ public class ProfileActivity extends AppCompatActivity {
         getUserInfo();
 
         findViewById(R.id.edit_button).setOnClickListener(view -> {
-            Log.d("ProfileActivity", "Edit button clicked");
+            Intent intent = new Intent(this, EditProfileActivity.class);
+            intent.putExtra("name", name);
+            intent.putExtra("major", major);
+            intent.putExtra("yearLevel", yearLevel);
+            startActivity(intent);
         });
-
     }
 
     private void getUserInfo() {
@@ -47,9 +55,12 @@ public class ProfileActivity extends AppCompatActivity {
         ServerRequest.ApiRequestListener apiRequestListener = new ServerRequest.ApiRequestListener() {
             @Override
             public void onApiRequestComplete(JsonElement response) {
-                ((TextView) findViewById(R.id.account_name)).setText("Name: " + response.getAsJsonObject().get("name").getAsString());
-                ((TextView) findViewById(R.id.major)).setText("Major: " + response.getAsJsonObject().get("major").getAsString());
-                ((TextView) findViewById(R.id.year_level)).setText("Year Level: " + response.getAsJsonObject().get("year_level").getAsString());
+                name = response.getAsJsonObject().get("name").getAsString();
+                major = response.getAsJsonObject().get("major").getAsString();
+                yearLevel = response.getAsJsonObject().get("year_level").getAsString();
+                ((TextView) findViewById(R.id.account_name)).setText("Name: " + name);
+                ((TextView) findViewById(R.id.major)).setText("Major: " + major);
+                ((TextView) findViewById(R.id.year_level)).setText("Year Level: " + yearLevel);
                 getUserCourses(userId);
             }
 
@@ -74,7 +85,7 @@ public class ProfileActivity extends AppCompatActivity {
             public void onApiRequestComplete(JsonElement response) {
                 SpannableStringBuilder builder = new SpannableStringBuilder();
                 for (JsonElement course : response.getAsJsonArray()) {
-                    builder.append("- ");
+                    builder.append("• ");
                     builder.append(course.getAsString());
                     builder.append("\n");
                 }

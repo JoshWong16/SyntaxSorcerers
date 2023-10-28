@@ -148,4 +148,9 @@
     <string name="spinner_placeholder">Select your Major</string>
     <string name="edit_button">Edit</string>
     <string name="favourite_courses">Favourite Courses</string>
+    <string name="save_button">Save</string>
+    <string name="join_button">Join</string>
+    <string name="joined_button">Joined</string>
+    <string name="title_activity_forum_view">ForumViewActivity</string>
+    <string name="forum_name">Forum Name</string>
 </resources>

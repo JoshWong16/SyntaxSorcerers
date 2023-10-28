@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!--    Used this website for reference: https://www.notesjam.com/2022/08/cardview-android-kotlin.html-->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/comment_card"
+        android:layout_width="352dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        app:cardBackgroundColor="#E6E6E6"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="4dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/comment_user"
+                    android:layout_width="342dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_weight="1"
+                    android:text="TextView"
+                    android:textColor="@android:color/darker_gray" />
+
+                <TextView
+                    android:id="@+id/comment_date"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_weight="1"
+                    android:gravity="end"
+                    android:text="TextView"
+                    android:textColor="@android:color/darker_gray" />
+            </LinearLayout>
+
+            <ScrollView
+                android:layout_width="352dp"
+                android:layout_height="55dp"
+                android:layout_marginStart="5dp"
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/comment_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="TextView"
+                    android:textColor="@color/black" />
+            </ScrollView>
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>
