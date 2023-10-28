@@ -1,5 +1,6 @@
 import { database } from '../db/db.js';
 import manipulateCommentOutput from '../helpers/manipulateCommentOutput.js';
+import User from './User.js';
 
 class Comments {
     constructor() {
@@ -8,7 +9,13 @@ class Comments {
 
     async getAllComments(postId) {
         const comments = await this.collection.find({ postId: postId }).toArray();
-        return manipulateCommentOutput(comments);
+        const res = [];
+        for (let comment of comments) {
+            const user =  new User();
+            const username = await user.getUser(comment.writtenBy);
+            res.push({...comment, username: username.name});
+        }
+        return manipulateCommentOutput(res);
     }
 
     async addComment(content, postId, userId) {
