@@ -111,6 +111,7 @@ public class LoginActivity extends AppCompatActivity {
     private void createAccount(GoogleSignInAccount account) {
         Intent intent = new Intent(LoginActivity.this, SignupActivity.class);
         intent.putExtra("email", account.getEmail());
+        Log.d(TAG, account.getId() + " not null");
         intent.putExtra("userId", account.getId());
         startActivity(intent);
     }

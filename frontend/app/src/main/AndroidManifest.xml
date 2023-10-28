@@ -25,6 +25,12 @@
             android:name=".EditProfileActivity"
             android:exported="false" />
         <activity
+            android:name=".DisplayCourseRecommenderActivity"
+            android:exported="false" />
+        <activity
+            android:name=".CourseRecommenderActivity"
+            android:exported="false" />
+        <activity
             android:name=".SignupActivity"
             android:exported="false" />
         <activity

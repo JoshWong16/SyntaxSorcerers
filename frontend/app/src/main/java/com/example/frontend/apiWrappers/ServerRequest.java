@@ -28,7 +28,8 @@ import retrofit2.http.Url;
 public class ServerRequest {
 
     public static final String RequestTag = "Server Requests";
-    private static final String BASE_URL = "http://206.87.100.225:8080/"; // Replace with your API base URL
+    private static final String BASE_URL = "https://grgq6ss4i9.execute-api.us-east-2.amazonaws.com/prod/"; // Replace with your API base URL
+
 
     private Retrofit retrofit;
     private ApiService apiService;

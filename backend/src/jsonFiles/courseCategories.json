@@ -1,0 +1,149 @@
+{
+    "First Nations": [
+        "ANTH220 : Contemporary Indigenous Issues in British Columbia",
+        "ANTH329 : Contemporary Indigenous Issues in a Global Perspective (A)",
+        "ANTH329 : Contemporary First Nations Issues",
+        "ANTH430 : Indigenous Governance, British Columbia",
+        "FRST522 : Social, Community, and Indigenous Forestry",
+        "ANTH430 : Indigenous Governance, British Columbia",
+        "CRWR220 : Introduction to Creative Writing with an Indigenous Focus"
+    ],
+    "Culture": [
+        "ACAM250 : Asian Canadians in Popular Culture",
+        "AFST370 :Literatures and Cultures of Africa and/or the Middle East",
+        "AFST450 : African Diasporic Culture in African Canadian Communities",
+        "ANTH201 : Culture, Race and Inequality",
+        "AMNE324 : Women in the Bronze Age, Classical Greek and Hellenistic Cultures",
+        "ANTH210 : Eating Culture",
+        "ANTH213 : Sex, Gender, and Culture",
+        "ANTH215 : Japanese Popular Culture",
+        "ANTH217 : Culture and Communication",
+        "ANTH315 : Japanese Culture and Society",
+        "ANTH316 : Culture, Power & Politics",
+        "ARTH340 : 20th Century Art and Culture: The Triumph and Demise of Modernism",
+        "ARTH341 : 20th Century Art and Culture: The Postmodern"
+    ],
+    "Art": [
+        "ARTH331 : Greek Art and Architecture",
+        "ARTH332 : Roman Art and Architecture",
+        "ARTH343 : Inventing Canada Through Art",
+        "ARTH344 : Contemporary Conversations about Art in Kanata/Canada",
+        "ARTH443 : Seminar in Canadian Art",
+        "ARTH351 : Art and Urban Culture in the Islamic World",
+        "ARTH450 : Seminar in Art in the Islamic World",
+        "ARTH358 : Chinese Art for the Afterlife",
+        "ARTH360 : Chinese Painting: Word and Image",
+        "ARTH459 : Seminar in Chinese Art",
+        "AMNE376 : Greek Art and Architecture",
+        "AMNE377 : Roman Art and Architecture",
+        "ARTH440 : Seminar in Modern and Contemporary Art",
+        "ARTH540 : Studies in 20th Century Art",
+        "CLST332 : Roman Art and Architecture",
+        "CLST331 : Greek Art and Architecture"
+    ],
+    "Asian Culture": [
+        "ACAM300 : Dis/Orienting Asian Canada",
+        "ACAM390 : Asian Migrations in a Global Context",
+        "ACAM350 : Asian Canadian Community-Based Media"
+    ],
+    "Working with Adults": [
+        "ADHE327 : Teaching Adults",
+        "ADHE329 : Developing Short Courses, Workshops and Seminars",
+        "ADHE412 : An Overview of Adult Education",
+        "ADHE328 : Institutions of Adult Education",
+        "ADHE330 : The Community Practice of Adult Education",
+        "CNPS524 - Counselling Adults",
+        "CNPS433 - The Personal and Social Development of the Adult"
+    ],
+    "Africa": [
+        "AFST250: Introduction to African Studies",
+        "AFST351: Perspectives in African Studies: Literary and Theoretical Approaches",
+        "AFST352: Perspectives in African Studies: A Social Science Approach",
+        "AFST308: The Languages of Africa",
+        "ANTH308: Ethnography of Sub-Saharan Africa",
+        "CONS454: Communities, Wildlife, and Conservation in Post-Apartheid South Africa",
+        "HIST256: History of Africa"
+    ],
+    "Mythology": [
+        "AMNE151 : Greek and Roman Mythology",
+        "AMNE251 : Near Eastern and Biblical Mythology",
+        "CLST105 : Greek and Roman Mythology",
+        "CLST313 : Greek Epic",
+        "SCAN335 : Vikings and Norse Mythology (in English)"
+    ],
+    "Religion": [
+        "AMNE160 : Jewish, Christian, and Muslim Religious Traditions",
+        "AMNE261 : Eden to Exile: Introduction to the Hebrew Bible",
+        "AMNE363 : Talmud, Midrash and the Rabbinic Imagination",
+        "AMNE366 : The Origins of Christianity",
+        "AMNE381 : Theories of Myth",
+        "CLST333 : Greek Religion",
+        "AMNE356 : Roman Religion",
+        "ASIA110 : Introduction to Religions in Asia",
+        "ASIA206 : Modern Islam",
+        "ASIA207 : Classical Islam",
+        "ASIA250 : Introduction to Buddhism",
+        "ASIA311 : Tibetan Buddhism",
+        "ASIA381 : Daoist (Taoist) Religion and Its Philosophical Background",
+        "ASIA387 : Japanese Religions",
+        "ASIA328 : Modern Islam",
+        "ASIA330 : Islam in South Asia (1750 to present)",
+        "ASIA311 : Tibetan Buddhism",
+        "ASIA332 : Confucianism in China and Beyond: Reinventions of Tradition",
+        "ASIA510 : Indian Mahayana Buddhism and the Transcultural Formation of East Asian Buddhism"
+    ],
+    "Archaeology": [
+        "AMNE170 : Temples, Tombs, and Tyrants: The Archaeology of the Middle East, Greece, and Rome",
+        "AMNE372 : The Archaeology of Ancient Iraq and Syria: Babylon and Beyond",
+        "AMNE470 : Seminar in Ancient Mediterranean and Near Eastern Archaeology",
+        "AMNE395 : Practicum in Ancient Mediterranean or Near Eastern Archaeology",
+        "CNRS104 : Temples, Tombs, and Tyrants: The Archaeology of the Middle East, Greece, and Rome",
+        "CNRS535 : Practicum in Classical or Near Eastern Archaeology",
+        "NEST304 : Ancient Egypt: The Archaeology of the Land of the Pharaohs"
+    ],
+    "Ancient Civilizations": [
+        "AMNE215 : Ancient Greece",
+        "AMNE225 : Gladiators, Games, and Spectacle in the Greek and Roman World",
+        "AMNE235 : Greek Philosophy I",
+        "AMNE216 : Ancient Rome",
+        "AMNE346 : Latin Epic",
+        "AMNE318 : The Roman Republic",
+        "AMNE200 : Approaching the Ancient Mediterranean & Near East",
+        "AMNE306 : Ancient Technology: Greece and Rome",
+        "AMNE312 : History of Ancient Egypt",
+        "AMNE317 : Alexander the Great and his Empire",
+        "AMNE323 : Slavery in the Ancient Greek and Roman World",
+        "CLST212 : Greek Philosophy II",
+        "CLST317 : Classical Tragedy",
+        "CLST232 : Ancient Rome",
+        "CLST312 : Women in the Roman World of Republican and Imperial Times",
+        "CLST306 : Ancient Technology: Greece and Rome",
+        "CLST329 : Ancient Greek Warfare",
+        "GREK101 : Beginning Ancient Greek I",
+        "GREK102 : Beginning Ancient Greek II",
+        "GREK201 : Intermediate Ancient Greek I",
+        "GREK202 : Intermediate Ancient Greek II",
+        "NEST312 : Religion in Ancient Egypt"
+      ],
+      "Ancient Literature": [
+        "PHIL211: Greek Philosophy I: Socrates and Plato",
+        "PHIL211: Greek Philosophy I: Socrates and Plato",
+        "PHIL212: Greek Philosophy II: Aristotle and After",
+        "GREK351 : Reading Ancient Greek: Prose",
+        "NEST505 : Literature of Ancient Egypt and the Ancient Near East"
+      ],
+      "Middle Eastern Literature": [
+        "AMNE260 : Scriptures of the Near East",
+        "AMNE301 : The Technical Terms of Medicine and Biological Science",
+        "AMNE392 : Introduction to Akkadian",
+        "AMNE440 : Seminar in Ancient Mediterranean and Near Eastern Literature and Ideas",
+        "AMNE300 : Uses and Abuses of Antiquity"
+      ]
+    
+}
+
+  
+  
+  
+  
+  
