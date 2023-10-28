@@ -3,6 +3,7 @@ package com.example.frontend;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.Button;
@@ -71,6 +72,13 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     private void checkIfUserExists(GoogleSignInAccount account) {
+        SharedPreferences sharedPreferences = getSharedPreferences("GoogleAccountInfo", MODE_PRIVATE);
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        editor.putString("accountName", account.getDisplayName());
+        editor.putString("accountDisplayImage", account.getPhotoUrl() != null ? account.getPhotoUrl().toString() : "");
+        editor.putString("userId", account.getId());
+        editor.apply();
+
         ServerRequest serverRequest = new ServerRequest(account.getId());
         ServerRequest.ApiRequestListener apiRequestListener = new ServerRequest.ApiRequestListener() {
             @Override

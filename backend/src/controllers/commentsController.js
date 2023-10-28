@@ -3,7 +3,7 @@ import Comments from '../models/Comments.js';
 async function getComments(req, res) {
     const model = new Comments();
     try {
-        const comments = model.getAllComments(req.params.post_id);
+        const comments = await model.getAllComments(req.params.post_id);
         return res.json(comments);
     } catch (error) {
         return res.status(500).json({message: error.message});

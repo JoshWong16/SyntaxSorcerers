@@ -4,7 +4,7 @@ export default function manipulateCommentOutput(comments) {
             commentId: comment._id.toString(),
             postId: comment.postId,
             content: comment.content,
-            writtenBy: comment.writtenBy,
+            writtenBy: comment.username,
             dateWritten: comment.dateWritten
         };
     });

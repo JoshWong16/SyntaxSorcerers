@@ -10,6 +10,11 @@ class Likes {
         return likes;
     }
 
+    async userLikedPost(postId, userId) {
+        const like = await this.collection.findOne({ postId: postId, userId: userId });
+        return like !== null;
+    }
+
     async addLike(postId, userId) {
         const like = {
             postId: postId,
