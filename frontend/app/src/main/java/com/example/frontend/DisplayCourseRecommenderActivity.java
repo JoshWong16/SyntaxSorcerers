@@ -30,6 +30,8 @@ public class DisplayCourseRecommenderActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_display_course_recommender);
 
+        BottomNavMenu.createBottomNavMenu(this, findViewById(R.id.bottom_navigation), R.id.action_home);
+
         ListView listView = findViewById(R.id.listViewDisplay);
 
         Intent intent = getIntent();
