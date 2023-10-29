@@ -31,6 +31,8 @@ public class CourseRecommenderActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_course_recommender);
 
+        BottomNavMenu.createBottomNavMenu(this, findViewById(R.id.bottom_navigation), R.id.action_home);
+
         Intent intent = getIntent();
         String userId = intent.getStringExtra("userId");
 
