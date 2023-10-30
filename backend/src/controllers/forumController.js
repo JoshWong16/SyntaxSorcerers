@@ -16,8 +16,10 @@ async function getAllForums(req, res) {
 
 async function addForum(req, res) {
     const forumModel = new Forum();
+    const userForumsModel = new UserForums();
     try {
         const forumId = await forumModel.addForum(req.body.name, req.userId, req.body.course);
+        await userForumsModel.addUserForum(req.userId, forumId);
         return res.json({forumId});
     } catch (error) {
         return res.status(500).json({message: error.message});
@@ -57,7 +59,7 @@ async function addUsersForum(req, res) {
 async function removeUsersForum(req, res) {
     const userForumsModel = new UserForums();
     try {
-        await userForumsModel.removeUserForum(req.userId, req.body.forumId);
+        await userForumsModel.removeUserForum(req.userId, req.params.forumId);
         return res.json({message: "removed user from forum"});
     } catch (error) {
         return res.status(500).json({message: error.message});

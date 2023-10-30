@@ -153,4 +153,5 @@
     <string name="joined_button">Joined</string>
     <string name="title_activity_forum_view">ForumViewActivity</string>
     <string name="forum_name">Forum Name</string>
+    <string name="leave_button">Leave</string>
 </resources>
