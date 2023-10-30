@@ -4,7 +4,7 @@ from tqdm import tqdm
 # import nltk
 
 # Set your API key
-openai.api_key = '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'
+openai.api_key = "API_KEY"
 
 # Define the URL of the API you want to call
 api_url = 'https://ubcgrades.com/api/v3/subjects/UBCV'
