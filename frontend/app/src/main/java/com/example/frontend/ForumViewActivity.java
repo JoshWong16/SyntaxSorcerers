@@ -58,6 +58,52 @@ public class ForumViewActivity extends AppCompatActivity {
         findViewById(R.id.create_forum_button).setOnClickListener(v -> {
             addPost(forumId);
         });
+
+        findViewById(R.id.positiveButton).setOnClickListener(v -> {
+            getFilteredPost(forumId, "positive");
+        });
+
+        findViewById(R.id.negativeButton).setOnClickListener(v -> {
+            getFilteredPost(forumId, "negative");
+        });
+
+        findViewById(R.id.neutralButton).setOnClickListener(v -> {
+            getFilteredPost(forumId, "neutral");
+        });
+
+        findViewById(R.id.allButton).setOnClickListener(v -> {
+            getAllPosts(forumId);
+        });
+    }
+
+    private void getFilteredPost(String forumId, String category) {
+        SharedPreferences sharedPreferences = getSharedPreferences("GoogleAccountInfo", MODE_PRIVATE);
+        String userId = sharedPreferences.getString("userId", null);
+        ServerRequest serverRequest = new ServerRequest(userId);
+        ServerRequest.ApiRequestListener apiRequestListener = new ServerRequest.ApiRequestListener() {
+            @Override
+            public void onApiRequestComplete(JsonElement response) throws ParseException {
+                Log.d("Posts", response.toString());
+                ((LinearLayout) findViewById(R.id.postsLayoutAll)).removeAllViews();
+                for(int i = 0;  i < response.getAsJsonArray().size(); i++) {
+                    JsonObject post = response.getAsJsonArray().get(i).getAsJsonObject();
+                    Log.d("ForumViewActivity", post.toString());
+                    makePostView(post);
+                }
+            }
+
+            @Override
+            public void onApiRequestError(String error) {
+                Log.d(ServerRequest.RequestTag, "Failure");
+                Log.d(ServerRequest.RequestTag, error);
+            }
+        };
+
+        try {
+            serverRequest.makeGetRequest("/posts/" + forumId + "?category=" + category, apiRequestListener);
+        } catch (UnsupportedEncodingException e) {
+            throw new RuntimeException(e);
+        }
     }
 
     private void leaveForum(String forumId) {
@@ -185,6 +231,7 @@ public class ForumViewActivity extends AppCompatActivity {
         ServerRequest.ApiRequestListener apiRequestListener = new ServerRequest.ApiRequestListener() {
             @Override
             public void onApiRequestComplete(JsonElement response) throws ParseException {
+                ((LinearLayout) findViewById(R.id.postsLayoutAll)).removeAllViews();
                 Log.d("Posts", response.toString());
                 for(int i = 0;  i < response.getAsJsonArray().size(); i++) {
                     JsonObject post = response.getAsJsonArray().get(i).getAsJsonObject();

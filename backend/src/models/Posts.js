@@ -27,7 +27,7 @@ class Posts {
         return manipulatePostOutput(res);
     }
 
-    async getFilteredPosts(forumId, category) {
+    async getFilteredPosts(forumId, category, userId) {
         const posts = await this.collection.find({forumId: forumId, category: category}).toArray();
         const res = [];
         for (let post of posts) {

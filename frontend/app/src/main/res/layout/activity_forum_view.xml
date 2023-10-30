@@ -36,26 +36,38 @@
             android:id="@+id/positiveButton"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:layout_marginLeft="15dp"
+            android:layout_marginLeft="5dp"
             android:layout_weight="1"
-            android:text="Positive" />
+            android:text="Positive"
+            android:textSize="10sp" />
 
         <Button
             android:id="@+id/neutralButton"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="15dp"
-            android:layout_marginRight="15dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
             android:layout_weight="1"
-            android:text="Neutral" />
+            android:text="Neutral"
+            android:textSize="10sp" />
 
         <Button
             android:id="@+id/negativeButton"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginRight="15dp"
+            android:layout_height="match_parent"
+            android:layout_marginRight="10dp"
             android:layout_weight="1"
-            android:text="Negative" />
+            android:text="Negative"
+            android:textSize="10sp" />
+
+        <Button
+            android:id="@+id/allButton"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginRight="5dp"
+            android:layout_weight="1"
+            android:text="All"
+            android:textSize="10sp" />
     </LinearLayout>
 
     <LinearLayout
