@@ -21,6 +21,7 @@ public class HomeActivity extends AppCompatActivity {
         setContentView(R.layout.activity_home);
 
         Button searchCourseButton = findViewById(R.id.SearchCoursesButton);
+        Button compareCoursesButton = findViewById(R.id.CompareCoursesButton);
         Button courseRecommenderButton = findViewById(R.id.RecommenderButton);
 
         BottomNavMenu.createBottomNavMenu(this, findViewById(R.id.bottom_navigation), R.id.action_home);
@@ -45,4 +46,8 @@ public class HomeActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+    public void compareCourse(View view) {
+        Intent intent = new Intent(this, CompareCoursesActivity.class);
+        startActivity(intent);
+    }
 }

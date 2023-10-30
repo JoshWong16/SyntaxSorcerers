@@ -8,8 +8,10 @@ import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.frontend.apiWrappers.UBCGradesRequest;
 import com.example.frontend.models.CourseGradesModel;
@@ -24,9 +26,11 @@ import com.github.mikephil.charting.data.Entry;
 import com.github.mikephil.charting.formatter.IndexAxisValueFormatter;
 import com.github.mikephil.charting.highlight.Highlight;
 import com.github.mikephil.charting.listener.OnChartValueSelectedListener;
+import com.google.gson.Gson;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
 
+import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.io.UnsupportedEncodingException;
@@ -51,6 +55,7 @@ public class CourseSearchActivity extends AppCompatActivity {
     private TextView stats;
     private TextView teachers;
     private TextView enrolled;
+    private CourseGradesModel courseGradesModel;
 
     private BarChart barChart;
 
@@ -69,6 +74,9 @@ public class CourseSearchActivity extends AppCompatActivity {
         teachers = findViewById(R.id.teachers);
         enrolled = findViewById(R.id.enrolled);
         barChart = findViewById(R.id.barChart);
+
+        Button favouriteButton = findViewById(R.id.favButton);
+        initializeFavouriteButton(favouriteButton);
 
         for (int i=0; i < NUM_SPINNERS; i++) {
             spinners[i] = findViewById(spinnerIds[i]);
@@ -183,7 +191,7 @@ public class CourseSearchActivity extends AppCompatActivity {
             public void onApiRequestComplete(JsonObject response) {
                 Log.d(UBCGradesRequest.RequestTag, "Course grade request success");
                 Deserializer deserializer = new Deserializer();
-                CourseGradesModel courseGradesModel = deserializer.courseGradesModelDeserialize(response);
+                courseGradesModel = deserializer.courseGradesModelDeserialize(response);
                 displaySearchResults(courseGradesModel);
                 displayGraph(courseGradesModel.getGrades());
             }
@@ -224,6 +232,7 @@ public class CourseSearchActivity extends AppCompatActivity {
             val = entry.getValue();
             index++;
         }
+
         entries.remove(entries.size()-1);
         entries.add(0, new BarEntry(0, val));
         xAxisLabels.add(0, xAxisLabels.remove(xAxisLabels.size()-1));
@@ -262,6 +271,19 @@ public class CourseSearchActivity extends AppCompatActivity {
             @Override
             public void run() {
                 barChart.invalidate();
+            }
+        });
+    }
+
+    private void initializeFavouriteButton(Button button) {
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (courseGradesModel == null) {
+                    Toast.makeText(CourseSearchActivity.this, "Please choose a course", Toast.LENGTH_SHORT).show();
+                } else {
+
+                }
             }
         });
     }
