@@ -7,6 +7,7 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.Button;
+import android.widget.Toast;
 
 import com.example.frontend.apiWrappers.ServerRequest;
 import com.google.android.gms.auth.api.signin.GoogleSignIn;
@@ -15,7 +16,9 @@ import com.google.android.gms.auth.api.signin.GoogleSignInClient;
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
 import com.google.android.gms.common.api.ApiException;
 import com.google.android.gms.tasks.Task;
+import com.google.firebase.messaging.FirebaseMessaging;
 import com.google.gson.JsonElement;
+import com.google.gson.JsonObject;
 
 import java.io.UnsupportedEncodingException;
 
@@ -87,10 +90,18 @@ public class LoginActivity extends AppCompatActivity {
                    Log.d(TAG, "User does not exist");
                    createAccount(account);
                } else {
-                   Log.d(TAG, "User does exist");
-                   Intent intent = new Intent(LoginActivity.this, HomeActivity.class);
-                   intent.putExtra("userId", account.getId());
-                   startActivity(intent);
+                   FirebaseMessaging.getInstance().getToken()
+                           .addOnCompleteListener(task -> {
+                               if (!task.isSuccessful()) {
+                                   Log.w(TAG, "Fetching FCM registration token failed", task.getException());
+                                   return;
+                               }
+
+                               // Get new FCM registration token
+                               String token = task.getResult();
+                               Log.d(TAG, "Token: " + token);
+                               putLatestToken(token, account);
+                           });
                }
             }
 
@@ -103,6 +114,35 @@ public class LoginActivity extends AppCompatActivity {
 
         try {
             serverRequest.makeGetRequest("/users", apiRequestListener);
+        } catch (UnsupportedEncodingException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    private void putLatestToken(String token, GoogleSignInAccount account) {
+        SharedPreferences sharedPreferences = getSharedPreferences("GoogleAccountInfo", MODE_PRIVATE);
+        String userId = sharedPreferences.getString("userId", null);
+        ServerRequest serverRequest = new ServerRequest(userId);
+        JsonObject body = new JsonObject();
+        body.addProperty("notification_token", token);
+        ServerRequest.ApiRequestListener apiRequestListener = new ServerRequest.ApiRequestListener() {
+            @Override
+            public void onApiRequestComplete(JsonElement response) {
+                Log.d(TAG, "User does exist");
+                Intent intent = new Intent(LoginActivity.this, HomeActivity.class);
+                intent.putExtra("userId", account.getId());
+                startActivity(intent);
+            }
+
+            @Override
+            public void onApiRequestError(String error) {
+                Log.d(ServerRequest.RequestTag, "Failure");
+                Log.d(ServerRequest.RequestTag, error);
+            }
+        };
+
+        try {
+            serverRequest.makePutRequest("/users", body, apiRequestListener);
         } catch (UnsupportedEncodingException e) {
             throw new RuntimeException(e);
         }

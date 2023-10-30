@@ -16,6 +16,9 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
+            android:name=".CompareCoursesActivity"
+            android:exported="false" />
+        <activity
             android:name=".PostActivity"
             android:exported="false" />
         <activity
@@ -44,7 +47,7 @@
             android:exported="false" />
         <activity
             android:name=".HomeActivity"
-            android:exported="false" >
+            android:exported="false">
         </activity>
         <activity
             android:name=".LoginActivity"
