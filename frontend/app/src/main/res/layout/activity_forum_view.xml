@@ -24,25 +24,58 @@
         android:layout_gravity="center"
         android:layout_marginTop="5dp"
         android:layout_weight="1"
-        android:text="Leave" />
+        android:text="@string/leave_button" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/positiveButton"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="15dp"
+            android:layout_weight="1"
+            android:text="Positive" />
+
+        <Button
+            android:id="@+id/neutralButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_weight="1"
+            android:text="Neutral" />
+
+        <Button
+            android:id="@+id/negativeButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="15dp"
+            android:layout_weight="1"
+            android:text="Negative" />
+    </LinearLayout>
 
     <LinearLayout
         android:id="@+id/inputLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
+        android:gravity="center_horizontal"
         android:orientation="horizontal">
 
         <EditText
-            android:id="@+id/commentMessage"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
+            android:id="@+id/postMessage"
+            android:layout_width="262dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0"
             android:hint="Type your message"
             android:inputType="textMultiLine" />
 
         <Button
-            android:id="@+id/create_button"
+            android:id="@+id/create_forum_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Submit" />
@@ -51,7 +84,7 @@
     <ScrollView
         android:id="@+id/allPosts"
         android:layout_width="match_parent"
-        android:layout_height="494dp"
+        android:layout_height="457dp"
         android:layout_gravity="top"
         android:layout_marginTop="10dp">
 

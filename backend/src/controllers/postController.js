@@ -13,7 +13,7 @@ async function getAllPosts(req, res) {
 async function getPostById(req, res) {
     const model = new Posts();
     try {
-        const post = await model.getPostById(req.params.postId);
+        const post = await model.getPostById(req.userId, req.params.postId);
         return res.json(post);
     } catch (error) {
         return res.status(500).json({message: error.message});

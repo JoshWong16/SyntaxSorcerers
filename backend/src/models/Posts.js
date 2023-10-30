@@ -43,15 +43,16 @@ class Posts {
         return manipulatePostOutput(res);
     };
 
-    async getPostById(postId) {
+    async getPostById(userId, postId) {
+        const posts = await this.collection.find({ _id : new ObjectId(postId)}).toArray();
         const likes = new Likes();
         const postLikes = await likes.getAllLikes(postId);
         const userLiked = await likes.userLikedPost(postId, userId);
         const comments = new Comments();
-        const postComments = await comments.getAllComments(post._id.toString());
+        const postComments = await comments.getAllComments(postId);
         const user =  new User();
-        const username = await user.getUser(post.writtenBy);
-        post.push({...post, likes_count: postLikes.length, comment_count: postComments.length, username: username.name, userLiked: userLiked});
+        const username = await user.getUser(posts[0].writtenBy);
+        const post = {...posts[0], likes_count: postLikes.length, comment_count: postComments.length, username: username.name, userLiked: userLiked};
         return manipulatePostOutput([post])[0];
     }
 

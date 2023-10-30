@@ -27,7 +27,7 @@ router.get('/user', getUsersForums);
 router.post('/user', addUsersForum);
 
 // Remove users forum
-router.delete('/user', removeUsersForum);
+router.delete('/user/:forumId', removeUsersForum);
 
 // Send firebase notification
 router.post('/firebase/notification', sendFirebaseNotification);

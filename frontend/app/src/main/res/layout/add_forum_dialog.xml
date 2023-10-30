@@ -24,7 +24,7 @@
         android:hint="@string/forum_name" />
 
     <Spinner
-        android:id="@+id/name_course"
+        android:id="@+id/name_of_course"
         android:layout_width="320dp"
         android:layout_height="60dp"
         android:layout_gravity="center_horizontal" />
@@ -36,7 +36,7 @@
         android:layout_gravity="center_horizontal" />
 
     <Button
-        android:id="@+id/create_button"
+        android:id="@+id/create_forum_button"
         android:layout_width="wrap_content"
         android:layout_height="62dp"
         android:layout_gravity="end"
