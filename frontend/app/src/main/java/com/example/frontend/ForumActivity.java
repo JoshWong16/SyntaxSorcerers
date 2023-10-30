@@ -10,12 +10,18 @@ import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.Window;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.LinearLayout;
+import android.widget.Spinner;
 import android.widget.TabHost;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.frontend.apiWrappers.ServerRequest;
+import com.example.frontend.apiWrappers.UBCGradesRequest;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
@@ -56,9 +62,9 @@ public class ForumActivity extends AppCompatActivity {
 
         tabHost.setOnTabChangedListener(tabId -> {
             if (tabId.equals("Tab1")) {
-                resetAdnAddView(findViewById(R.id.forum_layout_joined), joinedForumsViews);
+                resetAndAddView(findViewById(R.id.forum_layout_joined), joinedForumsViews);
             } else {
-                resetAdnAddView(findViewById(R.id.forum_layout_all), allForumsViews);
+                resetAndAddView(findViewById(R.id.forum_layout_all), allForumsViews);
             }
         });
 
@@ -71,9 +77,101 @@ public class ForumActivity extends AppCompatActivity {
                 window.setLayout(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
             }
 
+            Spinner courseName = dialog.findViewById(R.id.name_of_course);
+            ArrayAdapter<String> courseNameAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item);
+            courseNameAdapter.add("Select a Subject");
+            courseNameAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+            courseName.setAdapter(courseNameAdapter);
+
+            Spinner courseCode = dialog.findViewById(R.id.course_code);
+            ArrayAdapter<String> courseCodeAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item);
+            courseCodeAdapter.add("Select a Course");
+            courseCodeAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+            courseCode.setAdapter(courseCodeAdapter);
+
+            courseName.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                @Override
+                public void onItemSelected(AdapterView<?> parent, View selectedItemView, int position, long id) {
+                    String course = (String) parent.getItemAtPosition(position);
+                    if (!course.equals("Select a Subject")) {
+                        populateSpinner("api/v3/courses/UBCV/" + course, courseCodeAdapter);
+                    }
+                }
+
+                @Override
+                public void onNothingSelected(AdapterView<?> parentView) {
+                    // Do nothing here
+                }
+            });
+
+            dialog.findViewById(R.id.create_forum_button).setOnClickListener(a -> {
+                String forumName = ((TextView) dialog.findViewById(R.id.new_forum_name)).getText().toString();
+                String subject = courseName.getSelectedItem().toString();
+                String course = courseCode.getSelectedItem().toString();
+                createNewForum(forumName, subject, course);
+                dialog.dismiss();
+            });
+
             // Show the dialog
             dialog.show();
+            populateSpinner("api/v3/subjects/UBCV", courseNameAdapter);
         });
+    }
+
+    private void createNewForum(String forumName, String subject, String course) {
+        SharedPreferences sharedPreferences = getSharedPreferences("GoogleAccountInfo", MODE_PRIVATE);
+        String userId = sharedPreferences.getString("userId", "");
+        ServerRequest serverRequest = new ServerRequest(userId);
+
+        ServerRequest.ApiRequestListener apiRequestListener = new ServerRequest.ApiRequestListener() {
+            @Override
+            public void onApiRequestComplete(JsonElement response) {
+                Toast toast = Toast.makeText(getApplicationContext(), "Forum created", Toast.LENGTH_SHORT);
+                toast.show();
+                generateJoinedForums();
+            }
+
+            @Override
+            public void onApiRequestError(String error) {
+                Log.d(ServerRequest.RequestTag, "Failure");
+                Log.d(ServerRequest.RequestTag, error);
+                Toast toast = Toast.makeText(getApplicationContext(), "Failed to create forum", Toast.LENGTH_SHORT);
+                toast.show();
+            }
+        };
+
+        JsonObject body = new JsonObject();
+        body.addProperty("name", forumName);
+        body.addProperty("course", subject + " " + course);
+        try {
+            serverRequest.makePostRequest("/forums", body, apiRequestListener);
+        } catch (UnsupportedEncodingException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    private void populateSpinner(String endpoint, ArrayAdapter<String> adapter) {
+        UBCGradesRequest ubcGradesRequest = new UBCGradesRequest();
+        UBCGradesRequest.ApiRequestListener<JsonArray> apiRequestListener = new UBCGradesRequest.ApiRequestListener<JsonArray>() {
+            @Override
+            public void onApiRequestComplete(JsonArray response) {
+                for (int i = 0; i < response.size(); i++) {
+                    if (endpoint.equals("api/v3/subjects/UBCV")) {
+                        adapter.add(response.get(i).getAsJsonObject().get("subject").getAsString());
+                    } else {
+                        adapter.add(response.get(i).getAsJsonObject().get("course").getAsString());
+                    }
+                }
+            }
+
+            @Override
+            public void onApiRequestError(String error) {
+                Log.d(UBCGradesRequest.RequestTag, "Failure");
+                Log.d(UBCGradesRequest.RequestTag, error);
+            }
+        };
+
+        ubcGradesRequest.makeGetRequestForJsonArray(endpoint, apiRequestListener);
     }
 
     private void generateJoinedForums() {
@@ -89,7 +187,7 @@ public class ForumActivity extends AppCompatActivity {
                     Log.d("ForumActivity", forum.toString());
                     View joinedForumsView = getLayoutInflater().inflate(R.layout.forum_card, null);
                     joinedForumsView.setTag(forum.get("forumId").getAsString());
-                    ((TextView) joinedForumsView.findViewById(R.id.new_forum_name)).setText(forum.get("name").getAsString());
+                    ((TextView) joinedForumsView.findViewById(R.id.forum_name)).setText(forum.get("name").getAsString());
                     ((TextView) joinedForumsView.findViewById(R.id.course_name)).setText(forum.get("course").getAsString());
 
                     ((Button) joinedForumsView.findViewById(R.id.join_button)).setText(R.string.joined_button);
@@ -107,7 +205,7 @@ public class ForumActivity extends AppCompatActivity {
                 }
 
                 generateAllForums();
-                resetAdnAddView(findViewById(R.id.forum_layout_joined), joinedForumsViews);
+                resetAndAddView(findViewById(R.id.forum_layout_joined), joinedForumsViews);
             }
 
             @Override
@@ -136,23 +234,25 @@ public class ForumActivity extends AppCompatActivity {
                     Log.d("ForumActivity", forum.toString());
                     View addForumsView = getLayoutInflater().inflate(R.layout.forum_card, null);
                     addForumsView.setTag(forum.get("forumId").getAsString());
-                    ((TextView) addForumsView.findViewById(R.id.new_forum_name)).setText(forum.get("name").getAsString());
+                    ((TextView) addForumsView.findViewById(R.id.forum_name)).setText(forum.get("name").getAsString());
                     ((TextView) addForumsView.findViewById(R.id.course_name)).setText(forum.get("course").getAsString());
 
                     boolean isJoined = joinedForums.contains(forum);
                     if (isJoined) {
                         ((Button) addForumsView.findViewById(R.id.join_button)).setText(R.string.joined_button);
                         addForumsView.findViewById(R.id.join_button).setEnabled(false);
+                    } else {
+                        addForumsView.findViewById(R.id.join_button).setOnClickListener(v -> {
+                            joinNewForum((String) addForumsView.getTag());
+                        });
                     }
 
-                    addForumsView.findViewById(R.id.join_button).setOnClickListener(v -> {
-                        joinNewForum((String) addForumsView.getTag());
-                    });
 
                     addForumsView.setOnClickListener(v -> {
                         Intent intent = new Intent(ForumActivity.this, ForumViewActivity.class);
                         intent.putExtra("forumId", (String) v.getTag());
                         intent.putExtra("isJoined", isJoined);
+                        intent.putExtra("forumName", forum.get("name").getAsString());
                         startActivity(intent);
                     });
 
@@ -174,7 +274,7 @@ public class ForumActivity extends AppCompatActivity {
         }
     }
 
-    private void resetAdnAddView(LinearLayout layout, ArrayList<View> views) {
+    private void resetAndAddView(LinearLayout layout, ArrayList<View> views) {
         layout.removeAllViewsInLayout();
         for (View view : views)
             layout.addView(view);

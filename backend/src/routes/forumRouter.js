@@ -26,6 +26,6 @@ router.get('/user', getUsersForums);
 router.post('/user', addUsersForum);
 
 // Remove users forum
-router.delete('/user', removeUsersForum);
+router.delete('/user/:forumId', removeUsersForum);
 
 export default router;

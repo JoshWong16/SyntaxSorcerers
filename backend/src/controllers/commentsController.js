@@ -16,6 +16,17 @@ async function getComments(req, res) {
     }
 }
 
+
+async function getComment(req, res) {
+    const model = new Comments();
+    try {
+        const comments = await model.getCommentById(req.params.comment_id);
+        return res.json(comments);
+    } catch (error) {
+        return res.status(500).json({message: error.message});
+    }
+}
+
 /* https://medium.com/@jullainc/firebase-push-notifications-to-mobile-devices-using-nodejs-7d514e10dd4 */
 async function addComment(req, res) {
     const model = new Comments();
@@ -55,6 +66,7 @@ async function addComment(req, res) {
         });
 
        
+        return res.json({commentId});
     } catch (error) {
         return res.status(500).json({message: error.message});
     } 
@@ -80,4 +92,4 @@ async function deleteComment(req, res) {
     }
 }
 
-export { getComments, addComment, editComment, deleteComment }
+export { getComments, getComment, addComment, editComment, deleteComment }

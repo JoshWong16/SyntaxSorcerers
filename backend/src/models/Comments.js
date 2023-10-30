@@ -1,6 +1,7 @@
 import { database } from '../db/db.js';
 import manipulateCommentOutput from '../helpers/manipulateCommentOutput.js';
 import User from './User.js';
+import { ObjectId } from 'mongodb';
 
 class Comments {
     constructor() {
@@ -16,6 +17,14 @@ class Comments {
             res.push({...comment, username: username.name});
         }
         return manipulateCommentOutput(res);
+    }
+
+    async getCommentById(commentId) {
+        const comments = await this.collection.find({ _id : new ObjectId(commentId)}).toArray();
+        const user =  new User();
+        const username = await user.getUser(comments[0].writtenBy);
+        const comment = {...comments[0], username: username.name};
+        return manipulateCommentOutput([comment])[0];
     }
 
     async addComment(content, postId, userId) {
