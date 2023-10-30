@@ -4,6 +4,7 @@ export default function manipulatePostOutput(posts) {
             postId: post._id.toString(),
             forumId: post.forumId,
             writtenBy: post.username,
+            userId: post.writtenBy,
             dateWritten: post.dateWritten,
             content: post.content,
             likesCount: post.likes_count, 

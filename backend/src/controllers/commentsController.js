@@ -36,9 +36,9 @@ async function addComment(req, res) {
     try {
         const commentId = await model.addComment(req.body.content, req.body.postId, req.userId);
 
-        const post = await postModel.getPostById(req.body.postId);
-        const postUser = userModel.getUser(post.writtenBy);
-        const commentUser = userModel.getUser(req.userId);
+        const post = await postModel.getPostById(req.user, req.body.postId);
+        const postUser = await userModel.getUser(post.userId);
+        const commentUser = await userModel.getUser(req.userId);
         const notificationToken = postUser.notification_token;
 
         const message = `${commentUser.name} has responded to your post.`
@@ -57,16 +57,11 @@ async function addComment(req, res) {
 
         admin.messaging().sendToDevice(notificationToken, message_notification, notification_options)
         .then( response => {
-    
-            res.status(200).json({message: "Notification sent successfully for Comment ID: " + commentId});
-            
+            return res.json({commentId});
         })
         .catch( error => {
             console.log(error);
         });
-
-       
-        return res.json({commentId});
     } catch (error) {
         return res.status(500).json({message: error.message});
     } 
