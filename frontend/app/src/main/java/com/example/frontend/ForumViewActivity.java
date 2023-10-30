@@ -1,0 +1,371 @@
+package com.example.frontend;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+import android.annotation.SuppressLint;
+import android.content.Intent;
+import android.content.SharedPreferences;
+import android.graphics.drawable.Drawable;
+import android.os.Bundle;
+import android.util.Log;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.ImageButton;
+import android.widget.LinearLayout;
+import android.widget.TextView;
+import android.widget.Toast;
+
+import com.example.frontend.apiWrappers.ServerRequest;
+import com.google.gson.JsonElement;
+import com.google.gson.JsonObject;
+
+import java.io.UnsupportedEncodingException;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.Locale;
+
+public class ForumViewActivity extends AppCompatActivity {
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_forum_view);
+
+        String forumId = getIntent().getStringExtra("forumId");
+        boolean isJoined = getIntent().getBooleanExtra("isJoined", false);
+        String forumName = getIntent().getStringExtra("forumName");
+
+        getAllPosts(forumId);
+
+        if (!isJoined) {
+            ((Button) findViewById(R.id.leaveAndJoinButton)).setText(R.string.join_button);
+        }
+
+        ((TextView) findViewById(R.id.forumName)).setText(forumName);
+
+        findViewById(R.id.leaveAndJoinButton).setOnClickListener(v -> {
+            String joined = (String) ((Button) findViewById(R.id.leaveAndJoinButton)).getText();
+            if (joined.equals("Join")) {
+                joinForum(forumId);
+            } else {
+                leaveForum(forumId);
+                ((Button) findViewById(R.id.leaveAndJoinButton)).setText(R.string.join_button);
+            }
+        });
+
+        findViewById(R.id.create_forum_button).setOnClickListener(v -> {
+            addPost(forumId);
+        });
+
+        findViewById(R.id.positiveButton).setOnClickListener(v -> {
+            getFilteredPost(forumId, "positive");
+        });
+
+        findViewById(R.id.negativeButton).setOnClickListener(v -> {
+            getFilteredPost(forumId, "negative");
+        });
+
+        findViewById(R.id.neutralButton).setOnClickListener(v -> {
+            getFilteredPost(forumId, "neutral");
+        });
+
+        findViewById(R.id.allButton).setOnClickListener(v -> {
+            getAllPosts(forumId);
+        });
+    }
+
+    private void getFilteredPost(String forumId, String category) {
+        SharedPreferences sharedPreferences = getSharedPreferences("GoogleAccountInfo", MODE_PRIVATE);
+        String userId = sharedPreferences.getString("userId", null);
+        ServerRequest serverRequest = new ServerRequest(userId);
+        ServerRequest.ApiRequestListener apiRequestListener = new ServerRequest.ApiRequestListener() {
+            @Override
+            public void onApiRequestComplete(JsonElement response) throws ParseException {
+                Log.d("Posts", response.toString());
+                ((LinearLayout) findViewById(R.id.postsLayoutAll)).removeAllViews();
+                for(int i = 0;  i < response.getAsJsonArray().size(); i++) {
+                    JsonObject post = response.getAsJsonArray().get(i).getAsJsonObject();
+                    Log.d("ForumViewActivity", post.toString());
+                    makePostView(post);
+                }
+            }
+
+            @Override
+            public void onApiRequestError(String error) {
+                Log.d(ServerRequest.RequestTag, "Failure");
+                Log.d(ServerRequest.RequestTag, error);
+            }
+        };
+
+        try {
+            serverRequest.makeGetRequest("/posts/" + forumId + "?category=" + category, apiRequestListener);
+        } catch (UnsupportedEncodingException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    private void leaveForum(String forumId) {
+        SharedPreferences sharedPreferences = getSharedPreferences("GoogleAccountInfo", MODE_PRIVATE);
+        String userId = sharedPreferences.getString("userId", null);
+        ServerRequest serverRequest = new ServerRequest(userId);
+
+        ServerRequest.ApiRequestListener apiRequestListener = new ServerRequest.ApiRequestListener() {
+            @Override
+            public void onApiRequestComplete(JsonElement response) {
+                Log.d(ServerRequest.RequestTag, "Success");
+                Toast.makeText(ForumViewActivity.this, "Left forum", Toast.LENGTH_SHORT).show();
+                ((Button) findViewById(R.id.leaveAndJoinButton)).setText(R.string.join_button);
+            }
+
+            @Override
+            public void onApiRequestError(String error) {
+                Log.d(ServerRequest.RequestTag, "Failure");
+                Log.d(ServerRequest.RequestTag, error);
+            }
+        };
+
+        try {
+            serverRequest.makeDeleteRequest("/forums/user/" + forumId, apiRequestListener);
+        } catch (UnsupportedEncodingException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    private void joinForum(String forumId) {
+        SharedPreferences sharedPreferences = getSharedPreferences("GoogleAccountInfo", MODE_PRIVATE);
+        String userId = sharedPreferences.getString("userId", null);
+        ServerRequest serverRequest = new ServerRequest(userId);
+
+        ServerRequest.ApiRequestListener apiRequestListener = new ServerRequest.ApiRequestListener() {
+            @Override
+            public void onApiRequestComplete(JsonElement response) {
+                Log.d(ServerRequest.RequestTag, "Success");
+                Toast.makeText(ForumViewActivity.this, "Joined forum", Toast.LENGTH_SHORT).show();
+                ((Button) findViewById(R.id.leaveAndJoinButton)).setText(R.string.leave_button);
+            }
+
+            @Override
+            public void onApiRequestError(String error) {
+                Log.d(ServerRequest.RequestTag, "Failure");
+                Log.d(ServerRequest.RequestTag, error);
+            }
+        };
+
+        JsonObject body = new JsonObject();
+        body.addProperty("forumId", forumId);
+        try {
+            serverRequest.makePostRequest("/forums/user", body, apiRequestListener);
+        } catch (UnsupportedEncodingException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    private void addPost(String forumId) {
+        String post = (((EditText) findViewById(R.id.postMessage)).getText()).toString();
+        SharedPreferences sharedPreferences = getSharedPreferences("GoogleAccountInfo", MODE_PRIVATE);
+        String userId = sharedPreferences.getString("userId", null);
+        ServerRequest serverRequest = new ServerRequest(userId);
+
+        ServerRequest.ApiRequestListener apiRequestListener = new ServerRequest.ApiRequestListener() {
+            @SuppressLint("UnsafeIntentLaunch")
+            @Override
+            public void onApiRequestComplete(JsonElement response) throws ParseException {
+                Log.d(ServerRequest.RequestTag, "Success");
+                Log.d("AddPost", response.toString());
+                findViewById(R.id.postMessage).clearFocus();
+                ((EditText) findViewById(R.id.postMessage)).setText("");
+                Log.d("AddPost", response.getAsJsonObject().get("postId").getAsString());
+                getPost(response.getAsJsonObject().get("postId").getAsString());
+            }
+
+            @Override
+            public void onApiRequestError(String error) {
+                Log.d(ServerRequest.RequestTag, "Failure");
+                Log.d(ServerRequest.RequestTag, error);
+            }
+        };
+
+        JsonObject body = new JsonObject();
+        body.addProperty("content", post);
+        body.addProperty("forumId", forumId);
+        try {
+            serverRequest.makePostRequest("/posts", body, apiRequestListener);
+        } catch (UnsupportedEncodingException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    private void getPost(String postId) {
+        SharedPreferences sharedPreferences = getSharedPreferences("GoogleAccountInfo", MODE_PRIVATE);
+        String userId = sharedPreferences.getString("userId", null);
+        ServerRequest serverRequest = new ServerRequest(userId);
+        ServerRequest.ApiRequestListener apiRequestListener = new ServerRequest.ApiRequestListener() {
+            @Override
+            public void onApiRequestComplete(JsonElement response) throws ParseException {
+                Log.d("GetPost", response.toString());
+                JsonObject post = response.getAsJsonObject();
+                Log.d("GetPost", post.toString());
+                makePostView(post);
+            }
+
+            @Override
+            public void onApiRequestError(String error) {
+                Log.d(ServerRequest.RequestTag, "Failure");
+                Log.d(ServerRequest.RequestTag, error);
+            }
+        };
+
+        try {
+            serverRequest.makeGetRequest("/posts/post/" + postId, apiRequestListener);
+        } catch (UnsupportedEncodingException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    private void getAllPosts(String forumId) {
+        SharedPreferences sharedPreferences = getSharedPreferences("GoogleAccountInfo", MODE_PRIVATE);
+        String userId = sharedPreferences.getString("userId", null);
+        ServerRequest serverRequest = new ServerRequest(userId);
+        ServerRequest.ApiRequestListener apiRequestListener = new ServerRequest.ApiRequestListener() {
+            @Override
+            public void onApiRequestComplete(JsonElement response) throws ParseException {
+                ((LinearLayout) findViewById(R.id.postsLayoutAll)).removeAllViews();
+                Log.d("Posts", response.toString());
+                for(int i = 0;  i < response.getAsJsonArray().size(); i++) {
+                    JsonObject post = response.getAsJsonArray().get(i).getAsJsonObject();
+                    Log.d("ForumViewActivity", post.toString());
+                    makePostView(post);
+                }
+            }
+
+            @Override
+            public void onApiRequestError(String error) {
+                Log.d(ServerRequest.RequestTag, "Failure");
+                Log.d(ServerRequest.RequestTag, error);
+            }
+        };
+
+        try {
+            serverRequest.makeGetRequest("/posts/" + forumId, apiRequestListener);
+        } catch (UnsupportedEncodingException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    private void addLike(String postId, TextView numberOfLikes, ImageButton likeButton) {
+        SharedPreferences sharedPreferences = getSharedPreferences("GoogleAccountInfo", MODE_PRIVATE);
+        String userId = sharedPreferences.getString("userId", null);
+        ServerRequest serverRequest = new ServerRequest(userId);
+
+        ServerRequest.ApiRequestListener apiRequestListener = new ServerRequest.ApiRequestListener() {
+            @Override
+            public void onApiRequestComplete(JsonElement response) {
+                Log.d(ServerRequest.RequestTag, "Success");
+                likeButton.setImageResource(R.drawable.baseline_thumb_up_alt_24);
+                int val = Integer.parseInt((String) numberOfLikes.getText()) + 1;
+                numberOfLikes.setText(String.valueOf(val));
+            }
+
+            @Override
+            public void onApiRequestError(String error) {
+                Log.d(ServerRequest.RequestTag, "Failure");
+                Log.d(ServerRequest.RequestTag, error);
+            }
+        };
+
+        JsonObject body = new JsonObject();
+        body.addProperty("post_id", postId);
+        try {
+            serverRequest.makePostRequest("/likes", body, apiRequestListener);
+        } catch (UnsupportedEncodingException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    private void removeLike(String postId, TextView numberOfLikes, ImageButton likeButton) {
+        SharedPreferences sharedPreferences = getSharedPreferences("GoogleAccountInfo", MODE_PRIVATE);
+        String userId = sharedPreferences.getString("userId", null);
+        ServerRequest serverRequest = new ServerRequest(userId);
+
+        ServerRequest.ApiRequestListener apiRequestListener = new ServerRequest.ApiRequestListener() {
+            @Override
+            public void onApiRequestComplete(JsonElement response) {
+                Log.d(ServerRequest.RequestTag, "Success");
+                likeButton.setImageResource(R.drawable.baseline_thumb_up_off_alt_24);
+                int val = Integer.parseInt((String) numberOfLikes.getText()) - 1;
+                numberOfLikes.setText(String.valueOf(val));
+            }
+
+            @Override
+            public void onApiRequestError(String error) {
+                Log.d(ServerRequest.RequestTag, "Failure");
+                Log.d(ServerRequest.RequestTag, error);
+            }
+        };
+
+        try {
+            serverRequest.makeDeleteRequest("/likes/" + postId, apiRequestListener);
+        } catch (UnsupportedEncodingException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    private void makePostView(JsonObject post) throws ParseException {
+        View postView = getLayoutInflater().inflate(R.layout.post_card, null);
+        postView.setTag(post.get("postId").getAsString());
+        ((TextView) postView.findViewById(R.id.post_user)).setText(post.get("writtenBy").getAsString());
+        ((TextView) postView.findViewById(R.id.post_content)).setText(post.get("content").getAsString());
+        ((TextView) postView.findViewById(R.id.number_of_likes)).setText(post.get("likesCount").getAsString());
+        ((TextView) postView.findViewById(R.id.number_of_comments)).setText(post.get("commentCount").getAsString());
+
+        SimpleDateFormat inputFormat = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSS'Z'", Locale.US);
+        SimpleDateFormat outputFormat = new SimpleDateFormat("EEE MMM dd HH:mm:ss", Locale.US);
+        Date date = inputFormat.parse(post.get("dateWritten").getAsString());
+        assert date != null;
+        String formattedDate = outputFormat.format(date);
+        Log.d("ForumViewActivity", formattedDate);
+        ((TextView) postView.findViewById(R.id.post_date)).setText(formattedDate);
+
+        if (post.get("userLiked").getAsBoolean()) {
+            ((ImageButton) postView.findViewById(R.id.like_button)).setImageResource(R.drawable.baseline_thumb_up_alt_24);
+        }
+
+        postView.setOnClickListener(v -> {
+            goToPostPage(post, formattedDate);
+        });
+
+        postView.findViewById(R.id.comment_button).setOnClickListener(v -> {
+            goToPostPage(post, formattedDate);
+        });
+
+        ImageButton likeButton = postView.findViewById(R.id.like_button);
+        likeButton.setOnClickListener(v -> {
+            Drawable imageResource = likeButton.getDrawable();
+            Drawable.ConstantState imageButtonState = imageResource.getConstantState();
+            Drawable desiredDrawable = getResources().getDrawable(R.drawable.baseline_thumb_up_alt_24);
+            Drawable.ConstantState desiredDrawableState = desiredDrawable.getConstantState();
+            assert imageButtonState != null;
+            if (imageButtonState.equals(desiredDrawableState)) {
+                removeLike(post.get("postId").getAsString(), postView.findViewById(R.id.number_of_likes), likeButton);
+            } else {
+                addLike(post.get("postId").getAsString(), postView.findViewById(R.id.number_of_likes), likeButton);
+            }
+        });
+
+        ((LinearLayout) findViewById(R.id.postsLayoutAll)).addView(postView, 0);
+    }
+
+    private void goToPostPage(JsonObject post, String date) {
+        Intent intent = new Intent(ForumViewActivity.this, PostActivity.class);
+        intent.putExtra("postId", post.get("postId").getAsString());
+        intent.putExtra("writtenBy", post.get("writtenBy").getAsString());
+        intent.putExtra("content", post.get("content").getAsString());
+        intent.putExtra("likesCount", post.get("likesCount").getAsString());
+        intent.putExtra("commentCount", post.get("commentCount").getAsString());
+        intent.putExtra("userLiked", post.get("userLiked").getAsBoolean());
+        intent.putExtra("date", date);
+        startActivity(intent);
+    }
+}

@@ -3,9 +3,13 @@ export default function manipulatePostOutput(posts) {
         return {
             postId: post._id.toString(),
             forumId: post.forumId,
-            writtenBy: post.writtenBy,
+            writtenBy: post.username,
+            userId: post.writtenBy,
             dateWritten: post.dateWritten,
-            content: post.content
+            content: post.content,
+            likesCount: post.likes_count, 
+            commentCount: post.comment_count,
+            userLiked: post.userLiked
         };
     });
 }

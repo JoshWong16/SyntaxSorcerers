@@ -13,7 +13,7 @@ async function getLikes(req, res) {
 async function addLike(req, res) {
     const model = new Likes();
     try {
-        const likeId = await model.addLike(req.params.post_id, req.userId);
+        const likeId = await model.addLike(req.body.post_id, req.userId);
         return res.json(likeId);
     } catch (error) {
         return res.status(500).json({message: error.message});

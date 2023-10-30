@@ -1,10 +1,86 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:orientation="vertical"
-    android:layout_gravity="bottom">
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
-    <include layout="@layout/bottom_navigation_menu" />
+    <TabHost
+        android:id="@+id/forumTabHost"
+        android:layout_width="match_parent"
+        android:layout_height="510dp"
+        android:layout_gravity="top">
+
+        <!-- TabWidget for tab buttons -->
+
+        <TabWidget
+            android:id="@android:id/tabs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" />
+
+        <!-- FrameLayout for tab content -->
+        <FrameLayout
+            android:id="@android:id/tabcontent"
+            android:layout_width="match_parent"
+            android:layout_height="580dp">
+
+            <!-- Tab 1 Content -->
+            <ScrollView
+                android:id="@+id/joinedForums"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="75dp"
+                android:foregroundGravity="bottom">
+
+                <LinearLayout
+                    android:id="@+id/forum_layout_joined"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" />
+            </ScrollView>
+
+            <!-- Tab 2 Content -->
+            <ScrollView
+                android:id="@+id/allComments"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="75dp"
+                android:foregroundGravity="bottom">
+
+                <LinearLayout
+                    android:id="@+id/forum_layout_all"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" />
+            </ScrollView>
+
+            <!-- Add more FrameLayout containers for additional tabs -->
+
+        </FrameLayout>
+    </TabHost>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="bottom"
+        android:orientation="vertical">
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/addForumButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="20dp"
+            android:clickable="true"
+            android:contentDescription="TODO"
+            android:src="@android:drawable/ic_input_add" />
+
+        <include
+            layout="@layout/bottom_navigation_menu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom" />
+    </LinearLayout>
 </LinearLayout>

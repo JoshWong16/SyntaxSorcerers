@@ -8,6 +8,7 @@ import com.google.gson.JsonElement;
 
 import java.io.IOException;
 import java.io.UnsupportedEncodingException;
+import java.text.ParseException;
 
 import okhttp3.Interceptor;
 import okhttp3.OkHttpClient;
@@ -27,7 +28,8 @@ import retrofit2.http.Url;
 public class ServerRequest {
 
     public static final String RequestTag = "Server Requests";
-    private static final String BASE_URL = "http://192.168.0.145:8080/"; // Replace with your API base URL
+    private static final String BASE_URL = "https://grgq6ss4i9.execute-api.us-east-2.amazonaws.com/"; // Replace with your API base URL
+
 
     private Retrofit retrofit;
     private ApiService apiService;
@@ -54,22 +56,22 @@ public class ServerRequest {
     }
 
     public void makeGetRequest(String endpoint, final ServerRequest.ApiRequestListener listener) throws UnsupportedEncodingException {
-        Call<JsonElement> call = apiService.getData(endpoint);
+        Call<JsonElement> call = apiService.getData("/prod" + endpoint);
         callHandler(listener, call);
     }
 
     public void makePostRequest(String endpoint, JsonElement body, final ServerRequest.ApiRequestListener listener) throws UnsupportedEncodingException {
-        Call<JsonElement> call = apiService.postData(endpoint, body);
+        Call<JsonElement> call = apiService.postData("/prod" + endpoint, body);
         callHandler(listener, call);
     }
 
     public void makePutRequest(String endpoint, JsonElement body, final ServerRequest.ApiRequestListener listener) throws UnsupportedEncodingException {
-        Call<JsonElement> call = apiService.putData(endpoint, body);
+        Call<JsonElement> call = apiService.putData("/prod" + endpoint, body);
         callHandler(listener, call);
     }
 
     public void makeDeleteRequest(String endpoint, final ServerRequest.ApiRequestListener listener) throws UnsupportedEncodingException {
-        Call<JsonElement> call = apiService.deleteData(endpoint);
+        Call<JsonElement> call = apiService.deleteData("/prod" + endpoint);
         callHandler(listener, call);
     }
 
@@ -81,7 +83,11 @@ public class ServerRequest {
                 if (response.isSuccessful()) {
                     JsonElement jsonResponse = response.body();
                     Log.d(RequestTag, jsonResponse.toString());
-                    listener.onApiRequestComplete(jsonResponse);
+                    try {
+                        listener.onApiRequestComplete(jsonResponse);
+                    } catch (ParseException e) {
+                        throw new RuntimeException(e);
+                    }
                 } else {
                     listener.onApiRequestError("Error response: " + response.code());
                 }
@@ -95,7 +101,7 @@ public class ServerRequest {
     }
 
     public interface ApiRequestListener {
-        void onApiRequestComplete(JsonElement response);
+        void onApiRequestComplete(JsonElement response) throws ParseException;
         void onApiRequestError(String error);
     }
 

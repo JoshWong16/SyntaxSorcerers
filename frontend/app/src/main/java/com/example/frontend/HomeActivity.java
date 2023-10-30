@@ -22,8 +22,22 @@ public class HomeActivity extends AppCompatActivity {
 
         Button searchCourseButton = findViewById(R.id.SearchCoursesButton);
         Button compareCoursesButton = findViewById(R.id.CompareCoursesButton);
+        Button courseRecommenderButton = findViewById(R.id.RecommenderButton);
 
         BottomNavMenu.createBottomNavMenu(this, findViewById(R.id.bottom_navigation), R.id.action_home);
+
+        Intent intent = getIntent();
+        String userId = intent.getStringExtra("userId");
+
+        courseRecommenderButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(HomeActivity.this, CourseRecommenderActivity.class);
+                intent.putExtra("userId", userId);
+                startActivity(intent);
+
+            }
+        });
     }
 
 
