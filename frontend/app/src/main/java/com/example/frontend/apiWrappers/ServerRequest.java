@@ -28,7 +28,7 @@ import retrofit2.http.Url;
 public class ServerRequest {
 
     public static final String RequestTag = "Server Requests";
-    private static final String BASE_URL = "https://grgq6ss4i9.execute-api.us-east-2.amazonaws.com/prod/"; // Replace with your API base URL
+    private static final String BASE_URL = "https://grgq6ss4i9.execute-api.us-east-2.amazonaws.com/"; // Replace with your API base URL
 
 
     private Retrofit retrofit;
@@ -56,22 +56,22 @@ public class ServerRequest {
     }
 
     public void makeGetRequest(String endpoint, final ServerRequest.ApiRequestListener listener) throws UnsupportedEncodingException {
-        Call<JsonElement> call = apiService.getData(endpoint);
+        Call<JsonElement> call = apiService.getData("/prod" + endpoint);
         callHandler(listener, call);
     }
 
     public void makePostRequest(String endpoint, JsonElement body, final ServerRequest.ApiRequestListener listener) throws UnsupportedEncodingException {
-        Call<JsonElement> call = apiService.postData(endpoint, body);
+        Call<JsonElement> call = apiService.postData("/prod" + endpoint, body);
         callHandler(listener, call);
     }
 
     public void makePutRequest(String endpoint, JsonElement body, final ServerRequest.ApiRequestListener listener) throws UnsupportedEncodingException {
-        Call<JsonElement> call = apiService.putData(endpoint, body);
+        Call<JsonElement> call = apiService.putData("/prod" + endpoint, body);
         callHandler(listener, call);
     }
 
     public void makeDeleteRequest(String endpoint, final ServerRequest.ApiRequestListener listener) throws UnsupportedEncodingException {
-        Call<JsonElement> call = apiService.deleteData(endpoint);
+        Call<JsonElement> call = apiService.deleteData("/prod" + endpoint);
         callHandler(listener, call);
     }
 
