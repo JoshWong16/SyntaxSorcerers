@@ -5,8 +5,7 @@ import {
   removeForum,
   getUsersForums,
   addUsersForum,
-  removeUsersForum,
-  sendFirebaseNotification
+  removeUsersForum
 } from '../controllers/forumController.js';
 
 const router = express.Router();
@@ -28,8 +27,5 @@ router.post('/user', addUsersForum);
 
 // Remove users forum
 router.delete('/user/:forumId', removeUsersForum);
-
-// Send firebase notification
-router.post('/firebase/notification', sendFirebaseNotification);
 
 export default router;

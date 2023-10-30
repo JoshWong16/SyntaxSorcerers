@@ -1,166 +1,284 @@
-1. Animal Welfare:
-- AANB550 : Topics in Animal Welfare
+FINAL CATEGORIES:
+XX. First Nations:
+- ANTH220 : Contemporary Indigenous Issues in British Columbia
+- ANTH329 : Contemporary Indigenous Issues in a Global Perspective (A)
+- ANTH329 : Contemporary First Nations Issues
+- ANTH430 : Indigenous Governance, British Columbia
+- FRST522 : Social, Community, and Indigenous Forestry
+- ANTH430 : Indigenous Governance, British Columbia
+- CRWR220 : Introduction to Creative Writing with an Indigenous Focus
 
-2. Asian Canadians Culture and Society:
+XX. Culture:
 - ACAM250 : Asian Canadians in Popular Culture
-- ACAM300 : Dis/Orienting Asian Canada
-- ACAM320 : Selected Topics in ACAM Studies
-- ACAM320 : Selected Topics in ACAM Studies
-- ACAM320 : Selected Topics in ACAM Studies
-- ACAM390 : Asian Migrations in a Global Context
+- AFST370 : Literatures and Cultures of Africa and/or the Middle East
+- AFST450 : African Diasporic Culture in African Canadian Communities
+- ANTH201 : Culture, Race and Inequality
+- AMNE324 : Women in the Bronze Age, Classical Greek and Hellenistic Cultures
+- ANTH201 : Culture, Race and Inequality
+- ANTH210 : Eating Culture
+- ANTH213 : Sex, Gender, and Culture
+- ANTH215 : Japanese Popular Culture
+- ANTH217 : Culture and Communication
+- ANTH315 : Japanese Culture and Society
+- ANTH316 : Culture, Power & Politics
+- ARTH340 : 20th Century Art and Culture: The Triumph and Demise of Modernism
+- ARTH341 : 20th Century Art and Culture: The Postmodern
 
-3. Asian Canadian Media:
-- ACAM250 : Asian Canadians in Popular Culture
-- ACAM350 : Asian Canadian Community-Based Media
+XX. Art:
+- ARTH331 : Greek Art and Architecture
+- ARTH332 : Roman Art and Architecture
+- ARTH343 : Inventing Canada Through Art
+- ARTH344 : Contemporary Conversations about Art in Kanata/Canada
+- ARTH443 : Seminar in Canadian Art
+- ARTH351 : Art and Urban Culture in the Islamic World
+- ARTH450 : Seminar in Art in the Islamic World
+- ARTH358 : Chinese Art for the Afterlife
+- ARTH360 : Chinese Painting: Word and Image
+- ARTH459 : Seminar in Chinese Art
+- AMNE376 : Greek Art and Architecture
+- AMNE377 : Roman Art and Architecture
+- ARTH440 : Seminar in Modern and Contemporary Art
+- ARTH540 : Studies in 20th Century Art
+- ARTH540 : Studies in 20th Century Art
+- CLST332 : Roman Art and Architecture
+- CLST331 : Greek Art and Architecture
 
-4. Asian Canadian History and Migration:
-- ACAM250 : Asian Canadians in Popular Culture
-- ACAM350 : Asian Canadians in Community-Based Media
-
-5. Adult Education Teaching and Methods
+XX. Working with Adults:
 - ADHE327 : Teaching Adults
 - ADHE329 : Developing Short Courses, Workshops and Seminars
 - ADHE412 : An Overview of Adult Education
-
-6. Adult Education Instituions and Practices
 - ADHE328 : Institutions of Adult Education
 - ADHE330 : The Community Practice of Adult Education
+- CNPS524 : Counselling Adults
+- CNPS433 : The Personal and Social Development of the Adult
 
-7. African Studies
+XX. Africa:
 - AFST250 : Introduction to African Studies 
 - AFST351 : Perspectives in African Studies: Literary and Theoretical Approaches
 - AFST352 : Perspectives in African Studies: A Social Science Approach
-
-8. African Languages
 - AFST308 : The Languages of Africa
+- ANTH308 : Ethnography of Sub-Saharan Africa
+- CONS454 : Communities, Wildlife, and Conservation in Post-Apartheid South Africa
+- HIST256 : History of Africa
 
-9. African Literature and Culture:
-- AFST351 : Perspectives in African Studies: Literary and Theoretical Approaches
-- AFST370 : Literatures and Cultures of Africa and/or the Middle East
-
-10. African Disapora:
-- AFST450 : African Diasporic Culture in African Canadian Communities
-
-11. Mythology:
+XX. Mythology:
 - AMNE151 : Greek and Roman Mythology
 - AMNE251 : Near Eastern and Bibilical Mythology
+- CLST105 : Greek and Roman Mythology
+- CLST313 : Greek Epic
+- SCAN335 : Vikings and Norse Mythology (in English)
 
-12. Religious Traditions: 
+XX. Religion:
 - AMNE160 : Jewish, Christian, and Muslim Religious Traditions
 - AMNE261 : Eden to Exile: Introduction to the Hebrew Bible
 - AMNE363 : Talmud, Midrash and the Rabbinic Imagination
 - AMNE366 : The Origins of Christianity
 - AMNE381 : Theories of Myth
+- CLST333 : Greek Religion
+- AMNE356 : Roman Religion
+- ASIA110 : Introduction to Religions in Asia
+- ASIA206 : Modern Islam
+- ASIA207 : Classical Islam
+- ASIA250 : Introduction to Buddhism
+- ASIA311 : Tibetan Buddhism
+- ASIA381 : Daoist (Taoist) Religion and Its Philosophical Background
+- ASIA387 : Japanese Religions
+- ASIA328 : Modern Islam
+- ASIA330 : Islam in South Asia (1750 to present)
+- ASIA311 : Tibetan Buddhism
+- ASIA332 : Confucianism in China and Beyond: Reinventions of Tradition
+- ASIA510 : Indian Mahayana Buddhism and the Transcultural Formation of East Asian Buddhism
 
-13. Archaeology:
+XX. Archaeology:
 - AMNE170 : Temples, Tombs, and Tyrants: The Archaeology of the Middle East, Greece, and Rome
 - AMNE372 : The Archaeology of Ancient Iraq and Syria: Babylon and Beyond
+- AMNE470 : Seminar in Ancient Mediterranean and Near Eastern Archaeology
+- AMNE395 : Practicum in Ancient Mediterranean or Near Eastern Archaeology
+- CNRS104 : Temples, Tombs, and Tyrants: The Archaeology of the Middle East, Greece, and Rome
+- CNRS535 : Practicum in Classical or Near Eastern Archaeology
+- NEST304 : Ancient Egypt: The Archaeology of the Land of the Pharaohs
 
-14. Ancient Greece:
+XX. Ancient Civilizations:
 - AMNE215 : Ancient Greece
 - AMNE225 : Gladiators, Games, and Spectacle in the Greek and Roman World
 - AMNE235 : Greek Philosophy I
-- AMNE324 : Women in the Bronze Age, Classical Greek and Hellenistic Cultures
-- AMNE376 : Greek Art and Architecture
-
-15. Ancient Rome:
 - AMNE216 : Ancient Rome
-- AMNE377 : Roman Art and Architecture
 - AMNE346 : Latin Epic
-- AMNE356 : Roman Religion
 - AMNE318 : The Roman Republic
-
-16. Ancient Civilizations:
 - AMNE200 : Approaching the Ancient Mediterranean & Near East
 - AMNE306 : Ancient Technology: Greece and Rome
 - AMNE312 : History of Ancient Egypt
 - AMNE317 : Alexander the Great and his Empire
 - AMNE323 : Slavery in the Ancient Greek and Roman World
+- CLST212 : Greek Philosophy II
+- CLST317 : Classical Tragedy
+- CLST232 : Ancient Rome
+- CLST312 : Women in the Roman World of Republican and Imperial Times
+- CLST306 : Ancient Technology: Greece and Rome
+- CLST329 : Ancient Greek Warfare
+- GREK101 : Beginning Ancient Greek I
+- GREK102 : Beginning Ancient Greek II
+- GREK201 : Intermediate Ancient Greek I
+- GREK202 : Intermediate Ancient Greek II
+- NEST312 : Religion in Ancient Egypt
 
-17. Literature and Ideas:
+XX. Ancient Literature:
+- PHIL211: Greek Philosophy I: Socrates and Plato
+- PHIL211: Greek Philosophy I: Socrates and Plato
+- PHIL212: Greek Philosophy II: Aristotle and After
+- GREK351 : Reading Ancient Greek: Prose
+- NEST505 : Literature of Ancient Egypt and the Ancient Near East
+
+XX. Middle Eastern Literature
 - AMNE260 : Scriptures of the Near East
 - AMNE301 : The Technical Terms of Medicine and Biological Science
 - AMNE392 : Introduction to Akkadian
 - AMNE440 : Seminar in Ancient Mediterranean and Near Eastern Literature and Ideas
-
-18. Identity and Society:
-- AMNE470 : Seminar in Ancient Mediterranean and Near Eastern Archaeology
-- AMNE590 : Topics in Identity
-
-19. Speccialized Topics:
 - AMNE300 : Uses and Abuses of Antiquity
-- AMNE395 : Practicum in Ancient Mediterranean or Near Eastern Archaeology
-- AMNE500 : Pro-Seminar in Ancient Mediterranean Studies: Selected Topics
-- AMNE572 : Topics in Near Eastern Archaeology
-- AMNE577 : Topics in Roman Archaeology
 
-20. Human Anatomy:
+XX. Asian Languages:
+- KORN420 : Readings in Middle and Early Modern Korean
+- KORN410 : Modern Korean Short Fiction
+- KORN351 : Introduction to Sino-Korean Readings
+- KORN301 : Readings in Korean Topics I
+- KORN302 : Readings in Korean Topics II
+- KORN200 : Intermediate Korean
+- KORN102 : Basic Korean
+- CHIN131 : Basic Chinese I: Part 1 (Non-Heritage)
+- CHIN133 : Basic Chinese I: Part 2 (Non-Heritage)
+- CHIN134 : Intensive Basic Chinese I (Non-Heritage)
+- CHIN141 : Basic Chinese I: Part 1 (Heritage)
+- CHIN143 : Basic Chinese I: Part 2 (Heritage)
+- CHIN144 : Intensive Basic Chinese I (Heritage)
+- CHIN231 : Basic Chinese II: Part 1 (Non-Heritage)
+- CHIN233 : Basic Chinese II: Part 2 (Non-Heritage)
+- CHIN234 : Intensive Basic Chinese II (Non-Heritage)
+- CHIN241 : Basic Chinese II: Part 1 (Heritage)
+- CHIN243 : Basic Chinese II: Part 2 (Heritage)
+- CHIN244 : Intensive Basic Chinese II (Heritage)
+- CHIN331 : Intermediate Chinese I: Part 1 (Non-Heritage)
+- CHIN333 : Intermediate Chinese I: Part 2 (Non-Heritage)
+- CHIN334 : Intensive Intermediate Chinese I (Non-Heritage)
+- CHIN335 : Intermediate Chinese II: Part I (Non-Heritage)
+- CHIN337 : Intermediate Chinese II: Part 2 (Non-Heritage)
+- CHIN338 : Intensive Intermediate Chinese II (Non-Heritage)
+- CHIN341 : Intermediate Chinese I: Part 1 (Heritage)
+- CHIN343 : Intermediate Chinese I: Part 2 (Heritage)
+- CHIN345 : Intermediate Chinese II: Part I (Heritage)
+- CHIN347 : Intermediate Chinese II: Part 2 (Heritage)
+- CHIN403 : Advanced Chinese Reading and Writing II (Non-Heritage)
+- CHIN405 : Advanced Chinese Speaking and Writing I (Non-Heritage)
+- CHIN407 : Advanced Chinese Speaking and Writing II (Non-Heritage)
+- CHIN415 : Media Chinese I (Heritage)
+- CHIN435 : Business Chinese I (Heritage)
+- CHIN437 : Business Chinese II (Heritage)
+- CHIN441 : Advanced Chinese Reading and Writing I (Heritage)
+- CHIN443 : Advanced Chinese Reading and Writing II (Heritage)
+
+XX. Chinese Culture:
+- ASIA341 : Classical Chinese Literature in Translation
+- ASIA342 : Chinese Literature in Translation: The Vernacular Tradition
+- ASIA347 : Traditional Korean Literature in Translation
+- ASIA352 : Modern Chinese Fiction in Translation
+- ASIA451 : Modern Chinese Authors in Translation
+- ASIA345 : Chinese Film Classics
+- ASIA355 : History of Chinese Cinema
+- ASIA361 : Modern Chinese Fiction in Translation II
+- ASIA443 : National Narratives in Chinese Literature and Film
+- ASIA461 : Chinese Literature of the Ming and Qing Dynasties in Translation
+- ASIA411 : Chinese Political Thought and Institutions
+- ASIA518 : Contemporary Chinese Popular Cultures
+- ASIA361 : Modern Chinese Fiction in Translation II
+- ASIA385 : Chinese Intellectual History
+
+XX. Chinese Literature:
+- ASIA518 : Contemporary Chinese Popular Cultures
+- ASIA361 : Modern Chinese Fiction in Translation II
+- ASIA385 : Chinese Intellectual History
+- ASIA412 : Pre-Modern Chinese Poetry (Pre-Qin to Tang)
+- ASIA413 : Pre-Modern Chinese Poetry (Tang to Qing)
+- ASIA503 : Historical Chinese Dictionaries
+- ASIA501 : Research Methods and Source Materials in Classical Chinese Studies
+- ASIA396 : Chinese Grammar and Usage II
+- ASIA559 : Modern Chinese Fiction and Literary Theory
+- CHIN388 : Introduction to Classical Chinese I (Non-Heritage)
+- CHIN461 : Early Classical Chinese Poetry (to Han)
+- CHIN463 : Early Classical Chinese Poetry (Han to Tang)
+- CHIN464 : Early Classical Chinese Poetry (Intensive)
+- CHIN467 : Artistic Images in Chinese Literature from the Bronze Age to the Tang
+- CHIN468 : Artistic Images in Chinese Literature from the Song to the Present
+- CHIN491 : Classical Chinese I (Heritage)
+- CHIN493 : Classical Chinese II (Heritage)
+- CHIN494 : Intensive Classical Chinese (Heritage)
+- CHIN465 : Fantasy in Chinese Literature
+- CHIN466 : Chinese Martial Arts Fiction
+- CHIN471 : Later Classical Chinese Poetry (Tang)
+- CHIN473 : Later Classical Chinese Poetry (after Tang)
+- CHIN474 : Later Classical Chinese Poetry (Intensive)
+- CHIN481 : Modern Chinese Literature I (Heritage)
+- CHIN483 : Modern Chinese Literature II (Heritage)
+- CHIN484 : Intensive Modern Chinese Literature (Heritage)
+- PHIL371: Foundations of Chinese Thought
+- CHIN485 : Contemporary Chinese Fiction in Film
+- CHIN489 : Reading Modern Sinophone Literature
+
+XX. Human Anatomy/Physiology:
 - ANAT392 : Gross Anatomy of the Limbs and Trunk
-- ANAT511 : Fundamentals of Body Design: Basic Principles in Human Anatomy as Illustrated by the Organization of the Back and Upper Limb
-- ANAT548 : Directed Studies in Anatomy & Cell Biology
+- BIOL155 : Human Biology: Physiology and Introductory Anatomy
+- CAPS390 : Introduction to Microscopic Human Anatomy
+- CAPS391 : Introduction to Gross Human Anatomy
+- AUDI402 : Neuroanatomy for Audiology and Speech-Language Pathology
+- KIN411 : Neuroanatomy of Human Movement
+- KIN482 : Advanced Seminar in Neuromechanics
+- KIN110 : Human Anatomy
+- KIN131 : Systems Physiology I
+- KIN132 : Systems Physiology II
+- CAPS301 : Human Physiology
+- CAPS303 : Laboratory in Human Physiology (Honours)
+- KIN235 : Exercise Physiology I
+- KIN435 : Pulmonary Physiology of Exercise
+- KIN438 : Skeletal Muscle Physiology: Molecular Adaptions to Training, Disuse and Aging
 
-21. Anthropology:
-[{"course":"100","course_title":"Introduction to Cultural Anthropology","detail":""},
-{"course":"100","course_title":"Introduction to Cultural Anthropology","detail":"A"},
-{"course":"100","course_title":"Introduction to Cultural Anthropology","detail":"B"},
-{"course":"201","course_title":"Ethnic Relations","detail":""},
-{"course":"201","course_title":"Culture, Race and Inequality","detail":""},
-{"course":"202","course_title":"Contemporary Social Problems","detail":"A"},
-{"course":"202","course_title":"Contemporary Social Problems","detail":"B"},
-{"course":"202","course_title":"Contemporary Social Problems","detail":"E"},
-{"course":"203","course_title":"Anthropology of Drugs","detail":""},
-{"course":"205","course_title":"The Anthropology of Insurrections and Revolution","detail":""},
-{"course":"206","course_title":"Witches, Vampires, and Zombies: Anthropology of the Supernatural","detail":""},
-{"course":"210","course_title":"Eating Culture","detail":""},{"course":"213","course_title":"Sex, Gender, and Culture","detail":""},
-{"course":"215","course_title":"Japanese Popular Culture","detail":""},
-{"course":"217","course_title":"Culture and Communication","detail":""},
-{"course":"220","course_title":"First Nations of British Columbia","detail":""},
-{"course":"220","course_title":"Contemporary Indigenous Issues in British Columbia","detail":""},
-{"course":"227","course_title":"Introduction to Medical Anthropology","detail":""},
-{"course":"300","course_title":"Contemporary Anthropological Theory","detail":"A"},
-{"course":"300","course_title":"Contemporary Anthropological Theory","detail":"B"},
-{"course":"302","course_title":"Ethnography of South Asia","detail":"A"},
-{"course":"303","course_title":"Ethnography of Special Areas","detail":"C"},
-{"course":"303","course_title":"Ethnography of Special Areas","detail":"D"},
-{"course":"303","course_title":"Ethnography of Special Areas","detail":"A"},
-{"course":"307","course_title":"Ethnography of Korea","detail":"A"},
-{"course":"308","course_title":"Ethnography of Sub-Saharan Africa","detail":""},
-{"course":"311","course_title":"Ethnography of the Middle East","detail":""},
-{"course":"312","course_title":"Anthropology of Gender & Sexuality","detail":""},
-{"course":"315","course_title":"Japanese Culture and Society","detail":""},
-{"course":"316","course_title":"Culture, Power & Politics","detail":""},
-{"course":"317","course_title":"Linguistic Anthropology","detail":"A"},
-{"course":"329","course_title":"Contemporary First Nations Issues","detail":"A"},
-{"course":"329","course_title":"Contemporary Indigenous Issues in a Global Perspective","detail":"A"},
-{"course":"332","course_title":"Oral Tradition","detail":""},
-{"course":"341","course_title":"Museums, Heritage and Memory","detail":"A"},
-{"course":"350","course_title":"Ethnography of the Pacific Islands: Polynesia and Micronesia","detail":"A"},
-{"course":"351","course_title":"Ethnography of the Pacific Islands: Melanesia","detail":"A"},
-{"course":"360","course_title":"Introduction to Ecological Anthropology","detail":""},
-{"course":"378","course_title":"Anthropology of Media","detail":""},
-{"course":"400","course_title":"History of Anthropology","detail":"A"},
-{"course":"400","course_title":"History of Anthropology","detail":"B"},
-{"course":"403","course_title":"Ethnography of Special Areas","detail":"G"},
-{"course":"407","course_title":"Principles of Field Work","detail":""},
-{"course":"414","course_title":"Anthropology of Globalization","detail":""},
-{"course":"418","course_title":"Anthropological Statistics","detail":""},
-{"course":"429","course_title":"Global Health in Cross-Cultural Contexts","detail":""},
-{"course":"430","course_title":"Indigenous Governance, British Columbia","detail":""},
-{"course":"431","course_title":"Museum Practice and Curatorship","detail":"C"},
-{"course":"437","course_title":"Gardens of Culture: The Anthropology of Food Systems","detail":""},
-{"course":"452","course_title":"Conservation of Inorganic Materials","detail":""},
-{"course":"461","course_title":"Anthropological Study of Local Ecological Knowledge","detail":""},
-{"course":"478","course_title":"Ethnographic Film Methods","detail":"B"},
-{"course":"480","course_title":"Urban Ethnographic Field School (UEFS)","detail":"B"},
-{"course":"495","course_title":"Advanced Studies in Anthropology","detail":"A"},
-{"course":"495","course_title":"Advanced Studies in Anthropology","detail":"B"},
-{"course":"500","course_title":"History of Anthropological Thought","detail":""},
-{"course":"516","course_title":"Qualitative Methods in Anthropology","detail":""},
-{"course":"517","course_title":"Archaeological Methods","detail":""},
-{"course":"518","course_title":"Museum Methods","detail":"A"},
-{"course":"540","course_title":"Advanced Seminar","detail":"A"},
-{"course":"540","course_title":"Advanced Seminar","detail":"B"},
-{"course":"540","course_title":"Advanced Seminar","detail":"D"}]
+XX. Ethnography:
+- ANTH302 : Ethnography of South Asia (A)
+- ANTH303 : Ethnography of Special Areas (C)
+- ANTH303 : Ethnography of Special Areas (D)
+- ANTH303 : Ethnography of Special Areas (A)
+- ANTH307 : Ethnography of Korea (A)
+- ANTH311 : Ethnography of the Middle East
+- ANTH308 : Ethnography of Sub-Saharan Africa
+- ANTH350 : Ethnography of the Pacific Islands: Polynesia and Micronesia (A)
+- ANTH351 : Ethnography of the Pacific Islands: Melanesia (A)
+- ANTH403 : Ethnography of Special Areas (G)
+- ANTH478 : Ethnographic Film Methods (B)
+- ANTH480 : Urban Ethnographic Field School (UEFS) (B)
+- ASIA515 : Ethnography and History in East Asia
+
+XX. Anthropology
+- ANTH100 : Introduction to Cultural Anthropology
+- ANTH201 : Ethnic Relations
+- ANTH202 : Contemporary Social Problems
+- ANTH203 : Anthropology of Drugs
+- ANTH205 : The Anthropology of Insurrections and Revolution
+- ANTH206 : Witches, Vampires, and Zombies: Anthropology of the Supernatural
+- ANTH227 : Introduction to Medical Anthropology
+- ANTH300 : Contemporary Anthropological Theory 
+- ANTH312 : Anthropology of Gender & Sexuality
+- ANTH317 : Linguistic Anthropology
+- ANTH332 : Oral Tradition
+- ANTH341 : Museums, Heritage and Memory
+- ANTH360 : Introduction to Ecological Anthropology
+- ANTH378 : Anthropology of Media
+- ANTH400 : History of Anthropology
+- ANTH400 : History of Anthropology 
+- ANTH407 : Principles of Field Work
+- ANTH414 : Anthropology of Globalization
+- ANTH418 : Anthropological Statistics
+- ANTH429 : Global Health in Cross-Cultural Contexts
+- ANTH431 : Museum Practice and Curatorship 
+- ANTH437 : Gardens of Culture: The Anthropology of Food Systems
+- ANTH452 : Conservation of Inorganic Materials
+- ANTH461 : Anthropological Study of Local Ecological Knowledge
 
 XX. Soil Science:
 - APBI100 : Soil and the Global Environment
@@ -186,6 +304,29 @@ XX. Plant Science:
 - APBI444 : Agroforestry
 - APBI462 : Conservation Agriculture and Biodiversity Monitoring
 - APBI463 : Insects in Agroecosystems
+- BIOL320 : Survey of Algae
+- BIOL321 : Morphology and Evolution of Bryophytes
+- BIOL323 : Structure and Reproduction of Fungi
+- BIOL324 : Introduction to Seed Plant Taxonomy
+- BIOL340 : Plant Genomics
+- BEST201 : Plants, Carbon, and Environment
+- BIOL205 : Comparative Invertebrate Zoology
+- BIOL209 : Biodiversity of Algae, Fungi and Bryophytes
+- BIOL210 : Vascular Plants
+- BIOL343 : Plants and Peoples
+- BIOL351 : Plant Physiology I
+- BIOL352 : Plant Physiology II: Plant Development
+- BIOL440 : Plant Genomics
+- BIOL406 : Plant Ecology I
+- HGSE332 : Plant Ecology and Diversity
+- BIOL415 : Evolutionary Processes in Plants
+- BIOL421 : Plant-Microbe Interactions
+- BIOL433 : Plant Genetics
+- HGSE333 : Indigenous Plant Knowledge: Ethnoecology and Ethnobotany
+- FRST456 : The Role of Natural and Planted Forests in the Global Bioeconomy
+- FRST311 : Plant Physiology I
+- FRST200 : Forest Plant Biology I
+- FRST210 : Forest Plant Biology II
 
 XX. Animal Science
 - APBI214 : Animal Sheltering and Companion Animal Support Services
@@ -208,46 +349,217 @@ XX. Aquaculture and Fisheries:
 - APBI418 : Intensive Fish Production
 - APBI419 : Fish Health
 
-XX. Applied Biology and Research:
-- APBI290 : Introductory Topics in Applied Biology
-- APBI398 : Research Methods in Applied Biology
-- APBI490 : Advanced Topics in Applied Biology
-- APBI496 : Applied Animal Biology Practicum
-- APBI497 : Directed Studies
-- APBI499 : Undergraduate Thesis
-
 XX. Environmental Science and Conservation:
 - APBI423 : Ecological Restoration
 - APBI428 : Integrated Pest Management
-- APBI490 : Advanced Topics in Applied Biology (possibly related to environmental conservation)
+
+XX. Communication
+- APSC176 : Engineering Communication
+- APSC201 : Technical Communication
+- BMEG201 : Technical Communication for Biomedical Engineers
+- CIVL203: Technical Communication in Civil Engineering
+- CNPS331 : Communication Skills in Global Contexts
+- COMM196 : Business Communications I
+- COMM220 : Business Communications
+- COMM395 : Business Communications
+- COMM396 : Business Communications II
+- COMM462 : Integrated Marketing Communication
+- COMM439 : Business Telecommunications
+- CPEN281 : Technical Communication
+- PHAR180 : Pharmaceutical Topics and Communication Seminar I
+- PHAR280 : Pharmaceutical Topics and Communication Seminar II
+- PHAR380 : Pharmaceutical Topics and Communication Seminar III
+- LLED213 : Introduction to Intercultural Communication and Socialization in Multicultural Contexts
+- JAPN450 : Advanced Oral Communication I
+- FRST497 : Communications and Professionalism
+- EDCP570 : Seminar in the Teaching of Information and Communication Technologies
+- ANTH217 : Culture and Communication
 
 XX. Engineering Fundamentals:
 - APSC100 : Introduction to Engineering I
 - APSC101 : Introduction to Engineering II
-
-XX. Engineering Analysis:
 - APSC172 : Engineering Analysis I
 - APSC173 : Engineering Analysis II
 
-XX. Engineering Communication:
-- APSC176 : Engineering Communication
-- APSC201 : Technical Communication
+XX. Machine Learning:
+- CPSC340: Machine Learning and Data Mining
+- CPSC322: Introduction to Artificial Intelligence
+- CPSC330: Applied Machine Learning
+- CPSC440: Advanced Machine Learning
+- DSCI100 : Introduction to Data Science
+- DSCI310 : Reproducible and Trustworthy Workflows for Data Science
+- DSCI320 : Visualization for Data Science
 
-XX. Computation in Engineering Design:
+XX. Databases and Data Management:
+- CPSC304: Introduction to Relational Databases
+- CPSC404: Advanced Relational Databases
+- CPSC368: Databases in Data Science
+- CPSC504: Data Management
+
+XX. Algorithms and Data Structures:
+- CPSC221: Basic Algorithms and Data Structures
+- CPSC259: Data Structures and Algorithms for Electrical Engineers
+- CPSC320: Intermediate Algorithm Design and Analysis
+
+XX. Software Engineering:
 - APSC160 : Introduction to Computation in Engineering Design
+- CPEN221 : Software Construction I
+- CPEN223 : Software Design for Engineers
+- CPEN321 : Software Engineering
+- CPEN322 : Software Construction II
+- CPEN421 : Software Project Management
+- CPEN522 : Software Verification and Testing
+- CPEN523 : Software Project Management
+- CPSC210: Software Construction
+- CPSC310: Introduction to Software Engineering
 
-XX. Electricity and Waves:
+XX. System and Operating Systems:
+- CPEN331 : Operating Systems
+- CPEN333 : System Software Engineering
+- CPEN431 : Design of Distributed Software Applications
+- CPEN432 : Real-time System Design
+- CPEN533 : Error Resilient Computing Systems
+- CPSC317: Internet Computing
+
+XX. Computing Basics:
+- CPEN211 : Introduction to Microcomputers
+- CPEN211 : Computing Systems I
+- CPEN212 : Computing Systems II
+- CPEN312 : Digital Systems and Microcomputers
+- CPEN411 : Computer Architecture
+- CPEN412 : Microcomputer Systems Design
+
+XX. Foundations in Programming:
+CPSC100: Computational Thinking
+CPSC103: Introduction to Systematic Program Design
+CPSC107: Systematic Program Design
+CPSC110: Computation, Programs, and Programming
+CPSC121: Models of Computation
+
+XX. Human-Computer Interaction:
+CPSC344: Introduction to Human Computer Interaction Methods
+CPSC444: Advanced Methods for Human Computer Interaction
+CPSC543: Physical User Interface Design and Evaluation
+CPSC544: Human Computer Interaction
+
+XX. Computer Graphics and Visualization:
+CPSC314: Computer Graphics
+CPSC524: Computer Graphics: Modelling
+
+XX. Electricity, Magnets, and Waves:
 - APSC178 : Electricity, Magnetism, and Waves
+- PHYS504 : Special Relativity and Classical Electromagnetism
+- PHYS118 : Electricity, Light and Radiation
+- PHYS301 : Electricity and Magnetism
+- ELEC352 : Electric Energy Systems
+- ELEC211 : Engineering Electromagnetics
+- ELEC311 : Electromagnetic Fields and Waves
+- PHYS131 : Energy and Waves 
+- ELEC411 : Antennas and Propagation
+- ELEC412 : Optical Waveguides and Photonics
+- BMEG220 : Circuits and Electromagnetics with Application to Biomedical Engineering
 
-XX. Mathematics for Engineers:
+XX. Probability/Stats:
+- MATH401 : Green's Functions and Variational Methods
+- MATH418 : Probability
+- MATH419 : Stochastic Processes
+- MATH418 : Probability
+
+XX. Number Theory:
+- MATH312 : Introduction to Number Theory
+- MATH313 : Topics in Number Theory
+- MATH437 : Number Theory
+
+XX. Geometry and Topology:
+- MATH308 : Euclidean Geometry
+- MATH309 : Topics in Geometry
+- MATH320 : Real Variables I
+- MATH321 : Real Variables II
+- MATH322 : Introduction to Group Theory
+- MATH323 : Introduction to Rings and Modules
+- MATH426 : Introduction to Topology
+
+XX. Applied Mathematics:
+- MATH300 : Introduction to Complex Variables
+- MATH301 : Applied Analysis
+- MATH303 : Introduction to Stochastic Processes
+- MATH305 : Applied Complex Analysis
+- MATH307 : Applied Linear Algebra
+- MATH360 : Mathematical Modelling in Science
+- MATH361 : Introduction to Mathematical Biology
+- MATH400 : Applied Partial Differential Equations
+- MATH401 : Green's Functions and Variational Methods
+- MATH405 : Numerical Methods for Differential Equations
+- MATH406 : Variational and Approximate Methods in Applied Mathematics
+- MATH419 : Stochastic Processes
+- MATH441 : Mathematical Modelling: Discrete Optimization Problems
+- MATH442 : Graphs and Networks
+- MATH444 : Mathematical Research and Writing
+- MATH445 : Applied Nonlinear Dynamics and Chaos
+- PHYS312 : Introduction to Mathematical Physics
+
+XX. Linear Algebra:
+- MATH152 : Linear Systems
+- MATH221 : Matrix Algebra
+- MATH223 : Linear Algebra
+- MATH318 : Probability with Physical Applications
+- MATH310 : Abstract Linear Algebra
+- MATH312 : Introduction to Number Theory
+- MATH313 : Topics in Number Theory
+- MATH412 : Advanced Linear Algebra
+- MATH423 : Commutative Algebra
 - APSC179 : Linear Algebra for Engineers
-
-XX. Statics:
 - APSC180 : Statics
 
-XX. Matter and Energy:
+XX. Calculus:
+- MATH100 : Differential Calculus with Applications to Physical Sciences and Engineering
+- MATH100 : Differential Calculus with Applications
+- MATH102 : Differential Calculus with Applications to Life Sciences
+- MATH104 : Differential Calculus with Applications to Commerce and Social Sciences
+- MATH110 : Differential Calculus
+- MATH120 : Honours Differential Calculus
+- MATH180 : Differential Calculus with Applications
+- MATH184 : Differential Calculus for Social Science and Commerce
+- MATH190 : Calculus Survey
+- MATH226 : Advanced Calculus I
+- MATH227 : Advanced Calculus II
+- MATH253 : Multivariable Calculus
+- MATH254 : Multivariable and Vector Calculus for Mechanical Engineering
+- MATH264 : Vector Calculus for Electrical Engineering
+- MATH101 : Integral Calculus with Applications to Physical Sciences and Engineering
+- MATH101 : Integral Calculus with Applications
+- MATH103 : Integral Calculus with Applications to Life Sciences
+- MATH105 : Integral Calculus with Applications to Commerce and Social Sciences
+- MATH121 : Honours Integral Calculus
+- MATH200 : Calculus III
+
+XX. Mathematics Education:
+- EDCP343 : Mathematics Education: Problem Solving
+- EDCP441 : Assessment in Mathematics Education
+- EDCP442 : Mathematics History for Teachers
+
+XX. Energy:
 - APSC182 : Matter and Energy I
 - APSC183 : Matter and Energy II
+- PHYS333 : Energy and Climate
+- BEST202 : Alternative Energy Systems
+- BEST301 : Bioenergy
+- PHYS131 : Energy and Waves 
+
+XX. Energy Systems:
+- ELEC352 : Electric Energy Systems
+- MECH470 : Energy Conversion Systems
+- CHBE483 : Energy Engineering
+- CHBE583 : Energy Engineering
+- CEEN501 : Energy System Fundamentals
+- CEEN503 : Sustainable Energy Systems
+
+XX. Power Systems:
+- ELEC453 : Power System Analysis
+- ELEC454 : Power System Analysis II
+- ELEC455 : Power Systems Protection
+- ELEC456 : Decision Support Methods in Power Systems Operation
+- ELEC457 : Optimization of Power System Operation
 
 XX. Technology and Society:
 - APSC261 : Technology and Society I
@@ -257,35 +569,22 @@ XX. Engineering Materials:
 - APSC278 : Engineering Materials
 - APSC279 : Engineering Materials Laboratory
 
-XX. Nuclear Weapons and Arms Control:
-- APSC377 : Nuclear Weapons and Arms Control
-
-XX. Prototyping:
-- APSC383 : Prototyping
-
-XX. Management and Product Marketing:
-- APSC440 : Management Fundamentals for Technology-Based Product Marketing and Development
-
-XX. Professional Engineering Practice:
-- APSC450 : Professional Engineering Practice
-
-XX. Global Engineering Leadership:
-- APSC461 : Global Engineering Leadership
-
-XX. Interdisciplinary Engineering Design Project:
-- APSC496 : Interdisciplinary Engineering Design Project
-- APSC496 : Interdisciplinary Engineering Design Project
-
-XX. Entrepreneurship for Engineers:
+XX. Entrepreneurship:
 - APSC486 : New Venture Design
-- APSC540 : Entrepreneurial Thinking for Applied Scientists
-- APSC541 : Technology Entrepreneurship for Engineers
-
-XX. Topics in Engineering:
-- APSC598 : Topics in Engineering
-
-XX. Seafood Processing:
-- AQUA507 : Seafood Processing
+- COMR280 : Entrepreneurship
+- COMR382 : Economics of Entrepreneurship and Innovation
+- COMM283 : Starting a Small Business
+- COMM387 : Entrepreneurial Finance
+- COMM389 : New Venture Strategies
+- COMM466 : New Venture Design
+- COMM489 : Applied Methods in Technology Start-ups at CDL
+- COMM485 : Social Entrepreneurship
+- COMM280 : Entrepreneurship
+- COMM382 : Economics of Entrepreneurship and Innovation
+- COMM383 : Innovation Leadership
+- COMM387 : Entrepreneurial Finance
+- COMM387 : Entrepreneurial Finance and Private Equity
+- COMM488 : Design Methods for Business Innovation
 
 XX. Arabic Study:
 - ARBC101 : Beginning Classical and Quranic Arabic I
@@ -295,270 +594,15 @@ XX. Arabic Study:
 - ARBC420 : Supervised Study in Classical and Quranic Arabic
 - ARBM101 : Introductory Modern Standard Arabic I
 
-XX. Architectural Design: 
-- ARCH500 : Architectural Design Studio I
-- ARCH501 : Architectural Design Studio II
-- ARCH520 : Architectural Design Studio III
-- ARCH521 : Architectural Design Studio IV
-- ARCH540 : Architectural Design Studio V
-
-XX. Architectual History 
-- ARCH504 : Topics in Architectural History I (Pre-1900)
-- ARCH505 : Topics in Architectural History II (1900-Present)
-
-XX. Architectural Technology:
-- ARCH511 : Architectural Technology I
-- ARCH531 : Architectural Technology II
-
-XX. Structures:
-- ARCH512 : Structures I
-- ARCH532 : Architectural Structures II
-
-XX. Environmental Systems and Controls:
-- ARCH513 : Environmental Systems and Controls I
-- ARCH533 : Environmental Systems and Controls II
-
-XX. Design Media:
-- ARCH515 : Design Media I
-- ARCH517 : Design Media II
-
-XX. Contemporary Theories in Architecture:
-- ARCH523 : Contemporary Theories in Architecture
-
-XX. Study of Architecture Abroad:
-- ARCH538 : Study of Architecture Abroad
-
-XX. Professional Practice:
-- ARCH541 : Professional Practice
-
-XX. Seminar in Architecture:
-- ARCH544 : Seminar in Architecture
-
-XX. Directed Studies in Architecture:
-- ARCH545 : Directed Studies in Architecture
-
-XX. Graduate Project:
-- ARCH548 : Graduate Project Part I
-- ARCH549 : Graduate Project Part II
-
-XX. Communicating Construction:
-- ARCH551 : Communicating Construction
-
-XX. Seminar: Technology and Analysis:
-- ARCH571 : Seminar: Technology and Analysis
-
-XX. Green Building and Regenerative Development:
-- ARCH574 : Green Building Contemporary Practice
-- ARCH575 : Regenerative Development
-
-XX. Seminar: Design Media:
-- ARCH577 : Seminar: Design Media
-
-XX. Special Topics:
-- ARCH597 : Special Topics
-
-XX. Human Origins and Evolution: 
-- ARCL140 : Bones: The Origins of Humanity
-
-XX. Archaeological Methods:
-- ARCL203 : Archaeological Methods
-
-XX. Forensic Anthropology:
-- ARCL228 : Forensic Anthropology
-
-XX. Relationship between Animals, Alcohol, and Agriculture:
-- ARCL235 : Taming the Wild: Animals, Alcohol and Agriculture : Relationship between Animals, Alcohol, and Agriculture
-
-XX. Archaeological Interpretation:
-- ARCL305 : Archaeological Interpretation
-
-XX. Fieldwork in Archaeology:
-- ARCL306 : Summer Field Training in Archaeology : Fieldwork in Archaeology
-
-XX. Study of Primates:
-- ARCL326 : Primatology : Study of Primates
-
-XX. Molecular Analysis in Archaeology:
-- ARCL345 : Molecular Archaeology : Molecular Analysis in Archaeology
-
-XX. Mapping in Archaeology and Anthropology:
-- ARCL405 : Archaeological and Anthropological Mapping : Mapping in Archaeology and Anthropology
-
-XX. Archaeology of a Specific Region/Area:
-- ARCL410 : Archaeology of a Special Area : Archaeology of a Specific Region/Area
-
-XX. Archaeology of Death and Burial:
-- ARCL419 : The Archaeology of Death : Archaeology of Death and Burial
-
-XX. Practice of Archaeology and Cultural Resource Management:
-- ARCL424 : Practising Archaeology and the Management of Cultural Resources : Practice of Archaeology and Cultural Resource Management
-
-XX. Study of Ancient Diets:
-- ARCL425 : Paleodiet : Study of Ancient Diets
-
-XX. Archival Diplomatics:
-- ARST510 : Archival Diplomatics
-
-XX. Arrangement and Description of Archives:
-- ARST515 : Arrangement and Description of Archives
-- ARST545 : Advanced Arrangement and Description of Archival Documents
-
-XX. Management of Records and Archives:
-- ARST516 : Management of Current Records
-- ARST550 : Management of : AUDIovisual and Non-textual Archives
-- ARST565 : Administering Records under Freedom of Information and Protection of Privacy Legislation
-- ARST570 : Management of Information Organizations
-- ARST573 : Archival Systems and the Profession
-- ARST580 : Records, Archives, and the Law
-
-XX. Selection and Acquisition:
-- ARST520 : Selection and Acquisition of Archival Documents
-
-XX. Archival Public Services:
-- ARST540 : Archival Public Services
-
-XX. Preservation and Conservation:
-- ARST555 : The Preservation of Digital Records
-- ARST587 : Preservation
-
-XX. Database Design and Automation:
-- ARST554 : Database Design
-- ARST556 : Topics in Archival Automation
-
-XX. Records and Information Management:
-- ARST575 : Topics in the Management of Records
-
-XX. Indigenous Initiatives and Protocols:
-- ARST585 : Information Practice and Protocol in Support of Indigenous Initiatives
-
-XX. Archival Research and Scholarship:
-- ARST591 : Archival Research and Scholarship
-
-XX. Crisis and Contradiction in Art and Architecture:
-- ARTH102 : Crisis and Contradiction in Art and the Built Environment
-
-XX. Byzantine Art and Culture:
-- ARTH210 : Byzantium: Arts of an Empire
-
-XX. Medieval Art and Society:
-- ARTH225 : Art, Patrons, and : AUDIences in the Middle Ages
-
-XX. Modern Art:
-- ARTH227 : What is Modern Art?
-
-XX. Asian Arts and Architecture:
-- ARTH251 : Asian Arts: From Chinese Warriors to Bollywood Posters
-- ARTH253 : Asian Architecture: Sacred and Urban Spaces
-
-XX. Methods and Approaches in Art History:
-- ARTH300 : Seminar on Methods and Approaches in Art History
-
-XX. Archaeology of Ancient Iraq and Syria:
-- ARTH319 : The Archaeology of Ancient Iraq and Syria: Babylon and Beyond
-
-XX. Spain, Colonial Latin America, and Entangled Worlds:
-- ARTH320 : Entangled Worlds: Spain and Colonial Latin America (1500-1700)
-
-XX. Early Modern Italian Art and Culture:
-- ARTH322 : Early Modern Italian Art and Culture (ca.1550-1700)
-
-XX. Renaissance Art and Culture in Northern Europe:
-- ARTH323 : Heaven and Earth: Renaissance Art and Culture in Northern Europe
-
-XX. Urban and Courtly Arts in Early Modern Northern Europe:
-- ARTH324 : Urban and Courtly Arts in Early Modern Northern Europe (1600-1700)
-
-XX. Ancient Egypt: Art and Archaeology:
-- ARTH325 : Ancient Egypt: The Archaeology of the Land of the Pharaohs
-
-XX. Greek and Roman Art and Architecture:
-- ARTH331 : Greek Art and Architecture
-- ARTH332 : Roman Art and Architecture
-
-XX. Visual Culture in the Age of Enlightenment and Revolution:
-- ARTH338 : Visual Culture in the Age of Enlightenment and Revolution (1715-1830)
-
-XX. 19th-Century Art and Social Space:
-- ARTH339 : 19th-Century Art and Social Space
-
-XX. 20th Century Art and Culture:
-- ARTH340 : 20th Century Art and Culture: The Triumph and Demise of Modernism
-- ARTH341 : 20th Century Art and Culture: The Postmodern
-
-XX. Latin American Art:
-- ARTH342 : Latin American Art: Modern and Contemporary
-
-XX. Canadian Art:
-- ARTH343 : Inventing Canada Through Art
-- ARTH344 : Contemporary Conversations about Art in Kanata/Canada
-- ARTH443 : Seminar in Canadian Art
-
-XX. Photography and its History:
-- ARTH345 : History of Photography: Archive, Spectacle, Reality
-
-XX. Art and Urban Culture in the Islamic World:
-- ARTH351 : Art and Urban Culture in the Islamic World
-- ARTH450 : Seminar in Art in the Islamic World
-
-XX. Chinese Art and Culture:
-- ARTH358 : Chinese Art for the Afterlife
-- ARTH360 : Chinese Painting: Word and Image
-- ARTH459 : Seminar in Chinese Art
-
-XX. Japanese Art:
-- ARTH368 : Art in Japan: Print Media
-
-XX. Art and Technology:
-- ARTH380 : Art as Technology
-
-XX. African Art:
-- ARTH410 : Seminar in African Art
-
-XX. Middle Ages Art:
-- ARTH432 : Seminar in the Art of the Middle Ages
-
-XX. Early Modern Art:
-- ARTH436 : Seminar in Early Modern Art
-
-XX. 18th & 19th-Century Visual Culture:
-- ARTH439 : Seminar in 18th & 19th-Century Visual Culture
-
-XX. Modern and Contemporary Art:
-- ARTH440 : Seminar in Modern and Contemporary Art
-- ARTH540 : Studies in 20th Century Art
-- ARTH540 : Studies in 20th Century Art
-
-XX. North American Indigenous Art:
-- ARTH476 : Seminar in North American Indigenous Art
-
-XX. Visual and Digital Media Theory:
-- ARTH480 : Visual and Digital Media Theory
-
-XX. Renaissance Art:
-- ARTH535 : Early Modern: Renaissance
-
-XX. 19th-Century Art:
-- ARTH539 : Studies in 19th-Century Art
-
-XX. Methodology of Art History:
-- ARTH571 : The Methodology of Art History
-
-XX. Indigenous Arts of the Americas:
-- ARTH561 : Studies in the Indigenous Arts of the Americas
-
-XX. Arts One:
-- ARTS001 : Arts One
-
-XX. Introduction to Asian Cultures and Traditions:
+XX. Asian Culture:
 - ASIA100 : Introduction to Traditional Asia
 - ASIA101 : Introduction to Modern Asia
-- ASIA110 : Introduction to Religions in Asia
 - ASIA150 : Asian Internets
-
-XX. Cultural Foundations and History:
+- ACAM300 : Dis/Orienting Asian Canada
+- ACAM390 : Asian Migrations in a Global Context
+- ACAM350 : Asian Canadian Community-Based Media
 - ASIA200 : Cultural Foundations of East Asia
 - ASIA208 : Cultural Foundations of South Asia
-- ASIA311 : Tibetan Buddhism
 - ASIA313 : Tibetan and Himalayan Culture and Society
 - ASIA314 : Premodern Japan
 - ASIA315 : Japan from Feudal to Modern State
@@ -567,14 +611,7 @@ XX. Cultural Foundations and History:
 - ASIA323 : History of Cantonese Worlds
 - ASIA324 : Literature of Hong Kong
 - ASIA325 : Hong Kong Cinema
-- ASIA328 : Modern Islam
-- ASIA330 : Islam in South Asia (1750 to present)
-- ASIA332 : Confucianism in China and Beyond: Reinventions of Tradition
 - ASIA338 : India in the Age of Revolutions
-- ASIA341 : Classical Chinese Literature in Translation
-- ASIA342 : Chinese Literature in Translation: The Vernacular Tradition
-- ASIA347 : Traditional Korean Literature in Translation
-- ASIA352 : Modern Chinese Fiction in Translation
 - ASIA356 : Korean Cinema
 - ASIA357 : Modern Korean Literature in Translation
 - ASIA370 : The Sanskrit Cosmopolis: India and the World, 200-1500 CE
@@ -585,19 +622,13 @@ XX. Cultural Foundations and History:
 - ASIA465 : Japanese Horror
 - ASIA484 : The History of the Choson Dynasty
 - ASIA491 : India and the Persianate World
-
-XX. Asian Religions and Philosophies:
 - ASIA210 : Traditions of Yoga
-- ASIA206 : Modern Islam
-- ASIA207 : Classical Islam
-- ASIA250 : Introduction to Buddhism
-- ASIA311 : Tibetan Buddhism
 - ASIA346 : Topics in Japanese Cultural History II: The Early Modern Age
-- ASIA381 : Daoist (Taoist) Religion and Its Philosophical Background
-- ASIA387 : Japanese Religions
-- ASIA412 : Pre-Modern Chinese Poetry (Pre-Qin to Tang)
-- ASIA413 : Pre-Modern Chinese Poetry (Tang to Qing)
-- ASIA451 : Modern Chinese Authors in Translation
+- ASIA456 : History and Culture of Taiwan
+- ASIA511 : Modern Tibet
+- ASIA516 : Race and Ethnicity in Asian Studies
+- ASIA551 : 20th Century China: The People's Republic
+- ASIA552 : Issues in International Relations of East Asia
 
 XX. Asian Literature, Film, and Media:
 - ASIA212 : Writing About Japan
@@ -610,67 +641,27 @@ XX. Asian Literature, Film, and Media:
 - ASIA326 : Critical Approaches to Manga and Anime
 - ASIA339 : The Construction of South Asian Communities in the Diaspora
 - ASIA344 : Topics in Japanese Cultural History I: Aristocrats and Warriors
-- ASIA345 : Chinese Film Classics
 - ASIA353 : Introduction to Hindi Film
 - ASIA354 : Introduction to Japanese Cinema
-- ASIA355 : History of Chinese Cinema
 - ASIA356 : Korean Cinema
-- ASIA361 : Modern Chinese Fiction in Translation II
 - ASIA363 : Fiction and Film from Modern Taiwan
 - ASIA364 : Modern Japanese Literature in Translation
 - ASIA397 : The Idea of India
 - ASIA398 : Narrative Literature in Premodern India
 - ASIA399 : Films of the South Asian Diaspora
-- ASIA443 : National Narratives in Chinese Literature and Film
 - ASIA444 : Topics in Modern Japanese Fiction and Cultural History
 - ASIA445 : Japanese Crime Fiction
 - ASIA447 : Korean Women's Literature
 - ASIA453 : Japanese Travel Literature
-- ASIA461 : Chinese Literature of the Ming and Qing Dynasties in Translation
 - ASIA463 : Japanese Documentary Media
 - ASIA464 : Japanese Women's Self-Writing
 - ASIA465 : Japanese Horror
 - ASIA484 : The History of the Choson Dynasty
 - ASIA492 : Asian Literature and Film
-
-XX. Asian History and Politics:
 - ASIA309 : South Asian Beyond South Asia
 - ASIA402 : Language, Writing, and Linguistic Thought in the History of the Sinographic Cosmopolis
 - ASIA410 : International Relations in Premodern East Asia
-- ASIA411 : Chinese Political Thought and Institutions
 - ASIA447 : Korean Women's Literature
-- ASIA456 : History and Culture of Taiwan
-- ASIA503 : Historical Chinese Dictionaries
-- ASIA510 : Indian Mahayana Buddhism and the Transcultural Formation of East Asian Buddhism
-- ASIA511 : Modern Tibet
-- ASIA515 : Ethnography and History in East Asia
-- ASIA516 : Race and Ethnicity in Asian Studies
-- ASIA551 : 20th Century China: The People's Republic
-- ASIA552 : Issues in International Relations of East Asia
-
-XX. South Asian Studies:
-- ASIA309 : South Asian Beyond South Asia
-- ASIA328 : Modern Islam
-- ASIA330 : Islam in South Asia (1750 to present)
-- ASIA336 : Sufi and Bhakti Devotional Literatures
-- ASIA337 : The Korean People in Modern Times (1600 to the present)
-- ASIA339 : The Construction of South Asian Communities in the Diaspora
-- ASIA360 : India in the Age of Revolutions
-- ASIA398 : Narrative Literature in Premodern India
-- ASIA399 : Films of the South Asian Diaspora
-- ASIA501 : Research Methods and Source Materials in Classical Chinese Studies
-- ASIA553 : Special Topics in South Asian Studies: Women and Asian Immigrant Communities
-
-XX. East Asian Studies:
-- ASIA518 : Contemporary Chinese Popular Cultures
-- ASIA361 : Modern Chinese Fiction in Translation II
-- ASIA396 : Chinese Grammar and Usage II
-- ASIA385 : Chinese Intellectual History
-- ASIA553 : Special Topics in East Asian Studies: Women and Asian Immigrant Communities
-- ASIA559 : Modern Chinese Fiction and Literary Theory
-- ASIA580 : Directed Readings
-
-XX. Comparative Studies:
 - ASIA305 : Asian Horror Cinema: National Nightmares and Specters of Trauma
 - ASIA325 : Hong Kong Cinema
 - ASIA399 : Films of the South Asian Diaspora
@@ -680,68 +671,35 @@ XX. Comparative Studies:
 - ASIA591 : Critical Issues in Asian Studies
 - ASIA498 : Asia in Museums/the Museum in Asia
 
-XX. ASIC stuff:
-- ASIC200 : Global Issues in the Arts and Sciences
-- ASIC220 : Introduction to Sustainability
+XX. South Asian Studies:
+- ASIA309 : South Asian Beyond South Asia
+- ASIA336 : Sufi and Bhakti Devotional Literatures
+- ASIA337 : The Korean People in Modern Times (1600 to the present)
+- ASIA339 : The Construction of South Asian Communities in the Diaspora
+- ASIA360 : India in the Age of Revolutions
+- ASIA398 : Narrative Literature in Premodern India
+- ASIA399 : Films of the South Asian Diaspora
 
 XX. Sign Language: 
 - ASL100 : American Sign Language and Deaf Culture I
 - ASL101 : American Sign Language and Deaf Culture II
 
-XX. Introduction to Astronomy:
+XX. Astronomy:
 - ASTR101 : Introduction to the Solar System
 - ASTR102 : Introduction to Stars and Galaxies
-
-XX. Advanced Astronomy:
 - ASTR200 : Frontiers of Astrophysics
 - ASTR300 : Galaxies
 - ASTR403 : Cosmology
-
-XX. Stellar Science:
 - ASTR205 : Stars and Stellar Populations
 - ASTR311 : Exploring the Universe: Stars and Galaxies
 - ASTR505 : Galactic Astronomy
-
-XX. Planetary Science:
 - ASTR310 : Exploring the Universe: The Solar System
 - ASTR333 : Exoplanets and Astrobiology
 - ASTR407 : Planetary Science
-
-XX. Laboratory and Measurements:
 - ASTR404 : Astronomical and Astrophysical Measurements
 - ASTR405 : Astronomical Laboratory
-
-XX. Special Topics:
 - ASTR406 : High-Energy Astrophysics
 - ASTR514 : Observational Astronomy
-- ASTR506 : High-Energy Astrophysics
-
-XX. Honors Thesis:
-- ASTR449 : Honors Thesis in Astronomy
-
-XX. Writing in Social Sciences and Humanities:
-- ASTU101 : Writing for Research in the Social Sciences and the Humanities
-- ASTU160 : International Perspectives on Writing in the Social Sciences and Humanities
-
-XX. Cultural Studies:
-- ASTU201 : Canada, Japan and the Pacific: Cultural Studies
-
-XX. Political, Economic, and Geographical Perspectives:
-- ASTU202 : Canada, Japan and the Pacific: Political, Economic and Geographical Perspectives
-
-XX. Interdisciplinary Studies:
-- ASTU204 : Topics in Interdisciplinary Arts Studies
-- ASTU400 : Interdisciplinary Studies in Arts
-- ASTU401 : Special Topics in Arts Studies
-
-XX. Knowledge Dissemination:
-- ASTU260 : Knowledge Dissemination: Communicating Research to Public : AUDIences
-
-XX. Science and Society:
-- ASTU402 : Living Language: Science and Society
-
-XX. Unknown Theme:
-- ASTU460 : No Knowledge is Neutral
 
 XX. Meterology:
 - ATSC113 : Applied Meteorology
@@ -749,1056 +707,395 @@ XX. Meterology:
 - ATSC301 : Atmospheric Radiation and Remote Sensing
 - ATSC303 : Methods in Atmospheric Science
 - ATSC404 : Dynamic Meteorology
-
-XX. Specialized Meteorology Courses:
 - ATSC313 : Renewable Energy Meteorology
-- ATSC448 : Directed Studies2. Introduction to Neurolinguistics
+- GEOS401 : Urban Meteorology
+- GEOS402 : Air Pollution Meteorology
 
-XX. Neuroanatomy and Neurolinguistics:
-- AUDI402: Neuroanatomy for Audiology and Speech-Language Pathology
+XX. Neuroscience:
+- PSYC361 : Neuroscience of Motivation
+- PSYC363 : Neuroscience of Simple Learning
+- PSYC370 : Behavioral Neuroscience I
+- PSYC371 : Behavioral Neuroscience II
+- PSYC388 : Directed Studies in Behavioral Neuroscience
+- PSYC460 : Behavioral Neuroendocrinology
+- PSYC461 : Neuroplasticity and Behavior
+- PSYC462 : Drugs and Behavioral Neuroscience
+- PSYC472 : Advanced Neuroscience of Motivation
+- PSYC488 : Directed Studies in Behavioral Neuroscience
+- AUDI402 : Neuroanatomy for Audiology and Speech-Language Pathology
+- KIN411 : Neuroanatomy of Human Movement
+- KIN313 : Neuromuscular Integration of Human Movement
+- KIN519 : Laboratory Investigations in Neuromechanical Kinesiology
+- KIN482 : Advanced Seminar in Neuromechanics
+- PSYC277 : Behavioral and Neuroscientific Research Methods
+- PSYC278 : Analysis of Behavioral and Neuroscientific Data
+- PSYC409 : Cognitive Neuropsychology
+- PSYC365 : Cognitive Neuroscience
+- BIOL371: Principles of Neurobiology I
+- BIOL372: Principles of Neurobiology II
+- PSYC270 : Introduction to Behavioral Neuroscience
 - AUDI403: Introduction to Neurolinguistics
 
-XX. Phonetics and Acoustics:
-- AUDI513: Acoustic and Articulatory Phonetics
-
-XX. Hearing Science and Aural Rehabilitation:
-- AUDI514A: Hearing Science I
-- AUDI514B: Hearing Science I
-- AUDI515: Hearing Science II
-- AUDI528: Aural Rehabilitation I
-
-XX. Language and Communication Development:
-- AUDI516A: Discourse Analysis
-- AUDI516C: Discourse Analysis
-- AUDI520B: Phonological Development, Assessment and Intervention
-- AUDI522: Communication Development and Disorders
-
-XX. Speech Disorders and Language Disorders:
-- AUDI524: Disorders of Speech Production
-- AUDI526: Acquired Language Disorders
-
-XX. Research Methods:
-- AUDI530A: Research Methods
-- AUDI530B: Research Methods
-- AUDI530C: Research Methods
-
-XX. Cultural and Heritage Considerations:
-- AUDI540: Approaches to Audiology and Speech-Language Pathology for People of First Nations, Métis or Inuit Heritage
-
-XX. Clinical Practice and Externships:
-- AUDI545: Preparation for Clinical Practice and Externships
-
-XX. Advanced Communication Sciences and Disorders:
-- AUDI546A: Advanced Communication Sciences and Disorders
-- AUDI546B: Advanced Communication Sciences and Disorders
-Directed Reading and Advanced Topics:
-- AUDI547A: Directed Reading in Audiology and Speech Sciences
-- AUDI550A: Advanced Topics in Audiology
-
-XX. Audiology and Hearing Assessment:
-- AUDI551: Hearing and Noise
-- AUDI552: Diagnostic Audiology I
-- AUDI553: Diagnostic Audiology II
-
-XX. Amplification and : AUDItory Function:
-- AUDI556: Amplification I
-- AUDI557: Amplification II
-- AUDI558: Physiological Measurement of : AUDItory Function
-
-XX. Pediatric Audiology and Cochlear Implants:
-- AUDI562: Pediatric Audiology
-- AUDI563: Cochlear Implants: : AUDIological Assessment and Management Issues
-
-XX. Audiology Practicum:
-- AUDI565C: : Audiology Practicum I
-- AUDI566C: : Audiology Practicum II
-- AUDI567: : Audiology Practicum III
-- AUDI568: : Audiology Practicum IV
-
-XX. Aging and Developmental Disorders:
-- AUDI569: Hearing and Aging
-- AUDI570: Case Studies in Phonological Intervention and Aural (Re)habilitation
-- AUDI571: Developmental Language Disorders
-- AUDI572: Cognitive Processing and Acquired Language Disorders
-- AUDI575: Language Development and Disorders in the School Years
-
-XX. Speech and Swallowing Disorders:
-- AUDI576: Topics in Fluency Disorders
-- AUDI577: Advanced Studies in Acquired Speech and Swallowing Disorders
-
-XX. Perceptual, Cognitive, and Social-affective Aspects:
-- AUDI581: Perceptual, Cognitive, and Social-affective Issues in Communication Development, Assessment and Intervention
-
-XX. Advanced Speech Science:
-- AUDI583: Advanced Speech Science
-
-XX. Language Development Across the Lifespan:
-- AUDI585: Language Development Across the Lifespan
-
-XX. Advanced Language Disorders:
-- AUDI586: Acquired Language Disorders II
-
-XX. Speech-Language Pathology Practicum:
-- AUDI590C: Speech-Language Pathology Practicum I
-- AUDI591C: Speech-Language Pathology Practicum II
-- AUDI593C: Speech-Language Pathology Practicum III
-- AUDI593: Speech-Language Pathology Practicum III
-- AUDI594C: Speech-Language Pathology Practicum IV
-
-XX. Business Administration
-- BA501 : Professional Residency I: Leadership and Competitive Strategy
-- BA502 : Professional Residency II: Business Development and Negotiations
-- BA503 : Professional Residency III: Ethics, Sustainability and Managing Change
-- BA504 : Business Strategy Integration: Foundation
-- BA507 : Business Strategy Integration: Global
-- BA512 : Business Strategy Integration: Experiential Learning
-
-XX. Experiential Learning and Internship
-- BA509 : Experiential Learning: Business Analytics Internship
-- BA511 : Community Business Project
-
-XX. Management and Leadership Skills
-- BA514 : IMBA Residency - People, Culture and Organizations
-- BA563 : Decision Making for Managers
-- BA564 : Leadership Development
-
-XX. Analytics and Technology
-- BA515 : Fundamentals of Analytics and Tech
-
-XX. Ethics and Sustainability
-- BA560 : Ethics and Sustainability
-
-XX. Creativity
-- BA562 : Creativity
-
-XX. Miscellaneous Topics
-- BA550 : Business Immersion
-- BA580 : Topics in Business Administration
-
-XX. Financial Statement Analysis:
-- BAAC501 : Financial Statement Analysis I
-    
-XX. Managerial Accounting and Decision Making:
-- BAAC511 : Intermediate Managerial Accounting: Decision Making and Performance Evaluation
-
-XX. Foundations in Accounting:
-- BAAC550 : Foundations in Accounting
-- BAAC551 : Foundations in Accounting II
-
-XX. Business Accounting:
-- BABS502 - Forecasting and Time Series Prediction
-- BABS507 - Descriptive and Predictive Business Analysis
-
-XX. Analyzing and Modelling Uncertainty
-- BABS506 - Analyzing and Modelling Uncertainty
-
-XX. Predictive Business Analytics
-- BABS507 - Descriptive and Predictive Business Analysis
-- BABS508 - Advanced Predictive Business Analytics
-
-XX. Application of Statistics in Management
-- BABS550 - Application of Statistics in Management
-
-XX. Venture Growth and Exit
-1. BAEN502 - Growing and Exiting a Venture
-
-XX. Entrepreneurial Finance
-2. BAEN505 - Entrepreneurial Finance
-
-XX. Technology Entrepreneurship
-3. BAEN506 - Technology Entrepreneurship
-
-XX. Applied Methods in Technology Start-ups
-4. BAEN509 - Applied Methods in Technology Start-ups at CDL
-
-XX. Strategy and Innovation
-5. BAEN540 - Strategy & Innovation
-
-XX. Innovation and Sustainability
-6. BAEN549 - Innovation and Sustainability
-
-XX. Fundamentals of Entrepreneurship
-7. BAEN550 - Fundamentals in Entrepreneurship
-
-XX. Topics in Entrepreneurship
-8. BAEN580 - Topics in Entrepreneurship
-9. BAEN580 - Topics in Entrepreneurship
-10. BAEN580 - Topics in Entrepreneurship
-
-XX. Foundational Finance:
-BAFI500 - Introductory Finance
-BAFI550 - Fundamental Finance
-
-XX. Banking and Capital Markets:
-- BAFI501 - Banking and Capital Markets
-
-XX. Corporate Finance:
-- BAFI502 - Corporate Finance
-- BAFI503 - Topics in Corporate Finance
-
-XX. Investment Management and Asset Pricing:
-- BAFI507 - Mergers and Acquisitions
-- BAFI508 - Data-driven Investments
-- BAFI511 - Investment Theory and Asset Pricing
-- BAFI513 - Risk Management
-- BAFI519 - Topics in Investment Management
-- BAFI520 - Empirical Finance
-
-XX. International Finance:
-- BAFI532 - International Financial Management
-
-XX. Specialized Topics in Finance:
-- BAFI580 - Special Topics in Finance
-
-XX. Leadership and Management:
-- BAHR505 - Leadership
-- BAHR508 - Managing Change
-- BAHR550 - Organizational Behavior
-
-XX. Negotiation and Conflict Resolution:
-- BAHR507 - Two-Party Negotiations
-
-XX. Team Building and Performance:
-- BAHR560 - Building High Performance Teams and Organizations
-
-XX. Human Resources:
-- BAHR580 - Topics in Human Resources
-
-XX. Business Technology Management:
-- BAIT508 - Business Analytics Programming
-- BAIT518 - Data Visualization
-
-XX. Machine Learning and AI
-- BAIT509 - Business Applications of Machine Learning
-- BAIT515 - AI Commercialization
-
-XX. Business Solutions and Project Management
-- BAIT510 - Project Management in Delivering Business Solutions
-- BAIT513 - Managing e-Business
-
-XX. Technology and Industries
-- BAIT516 - Health and Technology
-- BAIT523 - FinTech
-
-XX. Topics in Information Technology Management
-- BAIT580 - Topics in Information Technology Management
-
-XX. Business Administration: Commercial Law
-- BALA503 : Commercial Law
-
-XX. Product Development
-- BAMA503 - New Product Development
-
-XX. Marketing Communication:
-- BAMA504 - Integrated Marketing Communication
-
-XX. Business Development:
-- BAMA505 - Business Development
-
-XX. Consumer Behavior:
-- BAMA506 - Consumer Behaviour
-
-XX. Marketing Research:
-- BAMA508 - Marketing Research
-
-XX. Pricing:
-- BAMA511 - Pricing Analytics
-
-XX. Digital Marketing:
-- BAMA513 - Digital Marketing
-
-XX. Brand Management:
-- BAMA514 - Brand Management
-
-XX. Data Driven Marketing:
-- BAMA517 - Data Driven Marketing
-
-XX. Purposeful Branding:
-- BAMA519 - Building Brands with Purpose
-
-XX. Customer Analytics:
-- BAMA520 - Customer Analytics
-
-XX. General Marketing:
-- BAMA550 - Marketing
-- BAMA580 - Topics in Marketing
-- BAMA580 - Topics in Marketing
-- BAMA580 - Topics in Marketing
-
-XX. Simulation Modelling:
-- BAMS503 - Simulation Modelling I: Data Processing and Monte Carlo Simulation
-- BAMS503 - Simulation Modelling
-- BAMS504 - Simulation Modelling II: Queuing and Discrete Event Simulation
-
-XX. Optimal Decision Making:
-- BAMS506 - Optimal Decision Making I
-- BAMS508 - Optimal Decision Making II
-
-XX. Decision Analysis and Uncertainty:
-- BAMS517 - Decision Analysis Under Uncertainty
-
-XX. Analytics Leadership:
-- BAMS521 - Analytics Leadership
-
-XX. Managerial Decisions Modelling and Analytics:
-- BAMS523 - Managerial Decisions Modelling and Analytics
-
-XX. Managerial Economics:
-- BAPA550 - Managerial Economics I
-- BAPA560 - Foundations of Managerial and Business Economics
-
-XX. Supply Chain Fundamentals
-- BASC500 - Process Fundamentals
-
-XX. Supply Chain Management:
-- BASC523 - Supply Chain Management
-
-XX. Supply Chain Analytics:
-- BASC524 - Supply Chain Analytics
-
-XX. Supply Chain Strategy and Analytics:
-- BASC525 - Supply Chain Strategy and Analytics
-
-XX. Operations (Assuming related to operations management):
-- BASC550 - Operations
-
-XX. Business Strategy:
-- BASM501 - Business Strategy
-- BASM502 - Corporate Strategy
-- BASM514 - Strategy in Organizations
-- BASM550 - Strategic Management
-
-XX. Consulting and Decision Support:
-- BASM510 - Consulting Simulation
-- BASM523 - Management Consulting and Corporate Decision Support
-
-XX. Innovation and Economics:
-- BASM516 - Economics and Strategy of Innovation
-
-XX. Multinational Management:
-- BASM530 - Multinational Strategic Management
-
-XX. Special Topics:
-- BASM580 - Topics in Strategic Management
-
-XX. Real Estate Finance:
-- BAUL500 : Real Estate Markets
-- BAUL501 - Real Estate Investment Analysis
-
-XX. Finance and Investment in Real Estate:
-- BAUL501 - Real Estate Investment Analysis
-
-XX. Real Estate Development and Management:
-- BAUL500 - Real Estate Markets
-
-XX. Real Estate Economics and Market Trends:
-- BAUL500 - Real Estate Markets
-
-XX. Real Estate Finance and Investments:
-- BAUL500 - Real Estate Markets
-- BAUL501 - Real Estate Investment Analysis
-
-XX. Bioproducts
-- BEST200 - Foundations in Bioproducts and the Bioeconomy
-- BEST300 - Biobased Polymers and Bioproducts
-- BEST303 - Applied Biotechnology for Bioproducts
-- BEST304 - Laboratory in Bioeconomy Technology (II)
-- BEST403 - Integrated Strategies for Bioproduct Innovation
-
-XX. Plants and the Environment:
-- BEST201 - Plants, Carbon, and Environment
-- BEST203 - Ecology of Managed Ecosystems
-
-XX. Alternative Energy:
-- BEST202 - Alternative Energy Systems
-- BEST301 - Bioenergy
+XX. Bioproducts:
+- BEST200 : Foundations in Bioproducts and the Bioeconomy
+- BEST300 : Biobased Polymers and Bioproducts
+- BEST303 : Applied Biotechnology for Bioproducts
+- BEST304 : Laboratory in Bioeconomy Technology (II)
+- BEST403 : Integrated Strategies for Bioproduct Innovation
+
+XX. Writing:
+- CRWR220 : Introduction to Creative Writing with an Indigenous Focus
+- FRST150 : Scholarly Writing and Argumentation in Forestry
+- LFS150 : Scholarly Writing and Argumentation in Land and Food Systems- LLED200 : Introduction to Writing in Academic and Professional Registers
+- LLED201 : Critical Reading and Writing in Academic and Professional Registers
+- WRDS150 : Writing and Research in the Disciplines
+- CRWR200 : Introduction to Creative Writing
+- CRWR209 : Introduction to Writing Fiction
+- CRWR213 : Introduction to Writing for the New Media
+- CRWR201 : Introduction to Writing Poetry
+- CRWR203 : Introduction to Writing for Children and Young Adults
+- CRWR205 : Introduction to Writing Creative Nonfiction
+- CRWR206 : Introduction to Writing for the Screen
+- CRWR208 : Introduction to Writing for Graphic Forms
+- CRWR230 : Introduction to Writing for Comedic Forms
+- CRWR307 : Intermediate Writing for the Stage and Radio
+- CRWR310 : Video Game Writing and Narrative
+- CRWR312 : Interactive Storytelling
+- CRWR316 : Intermediate Writing for Television
+- CRWR319 : Writing Genre Fiction
+- CRWR351 : Intermediate Poetry Workshop
+- CRWR353 : Intermediate Children and Young Adult Writing Workshop
+- CRWR356 : Intermediate Screenplay Workshop
+- CRWR359 : Intermediate Fiction Workshop
+- CRWR401 : Writing Poetry I
+- CRWR402 : Writing for New Media I
+- CRWR403 : Writing for Children and Young Adults I
+- CRWR405 : Writing Creative Nonfiction I
+- CRWR406 : Writing for the Screen I
+- CRWR407 : Writing of Drama for the Stage I
+- CRWR408 : Writing for Graphic Forms I
+- CRWR409 : Writing Fiction I
+- CRWR411 : Writing for Lyric Forms I
+- CRWR416 : Writing for Television I
+- CRWR419 : Writing Speculative Fiction
+- CRWR501 : Advanced Writing of Poetry I
+- CRWR503 : Advanced Writing for Children I
+- CRWR505 : Advanced Writing of Creative Non-Fiction I
+- CRWR506 : Advanced Writing of Drama for Screen I
+- CRWR508 : Advanced Writing for Graphic Forms I
+- CRWR509 : Advanced Writing of Fiction I
+- CRWR511 : Advanced Writing for Lyric Forms I
+- CRWR514 : Advanced Writing for Television I
+- ASTU101 : Writing for Research in the Social Sciences and the Humanities
+- ASTU160 : International Perspectives on Writing in the Social Sciences and Humanities
+
+XX. Genetics, Evolution, and Ecology:
+- BEST203 : Ecology of Managed Ecosystems
+- BIOL121 : Genetics, Evolution and Ecology
+- BIOL230 : Fundamentals of Ecology
+- BIOL234 : Fundamentals of Genetics
+- BIOL306 : Advanced Ecology
+- FRST201 : Forest Ecology
+- HGSE357 : Ecology and Management of Island Wildlife
+- CONS310 : Ecology in a Changing Climate
+- BIOL402 : Aquatic Ecology
+- BIOL403 : Microbial Ecology
+- BIOL404 : Ecological Methodology
+- BIOL411 : Insect Ecology
+- BIOL418 : Evolutionary Ecology
+- BIOL424 : Tropical Ecology and Conservation
+- BIOL501 : Quantitative Methods in Ecology and Evolution
+- BIOL509 : Population and Quantitative Genetics
+- HGSE355 : Applied Ecology of Coastal Terrestrial Ecosystems
+- BIOL406 : Plant Ecology I
+- HGSE332 : Plant Ecology and Diversity
+
+XX. Biochemistry:
+- BIOC302 : General Biochemistry
+- BIOC202 : Introductory Medical Biochemistry
+- BIOC203 : Fundamentals of Biochemistry
+- BIOC303 : Molecular Biochemistry
+- BIOC304 : Contemporary Biochemical Research
+- BIOC402 : Proteins: Structure and Function
+- BIOL201 : Introduction to Biochemistry
+- PHAR202 : Biochemical Pharmacology
 
 XX. Sustainable Technology and Manufacturing:
-- BEST302 - Laboratory in Bioeconomy Technology (I)
-- BEST308 - Land Use Management and Planning
-- BEST400 - Biomimicry and Biocomposites
-
-XX. Carbon and Energy Management:
-- BEST401 - Carbon and Energy Economics
-
-XX. Industrial Ecology and Sustainability:
-- BEST402 - Industrial Ecology
-
-XX. Biochemistry Intro
-- BIOC202 - Introductory Medical Biochemistry
-- BIOC203 - Fundamentals of Biochemistry
-
-XX. Biochemistry Laboratory:
-- BIOC301 - Biochemistry Laboratory
-
-XX. General Biochemistry:
-- BIOC302 - General Biochemistry
-
-XX. Molecular Biochemistry:
-- BIOC303 - Molecular Biochemistry
-
-XX. Contemporary Biochemical Research:
-- BIOC304 - Contemporary Biochemical Research
-
-XX. Protein Biochemistry:
-- BIOC402 - Proteins: Structure and Function
-
-XX. Enzymology:
-- BIOC403 - Enzymology
-
-XX. Biochemical Methods:
-- BIOC404 - Biochemical Methods
-
-XX. Nucleic Acids:
-- BIOC410 - Nucleic Acids-Structure and Function
-
-XX. Advanced Biochemical Techniques:
-- BIOC420 - Advanced Biochemical Techniques
-
-XX. Recombinant DNA Techniques:
-- BIOC421 - Recombinant DNA Techniques
-
-XX. Concepts in Molecular Biology:
-- BIOC440 - Concepts in Molecular Biology
-
-XX. Directed Studies and Honors Thesis:
-- BIOC448 - Directed Studies in Biochemistry
-- BIOC449 - Honors Thesis
-
-XX. Membrane Biochemistry:
-- BIOC450 - Membrane Biochemistry
-
-XX. Advanced Techniques in Biochemistry:
-- BIOC460 - Advanced Techniques in Biochemistry
-
-XX. Biochemistry & Society:
-- BIOC470 - Biochemistry & Society: Current Issues
-
-XX. Seminar in Biochemistry:
-- BIOC530 - Seminar in Biochemistry
-
-XX. Advanced Topics in Biochemistry and Molecular Biology:
-- BIOC551 - Advanced Topics in Biochemistry and Molecular Biology
-
-XX. Membrane Proteins:
-- BIOC552 - Membrane Proteins
-
-XX. Nucleic Acids Structure and Function:
-- BIOC554 - Nucleic Acids: DNA/RNA Structure and Function
-
-XX. Epigenetics:
-- BIOC555 - Epigenetics
-
-XX. Biochemical Aspects of Cellular Regulation:
-- BIOC556 - Biochemical Aspects of Cellular Regulation
-
-XX. Advanced Topics in Biochemistry:
-- BIOC557 - Advanced Topics in Biochemistry
-
-XX. Advanced Topics in Protein Chemistry:
-- BIOC558 - Advanced Topics in Protein Chemistry I
-- BIOC559 - Advanced Topics in Protein Chemistry II
-
-XX. Computational Approaches in Biochemistry:
-- BIOC560 - Computational Approaches in Biochemistry1
+- BEST302 : Laboratory in Bioeconomy Technology
+- BEST308 : Land Use Management and Planning
+- BEST400 : Biomimicry and Biocomposites
 
 XX. Bioinformatics:
-- BIOF501 - Special Topics in Bioinformatics
-- BIOF520 - Problem-Based Learning In Bioinformatics
-- BIOF540 - Statistical Methods for High Dimensional Biology
+- BIOF501 : Special Topics in Bioinformatics
+- BIOF520 : Problem-Based Learning In Bioinformatics
+- BIOF540 : Statistical Methods for High Dimensional Biology
+- BMEG310 : Introduction to Bioinformatics
+- MICB405 : Bioinformatics
 
-XX. Introductory Courses:
-BIOL111: Introduction to Modern Biology
-BIOL112: Biology of the Cell
-BIOL121: Genetics, Evolution and Ecology
-BIOL140: Laboratory Investigations in Life Science
-BIOL155: Human Biology: Physiology and Introductory Anatomy
-BIOL180: Thinking Like a Life Scientist
-
-XX. Cell and Molecular Biology:
-BIOL200: Fundamentals of Cell Biology
-BIOL201: Introduction to Biochemistry
-BIOL203: Eukaryotic Microbiology
-BIOL204: Vertebrate Structure and Function
-
-XX. Comparative Zoology and Botany:
-BIOL205: Comparative Invertebrate Zoology
-BIOL209: Biodiversity of Algae, Fungi and Bryophytes
-BIOL210: Vascular Plants
-
-XX. Ecology and Genetics:
-BIOL230: Fundamentals of Ecology
-BIOL234: Fundamentals of Genetics
-
-XX. Physiology:
-BIOL260: Fundamentals of Physiology
-
-XX. Biostatistics and Biomathematics:
-BIOL300: Fundamentals of Biostatistics
-BIOL301: Biomathematics
-
-XX. Advanced Ecology and Behavior:
-BIOL306: Advanced Ecology
-BIOL310: Introduction to Animal Behavior
-
-XX. Plant Biology:
-BIOL320: Survey of Algae
-BIOL321: Morphology and Evolution of Bryophytes
-BIOL323: Structure and Reproduction of Fungi
-BIOL324: Introduction to Seed Plant Taxonomy
-BIOL340: Plant Genomics
+XX. Biology Fundamentals:
+- BIOL111 : Introduction to Modern Biology
+- BIOL112 : Biology of the Cell
+- BIOL200 : Fundamentals of Cell Biology
+- BIOL140 : Laboratory Investigations in Life Science
+- BIOL180 : Thinking Like a Life Scientist
+- BIOL310 : Introduction to Animal Behavior
 
 XX. Microbiology and Genetics:
-BIOL325: Introduction to Animal Mechanics and Locomotion
-BIOL326: Experimental Biology of Invertebrates
-BIOL327: Introduction to Entomology
-BIOL331: Developmental Biology
-BIOL332: Protistology
-BIOL335: Molecular Genetics
-BIOL336: Fundamentals of Evolutionary Biology
-BIOL337: Introductory Genetics Laboratory
-BIOL338: Introduction to Genomics
+- BIOL325 : Introduction to Animal Mechanics and Locomotion
+- BIOL326 : Experimental Biology of Invertebrates
+- BIOL327 : Introduction to Entomology
+- BIOL331 : Developmental Biology
+- BIOL332 : Protistology
+- BIOL335 : Molecular Genetics
+- BIOL336 : Fundamentals of Evolutionary Biology
+- BIOL337 : Introductory Genetics Laboratory
+- BIOL338 : Introduction to Genomics
+- BIOL203 : Eukaryotic Microbiology
+
+XX. Biostatistics and Biomathematics:
+- BIOL300 : Fundamentals of Biostatistics
+- BIOL301 : Biomathematics
 
 XX. Interdisciplinary Biology:
-BIOL343: Plants and Peoples
-BIOL344: Human Heredity and Evolution
-BIOL346: Microbes and Society
-BIOL347: Principles and Methodology in Biological Research
+- BIOL344 : Human Heredity and Evolution
+- BIOL346 : Microbes and Society
+- BIOL347 : Principles and Methodology in Biological Research
 
 XX. Plant Physiology and Cellular Biology:
-BIOL351: Plant Physiology I
-BIOL352: Plant Physiology II: Plant Development
-BIOL362: Cellular Physiology
-BIOL362: Cellular Dynamics
-BIOL363: Laboratory in Animal Physiology
-BIOL364: Comparative Cardiovascular, Respiratory and Osmoregulatory Physiology
-BIOL370: Principles of Muscle Physiology and Energetics
-BIOL371: Principles of Neurobiology I
-BIOL372: Principles of Neurobiology II
+- BIOL362 : Cellular Physiology
+- BIOL362 : Cellular Dynamics
+- BIOL363 : Laboratory in Animal Physiology
+- BIOL364 : Comparative Cardiovascular, Respiratory and Osmoregulatory Physiology
+- BIOL370 : Principles of Muscle Physiology and Energetics
 
-XX. Ecology and Environmental Biology:
-BIOL402: Aquatic Ecology
-BIOL403: Microbial Ecology
-BIOL404: Ecological Methodology
-BIOL406: Plant Ecology I
-BIOL411: Insect Ecology
-BIOL415: Evolutionary Processes in Plants
-BIOL416: Principles of Conservation Biology
-BIOL417: Phylogenetic Biology
-BIOL418: Evolutionary Ecology
-BIOL420: Ocean Conservation and Sustainability
-BIOL421: Plant-Microbe Interactions
-BIOL424: Tropical Ecology and Conservation
-BIOL425: Biomechanics
-BIOL427: Ornithology and Herpetology
-BIOL428: Evolutionary Morphology of Marine Invertebrates
+XX. Environmental Biology:
+- BIOL416 : Principles of Conservation Biology
+- BIOL417 : Phylogenetic Biology
+- BIOL420 : Ocean Conservation and Sustainability
+- BIOL425 : Biomechanics
+- BIOL427 : Ornithology and Herpetology
+- BIOL428 : Evolutionary Morphology of Marine Invertebrates
 
 XX. Evolutionary Biology:
-BIOL430: Genome Evolution
-BIOL431: Evolutionary Cell Biology
-BIOL432: Research Strategies and Techniques in Cell Biology
-BIOL433: Plant Genetics
-BIOL434: Population Genetics
-BIOL438: Zoological Physics
+- BIOL430: Genome Evolution
+- BIOL431: Evolutionary Cell Biology
+- BIOL432: Research Strategies and Techniques in Cell Biology
+- BIOL434: Population Genetics
+- BIOL438: Zoological Physics
 
-XX. Advanced Topics in Biology:
-BIOL440: Plant Genomics
-BIOL441: Cell Biology of Intracellular Trafficking
-BIOL445: Darwin's Fishes
-BIOL447: Principles and Methodology in Biological Research
-BIOL448G: Directed Studies in Biology
-BIOL448I: Directed Studies in Biology
-BIOL448L: Directed Studies in Biology
-BIOL448O: Directed Studies in Biology
-BIOL448Q: Directed Studies in Biology
-BIOL448S: Directed Studies in Biology
-BIOL448T: Directed Studies in Biology
-BIOL448U: Directed Studies in Biology
-BIOL448V: Directed Studies in Biology
-BIOL448W: Directed Studies in Biology
-
-XX. Quantitative and Population Genetics:
-BIOL501: Quantitative Methods in Ecology and Evolution
-BIOL509: Population and Quantitative Genetics
-
-XX. Systematics and Evolution:
-BIOL525B: Topics in Systematics and Evolution
-BIOL525D: Topics in Systematics and Evolution
-
-XX. Cell Biology:
-BIOL530: The Biology of the Cell
-
-XX. Introduction/Essential/Elective Courses:
-- BMEG101 - Introduction to Biomedical Engineering
-- BMEG102 - Biomedical Engineering Lab
-- BMEG200 - Biomedical Engineering Bridge Module
-- BMEG201 - Technical Communication for Biomedical Engineers
-- BMEG257 - Biomedical Engineering Design I
-- BMEG310 - Introduction to Bioinformatics
-- BMEG321 - Biomedical Instrumentation
-- BMEG357 - Biomedical Engineering Design II
-
-XX. Core Biomedical Engineering:
-- BMEG210 - Thermodynamics in Biomedical Engineering
-- BMEG220 - Circuits and Electromagnetics with Application to Biomedical Engineering
-- BMEG230 - Biomechanics I
-- BMEG245 - The Fundamental Units of Life: From Cells To Systems
-- BMEG250 - Cellular Physiology and Biophysics
-- BMEG330 - Biomechanics II
-- BMEG350 - Human Structure/Function from Cells to Systems
-- BMEG371 - Transport Phenomena within Cells and Tissues
-- BMEG372 - Biomedical Materials and Drug Delivery
-- BMEG373 - Microfluidics
-- BMEG374 - Cellular Bioengineering: Laboratory & Design
-- BMEG470 - Cellular Responses to Forces and Biomaterials
-- BMEG474 - Stem Cells and Regenerative Medicine
-
-XX. Advanced/Specialized Topics:
-- BMEG400 - Topics in Biomedical Engineering
-- BMEG401 - Economics of Healthcare Solutions
-- BMEG402 - Impact of Biomedical Engineering on Society, Sustainability and Environmental Stewardship
-- BMEG420 - Medical Imaging
-- BMEG455 - Professionalism and Ethics in Biomedical Engineering
-- BMEG456 - Clinical and Industrial Biomedical Engineering
-- BMEG457 - Biomedical Engineering Design Project
-- BMEG550 - Biomedical Engineering Technology
-- BMEG556 - Clinical and Industrial Biomedical Engineering
-- BMEG557 - Statistical Methods for Evaluating Medical Technologies
-- BMEG580 - Biomedical Engineering Topics at the Interface of Medicine and Engineering
-- BMEG581 - Professional and Academic Development
-- BMEG591 - Topics in Biomedical Engineering
-
-XX. Research/Orientation/Thesis:
-- BMEG490 - Introduction to Academic Research
-- BMEG490 - Introduction to Academic Research
-- BMEG500 - Orientation to Clinical Environment
-- BMEG501 - Interdisciplinary Team Project in Medical Technology Innovation
-- BMEG597 - Master of Engineering Project
-- BMEG599 - M.A. Sc. Thesis
-
-XX. Botany:
-- BOTA501 - Seminar in Botany
-- BOTA546 - Topics in Botany
-
-XX. Business Real Estate:
-- BUSI111 - British Columbia Real Estate Law and Real Estate Ethics
-- BUSI112 - Canadian Real Property Law and Real Estate Ethics
-- BUSI300 - Urban and Real Estate Economics
-
-XX. Real Estate Finance and Investment
-- BUSI101 - Capital Markets and Real Estate
-- BUSI221 - Real Estate Finance in a Canadian Context
-- BUSI331 - Real Estate Investment Analysis and Advanced Income Appraisal
-- BUSI433 - Real Estate Business
-- BUSI460 - Critical Analysis and Forecasting in Real Estate
-
-XX. Accounting and Financial Management
-- BUSI291 - Application of Statistics in Business
-- BUSI293 - Introductory Financial Accounting
-- BUSI294 - Introductory Management Accounting
-- BUSI355 - Introduction to Income Tax
-- BUSI370 - Business Finance
-- BUSI398 - Residental Property Guided Case Study
-- BUSI398 - Residential Property Guided Case Study
-- BUSI450 - Intermediate Financial Accounting II
-- BUSI485 - Taxes and Decision Making
-
-XX. Data Analysis and Analytics
-- BUSI344 - Statistical and Computer Applications in Valuation
-- BUSI414 - Data Visualization and Business Analytics
-
-XX. Property Appraisal and Valuation
-- BUSI330 - Foundations of Real Estate Appraisal
-- BUSI352 - Case Studies in Residential Valuation
-- BUSI442 - Case Studies in Appraisal I
-- BUSI444 - Computer Aided Mass Property Assessment
-- BUSI452 - Case Studies in Appraisal II
-
-XX. Real Estate Management and Development
-- BUSI441 - Real Estate Management I
-- BUSI443 - Assessment Administration
-- BUSI445 - Real Estate Development I
-- BUSI446 - Real Estate Development II
-- BUSI451 - Real Estate Management II 
-
-XX. Business Law and Ethics
-- BUSI393 - Introduction to Business Law
-- BUSI111 - British Columbia Real Estate Law and Real Estate Ethics
-- BUSI112 - Canadian Real Property Law and Real Estate Ethics
-
-XX. Auditing and Assurance
-- BUSI455 - Principles of Auditing
-
-XX. Business Strategy and Management
-- BUSI493 - Strategic Management in Business
-
-XX. Other Business-related Courses
-- BUSI295 - Managerial Economics
-- BUSI295 - Business Economics
-- BUSI354 - Cost Accounting
-- BUSI400 - Residential Property Analysis
-- BUSI401 - Commercial Property Analysis
-- BUSI499 - Income Property Guided Case Study
-
-XX. Biomedical Research:
-- CAPS200 - Biomedical Research: Essential Skills and Concepts
-
-XX. Human Physiology
-- CAPS301 - Human Physiology
-- CAPS303 - Laboratory in Human Physiology (Honours)
-
-XX. Anatomy
-- CAPS390 - Introduction to Microscopic Human Anatomy
-- CAPS391 - Introduction to Gross Human Anatomy
-
-XX. Cellular and Molecular Physiology
-- CAPS421 - Advanced Cellular and Molecular Physiology
-
-XX. Cardiovascular and Respiratory Physiology
-- CAPS422 - Mammalian Cardiovascular and Respiratory Physiology
-
-XX. Renal and Gastrointestinal Physiology
-- CAPS423 - Mammalian Renal and Gastrointestinal Physiology
-
-XX. Endocrinology
-- CAPS424 - Mammalian Endocrinology
-
-XX. Central Nervous System Physiology
-- CAPS426 - Physiological Basis of Central Nervous System Functions
-
-XX. Advanced Laboratory in Physiology
-- CAPS430 - Advanced Laboratory in Physiology
-- CAPS431 - Advanced Laboratory in the Physiology of Human Health and Disease
-
-XX. Graduation Requirement
-- CAPS449 - Graduating Essay
-
-XX. Canadian Studies:
-- CDST250 - Introduction to Canada
-- CDST350 - Canadian Studies
-- CDST450 - Senior Seminar in Canadian Studies
-
-XX. Energy Systems:
-- CEEN501 - Energy System Fundamentals
-- CEEN503 - Sustainable Energy Systems
-
-XX. Energy Storage and Transmission:
-- CEEN504 - Energy Storage and Transmission
-
-XX. Energy and the Environment:
-- CEEN523 - Energy and the Environment
-
-XX. Energy Policy:
-- CEEN525 - Energy Policy
-
-XX. Energy Efficiency and Conservation:
-- CEEN550 - Energy Efficiency and Conservation
-
-XX. Cells:
-- CELL501 - Cell and Developmental Biology Research Literature
-
-XX. Current topics in specific areas of cellular and developmental biology:
-- CELL502 - Current Topics in Developmental Biology
-- CELL503 - Current Topics in Cellular Communication
-- CELL504 - Current Topics in Cytoskeleton and Cell Motility
-- CELL505 - Current Topics in Intracellular Trafficking
-
-XX. Experimental techniques and methods in cell and developmental biology:
-- CELL506 - Fluorescence Microscopy
-- CELL507 - Special Techniques and Protocols in Cell and Developmental Biology
-
-XX. Integration of cellular and developmental biology with systems-level understanding:
-- CELL509 - Cell Systems Biology
-
-XX. Candian Monuments to Central and Eastern European History:
-- CENS104 - Canadian Monuments to Central and Eastern European History
-
-XX. Culture and Literature
-- CENS201 - Contrasts and Conflicts: The Cultures of Central, Eastern and Northern Europe (in English)
-- CENS202 - Great Works of Literature from Central, Eastern and Northern Europe (in English).
-
-XX. Holocaust Representation
-- CENS303 - Representations of the Holocaust (in English)
-- CENS303 - Representations of the Holocaust (in English)
-- CENS303 - Representations of the Holocaust (in English)
-
-XX. Mythology and Folklore
-- CENS307 - Witches: Myth and Reality
-
-XX. Popular Culture
-- CENS308 - Comics and Graphic Novels in Central, Eastern and Northern Europe
-
-XX. Language and Identity
-- CENS315 - Becoming Multilingual: Experience, Aesthetics, Community
-
-XX. Gender Studies
-- CENS404 - Gender and Nation: Women's State in Modern Central, Eastern and Northern European Literatures and Cultures
-
-XX. Foundational Principles:
-- CHBE220 - Founding Principles in Chemical and Biological Engineering I
-- CHBE221 - Founding Principles in Chemical and Biological Engineering II
-
-XX. Computational Methods:
-- CHBE230 - Computational Methods
-
-XX. Material and Energy Balances:
-- CHBE241 - Material and Energy Balances
+XX. Other Biology Topics:
+- BIOL204 : Vertebrate Structure and Function
+- BIOL441 : Cell Biology of Intracellular Trafficking
+- BIOL445 : Darwin's Fishes
+- BIOL447 : Principles and Methodology in Biological Research
 
 XX. Thermodynamics:
-- CHBE244 - Chemical and Biological Engineering Thermodynamics I
-- CHBE346 - Chemical and Biological Engineering Thermodynamics II
+- CHBE244 : Chemical and Biological Engineering Thermodynamics I
+- CHBE346 : Chemical and Biological Engineering Thermodynamics II
+- BMEG210 : Thermodynamics in Biomedical Engineering
+- CHEM123 : Thermodynamics, Kinetics and Organic Chemistry
+- CHEM130 : Thermodynamics, Kinetics and Organic Chemistry
+- CHEM304 : Fundamentals of Thermodynamics and Statistical Mechanics
+- MECH327 : Thermodynamics II
+- ENPH257 : Heat and Thermodynamics
 
-XX. Transport Phenomena:
-- CHBE251 - Transport Phenomena I
-- CHBE352 - Transport Phenomena II
+XX. Biomechanics:
+- BMEG230 : Biomechanics I
+- BMEG330 : Biomechanics II
+- MECH435 : Orthopaedic Biomechanics
+- MECH436 : Fundamentals of Injury Biomechanics
+- MECH439 : Biomechanics Research
+- MECH448 : Biomechanics Research
 
-XX. Laboratory Practice:
-- CHBE263 - Introduction to Chemical and Biological Engineering Laboratory Practice
-- CHBE264 - Chemical and Biological Engineering Laboratory
-- CHBE362 - Process Engineering Laboratory
-- CHBE364 - Environmental Engineering Laboratory
-- CHBE365 - Biological Engineering Laboratory
-- CHBE366 - Chemical Engineering Laboratory
+XX. Core Biomedical Engineering:
+- BMEG245 : The Fundamental Units of Life: From Cells To Systems
+- BMEG250 : Cellular Physiology and Biophysics
+- BMEG350 : Human Structure/Function from Cells to Systems
+- BMEG371 : Transport Phenomena within Cells and Tissues
+- BMEG372 : Biomedical Materials and Drug Delivery
+- BMEG373 : Microfluidics
+- BMEG374 : Cellular Bioengineering: Laboratory & Design
+- BMEG470 : Cellular Responses to Forces and Biomaterials
+- BMEG474 : Stem Cells and Regenerative Medicine
 
-XX. Unit Operations:
-- CHBE344 - Introduction to Unit Operations
-- CHBE345 - Unit Operations II
-- CHBE345 - Unit Operations
+XX. Advanced/Specialized Topics in Biomedical Engineering:
+- BMEG400 : Topics in Biomedical Engineering
+- BMEG401 : Economics of Healthcare Solutions
+- BMEG402 : Impact of Biomedical Engineering on Society, Sustainability and Environmental Stewardship
+- BMEG420 : Medical Imaging
+- BMEG455 : Professionalism and Ethics in Biomedical Engineering
+- BMEG456 : Clinical and Industrial Biomedical Engineering
+- BMEG457 : Biomedical Engineering Design Project
 
-XX. Kinetics and Reactor Design:
-- CHBE355 - Kinetics and Reactor Design
+XX. Real Estate:
+- BUSI111 : British Columbia Real Estate Law and Real Estate Ethics
+- BUSI112 : Canadian Real Property Law and Real Estate Ethics
+- BUSI300 : Urban and Real Estate Economics
+- BUSI101 : Capital Markets and Real Estate
+- BUSI221 : Real Estate Finance in a Canadian Context
+- BUSI331 : Real Estate Investment Analysis and Advanced Income Appraisal
+- BUSI433 : Real Estate Business
+- BUSI460 : Critical Analysis and Forecasting in Real Estate
+- BUSI441 : Real Estate Management I
+- BUSI443 : Assessment Administration
+- BUSI445 : Real Estate Development I
+- BUSI446 : Real Estate Development II
+- BUSI451 : Real Estate Management II
+- BUSI330 : Foundations of Real Estate Appraisal
+- BUSI352 : Case Studies in Residential Valuation
+- BUSI442 : Case Studies in Appraisal I
+- BUSI444 : Computer Aided Mass Property Assessment
+- BUSI452 : Case Studies in Appraisal II
+- COMM306 : Urban Land Economics
+- COMM307 : Real Estate Investment
+- COMM405 : Real Estate Finance
+- COMM407 : Real Estate Economics
+- COMM408 : Real Estate Development
+- BUSI398 : Residential Property Guided Case Study
+- BUSI400 : Residential Property Analysis
+- BUSI401 : Commercial Property Analysis
 
-XX. Process Dynamics and Control:
-- CHBE356 - Process Dynamics and Control
+XX. Accounting:
+- BUSI293 : Introductory Financial Accounting
+- BUSI294 : Introductory Management Accounting
+- BUSI450 : Intermediate Financial Accounting II
+- BUSI354 : Cost Accounting
+- COMR457 : Fundamentals of Financial Accounting
+- COMR458 : Fundamentals of Managerial Accounting
+- COMM293 : Financial Accounting
+- COMM294 : Managerial Accounting
+- COMM320 : Foundations in Accounting I
+- COMM353 : Financial Accounting: Intermediate I
+- COMM354 : Cost Accounting
+- COMM450 : Financial Accounting : Intermediate II
+- COMM452 : Taxes and Decision Making
+- COMM453 : Financial Accounting-Advanced
+- COMM454 : Accounting for Management Control and Incentives
+- COEC293 : Financial Accounting
+- COEC294 : Managerial Accounting
+- COMM455 : Principles of Auditing
+- COMM459 : Financial Statement Analysis
 
-XX. Sustainable Engineering:
-- CHBE370 - Fundamentals of Sustainable Engineering
+XX. Economics:
+- BUSI295 : Managerial Economics
+- BUSI295 : Business Economics
+- PHIL362: History and Philosophy of Economics from Aristotle to Adam Smith
+- PHIL363: History and Philosophy of Economics from Ricardo to Keynes
+- ECON398 : Introduction to Applied Economics
+- ECON490 : Seminar in Applied Economics
+- ECON494 : Seminar in Applied International Economics
+- ECON450 : Economics of Taxation
+- ECON451 : Economics of Public Expenditures
+- BUSI393 : Introduction to Business Law
+- ECON255 : Understanding Globalization
+- ECON355 : Introduction to International Trade
+- ECON356 : Introduction to International Finance
+- ECON444 : Seminar in International Economic Relations
+- ECON455 : International Trade
+- ECON456 : International Macroeconomics and Finance
 
-XX. Bioprocess Engineering:
-- CHBE381 - Bioprocess Engineering I
-- CHBE481 - Bioprocess Engineering II
+XX. Financial Management
+- BUSI291 : Application of Statistics in Business
+- BUSI355 : Introduction to Income Tax
+- BUSI370 : Business Finance
+- BUSI485 : Taxes and Decision Making
 
-XX. Industrial Biotechnology:
-- CHBE402 - Biomass Fractionation Technology
-- CHBE419 - Industrial Biotechnology Laboratory
+XX. Business Analysis and Analytics
+- BUSI344 : Statistical and Computer Applications in Valuation
+- BUSI414 : Data Visualization and Business Analytics
 
-XX. Biological Process and Product Design:
-- CHBE453 - Biological Process and Product Design
+XX. Canadian Studies:
+- CDST250 : Introduction to Canada
+- CDST350 : Canadian Studies
+- CDST450 : Senior Seminar in Canadian Studies
 
-XX. Chemical Process and Product Design:
-- CHBE454 - Chemical Process and Product Design
-
-XX. Heterogeneous Catalysis and Reactor Design:
-- CHBE456 - Heterogeneous Catalysis and Advanced Reactor Design
-
-XX. Process Synthesis:
-- CHBE457 - Process Synthesis
-
-XX. Economics and Management:
-- CHBE459 - Chemical and Biological Engineering Economics
-
-XX. Modelling and Optimization:
-- CHBE476 - Modeling and Optimization in Chemical Engineering
-
-XX. Environmental Engineering:
-- CHBE473 - Water Pollution Control
-- CHBE485 - Air Pollution Prevention and Control
-- CHBE486 - Waste Management for Resource Recovery
-
-XX. Polymer Science and Processing:
-- CHBE478 - Polymer Science and Processing
-
-XX. Petroleum Refining:
-- CHBE482 - Petroleum Refining Process Modeling and Simulation
-
-XX. Energy Engineering:
-- CHBE483 - Energy Engineering
-- CHBE583 - Energy Engineering
-
-XX. Interfacial Phenomena:
-- CHBE487 - Interfacial Phenomena
-- CHBE587 - Interfacial Phenomena
-
-XX. Carbon Capture, Conversion, and Sequestration:
-- CHBE488 - Carbon Capture, Conversion and Sequestration Technologies
-- CHBE588 - Carbon Capture, Conversion and Sequestration Technologies
-
-XX. Thesis and Research:
-- CHBE495 - Thesis Proposal-Biotechnology Topic
-- CHBE496 - Thesis Biotechnology Topic
-- CHBE497 - Topics in Chemical and Biological Engineering.
-- CHBE502 - Biomass Fractionation Chemistry
-- CHBE597 - M.A.Sc. Thesis Proposal Development
-
-XX. Non-Chemical Engineer Introduction:
-- CHBE505 - Introduction to Chemical Engineering for Non-Chemical Engineers
-
-XX. Advanced Topics:
-- CHBE497 - Topics in Chemical and Biological Engineering.
-- CHBE550 - Advanced Reactor Design
-- CHBE551 - Engineering Thermodynamics and Statistical Mechanics
-- CHBE552 - Optimization Methods
-- CHBE553 - Mathematical Operations in Chemical Engineering
-- CHBE554 - Momentum, Heat and Mass Transfer
-- CHBE563 - Applied Heterogeneous Catalysis
-- CHBE565 - Advanced Process Control
-- CHBE575 - Air Pollution Control
-- CHBE577 - Electrochemical Science, Engineering and Technology
-
-XX. Chemistry Foundations:
-- CHEM100 - Foundations of Chemistry
-
-XX. Structure and Bonding in Chemistry:
-- CHEM111 - Structure, Bonding, and Equilibrium in Chemistry
-- CHEM120 - Structure and Bonding in Chemistry (Lecture)
-- CHEM121 - Structure and Bonding in Chemistry
-- CHEM123 - Thermodynamics, Kinetics and Organic Chemistry
-- CHEM130 - Thermodynamics, Kinetics and Organic Chemistry (Lecture)
-
-XX. Chemical Laboratory:
-- CHEM115 - Introductory Chemical Laboratory I
-- CHEM135 - Introductory Chemical Laboratory II
-- CHEM154 - Chemistry for Engineering
-- CHEM215 - Introductory Analytical Chemical Laboratory
-- CHEM225 - Introductory Synthetic Chemical Laboratory
-- CHEM235 - Organic Chemistry Laboratory
-- CHEM245 - Intermediate Synthetic Chemistry Laboratory
-- CHEM315 - Chemistry Integrated Laboratory I
-- CHEM325 - Integrated Chemistry Laboratory I
-- CHEM335 - Chemistry Integrated Laboratory II
-- CHEM345 - Integrated Chemistry Laboratory II
-- CHEM355 - Chemistry Integrated Laboratory
-- CHEM445 - Projects in Experimental Chemistry (x3)
+XX. European History and Culture
+- CENS201 : Contrasts and Conflicts: The Cultures of Central, Eastern and Northern Europe (in English)
+- CENS202 : Great Works of Literature from Central, Eastern and Northern Europe (in English).
+- HIST202 : Gateway to the Middle Ages
+- HIST202 : Gateway to the Middle Ages
+- HIST220 : History of Europe
+- HIST363 : Europe in the Early Middle Ages
+- HIST365 : Europe During the Renaissance
+- HIST366 : Europe During the Reformation
+- HIST367 : Europe in the Age of the Enlightenment
+- HIST368 : Europe in the 19th Century
+- HIST369 : Europe, 1900-1950
+- HIST370 : Europe Since 1950
+- HIST356 : Twentieth-Century Germany
+- HIST323 : Empires, Wars, and Revolutions in Europe and the Americas,1763-1838
+- HIST351 : East Central Europe in the 19th and 20th Centuries
 
 XX. Organic Chemistry:
-- CHEM203 - Introduction to Organic Chemistry
-- CHEM213 - Organic Chemistry
-- CHEM223 - Introduction to Organic Chemistry (Lecture)
-- CHEM233 - Organic Chemistry for the Biological Sciences
-- CHEM330 - Advanced Organic Chemistry
-- CHEM413 - Bioorganic Chemistry
-- CHEM460 - Organic Synthesis: A Mechanistic Approach
-- CHEM461 - Synthetic Chemical Biology
-- CHEM569 - Advanced Bioorganic Chemistry
+- CHEM203 : Introduction to Organic Chemistry
+- CHEM213 : Organic Chemistry
+- CHEM223 : Introduction to Organic Chemistry (Lecture)
+- CHEM233 : Organic Chemistry for the Biological Sciences
+- CHEM330 : Advanced Organic Chemistry
+- CHEM413 : Bioorganic Chemistry
+- CHEM460 : Organic Synthesis: A Mechanistic Approach
+- CHEM461 : Synthetic Chemical Biology
+- CHEM569 : Advanced Bioorganic Chemistry
 
 XX. Physical Chemistry:
-- CHEM205 - Physical Chemistry
-- CHEM304 - Fundamentals of Thermodynamics and Statistical Mechanics
-- CHEM305 - Biophysical Chemistry
-- CHEM312 - Introduction to Quantum Mechanics and Spectroscopy
-- CHEM407 - Statistical Mechanics in Chemistry
-- CHEM501 - Applications of Quantum Mechanics in Chemistry
-- CHEM507 - Topics in Physical and Theoretical Chemistry
+- CHEM205 : Physical Chemistry
+- CHEM305 : Biophysical Chemistry
+- CHEM312 : Introduction to Quantum Mechanics and Spectroscopy
+- CHEM407 : Statistical Mechanics in Chemistry
+- CHEM501 : Applications of Quantum Mechanics in Chemistry
+- CHEM507 : Topics in Physical and Theoretical Chemistry
 
 XX. Inorganic Chemistry:
-- CHEM208 - Coordination Chemistry
-- CHEM218 - Fundamentals of Reactivity in Inorganic Chemistry
-- CHEM250 - Inorganic Chemistry for Engineers
-- CHEM411 - Synthesis and Chemistry of Natural Products
-- CHEM521 - Topics in Inorganic Chemistry
-- CHEM524 - Advanced Applications in Organometallic Chemistry
+- CHEM208 : Coordination Chemistry
+- CHEM218 : Fundamentals of Reactivity in Inorganic Chemistry
+- CHEM250 : Inorganic Chemistry for Engineers
+- CHEM411 : Synthesis and Chemistry of Natural Products
+- CHEM521 : Topics in Inorganic Chemistry
+- CHEM524 : Advanced Applications in Organometallic Chemistry
+
+XX. Environmental Engineering:
+- CHBE473 : Water Pollution Control
+- CHBE485 : Air Pollution Prevention and Control
+- CHBE486 : Waste Management for Resource Recovery
 
 XX. Analytical Chemistry:
-- CHEM211 - Introduction to Chemical Analysis
-- CHEM311 - Instrumental Analytical Chemistry
-- CHEM533 - Bioanalytical Chemistry
-- CHEM535 - Topics in Analytical Chemistry
+- CHEM211 : Introduction to Chemical Analysis
+- CHEM311 : Instrumental Analytical Chemistry
+- CHEM533 : Bioanalytical Chemistry
+- CHEM535 : Topics in Analytical Chemistry
 
-XX. Environmental Chemistry:
-- CHEM301 - Aqueous Environmental Chemistry
-- CHEM302 - Atmospheric Environmental Chemistry
+XX. Specialized Chemistry:
+- CHEM300 : Communicating Chemistry
+- CHEM341 : Global Challenges: A Chemical Perspective
+- CHEM417 : Nuclear Chemistry and Radiochemistry
+- CHEM418 : Organometallic Chemistry
+- CHEM410 : Properties of Materials
+- CHEM449 : Seminar and Thesis
+- CHEM473 : Structure Determination and Reaction Analysis
+- CHEM588 : Topics in Chemistry
 
 XX. Materials Chemistry:
-- CHEM327 - Introduction to Materials Chemistry
-- CHEM427 - Applications of Materials Chemistry
-- CHEM527 - Nanomaterials
-- CHEM528 - Nanomaterials Characterization
+- CHEM327 : Introduction to Materials Chemistry
+- CHEM427 : Applications of Materials Chemistry
 
-XX. Computational Chemistry:
-- CHEM404 - Computational Chemistry
+XX. Environmental Chemistry:
+- CHEM301 : Aqueous Environmental Chemistry
+- CHEM302 : Atmospheric Environmental Chemistry
 
-XX. Other Specialized Topics:
-- CHEM300 - Communicating Chemistry
-- CHEM341 - Global Challenges: A Chemical Perspective
-- CHEM417 - Nuclear Chemistry and Radiochemistry
-- CHEM418 - Organometallic Chemistry
-- CHEM410 - Properties of Materials
-- CHEM449 - Seminar and Thesis
-- CHEM473 - Structure Determination and Reaction Analysis
-- CHEM588 - Topics in Chemistry
-
-XX. Basic Chinese: 
-- CHIN131 - Basic Chinese I: Part 1 (Non-Heritage)
-- CHIN133 - Basic Chinese I: Part 2 (Non-Heritage)
-- CHIN134 - Intensive Basic Chinese I (Non-Heritage)
-- CHIN141 - Basic Chinese I: Part 1 (Heritage)
-- CHIN143 - Basic Chinese I: Part 2 (Heritage)
-- CHIN144 - Intensive Basic Chinese I (Heritage)
-
-XX. Intermediate Chinese: 
-- CHIN231 - Basic Chinese II: Part 1 (Non-Heritage)
-- CHIN233 - Basic Chinese II: Part 2 (Non-Heritage)
-- CHIN234 - Intensive Basic Chinese II (Non-Heritage)
-- CHIN241 - Basic Chinese II: Part 1 (Heritage)
-- CHIN243 - Basic Chinese II: Part 2 (Heritage)
-- CHIN244 - Intensive Basic Chinese II (Heritage)
-- CHIN331 - Intermediate Chinese I: Part 1 (Non-Heritage)
-- CHIN333 - Intermediate Chinese I: Part 2 (Non-Heritage)
-- CHIN334 - Intensive Intermediate Chinese I (Non-Heritage)
-- CHIN335 - Intermediate Chinese II: Part I (Non-Heritage)
-- CHIN337 - Intermediate Chinese II: Part 2 (Non-Heritage)
-- CHIN338 - Intensive Intermediate Chinese II (Non-Heritage)
-- CHIN341 - Intermediate Chinese I: Part 1 (Heritage)
-- CHIN343 - Intermediate Chinese I: Part 2 (Heritage)
-- CHIN345 - Intermediate Chinese II: Part I (Heritage)
-- CHIN347 - Intermediate Chinese II: Part 2 (Heritage)
-
-XX. Advanced Chinese: 
-- CHIN403 - Advanced Chinese Reading and Writing II (Non-Heritage)
-- CHIN405 - Advanced Chinese Speaking and Writing I (Non-Heritage)
-- CHIN407 - Advanced Chinese Speaking and Writing II (Non-Heritage)
-- CHIN415 - Media Chinese I (Heritage)
-- CHIN435 - Business Chinese I (Heritage)
-- CHIN437 - Business Chinese II (Heritage)
-- CHIN441 - Advanced Chinese Reading and Writing I (Heritage)
-- CHIN443 - Advanced Chinese Reading and Writing II (Heritage)
-
-XX. Classical Chinese: 
-- CHIN388 - Introduction to Classical Chinese I (Non-Heritage)
-- CHIN461 - Early Classical Chinese Poetry (to Han)
-- CHIN463 - Early Classical Chinese Poetry (Han to Tang)
-- CHIN464 - Early Classical Chinese Poetry (Intensive)
-- CHIN467 - Artistic Images in Chinese Literature from the Bronze Age to the Tang
-- CHIN468 - Artistic Images in Chinese Literature from the Song to the Present
-- CHIN491 - Classical Chinese I (Heritage)
-- CHIN493 - Classical Chinese II (Heritage)
-- CHIN494 - Intensive Classical Chinese (Heritage)
-
-XX. Chinese Literature and Culture:
-- CHIN465 - Fantasy in Chinese Literature
-- CHIN466 - Chinese Martial Arts Fiction
-- CHIN471 - Later Classical Chinese Poetry (Tang)
-- CHIN473 - Later Classical Chinese Poetry (after Tang)
-- CHIN474 - Later Classical Chinese Poetry (Intensive)
-- CHIN481 - Modern Chinese Literature I (Heritage)
-- CHIN483 - Modern Chinese Literature II (Heritage)
-- CHIN484 - Intensive Modern Chinese Literature (Heritage)
-- CHIN485 - Contemporary Chinese Fiction in Film
-- CHIN489 - Reading Modern Sinophone Literature
-
-XX. Special Topics/Supervised Study:
-- CHIN482 - Supervised Study in the Chinese Language
+XX. Structure and Bonding in Chemistry:
+- CHEM111 : Structure, Bonding, and Equilibrium in Chemistry
+- CHEM120 : Structure and Bonding in Chemistry (Lecture)
+- CHEM121 : Structure and Bonding in Chemistry
 
 XX. Foundational Civil Engineering Courses:
 - CIVL201: Introduction to Civil Engineering
-- CIVL203: Technical Communication in Civil Engineering
 - CIVL204: Fundamentals of Environmental Engineering
 - CIVL215: Fluid Mechanics I
 - CIVL230: Solid Mechanics
 - CIVL235: Plane Surveying
 - CIVL250: Engineering and Sustainable Development
 
-XX. Engineering Analysis and Tools:
+XX. Civil Engineering Analysis and Tools:
 - CIVL300: Construction Engineering and Management
 - CIVL301: Modelling and Decision-Making in Civil Engineering
 - CIVL302: Civil Engineering Impacts
@@ -1838,580 +1135,1386 @@ XX. Environmental Engineering and Sustainability:
 - CIVL415: Water Resource Engineering
 - CIVL475: Environmental Stewardship in Civil Engineering
 
-XX. Construction and Project Management:
-- CIVL300: Construction Engineering and Management
-- CIVL520: Construction Planning and Control
-- CIVL521: Construction Methods and Performance
-- CIVL522: Project and Construction Economics
-- CIVL523: Project Management for Engineers
-- CIVL524: Legal Aspects of Project and Construction Management
-
-XX. Structural Analysis and Design (Advanced):
-- CIVL504: Seismic Hazard Analysis and Design Parameters
-- CIVL505: Principles of Earthquake Engineering and Seismic Design
-- CIVL506: Performance-based Earthquake Engineering
-- CIVL507: Dynamics of Structures I
-- CIVL508: Dynamics of Structures II
-- CIVL509: Nonlinear Structural Analysis
-- CIVL511: Seismic Design of Steel Structures
-- CIVL518: Reliability and Structural Safety
-- CIVL519: Risk and Decision Analysis for Infrastructure Management
-- CIVL533: Advanced Concrete Design
-- CIVL535: Advanced Structural Analysis
-- CIVL536: Matrix Structural Analysis and Dynamics
-
-XX. Geotechnical Engineering (Advanced):
-- CIVL570: Advanced Soil Mechanics
-- CIVL574: Experimental Soil Mechanics
-- CIVL575: Constitutive Models for Soil
-- CIVL580: Geotechnical Earthquake Engineering
-- CIVL581: Soil Dynamics for Design Practice
-
-XX. Computational Mechanics and Modeling:
-- CIVL537: Computational Mechanics I
-- CIVL538: Computational Mechanics II
-- CIVL556: Modelling and Optimization of Civil Engineering Systems
-
-XX. Environmental Engineering (Advanced):
-- CIVL562: Environmental Data Collection and Analysis
-- CIVL565: Physical-Chemical Treatment Processes
-- CIVL569: Environmental Biotechnology
-
-XX. Thesis and Research Courses:
-- CIVL598A: Topics in Civil Engineering
-- CIVL598M: Topics in Civil Engineering
-- CIVL598Q: Topics in Civil Engineering
-- CIVL598K: Topics in Civil Engineering
-- CIVL598S: Topics in Civil Engineering
-- CIVL598W: Topics in Civil Engineering
-- CIVL598X: Topics in Civil Engineering
-- CIVL598N: Topics in Civil Engineering
-- CIVL598P: Topics in Civil Engineering
-- CIVL599: M.A.Sc. Thesis
-
-XX. Greek and Roman Mythology:
-- CLST105 - Greek and Roman Mythology
-- CLST313 - Greek Epic
-- CLST333 - Greek Religion
-
-XX. Greek Philosophy and Literature:
-- CLST212 - Greek Philosophy II
-- CLST317 - Classical Tragedy
-
-XX. Ancient Rome:
-- CLST232 - Ancient Rome
-- CLST312 - Women in the Roman World of Republican and Imperial Times
-- CLST332 - Roman Art and Architecture
-
-XX. Medicine and Science in Ancient Times:
-- CLST301 - The Technical Terms of Medicine and Biological Science
-
-XX. Ancient Technology and Warfare:
-- CLST306 - Ancient Technology: Greece and Rome
-- CLST329 - Ancient Greek Warfare
-
-XX. Greek and Roman Art and Architecture:
-- CLST331 - Greek Art and Architecture
-- CLST332 - Roman Art and Architecture
-
-XX. Alexander the Great and Hellenistic Period:
-- CLST356 - Alexander the Great and his Empire
-
-XX. Life and Society in Classical Antiquity:
-- CLST360 - Life and Society in Classical Antiquity
-
-XX. Classical History and Archaeology:
-- CLST401 - Seminar in Classical History
-- CLST403 - Seminar in Classical Art and Archaeology
-
-XX. Counselling Psychology:
-- CNPS331 - Communication Skills in Global Contexts
-- CNPS362 - Basic Interviewing Skills
+XX. Interviewing Skills:
+- SOWK310 : Interviewing Skills
+- CNPS362 : Basic Interviewing Skills
 
 XX. Career Counselling:
-- CNPS363 - Career Counselling
-- CNPS426 - The Role of the Teacher in Guidance
-- CNPS427 - Guidance: Planning and Decision-making
-- CNPS574 - Career Planning and Decision-Making Counselling
+- CNPS363 : Career Counselling
+- CNPS426 : The Role of the Teacher in Guidance
+- CNPS427 : Guidance: Planning and Decision-making
+- CNPS574 : Career Planning and Decision-Making Counselling
 
 XX. Counselling Theory and Practice:
-- CNPS364 - Family Education and Consultation
-- CNPS365 - Introduction to Theories of Counselling
-- CNPS504 - School Counselling
-- CNPS514 - Counselling Adolescents
-- CNPS524 - Counselling Adults
-- CNPS564 - Group Counselling
-- CNPS578 - Individual and Family Counselling Theories and Interventions
-- CNPS586 - Ethics in Counselling Psychology
+- CNPS364 : Family Education and Consultation
+- CNPS365 : Introduction to Theories of Counselling
+- CNPS504 : School Counselling
+- CNPS514 : Counselling Adolescents
+- CNPS564 : Group Counselling
+- CNPS578 : Individual and Family Counselling Theories and Interventions
+- CNPS586 : Ethics in Counselling Psychology
+- CNPS534 : Gender and Sex Role Issues in Counselling
+- CNPS594 : Cross-Cultural Counselling
 
-XX. Personal and Social Development:
-- CNPS433 - The Personal and Social Development of the Adult
-- CNPS534 - Gender and Sex Role Issues in Counselling
-- CNPS594 - Cross-Cultural Counselling
-
-XX. Psychological Assessment:
-- CNPS532 - Psychological Assessment in Counselling
-
-XX. Family Counselling:
-- CNPS545 - Family Counselling - Interventions and Research
-
-XX. Research and Professional Practice:
-- CNPS579 - Research in Counselling Psychology
-- CNPS584 - Program Development and Professional Practice in Counselling
-
-XX. Trauma and Addictions:
-- CNPS595 - Stress, Coping and Adaptation Related to Trauma and Addictions
-
-XX. Vocational Counselling:
-- CNPS677 - Theories of Vocational Development
-
-XX. Archaeology:
-   - CNRS104 - Temples, Tombs, and Tyrants: The Archaeology of the Middle East, Greece, and Rome
-   - CNRS535 - Practicum in Classical or Near Eastern Archaeology
-
-XX. Basic Cantonese:
-- CNTO303 - Basic Cantonese II
-- CNTO311 - Basic Cantonese for Mandarin Speakers
-
-XX. Intermediate Cantonese Courses:
-- CNTO401 - Intermediate Cantonese I
-- CNTO403 - Intermediate Cantonese II
-
-XX. Advanced Cantonese Course:
-- CNTO451 - Advanced Cantonese through Popular Culture
-
-XX. Accounting:
-- COEC293 - Financial Accounting
-- COEC294 - Managerial Accounting
-
-XX. Finance:
-- COEC370 - Corporate Finance
-- COEC371 - Investment Theory
-- COEC387 - Entrepreneurial Finance
-
-XX. Marketing and Market Research:
-- COEC365 - Market Research
-
-XX. Database and Information Technology:
-- COEC437 - Database Technology
-
-XX. Economics and Policy:
-- COEC475 - The Economics & Policy of the Environment, Energy, and Natural Resources
+XX. Cantonese:
+- CNTO303 : Basic Cantonese II
+- CNTO311 : Basic Cantonese for Mandarin Speakers
+- CNTO401 : Intermediate Cantonese I
+- CNTO403 : Intermediate Cantonese II
 
 XX. Management:
-- COEC491 - Strategic Management
-- COEC497 - New Enterprise Development
-- COEC498 - International Business Management
+- COEC491 : Strategic Management
+- COEC497 : New Enterprise Development
+- COHR402 : Leadership
+- COHR411 : Managing and Building Teams
+- COEC498 : International Business Management
 
 XX. Cognitive Systems:
-- COGS200 - Introduction to Cognitive Systems
-- COGS300 - Understanding and Designing Cognitive Systems
-- COGS303 - Research Methods in Cognitive Systems
-- COGS401 - Seminar in Cognitive Systems
-- COGS402 - Research in Cognitive Systems
+- COGS200 : Introduction to Cognitive Systems
+- COGS300 : Understanding and Designing Cognitive Systems
+- COGS303 : Research Methods in Cognitive Systems
+- COGS401 : Seminar in Cognitive Systems
+- COGS402 : Research in Cognitive Systems
 
 XX. Human Resource Management:
-- COHR304 - Training, Development, and Performance Management
-- COHR305 - Strategic Compensation
-- COHR308 - Labour Relations
-- COHR405 - Managing the Family Business
-- COHR411 - Managing and Building Teams
-- COHR433 - Employment Law
+- COHR304 : Training, Development, and Performance Management
+- COHR305 : Strategic Compensation
+- COHR308 : Labour Relations
+- COHR405 : Managing the Family Business
+- COHR411 : Managing and Building Teams
+- COHR433 : Employment Law
+- COHR486 : Special Topics in Organizational Behaviour and Human Resources
 
-XX. Leadership and Management:
-- COHR402 - Leadership
-- COHR411 - Managing and Building Teams
-
-XX. Organizational Behavior and Human Resources:
-- COHR486 - Special Topics in Organizational Behaviour and Human Resources
-
-XX. Computation Linguistics Basics:
-- COLX521 - Corpus Linguistics
-- COLX523 - Advanced Corpus Linguistics
-
-XX. Computational Linguistics Group:
-- COLX525 - Computational Morphology
-- COLX535 - Parsing for Computational Linguistics
-- COLX561 - Computational Semantics
-- COLX563 - Advanced Computational Semantics
-- COLX565 - Sentiment Analysis
-- COLX581 - Natural Language Processing for Low-Resource Languages
-- COLX585 - Trends in Computational Linguistics
-
-XX. Machine Learning and Translation Group:
-- COLX531 - Machine Translation
-
-XX. Business Fundamentals
-- COMM101 - Business Fundamentals
+XX. Computation Linguistics:
+- COLX521 : Corpus Linguistics
+- COLX523 : Advanced Corpus Linguistics
+- COLX525 : Computational Morphology
+- COLX535 : Parsing for Computational Linguistics
+- COLX561 : Computational Semantics
+- COLX563 : Advanced Computational Semantics
+- COLX565 : Sentiment Analysis
+- COLX581 : Natural Language Processing for Low-Resource Languages
+- COLX585 : Trends in Computational Linguistics
 
 XX. Business Ethics and Management:
-- COMM105 - Values, Ethics, and Community
-- COMM192 - Management and Organizational Behaviour
-- COMM203 - Managing the Employment Relationship
+- COMM105 : Values, Ethics, and Community
+- COMM192 : Management and Organizational Behaviour
+- COMM203 : Managing the Employment Relationship
 
 XX. Quantitative Decision Making and Statistics in Business:
-- COMM190 - Introduction to Quantitative Decision Making
-- COMM191 - Application of Statistics in Business
-- COMM290 - Introduction to Quantitative Decision Making
-- COMM291 - Application of Statistics in Business
-
-XX. Business Communications:
-- COMM196 - Business Communications I
-- COMM220 - Business Communications
-- COMM395 - Business Communications
-- COMM396 - Business Communications II
+- COMM190 : Introduction to Quantitative Decision Making
+- COMM191 : Application of Statistics in Business
+- COMM290 : Introduction to Quantitative Decision Making
+- COMM291 : Application of Statistics in Business
 
 XX. Logistics and Operations Management:
-- COMM204 - Logistics and Operations Management
-- COMM314 - Strategies for Responsible Business
-- COMM443 - Service Operations
+- COMM204 : Logistics and Operations Management
+- COMM314 : Strategies for Responsible Business
+- COMM443 : Service Operations
+- COMM449 : Supply-Chain Management
+- COMR493 : Strategic Management in Business
 
 XX. Finance and Investment:
-- COMM271 - Introduction to Capital Markets
-- COMM298 - Introduction to Finance
-- COMM370 - Corporate Finance
-- COMM371 - Investment Theory
-- COMM376 - Financial Institutions I
-- COMM377 - International Financial Markets and Institutions
-- COMM474 - Fixed Income Markets and Management
-- COMM475 - Investment Policy
-- COMM477 - Risk Management and Financial Engineering
-
-XX. Entrepreneurship and Innovation:
-- COMM280 - Entrepreneurship
-- COMM382 - Economics of Entrepreneurship and Innovation
-- COMM383 - Innovation Leadership
-- COMM387 - Entrepreneurial Finance
-- COMM387 - Entrepreneurial Finance and Private Equity
-- COMM488 - Design Methods for Business Innovation
-
-XX. Accounting:
-- COMM293 - Financial Accounting
-- COMM294 - Managerial Accounting
-- COMM320 - Foundations in Accounting I
-- COMM353 - Financial Accounting: Intermediate I
-- COMM354 - Cost Accounting
-- COMM450 - Financial Accounting - Intermediate II
-- COMM452 - Taxes and Decision Making
-- COMM453 - Financial Accounting-Advanced
-- COMM454 - Accounting for Management Control and Incentives
-- COMM455 - Principles of Auditing
-- COMM459 - Financial Statement Analysis
+- COMM271 : Introduction to Capital Markets
+- COMM298 : Introduction to Finance
+- COMM370 : Corporate Finance
+- COMM371 : Investment Theory
+- COMM376 : Financial Institutions I
+- COMM377 : International Financial Markets and Institutions
+- COMM474 : Fixed Income Markets and Management
+- COMM475 : Investment Policy
+- COMM477 : Risk Management and Financial Engineering
+- COEC370 : Corporate Finance
+- COEC371 : Investment Theory
+- COEC387 : Entrepreneurial Finance
+- COMR473 : Business Finance
+- ECON350 : Public Finance Policy Topics
 
 XX. Marketing and Market Research:
-- COMM296 - Introduction to Marketing
-- COMM362 - Consumer Behaviour
-- COMM363 - Marketing Analysis
-- COMM365 - Market Research
-- COMM420 - Marketing
-- COMM460 - Social and Nonprofit Marketing
-- COMM461 - Business Development
-- COMM462 - Integrated Marketing Communication
-- COMM463 - Public Relations
-- COMM464 - Digital Marketing
-- COMM467 - Brand Management
-- COMM468 - Marketing Applications
-
-XX. Real Estate and Property Development:
-- COMM306 - Urban Land Economics
-- COMM307 - Real Estate Investment
-- COMM405 - Real Estate Finance
-- COMM407 - Real Estate Economics
-- COMM408 - Real Estate Development
+- COMM296 : Introduction to Marketing
+- COMM362 : Consumer Behaviour
+- COMM363 : Marketing Analysis
+- COMM365 : Market Research
+- COMM420 : Marketing
+- COMM460 : Social and Nonprofit Marketing
+- COMM461 : Business Development
+- COMM463 : Public Relations
+- COMM464 : Digital Marketing
+- COMM467 : Brand Management
+- COMM468 : Marketing Applications
+- COMM484 : Sustainability Marketing
+- COMR465 : Marketing Management
 
 XX. Management Information Systems:
-- COMM205 - Introduction to Management Information Systems
-- COMM335 - Information Systems Technology and Development
-- COMM336 - Introduction to Digital Business
-- COMM437 - Database Technology
-- COMM438 - Management of Information Systems
-- COMM439 - Business Telecommunications
+- COMM205 : Introduction to Management Information Systems
+- COMM335 : Information Systems Technology and Development
+- COMM336 : Introduction to Digital Business
+- COMM437 : Database Technology
+- COMM438 : Management of Information Systems
+
+XX. Commerce Research:
+- COMM311 : Research Theory for Commerce Scholars
+- COMM525 : Introduction to Behavioural Research Methods for Business
+- COMM633 : Modelling Methods in the Research and Practice of Information Systems
+- COMM663 : Consumer Judgment and Decision Making
+- COMM671 : Theory of Finance
+- COMM672 : Advanced Topics in Theoretical Corporate Finance
+- COMM673 : Advanced Topics in Theoretical Asset Pricing
+- COMM674 : Advanced Topics in Empirical Asset Pricing
+- COMM691 : Advanced Topics in Policy Analysis
+- COMM693 : Seminar in Research Methodology I
+- COMM695 : Advanced Topics in Empirical Corporate Finance
+- COMM696 : Applied Research in Policy Analysis and Strategy
 
 XX. International Business:
-- COMM377 - International Financial Markets and Institutions
-- COMM498 - International Business Management
+- COMM377 : International Financial Markets and Institutions
+- COMM498 : International Business Management
+- ECON255 : Understanding Globalization
+- ECON355 : Introduction to International Trade
+- ECON356 : Introduction to International Finance
+- ECON444 : Seminar in International Economic Relations
+- ECON455 : International Trade
+- ECON456 : International Macroeconomics and Finance
 
 XX. Law and Regulations:
-- COMM393 - Commercial Law
-- COMM431 - Law of Business Organizations and Corporate Governance
-- COMM434 - Land Law
+- COMM393 : Commercial Law
+- COMM431 : Law of Business Organizations and Corporate Governance
+- COMM434 : Land Law
 
-XX. Supply Chain Management:
-- COMM449 - Supply-Chain Management
+XX. Business Ethics:
+- COMM312 : Business Ethics Leadership
+- COMM314 : Strategies for Responsible Business
 
-XX. Business Ethics and Responsible Management:
-- COMM312 - Business Ethics Leadership
-- COMM314 - Strategies for Responsible Business
-
-XX. Innovation and Technology Management:
-- COMM386 - Topics in Business III
-- COMM386 - Topics in Business III
-- COMM486 - Special Topics in Business
-- COMM486 - Special Topics in Business
-- COMM486 - Special Topics in Business
-- COMM486 - Special Topics in Business
-- COMM486 - Special Topics in Business
-
-XX. Nonprofit Management and Social Entrepreneurship:
-- COMM484 - Sustainability Marketing
-- COMM485 - Social Entrepreneurship
-
-XX. Research and Analysis:
-- COMM311 - Research Theory for Commerce Scholars
-- COMM525 - Introduction to Behavioural Research Methods for Business
-- COMM633 - Modelling Methods in the Research and Practice of Information Systems
-- COMM663 - Consumer Judgment and Decision Making
-- COMM671 - Theory of Finance
-- COMM672 - Advanced Topics in Theoretical Corporate Finance
-- COMM673 - Advanced Topics in Theoretical Asset Pricing
-- COMM674 - Advanced Topics in Empirical Asset Pricing
-- COMM691 - Advanced Topics in Policy Analysis
-- COMM693 - Seminar in Research Methodology I
-- COMM695 - Advanced Topics in Empirical Corporate Finance
-- COMM696 - Applied Research in Policy Analysis and Strategy
-
-XX. Internship and Work Experience:
-- COMM202 - Career Fundamentals
-- COMM499 - Internship
-
-XX. Directed Studies and Special Topics:
-- COMM490 - Directed Studies in Commerce
-- COMM486 - Special Topics in Business
-- COMM486 - Special Topics in Business
-- COMM486 - Special Topics in Business
-- COMM486 - Special Topics in Business
-- COMM589 - Applied Methods in Technology Start-ups at CDL
-
-XX. Small and Start-up Businesses:
-- COMM283 - Starting a Small Business
-- COMM387 - Entrepreneurial Finance
-- COMM389 - New Venture Strategies
-- COMM466 - New Venture Design
-- COMM489 - Applied Methods in Technology Start-ups at CDL
-
-XX. Business Intro
-- COMR100 - Introduction to Business
-- COMR398 - Introduction to Business Processes and Operations
-
-XX. Entrepreneurship:
-- COMR280 - Entrepreneurship
-- COMR382 - Economics of Entrepreneurship and Innovation
-
-XX. Organizational Behavior:
-- COMR329 - Principles of Organizational Behaviour
-
-XX. Accounting:
-- COMR457 - Fundamentals of Financial Accounting
-- COMR458 - Fundamentals of Managerial Accounting
-
-XX. Marketing:
-- COMR465 - Marketing Management
-
-XX. Finance:
-- COMR473 - Business Finance
-
-XX. Strategic Management:
-- COMR493 - Strategic Management in Business
+XX. Business Introduction:
+- COMR100 : Introduction to Business
+- COMR398 : Introduction to Business Processes and Operations
 
 XX. Foundations of Conservation:
 - CONS101: Introduction to Conservation
 - CONS200: Foundations of Conservation
 - CONS340: Introduction to Geographic Information Systems for Forestry and Conservation
 - CONS370: Aboriginal Forestry
-
-XX. Climate Change and Environmental Observations:
+- CONS440: Conservation Decision-Making and Policy
+- CONS481: Conservation Planning in Practice
 - CONS127: Observing the Earth from Space
 - CONS210: Visualizing Climate Change
+- CONS505: Ecological Restoration
+- CONS528: Social Science Research Methods and Design for Natural Resource Management
 
-XX. Genomics, Ecology, and Sustainability:
+XX. Sustainability:
 - CONS302: Issues in Genomics and the Environment
-- CONS310: Ecology in a Changing Climate
 - CONS330: Conservation Science and Sustainability
-
-XX. Energy and Policy:
 - CONS425: Sustainable Energy: Policy and Governance
-Conservation Decision-Making and Policy:
-- CONS440: Conservation Decision-Making and Policy
 
 XX. Field Schools and Global Perspectives:
 - CONS451: Integrated Field School
 - CONS452: Global Perspectives Capstone
 - CONS453: International Conservation and Forest Ecosystem Management Field School
-- CONS454: Communities, Wildlife, and Conservation in Post-Apartheid South Africa
-
-XX. Conservation Planning and Management:
-- CONS481: Conservation Planning in Practice
 
 XX. Fish and Wildlife Conservation:
 - CONS486: Fish Conservation and Management
 - CONS495: Human Wildlife Conflict
 - CONS496: Primate Conservation in the Anthropocene
 
-XX. Ecological Restoration and Social Science:
-- CONS505: Ecological Restoration
-- CONS528: Social Science Research Methods and Design for Natural Resource Management
+XX. Sexuality Studies:
+- CSIS200 : Critical Engagements in Sexuality Studies
+- CSIS300 : Introduction to Critical Studies in Sexuality
 
-XX. Computing Basics:
-- CPEN211 - Introduction to Microcomputers
-- CPEN211 - Computing Systems I
-- CPEN212 - Computing Systems II
-- CPEN312 - Digital Systems and Microcomputers
-- CPEN411 - Computer Architecture
-- CPEN412 - Microcomputer Systems Design
+Knowledge-Making in the Disciplines:
+- WRDS350 : Knowledge-Making in the Disciplines
+- WRDS250 : Evaluating Knowledge Production and Mobilization
 
-XX. Software Engineering:
-- CPEN221 - Software Construction I
-- CPEN223 - Software Design for Engineers
-- CPEN321 - Software Engineering
-- CPEN322 - Software Construction II
-- CPEN421 - Software Project Management
-- CPEN522 - Software Verification and Testing
-- CPEN523 - Software Project Management
+XX. Wood Finishing and Protection:
+- WOOD464 : Wood Finishing and Protection
+- WOOD373 : Wood Adhesives and Coatings
 
-XX. System and Operating Systems:
-- CPEN331 - Operating Systems
-- CPEN333 - System Software Engineering
-- CPEN431 - Design of Distributed Software Applications
-- CPEN432 - Real-time System Design
-- CPEN533 - Error Resilient Computing Systems
+XX. Wood Products and Industry:
+- WOOD365 : Wood Industry Business Management
+- WOOD449 : Directed Studies in Wood Products Processing
+- WOOD494 : Principles of Wood Cutting and Tooling
+- WOOD499 : Wood Products Capstone
 
-XX. Design and Capstone Projects:
-- CPEN281 - Technical Communication
-- CPEN291 - Computer Engineering Design Studio I
-- CPEN391 - Computer Engineering Design Studio II
-- CPEN491 - Computer Engineering Capstone Design Project
-- CPEN491 - Computer Engineering Capstone Design Project
+XX. Wood Design and Technology:
+- WOOD292 : Two-Dimensional and Solid Computer-Aided Graphics
+- WOOD482 : CAD/CAM
+- WOOD485 : Furniture Construction
+- WOOD487 : Wood Composites
+- WOOD491 : Environmental Facilities Design
 
-XX. Miscellaneous Topics:
-- CPEN400 - Topics in Computer Engineering
-- CPEN400 - Topics in Computer Engineering
-- CPEN400 - Topics in Computer Engineering
-- CPEN441 - Human Computer Interfaces in Engineering Design
-- CPEN442 - Introduction to Cybersecurity
-- CPEN481 - Economic Analysis of Engineering Projects
+XX. Wood Manufacturing and Production:
+- WOOD245 : Programming for Wood Products Manufacturing Applications
+- WOOD290 : Secondary Wood Products Manufacturing
+- WOOD353 : Mill Site Visits
+- WOOD356 : Machine Components
+- WOOD384 : Wood Sawmilling and Drying
+- WOOD488 : Wood Products Design and Development I
+- WOOD572 : Topics in Wood Science and Forest Products
 
-XX. Advanced Topics:
-- CPEN502 - Architecture for Learning Systems
-- CPEN511 - Advanced Computer Architecture
-- CPEN512 - Parallel and Reconfigurable Computing
-- CPEN513 - CAD Algorithms for Integrated Circuits
-- CPEN542 - Cybersecurity2. Introduction to Systematic Program Design
+XX. Art:
+- VISA220 : Drawing
+- VISA230 : Painting
+- VISA240 : Photography
+- VISA241 : Digital Photography
+- VISA250 : Print Media
+- VISA260 : Sculpture
 
-XX. Foundations and Programming:
-CPSC100: Computational Thinking
-CPSC103: Introduction to Systematic Program Design
-CPSC107: Systematic Program Design
-CPSC110: Computation, Programs, and Programming
-CPSC121: Models of Computation
+XX. Urban Systems:
+- URSY550 : Infrastructure Asset Management
+- URSY520 : Urban Systems Analysis and Planning
+- URSY530 : Urban Systems Engineering
+- URST400 : Seminar in Urban Studies
+- URST352 : Urbanization in the Global South
 
-XX. Algorithms and Data Structures:
-CPSC221: Basic Algorithms and Data Structures
-CPSC259: Data Structures and Algorithms for Electrical Engineers
-CPSC320: Intermediate Algorithm Design and Analysis
+XX. Urban Forests:
+- UFOR401 : Integrated Urban Forestry Capstone Studio
+- UFOR512 : Urban Forest Governance
+- UFOR522 : Urban Forest Resources and Benefits Assessment
+- UFOR449 : Directed Studies in Urban Forestry
+- UFOR511 : Geomatics Principles and Applications
 
-XX. Software Engineering and Systems:
-CPSC210: Software Construction
-CPSC310: Introduction to Software Engineering
-CPSC317: Internet Computing
-CPSC340: Machine Learning and Data Mining
+XX. Environmental Justice:
+- UFOR200 : Urban Forests and Well-Being
+- UFOR330 : Environmental Justice and Urban Green Equity
+- UFOR403 : Ecological Restoration
+- UFOR495 : Biodiversity in Urban Areas
+- UFOR402 : Urban Forestry Administration, Policy and Law
 
-XX. Databases and Data Management:
-CPSC304: Introduction to Relational Databases
-CPSC368: Databases in Data Science
-CPSC504: Data Management
+XX. Live and Digital Performance:
+- THFL402 : Professional Portfolio Preparation for Live and Digital Performance2. Introduction to Stage Acting
+- THFL402 : Professional Portfolio Preparation for Live and Digital Performance
+- THFL100 : The Art of Storytelling for Stage and Screen
+- THFL100 : The Art of Storytelling for Stage and Screen
+- THFL100 : The Art of Storytelling for Stage and Screen
+- THFL402 : Professional Portfolio Preparation for Live and Digital Performance
 
-XX. Artificial Intelligence and Machine Learning:
-CPSC322: Introduction to Artificial Intelligence
-CPSC330: Applied Machine Learning
-CPSC440: Advanced Machine Learning
+XX. Hispanic Literature:
+- SPAN221 : Introduction to Hispanic Literature
+- SPAN312 : Hopscotch: Topics in Hispanic Literature (in English)
+- SPAN357 : The Golden Age of Peninsular Literature and Culture
+- SPAN358 : Divergent Visions: Peninsular Literature and Culture since 1700
+- SPAN364 : Colonial Encounters in Spanish-American Literature and Culture
+- SPAN365 : Modern Magics: Spanish-American Literature and Culture since the 1820s
+- SPAN495 : Research Intensive Seminar in Hispanic Literature and Culture
+- SPAN520 : Golden-Age Literatures and Cultures
+- SPAN590 : Contemporary Latin-American Literatures and Cultures
 
-XX. Human-Computer Interaction:
-CPSC344: Introduction to Human Computer Interaction Methods
-CPSC444: Advanced Methods for Human Computer Interaction
-CPSC543: Physical User Interface Design and Evaluation
-CPSC544: Human Computer Interaction
+XX. Spanish:
+- SPAN301 : Intermediate Spanish I
+- SPAN302 : Intermediate Spanish II
+- SPAN206 : Conversational Spanish I
+- SPAN207 : Conversational Spanish II
+- SPAN201 : Elementary Spanish I
+- SPAN202 : Elementary Spanish II
+- SPAN101 : Beginners' Spanish I
+- SPAN102 : Beginners' Spanish II
 
-XX. Computer Graphics and Visualization:
-CPSC314: Computer Graphics
-CPSC524: Computer Graphics: Modelling
+XX. Spanish Culture:
+- SPAN308 : Spanish for Business
+- SPAN403 : History of the Spanish Language
+- SPAN404 : From World to Screen: Topics in Hispanic Cinema
+- SPAN406 : Breaking the Mold: Gender Representation(s) in Hispanic Literature and Culture
+- SPAN409 : From Text to Stage: Topics in Hispanic Theatre
+- SPAN490 : Peoples and Nations: Topics in Twentieth- and Twenty-First Century Spanish-American Culture
+- SPAN504 : Hispanic Cinema
+- SPAN505 : Transatlantic Hispanic Literatures and Cultures
+- SPAN550 : Hispanic Languages, Literatures and Cultures
 
-XX. Topics and Specializations:
-CPSC436: Topics in Computer Science (R, V, A, N)
-CPSC530: Topics in Information Processing (L)
-CPSC532: Topics in Artificial Intelligence (C, J, S, V, W, D, G, L, M, P, Y)
-CPSC533: Topics in Computer Graphics (R, V, Y)
-CPSC535: Topics in Simulation and Optimization (P)
-CPSC536: Topics in Algorithms and Complexity (N, R, S)
-CPSC538: Topics in Computer Systems (B, L, M, P)
-CPSC539: Topics in Programming Languages (S, B, L)
+XX. Social Work:
+- SOWK420 : Introduction to Social Work Research
+- SOWK405 : Social Work Practice II
+- SOWK450 : Social Work Practice in Community Mental Health
+- SOWK325 : Indigenous Peoples and Critical Social Work Analysis
+- SOWK337 : Culture and Race in Social Work Practice
+- SOWK441 : Social Context of Child Development
+- SOWK442 : Policy and Practice in Child Welfare
+- SOWK453 : Disability and Justice
 
-XX. Directed Studies and Projects:
-CPSC448: Directed Studies in Computer Science (A)
-CPSC449: Honours Thesis
+XX. Scandinavian Studies:
+- SCAN334 : Contemporary Scandinavian Fiction (in English)
+- SCAN336 : Scandinavian Crime Fiction (in English)
+- SCAN337 : Scandinavian Cinema (in English)
+- SCAN411 : Scandinavian Drama and Film in Translation
 
-XX. Other Special Topics:
-CPSC455: Applied Industry Practices
-CPSC490: Student Directed Seminars (A)
-CPSC491: Interactive Digital Media Practicum
+XX. Russian Studies:
+- RUSS303 : Topics in Russian Culture (in English)
+- RUSS316 : Russian through Film (in Russian)
+- RUSS321 : Imagining Location in Russian Literature (in English)
+- RUSS206 : Nineteenth-Century Russian Writers in Translation
+- RUSS207 : Twentieth-Century Russian Writers in Translation
+- RUSS306 : Russian Literature in Translation
 
-XX. Introduction to Creative Writing:
-- CRWR200 - Introduction to Creative Writing
-- CRWR209 - Introduction to Writing Fiction
-- CRWR213 - Introduction to Writing for the New Media
-- CRWR220 - Introduction to Creative Writing with an Indigenous Focus
+XX. Russain Language:
+- RUSS101 : Basic Russian I
+- RUSS102 : Basic Russian II
+- RUSS201 : Second-Year Russian I
+- RUSS202 : Second-Year Russian II
+- RUSS301 : Third-Year Russian I
+- RUSS302 : Third -Year Russian II
 
-XX. Writing for Specific Forms:
-- CRWR201 - Introduction to Writing Poetry
-- CRWR203 - Introduction to Writing for Children and Young Adults
-- CRWR205 - Introduction to Writing Creative Nonfiction
-- CRWR206 - Introduction to Writing for the Screen
-- CRWR208 - Introduction to Writing for Graphic Forms
-- CRWR230 - Introduction to Writing for Comedic Forms
-- CRWR307 - Intermediate Writing for the Stage and Radio
-- CRWR310 - Video Game Writing and Narrative
-- CRWR312 - Interactive Storytelling
-- CRWR316 - Intermediate Writing for Television
-- CRWR319 - Writing Genre Fiction
-- CRWR351 - Intermediate Poetry Workshop
-- CRWR353 - Intermediate Children and Young Adult Writing Workshop
-- CRWR356 - Intermediate Screenplay Workshop
-- CRWR359 - Intermediate Fiction Workshop
-- CRWR401 - Writing Poetry I
-- CRWR402 - Writing for New Media I
-- CRWR403 - Writing for Children and Young Adults I
-- CRWR405 - Writing Creative Nonfiction I
-- CRWR406 - Writing for the Screen I
-- CRWR407 - Writing of Drama for the Stage I
-- CRWR408 - Writing for Graphic Forms I
-- CRWR409 - Writing Fiction I
-- CRWR411 - Writing for Lyric Forms I
-- CRWR416 - Writing for Television I
-- CRWR419 - Writing Speculative Fiction
-- CRWR501 - Advanced Writing of Poetry I
-- CRWR503 - Advanced Writing for Children I
-- CRWR505 - Advanced Writing of Creative Non-Fiction I
-- CRWR506 - Advanced Writing of Drama for Screen I
-- CRWR508 - Advanced Writing for Graphic Forms I
-- CRWR509 - Advanced Writing of Fiction I
-- CRWR511 - Advanced Writing for Lyric Forms I
-- CRWR514 - Advanced Writing for Television I
+XX. Punjabi Language Courses:
+- PUNJ200 : Intermediate Punjabi
+- PUNJ300 : Advanced Punjabi
+- PUNJ102 : Introductory Punjabi
+- PUNJ200 : Intermediate Punjabi
+- PUNJ300 : Advanced Punjabi
 
-XX. Career Preparation and Special Projects:
-- CRWR430 - Preparation for a Career in Writing
-- CRWR440 - Interdisciplinary Projects
-- CRWR570 - Advanced Special Projects in Creative Writing
+XX. Portuguese Language:
+- PORT392 : Studies in Portuguese and Brazilian Literature (in English)
+- PORT405 : Studies in Portuguese and Brazilian Culture (In English)
+- PORT102 : First-Year Portuguese II
+- PORT201 : Second-Year Portuguese I
 
-XX. Other:
-- CRWR530 - Preparation for a Career in Writing
-- CRWR521 - Indigenous Writing
-- CRWR599 - Thesis
+XX. Social Psychology:
+- PSYC350 : Psychological Aspects of Human Sexuality
+- PSYC320 : Psychology of Sex Differences
+- PSYC308 : Social Psychology
+- PSYC307 : Cultural Psychology
 
-XX. Introduction to Sexuality Studies:
-- CSIS200 - Critical Engagements in Sexuality Studies
-- CSIS300 - Introduction to Critical Studies in Sexuality
+XX. Biological and Cognitive Psychology:
+- PSYC305 : Personality Psychology
+- PSYC309 : Cognitive Processes
+- PSYC314 : Health Psychology
+- PSYC340 : Directed Studies in Psychology
+- PSYC401 : Clinical Psychology
 
-XX. Introduction to Trans* Studies:
-- CSIS301 - Introduction to Trans* Studies
+XX. Developmental Psychology:
+- PSYC302 : Infancy
+- PSYC315 : Childhood and Adolescence
+- PSYC319 : Applied Developmental Psychology
+- PSYC413 : Social and Personality Development
 
-XX. Advanced/Graduate-level Sexuality Studies:
-- CSIS500 - Critical Studies in Sexuality: Multi-disciplinary Approaches
+XX. Psychotherapy and Interventions:
+- PSYC541 : Introduction to Psychotherapy
+- PSYC542 : Cognitive/Behavioral Interventions
+
+XX. Behavior and Mental Disorders:
+- PSYC300 : Abnormal Psychology
+- PSYC301 : Brain Dysfunction and Recovery
+- PSYC335 : Gambling and Decision Making
+
+XX. Psychological Research Methods and Data Analysis:
+- PSYC217 : Research Methods
+- PSYC218 : Analysis of Behavioral Data
+- PSYC359 : Advanced Research Methods in Behavioral Sciences
+
+XX. Special Topics in Politics:
+- POLI390 : Honours Seminar
+- POLI420 : Advanced Topics in Comparative Politics
+- POLI422 : Selected Problems in Comparative Politics
+- POLI428 : Comparative Public Management
+- POLI439 : Politics and Economic Growth
+- POLI440 : Contemporary Political Theory
+- POLI443 : Critical Theory: Political Theory and the Problems of Race
+
+XX. Politics and Internal Relations:
+- POLI364 : International Organizations
+- POLI366 : International Political Economy
+- POLI367 : International Relations Theory and the International System
+- POLI369 : Issues in International Security
+- POLI370 : Issues in International Conflict Management
+- POLI372 : Multinational Corporations and Globalization
+- POLI374 : International Peacekeeping
+- POLI375 : Global Environmental Politics
+- POLI376 : International Law
+- POLI377 : Nuclear Weapons and Arms Control
+- POLI378 : The Politics of Terrorism
+- POLI379 : China in World Politics
+- POLI361 : Peace and Conflict Studies
+- POLI362 : The Great Powers and International Politics
+
+XX. Public Administration and Policy:
+- POLI302 : Public Administration
+- POLI350 : Public Policy
+- POLI351 : Environmental Politics and Policy
+- POLI352 : Comparative Politics of Public Policy
+- POLI385 : Public Opinion and Elections
+- POLI450 : Policy Analysis
+
+XX. Political Thought and Theory:
+- POLI240 : Currents of Political Thought
+- POLI341 : Contemporary Political Theory
+- POLI343 : Theories of State and Society
+- POLI344 : Social and Political Thought
+- POLI347 : Law and Political Theory
+- POLI444 : Critical Theory: Political Theory and the Problems of Race
+- POLI446 : Multiculturalism and Identity Politics
+- POLI448 : Democratic Theory
+- POLI449 : Topics in Political Theory
+
+XX. Canadian Politics:
+- POLI101 : The Government of Canada
+- POLI303 : Federalism in Canada
+- POLI307 : Quebec Government and Politics
+- POLI308 : Issues in Canadian Politics
+
+XX. Special Topics in Physics:
+- PHYS341 : Physics of Music
+- PHYS348 : Frontiers in Physics and Astronomy
+- PHYS438 : Zoological Physics
+- PHYS403 : Statistical Mechanics
+- PHYS502 : Condensed Matter Physics I
+- PHYS473 : Applied Nuclear Physics
+- PHYS404 : Introduction to Medical Physics
+- PHYS250 : Introduction to Modern Physics
+- PHYS319 : Electronics Laboratory
+- PHYS408 : Optics
+- PHYS409 : Experimental Physics
+
+XX. Relativity and Quantum Mechanics:
+- PHYS304 : Introduction to Quantum Mechanics
+- PHYS400 : Introduction to Elementary Particles
+- PHYS402 : Applications of Quantum Mechanics
+- PHYS200 : Relativity and Quanta
+- PHYS507 : Quantum Field Theory II
+- PHYS526 : Quantum Field Theory I
+
+XX. Biophysics:
+- PHYS305 : Introduction to Biophysics
+- PHYS405 : Radiation Biophysics
+- PHYS536 : Advanced Radiation Biophysics
+
+XX. Computational Physics:
+- PHYS210 : Introduction to Computational Physics
+- PHYS410 : Computational Physics
+
+XX. Mechanics:
+- PHYS170 : Mechanics I
+- PHYS216 : Intermediate Mechanics
+- PHYS306 : Advanced Mechanics
+- PHYS350 : Applications of Classical Mechanics
+
+XX. Introductory Physics:
+- PHYS100 : Introductory Physics
+- PHYS157 : Introductory Physics for Engineers I
+- PHYS158 : Introductory Physics for Engineers II
+- PHYS159 : Introductory Physics Laboratory for Engineers
+
+XX. Pharmacy Practice in Specialized Settings:
+- PHRM330 : Pharmacy Practice in Acute and Critically Ill Patients
+- PHRM332 : Practical Applications of Pharmacoepidemiology & Health Economics
+- PHRM333 : Pharmacotherapy in Oncology
+
+XX. Indigenous Health and Cultural Safety:
+- PHRM261 : Indigenous Health and Cultural Safety
+- PHRM323 : Pharmaceutical Care in Indigenous Health
+
+XX. Medication Management:
+- PHRM111 : Medication Management I
+- PHRM211 : Medication Management II
+- PHRM212 : Medication Management III
+- PHRM311 : Medication Management IV
+- PHRM312 : Medication Management V
+
+XX. Philosophy:
+- PHIL120: Introduction to Critical Thinking
+- PHIL125: Introduction to Scientific Reasoning
+- PHIL100: Introduction to Philosophy
+- PHIL101: Introduction to Philosophy
+- PHIL102: Introduction to Philosophy II
+- PHIL415: The Philosophy of Immanuel Kant
+- PHIL416: Topics in 19th-Century Philosophy
+- PHIL418: Topics in Twentieth-Century Philosophy
+- PHIL431: Topics in Social and Political Philosophy
+- PHIL432: Topics in Ethical Theory
+- PHIL441: Philosophy of Perception
+- PHIL455: Topics in the Philosophy of Cognitive Science
+- PHIL491: Seminar for Majors in Philosophy
+- PHIL487: Directed Reading
+- PHIL351: Philosophical Perspectives on Cognitive Systems Research
+- PHIL337: Ethics for the Sciences
+- PHIL461: Philosophy of Social Science
+- PHIL462: Space and Time
+- PHIL470: Comparative Conceptions of the Self
+
+XX. History of Philosophy: 
+- PHIL313: Medieval Philosophy
+- PHIL314: Philosophy in the 17th Century
+- PHIL314: Philosophy in the 17th Century
+- PHIL315: Philosophy in the 18th Century
+- PHIL316: Philosophy After 1800
+- PHIL364: Darwin, Evolution, and Modern History
+- PHIL375: Philosophy and Literature
+- PHIL375: Philosophy and Literature
+- PHIL378: Philosophical Wisdom of Early India
+
+XX. Philosophy of Science:
+- PHIL260: Science and Society in the Contemporary World
+- PHIL369: Philosophy of Science
+- PHIL360: Introduction to History and Philosophy of Science
+- PHIL464: Philosophy of Biology
+
+XX. Epistemology:
+- PHIL240: Introduction to Epistemology
+- PHIL240: Introduction to Epistemology
+- PHIL440: Topics in Epistemology
+
+XX. Ethics: 
+- PHIL230: Introduction to Ethics
+- PHIL230: Introduction to Ethics
+- PHIL235: Contemporary Moral Issues
+- PHIL331: Business and Professional Ethics
+- PHIL331: Business and Professional Ethics
+- PHIL332: Environmental Ethics
+- PHIL333: Bio-Medical Ethics
+- PHIL333: Bio-Medical Ethics
+- PHIL334: Sex, Gender and Philosophy
+- PHIL335: Power and Oppression
+- PHIL337: Ethics for the Sciences
+- PHIL338: Philosophy of Law
+- PHIL338: Philosophy of Law
+
+XX. Logic:
+- PHIL220: Symbolic Logic
+- PHIL220: Symbolic Logic
+- PHIL320: Logic: Metatheory and Computability
+- PHIL321: Induction, Decision and Game Theory
+- PHIL322: Modal Logic
+- PHIL323: Non-Classical Logics
+
+XX. Drug Delivery:
+- BMEG372 : Biomedical Materials and Drug Delivery
+- PHAR203 : Drug Delivery Technologies and Personalized Medicine Theory and Laboratory
+
+XX. Pharamaceuticals:
+- PHAR204 : Pharmaceutical Research
+- PHAR205 : Clinical Epidemiology & Pharmaceutical Outcomes I
+- PHAR305 : Clinical Epidemiology & Pharmaceutical Outcomes II
+- PHAR302 : Pharmacokinetics and Pharmacogenomics
+
+XX. Persian:
+- PERS101 : Basic Persian II
+- PERS200 : Intermediate-Low Persian I
+- PERS104 : Persian Reading and Writing for Persian-Speaking Students
+- PERS400 : Persian Short Story for Native and Heritage Speakers
+
+XX. Microbiology and Infectious Diseases:
+- PATH327 : Bacteriology, Mycology, Virology and Parasitology
+- PATH417 : Human Bacterial Infections
+- PATH427 : Basic Principles of Infection Prevention and Control
+- PATH467 : Basic Microbiology for Infection Control
+- PATH477 : Basic Epidemiology for Infection Control
+
+XX. Cultural and Anthropological Perspectives in Music:
+- MUSC327 : Cantonese Music
+- MUSC328 : World Music Cultures
+
+XX. Histopathology and Histology:
+- PATH304 : Normal Human Histology
+- PATH404 : Diagnostic Histochemistry
+
+XX. Music Education and Pedagogy:
+- MUSC440 : Piano Pedagogy I: Theory and Studio Management
+- MUSC439 : Opera Workshop II
+- MUSC357 : History of Music Since 1900
+
+XX. Conducting:
+- MUSC311 : Fundamentals of Conducting
+- MUSC312 : Instrumental Conducting
+- MUSC313 : Choral Conducting
+
+XX. Chamber Music:
+- MUSC156 : Vocal Chamber Ensembles
+- MUSC161 : Piano Chamber Ensembles
+- MUSC162 : Wind and Percussion Chamber Ensembles
+- MUSC162 : Wind and Percussion Chamber Ensembles
+- MUSC560 : String Chamber Ensembles
+- MUSC236 : Piano Repertoire II
+- MUSC440 : Piano Pedagogy II: Applications
+
+XX. World Music:
+- MUSC165 : World Music Ensembles
+- MUSC165 : World Music Ensembles
+- MUSC165 : World Music Ensembles
+- MUSC328 : World Music Cultures
+- MUSC428 : Topics in World Music
+
+XX. Jazz:
+- MUSC164 : Jazz Ensemble
+- MUSC409 : Jazz Theory and Arranging
+- MUSC358 : History of Jazz
+
+XX. Piano:
+- MUSC136 : Piano Repertoire I
+- MUSC141 : Class Piano I
+- MUSC236 : Piano Repertoire II
+- MUSC241 : Class Piano II
+- MUSC340 : Piano Pedagogy I: Theory and Studio Management
+- MUSC440 : Piano Pedagogy II: Applications
+- MUSC467 : Advanced Class Piano
+
+XX. Voice and Opera:
+- MUSC135 : Opera Repertoire I
+- MUSC336 : Opera Theatre Techniques I
+- MUSC339 : Opera Workshop I
+- MUSC437 : Opera Theatre Techniques II
+- MUSC439 : Opera Workshop II
+- MUSC537 : Seminar in the Literature of Opera
+- MUSC539 : Opera Production
+
+XX. Chamber Ensembles:
+- MUSC156 : Vocal Chamber Ensembles
+- MUSC156 : Vocal Chamber Ensembles
+- MUSC156 : Vocal Chamber Ensembles
+- MUSC162 : Wind and Percussion Chamber Ensembles
+- MUSC162 : Wind and Percussion Chamber Ensembles
+- MUSC162 : Wind and Percussion Chamber Ensembles
+- MUSC162 : Wind and Percussion Chamber Ensembles
+- MUSC159 : University Chamber Strings
+
+XX. Music Technology:
+- MUSC119 : Introduction to Music Technology
+- MUSC319 : Electroacoustic Music
+- MUSC320 : Computer Music
+- MUSC417 : Musical Scoring for Film
+- MUSC419 : Interactive Performance Systems
+
+XX. Practical Music Performance:
+- MUSC112 : Class Brasses and Percussion
+- MUSC122 : Class Woodwinds
+- MUSC131 : Class Voice
+- MUSC141 : Class Piano I
+- MUSC149 : Collaborative Piano I
+- MUSC160 : String Chamber Ensembles
+- MUSC161 : Piano Chamber Ensembles
+- MUSC162 : Wind and Percussion Chamber Ensembles
+- MUSC163 : Contemporary Players
+- MUSC164 : Jazz Ensemble
+- MUSC188 : Class Guitar
+- MUSC297 : Class Organ
+- MUSC338 : String Quartet Class
+- MUSC452 : Brass Pedagogy I: Beginning Methods
+- MUSC467 : Advanced Class Piano
+
+XX. Music History:
+- MUSC120 : History of Music I
+- MUSC121 : History of Music II
+- MUSC220 : History of Music III
+- MUSC221 : History of Music IV
+- MUSC323 : History of Popular Music
+- MUSC353 : History of Renaissance Music
+- MUSC356 : Romantic Music
+- MUSC357 : History of Music Since 1900
+- MUSC358 : History of Jazz
+
+XX. Economic Analysis and Project Management in Mining:
+- MINE396 : Engineering Economics
+- MINE404 : Strategic Issues in Mining
+- MINE406 : Mine Project Valuation and Risk Assessment
+
+XX. Environmental and Social Impact of Mining:
+- MINE470 : Indigenous Peoples and Mining in Canada
+- MINE486 : Mining and The Environment
+
+XX. Mineral Processing and Physical Processes:
+- MINE331 : Physical Mineral Processes
+- MINE333 : Flotation
+- MINE420 : Applied Geostatistics
+- MINE432 : Mineral Process Control
+
+XX. Mining Methods and Systems:
+- MINE302 : Underground Mining and Design
+- MINE310 : Surface Mining and Design
+
+XX. Rock Mechanics and Design:
+- MINE303 : Rock Mechanics Fundamentals
+- MINE402 : Mine Ventilation and Occupational Health and Safety
+- MINE403 : Rock Mechanics Design
+
+XX. Mineralogy and Geology:
+- MINE200 : Mineral Resources Engineering I
+- MINE201 : Mineral Resources Engineering II
+- MINE224 : Mineralogy for Mining Engineering
+
+XX. Advanced Topics and Comprehensive Practice in Midwifery:
+- MIDW305 : Midwifery Theory for Variations in Primary Care
+- MIDW325 : Professional Issues in Midwifery
+- MIDW405 : Advanced Topics in Midwifery Theory and Practice
+- MIDW405 : Theory for Advanced Midwifery Care
+- MIDW435 : Comprehensive Midwifery Theory and Practice- MINE291 : Introduction to Mining
+- MINE292 : Introduction to Mineral Processing
+
+XX. Clinical Skills and Theory in Midwifery Practice:
+- MIDW201 : Clinical Skills for Midwifery Practice
+- MIDW201 : Midwifery Theory for Antepartum, Postpartum and Newborn Care
+- MIDW230 : Midwifery Theory for Primary Care
+
+XX. Health Services and Consultations in Maternity Care:
+- MIDW103 : Applied Health Services for Maternity Providers
+- MIDW104 : Lactation Consultation for Maternity Care Providers
+- MIDW104 : Lactation and Infant Feeding for Maternity Care Providers
+
+XX. Bacterial Pathogenesis:
+- MICB308 : Paradigms in Bacterial Pathogenesis
+- MICB404 : Topics in Molecular Bacterial Pathogenesis
+- MICB408 : Advanced Bacterial Pathogenesis
+- MICB325 : Analysis of Microbial Genes and Genomes
+
+XX. Virology:
+- MICB306 : Molecular Virology
+- MICB406 : Topics in Molecular Virology
+
+XX. Immunology:
+- MICB212 : Introductory Immunology & Virology
+- MICB302 : Immunology
+- MICB402 : Advanced Immunology
+- MICB412 : Topics in Immunological Research
+
+XX. Microbiology Laboratory Courses:
+- MICB203 : Basic Microbiology Laboratory
+- MICB322 : Molecular Microbiology Laboratory
+- MICB323 : Molecular Immunology and Virology Laboratory
+- MICB353 : Food Microbiology Laboratory
+- MICB401 : Environmental Microbiology Laboratory
+
+XX. Special Topics and Electives in Mechanical Engineering:
+- MECH410 : Special Topics in Mechanical Engineering
+- MECH473 : Heating, Ventilating and Air Conditioning
+- MECH488 : Introduction to Ship Hydrodynamics
+- MECH491 : Computer-Aided Manufacturing
+- MECH433 : Biofluids
+
+XX. Energy Systems and Propulsion:
+- MECH445 : Fuel Cell Systems
+- MECH477 : Aerospace Propulsion
+- MECH478 : Internal Combustion Engines
+
+XX. Mechatronics and Control Systems:
+- MECH306 : Data Analysis and Mechatronics Laboratories
+- MECH366 : Modelling of Mechatronic Systems
+- MECH421 : Mechatronics System Instrumentation
+- MECH426 : Mechanical Design
+- MECH431 : Engineering Economics
+- MECH454 : Thermofluids Capstone Design Project
+- MECH466 : Automatic Control
+- MECH467 : Computer Control of Mechatronics Systems
+- MECH468 : Modern Control Engineering
+
+XX. Fluid Mechanics and Heat Transfer:
+- MECH280 : Introduction to Fluid Mechanics
+- MECH375 : Heat Transfer
+- MECH380 : Fluid Dynamics
+- MECH386 : Industrial Fluid Mechanics
+- MECH479 : Introduction to Computational Fluid Dynamics
+- MECH481 : Aerodynamics of Aircraft I
+
+XX. Mechanics and Solid Mechanics:
+- MECH260 : Introduction to Mechanics of Materials
+- MECH305 : Data Analysis and Mechanical Engineering Laboratories
+- MECH360 : Mechanics of Materials
+- MECH358 : Engineering Analysis
+- MECH460 : Advanced Mechanics of Materials
+- MECH462 : Finite Element Analysis
+
+XX. Materials and Manufacturing:
+- MECH329 : Materials for Mechanical Design
+- MECH392 : Manufacturing Processes
+
+XX. Manufacturing Processes:
+- MANU380 : Manufacturing Processes I
+- MANU480 : Manufacturing Processes II
+- MANU481 : Manufacturing Processes III
+
+XX. Literary Writing intro
+- LLED212 : Introduction to Language Communities and Variation in Language Practices
+- LLED220 : Introduction to Translating in a Globalized Society
+- LLED222 : Introduction to Public and Private Language Practices in a Globalized Society
+- LLED223 : Introduction to the Nature of World Englishes
+
+XX. Literacy Education
+- LLED458 : Introduction to Teaching English as a Second Language
+- LLED459 : Trends and Issues in Literacy Instruction
+- LLED480 : Advanced Studies in Language and Literacy Education
+- LLED481 : Digital Media in English Language Arts Education
+
+XX. Applied Linguistics and Language Research
+- LLED489 : Applied Linguistics for Teachers
+
+XX. English as a Second Language (ESL) Education
+- LLED478 : Introduction to Teaching English as a Second Language
+- LLED479 : The Education of Immigrant Students
+
+XX. Language Teaching and Literature Courses
+- LLED421 : Gramligne: Learning and Teaching Grammar in Text for the Second Language Classroom
+- LLED423 : Teaching French Adolescent Literature: Secondary
+- LLED441 : Introduction to Teaching Children's Literature
+- LLED442 : Trends and Issues in Teaching Children's Literature
+- LLED445 : Teaching Poetry
+- LLED446 : Teaching with Illustrated Materials, K-12: From Picture Books to Information Texts
+- LLED449 : Teaching Adolescents Literature
+- LLED452 : Disciplinary Literacies: Intermediate Through Secondary
+- LLED462 : School Library Resource Centre Programs
+- LLED469 : Inquiry-Based Pedagogy in School Library Programs
+
+XX. Food Systems and Sustainability:
+- LFS250 : Land, Food and Community I: Introduction to Food Systems and Sustainability
+- LFS350 : Land, Food, and Community II: Principles and Practice of Community Food Security
+- LFS496 : Career Development Practicum
+
+XX. Introduction and Foundations in Land and Food Systems:
+- LFS100 : Introduction to Land, Food and Community
+- LFS101 : Principles of Microeconomics with Applications to Land and Food Systems
+- LFS110 : Land One: First-year Integrative Seminar
+
+XX. Site Analysis and Planning:
+-LARC525 : Design Research Methods
+
+XX. Research and Applied Studies in Kinesiology:
+- KIN205 : Research Methods in Kinesiology
+- KIN206 : Introduction to Statistics in Kinesiology
+- KIN300 : Human Athletic Performance
+
+- KIN483 : Advanced Seminar in Systems Biology, Exercise and Health
+- KIN488 : Advanced Seminar in Interdisciplinary Research in Kinesiology
+- KIN492 : Undergraduate Research Experience in Kinesiology
+
+XX. Sociocultural and Psychological Aspects of Sports and Physical Activity:
+- KIN150 : Sport and Exercise Psychology
+- KIN160 : Leisure and Sport in Society
+- KIN262 : Health Policy and Society
+- KIN360 : Sport, Peace, and Conflict
+- KIN364 : The Modern Olympics: Power, Politics, and Performance
+- KIN368 : Indigenous Sport and Physical Culture in Settler Canada
+- KIN442 : Planning Physical Education, Sport and Exercise Programs
+- KIN444 : Exploring Alternative Methods for Teaching Games and Sports
+- KIN487 : Advanced Seminar in Sociocultural Studies
+- KIN490 : Directed Studies in Kinesiology
+
+XX. Motor Development and Behavior:
+- KIN140 : Lifespan Motor Development
+- KIN211 : Human Motor Behaviour I
+- KIN311 : Sensorimotor Control of Human Movement
+- KIN316 : Biomechanical Properties of Tissues
+
+XX. Exercise and Health Management:
+- KIN120 : Health and Exercise Management
+- KIN232 : Nutrition, Physical Activity, and Health
+- KIN320 : Exercise Testing and Prescription
+- KIN420 : Prevention of Sports Injuries
+- KIN424 : Medical Aspects of Sport and Exercise
+- KIN432 : Sport Nutrition
+- KIN464 : Health Promotion and Physical Activity
+- KIN465 : Interculturalism, Health and Physical Activity
+- KIN468 : Indigenous Health and Wellness
+
+XX. Social Media and Digital Journalism:
+- JRNL400 : Feminist Postcolonial Critique and Journalism in a Digital Age
+- JRNL420 : Decoding Social Media
+
+XX. Japanese:
+- JAPN400 : Advanced Modern Japanese: Reading and Writing I
+- JAPN401 : Advanced Modern Japanese: Reading and Writing II
+- JAPN402 : Advanced Modern Japanese: Conversation and Composition I
+- JAPN422 : Classical Japanese I
+- JAPN424 : Japanese for Professional Life I
+- JAPN452 : Readings in Modern Japanese Essays
+- JAPN453 : Readings in Modern Japanese Literature
+- JAPN465 : Japanese Media and Translation
+- JAPN320 : Intermediate Japanese I A
+- JAPN321 : Intermediate Japanese I B
+- JAPN322 : Intermediate Japanese II A
+- JAPN323 : Intermediate Japanese II B
+- JAPN360 : Intensive Intermediate Japanese I
+- JAPN361 : Intensive Intermediate Japanese II
+- JAPN100 : Beginning Japanese IA
+- JAPN101 : Beginning Japanese IB
+- JAPN160 : Intensive Beginning Japanese I
+- JAPN200 : Beginning Japanese II A
+- JAPN201 : Beginning Japanese II B
+- JAPN260 : Intensive Beginning Japanese II
+
+XX. Intro to Italian Culture
+- ITST231 : Introduction to Italian Culture I: From the Middle Ages to the Early Modern Period
+- ITST232 : Introduction to Italian Culture II: From the Modern to the Post-Colonial Age
+
+XX. Italian Literature:
+- ITST333 : Masterpieces of the Novella in Italian Literature
+- ITST419 : Topics in Modern and Contemporary Italian Literature and Culture in Translation
+
+XX. Comparative History:
+- HIST347 : Medieval and Imperial Russian History, 998 to 1800
+- HIST353 : Special Topics in Middle Eastern History
+- HIST483 : Asian Migrations to the Americas
+- HIST484 : East Asian Military systems and warfare China
+- HIST485 : Asian Migrant Communities in Vancouver
+
+XX. Asian History:
+- HIST273 : History of India
+- HIST279 : Steppe Empires in World History
+- HIST386 : Korea Since 1860
+- HIST379 : History of Later Imperial China
+- HIST381 : Imperialism and Nationalism in Southeast Asia
+- HIST382 : Post-Colonial Southeast Asia
+- HIST475 : East Asian Military systems and warfare China
+
+XX. United States History:
+- HIST237 : History of the United States
+- HIST334 : African-American History, 1450 : 1850
+- HIST335 : African-American History, 1850 to the Present
+- HIST338 : American Modernity: The United States, 1890-1945
+- HIST339 : The United States Since 1945: The Limits of Power
+- HIST340 : Histories of the American West
+
+XX. Canadian History:
+- HIST235 : History of Canada: Moments that Matter
+- HIST236 : Public History in Canada: Memory, Representation, and Interpretation
+- HIST325 : Canada 1896-1945: Boom, Bust and War
+- HIST326 : Canada Since 1945: Affluence and Anxiety in the Atomic Age.
+- HIST305 : History of British Columbia
+- HIST324 : Inventing Canada, 1840-1896
+- HIST404 : The First World War
+
+XX. Contemporary Global Issues:
+- HIST105 : Contemporary Global Issues in Historical Perspective
+- HIST106 : Global Environmental History
+- HIST107 : Global Indigenous Histories
+- HIST108 : Global History of Capitalism
+
+XX. World History:
+- HIST101 : World History to Oceanic Contact
+- HIST102 : World History from 1500 to the Twentieth Century
+- HIST103 : World History Since 1900
+- HIST270 : China in World History
+- HIST271 : Japan and Global History, 1550 : 1900
+- HIST250 : Latin American History
+- HIST280 : Islamic World History
+- HIST355 : History of Mexico
+- HIST358 : State and Society in 20th century Cuba
+
+XX. Coastal and Marine Ecology
+- HGSE356 : Biophysical Dynamics of the Marine-Terrestrial Interface
+- HGSE360 : Ocean People, Culture and Tradition
+- HGSE361 : Fisheries Co-Management of the North Pacific Coast
+- HGSE394 : Marine Conservation in British Columbia
+
+XX. Social and Cultural Ecology
+- HGSE330 : Social Ecological Change: An Introduction to Systems Thinking and Resilience
+- HGSE331 : Environmental Assessment in Cross-Cultural and Indigenous Contexts
+
+- HGSE371 : Re-Storying History: Indigenous Perspective
+- HGSE372 : Language and Cultural Continuity
+
+XX. Biblical Studies Courses:
+- HEBR101 : Beginning Biblical Hebrew I
+- HEBR102 : Beginning Biblical Hebrew II
+- HEBR201 : Intermediate Biblical Hebrew I
+
+XX. Jewish Studies Courses:
+- HEBR101 : Beginning Biblical Hebrew I
+- HEBR102 : Beginning Biblical Hebrew II
+- HEBR201 : Intermediate Biblical Hebrew I
+
+XX. Gender, Race, Sexuality, and Social Justice:
+- GRSJ200 : Gender and Environmental Justice
+- GRSJ224 : Gender, Race, Sexuality, and Social Justice in Literature (repeated)
+- GRSJ225 : Youth Activism and Social Justice
+- GRSJ230 : Gender, Race, Sexuality, and Representation in Modern Asia
+- GRSJ235 : Gender, Race, Sexuality, and Social Structures in Modern Asia
+- GRSJ300 : Intersectional Approaches to Thinking Gender
+- GRSJ301 : Gender, Race and Indigeneity in Canada
+- GRSJ303 : Gender, Race, Social Justice and the Law
+- GRSJ307 : Gender, Race, Sexuality, and Popular Culture
+- GRSJ310 : Gender, Race, Social Justice and Health
+- GRSJ316 : Queer and Trans of Colour Theorizing
+- GRSJ401 : Body, Gender and Society
+- GRSJ415 : Critical Racial and Anti-Colonial Feminist Approaches
+
+
+XX. German Culture and History:
+- GERM121 : German Fairy Tales and Popular Culture 
+- GERM206 : Exile, Flight and Migration 
+- GERM305 : The Culture of Nazism 
+- GERM360 : Heaven and Earth: Studies in German Culture and Literature before 1700.
+- GERM390 : Progress and Disaster: Studies in the 20th and 21st Centuries
+- GERM408 : Selected Issues in German Culture
+- GERM412 : German Media Studies 
+- GERM426 : German Representations of the Holocaust 
+
+XX. German Literature:
+- GERM301 : German Literature 1900 : 1945
+- GERM302 : German Literature after 1945 
+- GERM303 : German Literature Before 1900 
+- GERM406 : Selected Topics in German Literature
+
+XX. Geographic Information Science:
+- GEOS270 : Geographic Information Science
+- GEOS370 : Advanced Geographic Information Science
+- GEOS479 : Research in Geographic Information Science
+
+XX. Hydrology and Water:
+- GEOS305 : Introduction to Hydrology
+- GEOS503 : Topics in Geomorphology and Hydrology
+
+XX. Geomorphology and Hazards:
+- GEOS206 : Geomorphic Processes and Hazards
+- GEOS308 : Quaternary and Applied Geomorphology
+- GEOS405 : Fluvial Geomorphology
+
+XX. Atmospheric Sciences:
+- GEOS200 : Atmospheric Environments
+- GEOS300 : Microscale Weather and Climate
+
+XX. Social and Political Geography:
+- GEOG329 : Political Geography
+- GEOG345 : Theory and Practice in Human Geography
+- GEOG353 : Geographies of Migration and Settlement
+- GEOG357 : Society, Culture & Space
+- GEOG453 : Political Geographic Analysis
+
+XX. Regional Geography:
+- GEOG290 : Introduction to the Geography of Canada
+- GEOG327 : Creating Canada
+- GEOG328 : Constructing Canada
+- GEOG484 : Geography of Southeast Asia
+- GEOG498 : Geographies of the Middle East
+
+XX. Urban Geography:
+- GEOG250 : Cities
+- GEOG311 : Urban Environments
+- GEOG350 : Urban Worlds
+- GEOG351 : Urban Environmental Politics
+- GEOG357 : Society, Culture & Space
+- GEOG450 : Urban Research
+
+XX. Environmental Geography and Sustainability:
+- GEOG202 : Climate Emergency
+- GEOG211 : The State of the Earth
+- GEOG310 : Environment and Sustainability
+- GEOG313 : Environmental Justice and Social Change
+- GEOG314 : Analyzing Environmental Problems
+- GEOG316 : Geography of Natural Hazards
+- GEOG318 : Sustainability in a Changing Environment
+- GEOG319 : Environmental Impact Assessment
+- GEOG395 : Culture, Nature, and Coloniality in Latin America
+- GEOG410 : Environment and Society
+- GEOG412 : Water Management: Theory, Policy, and Practice.
+- GEOG419 : Research in Environmental Geography
+- GEOG423 : Development of Environmental Thought
+- GEOG424 : Feminist Geographies
+- GEOG525 : Cultures of Nature in Contemporary Political Ecologies
+
+XX. Community and Social Forestry:
+- FRST370 : Community Forests and Community Forestry
+- FRST415 : Sustainable Forest Policy
+
+XX. Specialized Topics and Electives in Forestry:
+- FRST438 : Forest Level Measurement and Productivity
+- FRST443 : Remote Sensing for Ecosystem Management
+- FRST444 : Agroforestry
+- FRST449 : Directed Studies in Forestry
+
+- FRST485 : Forest Watershed Management
+- FRST490 : Visual Resource Management and Planning for Aesthetics
+- FRST492 : Environmental Perception
+- FRST495 : Biological Diversity and Forest Management
+- FRST495 : Biological Diversity and Conservation
+
+
+XX. Forest Science and Conservation:
+- FRST303 : Principles of Forest Science
+- FRST304 : The Science of Forests and Conservation
+- FRST305 : Silviculture
+- FRST307 : Biotic Disturbances
+- FRST310 : Soil Biology
+
+- FRST318 : Forest and Conservation Economics
+- FRST319 : Principles of Forestry Economics
+- FRST320 : Abiotic Disturbances: Fire and Climate
+- FRST339 : Forest Level Measurement and Productivity
+
+XX. Foundational Courses in Forestry:
+- FRST211 : Forest Classification and Silvics
+- FRST231 : Introduction to Biometrics
+- FRST232 : Computer Applications in Forestry
+- FRST239 : Tree and Stand Level Measurements
+
+XX. French Grammar and Linguistics:
+- FREN352 : French Grammar
+- FREN353 : Advanced French Grammar
+- FREN357 : Translation
+- FREN370 : Introduction to French Linguistics
+- FREN451 : French Phonetics
+- FREN470 : Studies in Modern French Linguistics
+- FREN476 : French Language and Societies
+- FREN477 : Contemporary Varieties of French
+
+XX. French Literature and Writing:
+- FREN311 : Introduction to Literature in French
+- FREN321 : Critical Writing
+- FREN330 : Introduction to Quebec Literature
+- FREN331 : Arts, Cultures and Society from the Middle Ages to the Revolution
+- FREN341 : Arts, Cultures and Society from Romanticism to the Present Day
+- FREN414 : The Modern and Contemporary French Novel
+- FREN416 : Contemporary French Literature and Culture
+- FREN417 : Popular Fiction
+- FREN418 : African and Caribbean Francophone Literatures
+- FREN419 : Women's Writing
+- FREN420 : Selected Topics in French Literature and Culture
+- FREN427 : French Cinema
+- FREN428 : Francophone Cinema
+- FREN442 : Cultures of the Francophone World
+- FREN495 : Research Seminar in French Literature and Culture
+
+XX. Elementary French Courses:
+- FREN201 : Elementary French I
+- FREN202 : Elementary French II
+
+XX. Intermediate French Courses:
+- FREN301 : Intermediate French I
+- FREN302 : Intermediate French II
+
+XX. Food Nutrition:
+- FNH474 : Sport Nutrition
+- FNH473 : Applied Public Health Nutrition
+- FNH472 : Maternal and Fetal Nutrition
+- FNH455 : Applied International Nutrition
+- FNH451 : Nutrient Metabolism and Implications for Health
+- FNH250 : Nutrition Concepts and Controversies
+- FNH350 : Fundamentals of Nutrition
+
+XX. Food Industry:
+- FNH440 : Food Service Systems Management
+- FNH415 : Business Concepts in Food, Nutrition, and Health
+- FNH414 : Sustainability in the Food Industry
+- FNH413 : Food Safety
+- FNH404 : Food Safety and Quality Management
+- FNH403 : Food Laws, Regulations and Quality Assurance
+
+XX. Food Science and Technology:
+- FNH300 : Food Engineering
+- FNH301 : Food Chemistry
+- FNH302 : Food Analysis
+- FNH303 : Food Product Development
+- FNH309 : Food Processing
+- FNH313 : Food Microbiology
+- FNH325 : Food Science Laboratory I
+- FNH326 : Food Science Laboratory II
+
+XX. Wine Science:
+- FNH330 : Introduction to Wine Science I
+- FNH335 : Introduction to Wine Science II
+
+XX. Film and Media Production
+- FIPR233 : Film and Media Production I
+- FIPR333 : Film and Media Production II
+- FIPR433 : Film and Media Production III
+
+XX. Motion Picture Directing
+- FIPR230 : Introduction to Motion Picture Directing
+- FIPR330 : Intermediate Motion Picture Directing
+
+XX. Post-Production Techniques
+- FIPR339 : Post-Production Techniques I
+- FIPR439 : Post-Production Techniques II
+
+XX. Earth and Planetary Sciences:
+- EOSC211 : Computer Methods in Earth, Ocean and Atmospheric Sciences
+- EOSC212 : Topics in the Earth and Planetary Sciences.
+- EOSC453 : Physics of the Earth and Other Planets
+- EOSC543 : Topics in Solid Earth Sciences
+
+XX. Geological Engineering and Hydrogeology:
+- EOSC329 : Quantitative Groundwater Hydrology
+- EOSC428 : Field Techniques in Groundwater Hydrology
+
+XX. Geophysics and Seismology:
+- EOSC350 : Environmental, Geotechnical, and Exploration Geophysics I
+- EOSC353 : Seismology
+- EOSC352 : Geophysical Continuum Dynamics
+- EOSC555 : Nonlinear Inverse Theory
+
+XX. Climatology and Climate Science:
+- EOSC340 : Global Climate Change
+- EOSC442 : Climate Measurement and Analysis
+
+XX. Oceanography and Marine Sciences:
+- EOSC270 : Marine Ecosystems
+- EOSC314 : The Ocean Environment
+- EOSC315 : The Ocean Ecosystem
+- EOSC372 : Introductory Oceanography: Circulation and Plankton
+- EOSC373 : Introductory Oceanography: Climate and Ecosystems
+- EOSC470 : Biological Oceanography
+- EOSC471 : Waves, Currents and Ocean Mixing
+- EOSC472 : Chemical Oceanography and Marine Geochemistry
+- EOSC474 : Marine Pollution
+- EOSC475 : Marine Microbiology
+- EOSC478 : Introduction to Fisheries Science
+
+XX. Geology and Mineralogy:
+- EOSC220 : Introductory Mineralogy
+- EOSC221 : Introductory Petrology
+- EOSC222 : Geological Time and Stratigraphy
+- EOSC320 : Sedimentology
+- EOSC321 : Igneous Petrology
+- EOSC322 : Metamorphic Petrology
+- EOSC325 : Principles of Physical Hydrogeology
+- EOSC331 : Introduction to Mineral Deposits
+- EOSC333 : Elemental and Isotopic Geochemistry
+- EOSC425 : Paleontology
+- EOSC424 : Advanced Mineral Deposits
+- EOSC526 : Fundamentals of Geomicrobiology
+
+XX. Earth Science for Engineers:
+- EOSC210 : Earth Science for Engineers
+- EOSC213 : Computational Methods in Geological Engineering
+- EOSC223 : Field Techniques
+- EOSC240 : Site Investigation
+- EOSC250 : Fields and Fluxes
+- EOSC326 : Earth and Life Through Time
+- EOSC328 : Field Geology
+- EOSC429 : Groundwater Contamination
+- EOSC433 : Geological Engineering Practice I : Rock Engineering
+- EOSC434 : Geological Engineering Practice II : Soil Engineering
+- EOSC442 : Climate Measurement and Analysis
+- EOSC445 : Engineering Design Project
+
+XX. Environmental Science:
+- ENVR440 : Analytical Methods in Sustainability Science
+- ENVR430 : Ecological Dimensions of Sustainability
+- ENVR420 : Ecohydrology of Watersheds and Water Systems
+- ENVR410 : Energy, Environment, and Society
+- ENVR400 : Community Project in Environmental Science
+
+XX. Applied Mechanics and Experimentation:
+- ENPH270 : Mechanics II
+- ENPH352 : Laboratory Techniques in Physics
+- ENPH253 : Introduction to Instrument Design
+- ENPH259 : Experimental Techniques
+
+XX. Engineering Physics Projects:
+- ENPH353 : Engineering Physics Project I
+- ENPH459 : Engineering Physics Project II
+- ENPH479 : Engineering Physics Project III
+
+XX. Literary Theory and Criticism:
+- ENGL300 : Introduction to Critical Theory
+
+XX. Rhetoric and Language Studies:
+- ENGL309 : Rhetoric of Science, Technology, and Medicine
+- ENGL310 : History and Theory of Rhetoric: Classical Rhetoric
+- ENGL311 : History and Theory of Rhetoric: The Later Theory
+- ENGL318 : History of the English Language: Early History
+- ENGL319 : History of the English Language: Later History
+- ENGL321 : English Grammar and Usage
+- ENGL322 : Stylistics
+- ENGL323 : Varieties of English
+- ENGL324 : English Corpus Linguistics
+- ENGL326 : Studies in the English Language
+- ENGL327 : Cognitive Approaches to the Study of Meaning
+- ENGL328 : Metaphor, Language and Thought
+- ENGL330 : The Structure of Modern English: Sounds and Words
+- ENGL331 : The Structure of Modern English: Sentences and Their Uses
+
+XX. Nanotechnology in Electronics:
+- ELEC461 : Nanotechnology in Electronics
+- ELEC462 : Sensors and Actuators in Microsystems
+- ELEC463 : Micro/Nanofabrication and Instrumentation Laboratory
+
+XX. Control Systems and Robotics:
+- ELEC341 : Systems and Control
+- ELEC442 : Introduction to Robotics
+
+XX. Communication Systems and Networking:
+- ELEC331 : Computer Communications
+- ELEC431 : Communication Systems I
+- ELEC433 : Error Control Coding for Communications and Computers
+
+XX. Signals and Systems:
+- ELEC221 : Signals and Systems
+- ELEC321 : Stochastic Signals and Systems
+- ELEC421 : Digital Signal and Image Processing
+- ELEC422 : Biosignals and Systems
+
+XX. Technology in Education:
+- EDCP471 : Technological Practices in Education: Technical Problems
+- EDCP474 : Digital Media in Education: Design and Pedagogy
+- EDCP571 : History of Media and Technology in Education
+
+XX. Curriculum Design and Evaluation:
+- EDCP362 : Curriculum Design and Evaluation: Practical and Theoretical Issues
+- EDCP467 : Special Topics in Curriculum and Pedagogy
+- EDCP474 : Digital Media in Education: Design and Pedagogy
+
+XX. Science Education:
+- EDCP452 : Science, Technology, and Society
+
+XX. Home Economics Education:
+- EDCP329 : Agriculture in the Curriculum
+- EDCP491 : Home Economics II : Secondary: Curriculum and Pedagogy
+- EDCP492 : Special Study in Home Economics: Textile Studies
+- EDCP493 : Special Study in Home Economics: Foods Studies
+- EDCP494 : Special Study in Home Economics: Family Studies
+- EDCP498 : Curriculum Inquiry in Home Economics Education
+
+XX. Health Education:
+- EDCP325 : Approaches to Health Education
+- EDCP326 : Health Education: Curriculum and Pedagogy
+- EDCP327 : Special Topics in Health Education
+
+XX. Art Education:
+- EDCP303 : Ceramic Design and Pedagogical Approaches: Art Education
+- EDCP304 : Textile Design and Pedagogical Approaches: Art Education
+- EDCP403 : Visual Arts for Classroom Practice: Three-Dimensional Practices and Processes
+- EDCP404 : Visual Arts for Classroom Practice: Textile Design
+
+XX. Development Economics:
+- ECON234 : Wealth and Poverty of Nations
+- ECON441 : The Process of Economic Development
+- ECON442 : Issues in Economic Development
+
+XX. Environmental and Resource Economics:
+- ECON367 : Economic Analysis of Law
+- ECON370 : Benefit-Cost Analysis and the Economics of Project Evaluation
+- ECON371 : Economics of the Environment
+- ECON374 : Land Economics
+- ECON471 : Economics of Nonrenewable Resources
+- ECON472 : Economics of Renewable Resources
+- ECON573 : Environmental Economics
+
+XX. Econometrics and Empirical Methods:
+- ECON226 : Making Sense of Economic Data
+- ECON323 : Quantitative Economic Modelling with Data Science Applications
+- ECON325 : Introduction to Empirical Economics
+- ECON326 : Methods of Empirical Research in Economics
+- ECON327 : Introduction to Empirical Methods
+- ECON328 : Methods of Empirical Research
+- ECON425 : Introduction to Econometrics
+
+XX. Intermediate Macroeconomics:
+- ECON302 : Intermediate Macroeconomic Analysis I
+- ECON305 : Honours Intermediate Macroeconomic Analysis I
+- ECON307 : Honours Intermediate Macroeconomics II
+- ECON309 : Intermediate Open Economy Macroeconomics
+
+XX. Intermediate Microeconomics:
+- ECON301 : Intermediate Microeconomic Analysis I
+- ECON303 : Intermediate Microeconomics II
+- ECON304 : Honours Intermediate Microeconomic Analysis I
+- ECON306 : Honours Intermediate Microeconomics II
+- ECON315 : Intermediate Microeconomics I
+- ECON316 : Intermediate Microeconomics II
+
+XX. Principles of Economics:
+- ECON101 : Principles of Microeconomics
+- ECON102 : Principles of Macroeconomics
+- ECON310 : Principles of Microeconomics
+- ECON311 : Principles of Macroeconomics
+
+XX. Architecture and Urbanism:
+- DES220 : Architecture and Urbanism in Context: Vancouver and its Region
+- DES321 : Topics in Architectural History I (Pre-1900)
+- DES321 : Topics in Architectural History I (Pre-1900)
+- DES322 : Topics in Architectural History II (1900-Present)
+- DES402 : Design Studio VI : Away
+- DES422 : Urbanism by Design
+
+XX. Architectural Drawing and Design:
+- DES110 : Measured Architectural Drawing
+- DES201 : Design Studio I : Context and Site
+- DES202 : Design Studio II : Form
+- DES211 : Design Media I
+- DES212 : Design Media II
+- DES231 : Site Analysis and Planning
+- DES232 : Material Culture
+- DES301 : Design Studio III : Building Scale Synthesis
+- DES302 : Design Studio IV : Vancouver
+- DES330 : Structural Systems and Supports

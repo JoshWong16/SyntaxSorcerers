@@ -40,6 +40,6 @@ router.delete('/favourite/:course_id', removeFavouriteCourse);
 router.get('/courseKeywords', getCourseKeywords);
 
 /* req must contain a json body of keywords like {"keywords" : ["power", "wires"]} */
-router.get('/reccomendedCourses', getRecommendedCourses);
+router.get('/recommendedCourses', getRecommendedCourses);
 
 export default router;
