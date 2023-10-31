@@ -15,6 +15,9 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class HomeActivity extends AppCompatActivity {
 
+    /**
+     * ChatGPT Usage: Partial
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -41,11 +44,17 @@ public class HomeActivity extends AppCompatActivity {
     }
 
 
+    /**
+     * ChatGPT Usage: No
+     */
     public void searchCourses(View view) {
         Intent intent = new Intent(this, CourseSearchActivity.class);
         startActivity(intent);
     }
 
+    /**
+     * ChatGPT Usage: No
+     */
     public void compareCourse(View view) {
         Intent intent = new Intent(this, CompareCoursesActivity.class);
         startActivity(intent);
