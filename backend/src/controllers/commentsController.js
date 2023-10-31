@@ -56,13 +56,20 @@ async function addComment(req, res) {
             }
         }
 
-        admin.messaging().sendToDevice(notificationToken, message_notification, notification_options)
-        .then( response => {
+        if (notificationToken != null) {
+            admin.messaging().sendToDevice(notificationToken, message_notification, notification_options)
+            .then( response => {
+                return res.json({commentId});
+            })
+            .catch( error => {
+                console.log(error);
+            });
+
+        } else {
             return res.json({commentId});
-        })
-        .catch( error => {
-            console.log(error);
-        });
+        }
+
+        
     } catch (error) {
         return res.status(500).json({message: error.message});
     } 
