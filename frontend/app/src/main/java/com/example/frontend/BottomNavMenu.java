@@ -10,6 +10,10 @@ import androidx.annotation.NonNull;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class BottomNavMenu {
+
+    /**
+     * ChatGPT Usage: Partial
+     */
     public static void createBottomNavMenu(Context context, BottomNavigationView menuView, int currentItemId) {
         menuView.setSelectedItemId(currentItemId);
         menuView.setOnItemSelectedListener(new BottomNavigationView.OnItemSelectedListener() {
