@@ -204,7 +204,7 @@ public class CourseSearchActivity extends AppCompatActivity {
                 Log.d(UBCGradesRequest.RequestTag, "Course grade request success");
                 Deserializer deserializer = new Deserializer();
                 courseGradesModel = deserializer.courseGradesModelDeserialize(response);
-                favouriteSwitch.setChecked(isCourseFavourited());
+                setSwitchState();
                 favouriteSwitch.setVisibility(View.VISIBLE);
 
                 displaySearchResults(courseGradesModel);
@@ -299,17 +299,15 @@ public class CourseSearchActivity extends AppCompatActivity {
     /**
      * ChatGPT Usage: Partial
      */
-    private void initializeFavouriteSwitch(SwitchMaterial materialSwitch) {
-        materialSwitch.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+    private void initializeFavouriteSwitch(SwitchMaterial switchMaterial) {
+        switchMaterial.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 String courseId = String.format("%s %s", courseGradesModel.getSubject(), courseGradesModel.getCourse());
                 if (isChecked) {
                     addFavouriteCourse(courseId);
-                    materialSwitch.setChecked(true);
                 } else {
                     removeCourse(courseId);
-                    materialSwitch.setChecked(false);
                 }
             }
         });
@@ -339,7 +337,7 @@ public class CourseSearchActivity extends AppCompatActivity {
         };
 
         try {
-            serverRequest.makePutRequest("/users/favourite", body, apiRequestListener);
+            serverRequest.makePostRequest("/users/favourite", body, apiRequestListener);
         } catch (UnsupportedEncodingException e) {
             throw new RuntimeException(e);
         }
@@ -376,18 +374,17 @@ public class CourseSearchActivity extends AppCompatActivity {
     /**
      * ChatGPT Usage: No
      */
-    private boolean isCourseFavourited() {
+    private void setSwitchState() {
         SharedPreferences sharedPreferences = getSharedPreferences("GoogleAccountInfo", MODE_PRIVATE);
         String userId = sharedPreferences.getString("userId", null);
-        Set<String> userCourses = getUserCourses(userId);
         String courseId = String.format("%s %s", courseGradesModel.getSubject(), courseGradesModel.getCourse());
-        return userCourses.contains(courseId);
+        getUserCourses(userId, courseId);
     }
 
     /**
      * ChatGPT Usage: No
      */
-    private Set<String> getUserCourses(String userId) {
+    private Set<String> getUserCourses(String userId, String courseId) {
         ServerRequest serverRequest = new ServerRequest(userId);
         Set<String> userCourses = new HashSet<>();
         ServerRequest.ApiRequestListener apiRequestListener = new ServerRequest.ApiRequestListener() {
@@ -396,6 +393,7 @@ public class CourseSearchActivity extends AppCompatActivity {
                 for (JsonElement course : response.getAsJsonArray()) {
                     userCourses.add(course.getAsString());
                 }
+                favouriteSwitch.setChecked(userCourses.contains(courseId));
             }
 
             @Override
