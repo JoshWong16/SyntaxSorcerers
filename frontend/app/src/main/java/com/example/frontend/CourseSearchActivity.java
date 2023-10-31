@@ -2,17 +2,22 @@ package com.example.frontend;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.text.SpannableStringBuilder;
 import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.CompoundButton;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.frontend.apiWrappers.ServerRequest;
 import com.example.frontend.apiWrappers.UBCGradesRequest;
 import com.example.frontend.models.CourseGradesModel;
 import com.example.frontend.models.Deserializer;
@@ -26,8 +31,10 @@ import com.github.mikephil.charting.data.Entry;
 import com.github.mikephil.charting.formatter.IndexAxisValueFormatter;
 import com.github.mikephil.charting.highlight.Highlight;
 import com.github.mikephil.charting.listener.OnChartValueSelectedListener;
+import com.google.android.material.materialswitch.MaterialSwitch;
 import com.google.gson.Gson;
 import com.google.gson.JsonArray;
+import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 
 import org.json.JSONException;
@@ -35,7 +42,9 @@ import org.json.JSONObject;
 
 import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.Map;
+import java.util.Set;
 
 public class CourseSearchActivity extends AppCompatActivity {
     private final String[] availableYearSessions = {"", "2023S", "2022W", "2022S", "2021W", "2021S"};
@@ -56,7 +65,7 @@ public class CourseSearchActivity extends AppCompatActivity {
     private TextView teachers;
     private TextView enrolled;
     private CourseGradesModel courseGradesModel;
-
+    private MaterialSwitch favouriteSwitch;
     private BarChart barChart;
 
     /**
@@ -75,8 +84,8 @@ public class CourseSearchActivity extends AppCompatActivity {
         enrolled = findViewById(R.id.enrolled);
         barChart = findViewById(R.id.barChart);
 
-        Button favouriteButton = findViewById(R.id.favButton);
-        initializeFavouriteButton(favouriteButton);
+        favouriteSwitch = findViewById(R.id.favSwitch);
+        initializeFavouriteSwitch(favouriteSwitch);
 
         for (int i=0; i < NUM_SPINNERS; i++) {
             spinners[i] = findViewById(spinnerIds[i]);
@@ -192,6 +201,9 @@ public class CourseSearchActivity extends AppCompatActivity {
                 Log.d(UBCGradesRequest.RequestTag, "Course grade request success");
                 Deserializer deserializer = new Deserializer();
                 courseGradesModel = deserializer.courseGradesModelDeserialize(response);
+                favouriteSwitch.setChecked(isCourseFavourited());
+                favouriteSwitch.setVisibility(View.VISIBLE);
+
                 displaySearchResults(courseGradesModel);
                 displayGraph(courseGradesModel.getGrades());
             }
@@ -275,16 +287,114 @@ public class CourseSearchActivity extends AppCompatActivity {
         });
     }
 
-    private void initializeFavouriteButton(Button button) {
-        button.setOnClickListener(new View.OnClickListener() {
+    private void initializeFavouriteSwitch(MaterialSwitch materialSwitch) {
+        materialSwitch.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 if (courseGradesModel == null) {
                     Toast.makeText(CourseSearchActivity.this, "Please choose a course", Toast.LENGTH_SHORT).show();
                 } else {
-
+                    String courseId = String.format("%s %s", courseGradesModel.getSubject(), courseGradesModel.getCourse());
+                    addFavouriteCourse(courseId);
                 }
             }
         });
+        materialSwitch.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                String courseId = String.format("%s %s", courseGradesModel.getSubject(), courseGradesModel.getCourse());
+                if (isChecked) {
+                    addFavouriteCourse(courseId);
+                } else {
+                    removeCourse(courseId);
+                }
+            }
+        });
+    }
+
+    private void addFavouriteCourse(String courseId) {
+        SharedPreferences sharedPreferences = getSharedPreferences("GoogleAccountInfo", MODE_PRIVATE);
+        String userId = sharedPreferences.getString("userId", null);
+        ServerRequest serverRequest = new ServerRequest(userId);
+        JsonObject body = new JsonObject();
+        body.addProperty("courseId", courseId);
+
+        ServerRequest.ApiRequestListener apiRequestListener = new ServerRequest.ApiRequestListener() {
+            @Override
+            public void onApiRequestComplete(JsonElement response) {
+                Toast.makeText(CourseSearchActivity.this, courseId + " favourited", Toast.LENGTH_SHORT).show();
+            }
+
+            @Override
+            public void onApiRequestError(String error) {
+                Log.d(ServerRequest.RequestTag, "Failure");
+                Log.d(ServerRequest.RequestTag, error);
+            }
+        };
+
+        try {
+            serverRequest.makePutRequest("/users/favourite", body, apiRequestListener);
+        } catch (UnsupportedEncodingException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    private void removeCourse(String courseId) {
+        SharedPreferences sharedPreferences = getSharedPreferences("GoogleAccountInfo", MODE_PRIVATE);
+        String userId = sharedPreferences.getString("userId", null);
+        ServerRequest serverRequest = new ServerRequest(userId);
+
+        ServerRequest.ApiRequestListener apiRequestListener = new ServerRequest.ApiRequestListener() {
+            @Override
+            public void onApiRequestComplete(JsonElement response) {
+                Toast.makeText(CourseSearchActivity.this, courseId + " unfavourited", Toast.LENGTH_SHORT).show();
+            }
+
+            @Override
+            public void onApiRequestError(String error) {
+                Log.d(ServerRequest.RequestTag, "Failure");
+                Log.d(ServerRequest.RequestTag, error);
+            }
+        };
+
+        try {
+            serverRequest.makeDeleteRequest("/users/favourite/" + courseId, apiRequestListener);
+        } catch (UnsupportedEncodingException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    private boolean isCourseFavourited() {
+        SharedPreferences sharedPreferences = getSharedPreferences("GoogleAccountInfo", MODE_PRIVATE);
+        String userId = sharedPreferences.getString("userId", null);
+        Set<String> userCourses = getUserCourses(userId);
+        String courseId = String.format("%s %s", courseGradesModel.getSubject(), courseGradesModel.getCourse());
+        return userCourses.contains(courseId);
+    }
+
+    private Set<String> getUserCourses(String userId) {
+        ServerRequest serverRequest = new ServerRequest(userId);
+        Set<String> userCourses = new HashSet<>();
+        ServerRequest.ApiRequestListener apiRequestListener = new ServerRequest.ApiRequestListener() {
+            @Override
+            public void onApiRequestComplete(JsonElement response) {
+                for (JsonElement course : response.getAsJsonArray()) {
+                    userCourses.add(course.getAsString());
+                }
+            }
+
+            @Override
+            public void onApiRequestError(String error) {
+                Log.d(ServerRequest.RequestTag, "Failure");
+                Log.d(ServerRequest.RequestTag, error);
+            }
+        };
+
+        try {
+            serverRequest.makeGetRequest("/users/favourite", apiRequestListener);
+        } catch (UnsupportedEncodingException e) {
+            throw new RuntimeException(e);
+        }
+        return userCourses;
     }
 }
