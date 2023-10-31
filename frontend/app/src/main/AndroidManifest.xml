@@ -35,7 +35,9 @@
             android:exported="false" />
         <activity
             android:name=".SignupActivity"
-            android:exported="false" />
+            android:exported="false" >
+
+        </activity>
         <activity
             android:name=".CourseSearchActivity"
             android:exported="false" />
