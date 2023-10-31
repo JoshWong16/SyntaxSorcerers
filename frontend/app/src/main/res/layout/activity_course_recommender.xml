@@ -6,6 +6,7 @@
     android:layout_height="wrap_content"
     tools:context=".CourseRecommenderActivity">
 
+
     <TextView
         android:id="@+id/courseRecommenderTitle"
         android:layout_width="wrap_content"
@@ -18,6 +19,7 @@
         app:layout_constraintBottom_toTopOf="@id/listView"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <!-- ChatGPT usage: Partial -->
     <ListView
         android:id="@+id/listView"
         android:layout_width="match_parent"

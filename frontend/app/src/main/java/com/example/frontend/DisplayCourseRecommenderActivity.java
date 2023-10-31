@@ -25,6 +25,7 @@ public class DisplayCourseRecommenderActivity extends AppCompatActivity {
 
     private final static String TAG = "DisplayCourseRecommenderActivity";
 
+    /* ChatGPT usage: No */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -43,6 +44,7 @@ public class DisplayCourseRecommenderActivity extends AppCompatActivity {
 
     }
 
+    /* ChatGPT usage: Partial */
     void displayRecommendedCourses(ArrayList<String> userInterests, String userId, ListView listView) {
         ServerRequest serverRequest = new ServerRequest(userId);
         ServerRequest.ApiRequestListener apiRequestListener = new ServerRequest.ApiRequestListener() {

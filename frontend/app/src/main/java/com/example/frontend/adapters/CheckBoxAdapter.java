@@ -9,6 +9,7 @@ import android.widget.CheckBox;
 
 import java.util.List;
 
+/* ChatGPT usage: Yes */
 /* ChatGPT generated code to added checkboxes to a listView for the course recommender use case */
 public class CheckBoxAdapter extends BaseAdapter {
     private List<CheckBox> checkBoxList;

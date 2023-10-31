@@ -26,6 +26,7 @@ public class CourseRecommenderActivity extends AppCompatActivity {
 
     private final List<CheckBox> checkboxes = new ArrayList<CheckBox>();
 
+    /* ChatGPT usage: No */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -55,6 +56,7 @@ public class CourseRecommenderActivity extends AppCompatActivity {
         });
     }
 
+    /* ChatGPT usage: Partial */
     void showInterestsChecklist(ListView listView, String userId) {
         ServerRequest serverRequest = new ServerRequest(userId);
         ServerRequest.ApiRequestListener apiRequestListener = new ServerRequest.ApiRequestListener() {
@@ -108,6 +110,7 @@ public class CourseRecommenderActivity extends AppCompatActivity {
 
     }
 
+    /* ChatGPT usage: No */
     ArrayList<String> saveUserInterests() {
 
         ArrayList<String> userInterests = new ArrayList<String>();

@@ -18,6 +18,7 @@
         app:layout_constraintBottom_toTopOf="@id/listViewDisplay"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <!-- ChatGPT usage: Partial -->
     <ListView
         android:id="@+id/listViewDisplay"
         android:layout_width="match_parent"

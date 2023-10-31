@@ -28,6 +28,7 @@ async function getComment(req, res) {
 }
 
 /* https://medium.com/@jullainc/firebase-push-notifications-to-mobile-devices-using-nodejs-7d514e10dd4 */
+/* ChatGPT usage: No */
 async function addComment(req, res) {
     const model = new Comments();
     const userModel = new User();
