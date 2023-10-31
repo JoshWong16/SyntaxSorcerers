@@ -36,12 +36,12 @@ async function addComment(req, res) {
     try {
         const commentId = await model.addComment(req.body.content, req.body.postId, req.userId);
 
-        const post = await postModel.getPostById(req.user, req.body.postId);
+        const post = await postModel.getPostById(req.userId, req.body.postId);
         const postUser = await userModel.getUser(post.userId);
         const commentUser = await userModel.getUser(req.userId);
         const notificationToken = postUser.notification_token;
 
-        const message = `${commentUser.name} has responded to your post.`
+        const message = `${commentUser.name} has responded to your post.`;
 
         const notification_options = {
             priority: "high",

@@ -22,7 +22,7 @@
         <FrameLayout
             android:id="@android:id/tabcontent"
             android:layout_width="match_parent"
-            android:layout_height="580dp">
+            android:layout_height="match_parent">
 
             <!-- Tab 1 Content -->
             <ScrollView
@@ -35,7 +35,7 @@
                 <LinearLayout
                     android:id="@+id/forum_layout_joined"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="430dp"
                     android:orientation="vertical" />
             </ScrollView>
 
