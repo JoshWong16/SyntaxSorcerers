@@ -119,6 +119,16 @@ public class ForumActivity extends AppCompatActivity {
         });
     }
 
+    /* ChatGPT usage: No */
+    /* https://stackoverflow.com/questions/5545217/back-button-and-refreshing-previous-activity */
+    @Override
+    public void onRestart()
+    {
+        super.onRestart();
+        finish();
+        startActivity(getIntent());
+    }
+
     /* ChatGPT usage: Partial */
     private void createNewForum(String forumName, String subject, String course) {
         SharedPreferences sharedPreferences = getSharedPreferences("GoogleAccountInfo", MODE_PRIVATE);

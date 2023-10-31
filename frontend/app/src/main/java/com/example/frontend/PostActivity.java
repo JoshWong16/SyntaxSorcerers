@@ -73,6 +73,16 @@ public class PostActivity extends AppCompatActivity {
         getComments(postId);
     }
 
+    /* ChatGPT usage: No */
+    /* https://stackoverflow.com/questions/5545217/back-button-and-refreshing-previous-activity */
+    @Override
+    public void onRestart()
+    {
+        super.onRestart();
+        finish();
+        startActivity(getIntent());
+    }
+
     /* ChatGPT usage: Partial */
     private void addLike(String postId) {
         SharedPreferences sharedPreferences = getSharedPreferences("GoogleAccountInfo", MODE_PRIVATE);
