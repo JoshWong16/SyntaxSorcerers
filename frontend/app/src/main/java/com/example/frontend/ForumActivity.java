@@ -258,7 +258,7 @@ public class ForumActivity extends AppCompatActivity {
                         addForumsView.findViewById(R.id.join_button).setEnabled(false);
                     } else {
                         addForumsView.findViewById(R.id.join_button).setOnClickListener(v -> {
-                            joinNewForum((String) addForumsView.getTag());
+                            joinNewForum((String) addForumsView.getTag(), addForumsView);
                         });
                     }
 
@@ -291,13 +291,13 @@ public class ForumActivity extends AppCompatActivity {
 
     /* ChatGPT usage: No */
     private void resetAndAddView(LinearLayout layout, ArrayList<View> views) {
-        layout.removeAllViewsInLayout();
+        layout.removeAllViews();
         for (View view : views)
             layout.addView(view);
     }
 
     /* ChatGPT usage: No */
-    private void joinNewForum(String forumId) {
+    private void joinNewForum(String forumId, View view) {
         SharedPreferences sharedPreferences = getSharedPreferences("GoogleAccountInfo", MODE_PRIVATE);
         String userId = sharedPreferences.getString("userId", null);
         ServerRequest serverRequest = new ServerRequest(userId);
@@ -305,7 +305,15 @@ public class ForumActivity extends AppCompatActivity {
         ServerRequest.ApiRequestListener apiRequestListener = new ServerRequest.ApiRequestListener() {
             @Override
             public void onApiRequestComplete(JsonElement response) {
-                ForumActivity.this.recreate();
+                ((Button) view.findViewById(R.id.join_button)).setText(R.string.joined_button);
+                view.findViewById(R.id.join_button).setEnabled(false);
+                View joinedForumsView = getLayoutInflater().inflate(R.layout.forum_card, null);
+                joinedForumsView.setTag(forumId);
+                ((TextView) joinedForumsView.findViewById(R.id.forum_name)).setText(((TextView) view.findViewById(R.id.forum_name)).getText().toString());
+                ((TextView) joinedForumsView.findViewById(R.id.course_name)).setText(((TextView) view.findViewById(R.id.course_name)).getText().toString());
+                ((Button) joinedForumsView.findViewById(R.id.join_button)).setText(R.string.joined_button);
+                joinedForumsView.findViewById(R.id.join_button).setEnabled(false);
+                joinedForumsViews.add(joinedForumsView);
             }
 
             @Override
