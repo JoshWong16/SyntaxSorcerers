@@ -7,6 +7,8 @@ import {
     deleteComment
 } from '../controllers/commentsController.js';
 
+/* ChatGPT usage: No */
+
 const router = express.Router();
 
 // Get all comment

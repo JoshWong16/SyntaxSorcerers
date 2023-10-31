@@ -7,6 +7,8 @@ import {
     editPost
 } from '../controllers/postController.js';
 
+/* ChatGPT usage: No */
+
 const router = express.Router();
 
 router.get('/:forumId', getAllPosts);

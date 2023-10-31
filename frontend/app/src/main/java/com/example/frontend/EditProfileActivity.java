@@ -21,6 +21,7 @@ import java.io.UnsupportedEncodingException;
 
 public class EditProfileActivity extends AppCompatActivity {
 
+    /* ChatGPT usage: Partial */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -53,6 +54,7 @@ public class EditProfileActivity extends AppCompatActivity {
         });
     }
 
+    /* ChatGPT usage: Partial */
     private void sendUpdateUserRequest(String name, String major, String yearLevel) {
         SharedPreferences sharedPreferences = getSharedPreferences("GoogleAccountInfo", MODE_PRIVATE);
         String userId = sharedPreferences.getString("userId", null);

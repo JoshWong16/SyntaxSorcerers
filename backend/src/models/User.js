@@ -5,6 +5,7 @@ class User {
         this.collection = database.collection("users");
     }
 
+    /* ChatGPT usage: No */
     async getUser(id) {
         try {
             const user = await this.collection.findOne({ userId: id });
@@ -14,6 +15,7 @@ class User {
         }
     }
 
+    /* ChatGPT usage: No */
     async createUser(user) {
         try {
             const result = await this.collection.insertOne(user);
@@ -23,6 +25,7 @@ class User {
         }
     }
 
+    /* ChatGPT usage: No */
     async updateUser(userId, updateData) {
         try {
             const result = await this.collection.updateOne(
@@ -35,6 +38,7 @@ class User {
         }
     }
 
+    /* ChatGPT usage: No */
     async deleteUser(userId) {
         try {
             const result = await this.collection.deleteOne({ userId : userId });

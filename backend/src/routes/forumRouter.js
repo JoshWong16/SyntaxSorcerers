@@ -10,6 +10,8 @@ import {
 
 const router = express.Router();
 
+/* ChatGPT usage: No */
+
 // Get all forums
 router.get('/', getAllForums);
 

@@ -1,6 +1,7 @@
 import Forum from '../models/Forums.js';
 import UserForums from '../models/UserForums.js';
 
+/* ChatGPT usage: No */
 async function getAllForums(req, res) {
     const forumModel = new Forum();
     try {
@@ -11,6 +12,7 @@ async function getAllForums(req, res) {
     }
 };
 
+/* ChatGPT usage: No */
 async function addForum(req, res) {
     const forumModel = new Forum();
     const userForumsModel = new UserForums();
@@ -23,6 +25,7 @@ async function addForum(req, res) {
     }
 };
 
+/* ChatGPT usage: No */
 async function removeForum(req, res) {
     const forumModel = new Forum();
     try {
@@ -33,6 +36,7 @@ async function removeForum(req, res) {
     }
 };
 
+/* ChatGPT usage: No */
 async function getUsersForums(req, res) {
     const userForumsModel = new UserForums();
     try {
@@ -43,6 +47,7 @@ async function getUsersForums(req, res) {
     }
 };
 
+/* ChatGPT usage: No */
 async function addUsersForum(req, res) {
     const userForumsModel = new UserForums();
     try {
@@ -53,6 +58,7 @@ async function addUsersForum(req, res) {
     }
 }
 
+/* ChatGPT usage: No */
 async function removeUsersForum(req, res) {
     const userForumsModel = new UserForums();
     try {

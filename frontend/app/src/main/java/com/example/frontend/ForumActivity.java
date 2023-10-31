@@ -36,6 +36,7 @@ public class ForumActivity extends AppCompatActivity {
 
     JsonArray joinedForums = new JsonArray();
 
+    /* ChatGPT usage: Partial */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -118,6 +119,7 @@ public class ForumActivity extends AppCompatActivity {
         });
     }
 
+    /* ChatGPT usage: Partial */
     private void createNewForum(String forumName, String subject, String course) {
         SharedPreferences sharedPreferences = getSharedPreferences("GoogleAccountInfo", MODE_PRIVATE);
         String userId = sharedPreferences.getString("userId", "");
@@ -150,6 +152,7 @@ public class ForumActivity extends AppCompatActivity {
         }
     }
 
+    /* ChatGPT usage: Partial */
     private void populateSpinner(String endpoint, ArrayAdapter<String> adapter) {
         UBCGradesRequest ubcGradesRequest = new UBCGradesRequest();
         UBCGradesRequest.ApiRequestListener<JsonArray> apiRequestListener = new UBCGradesRequest.ApiRequestListener<JsonArray>() {
@@ -174,6 +177,7 @@ public class ForumActivity extends AppCompatActivity {
         ubcGradesRequest.makeGetRequestForJsonArray(endpoint, apiRequestListener);
     }
 
+    /* ChatGPT usage: Partial */
     private void generateJoinedForums() {
         SharedPreferences sharedPreferences = getSharedPreferences("GoogleAccountInfo", MODE_PRIVATE);
         String userId = sharedPreferences.getString("userId", null);
@@ -222,6 +226,7 @@ public class ForumActivity extends AppCompatActivity {
         }
     }
 
+    /* ChatGPT usage: Partial */
     private void generateAllForums() {
         SharedPreferences sharedPreferences = getSharedPreferences("GoogleAccountInfo", MODE_PRIVATE);
         String userId = sharedPreferences.getString("userId", null);
@@ -274,12 +279,14 @@ public class ForumActivity extends AppCompatActivity {
         }
     }
 
+    /* ChatGPT usage: No */
     private void resetAndAddView(LinearLayout layout, ArrayList<View> views) {
         layout.removeAllViewsInLayout();
         for (View view : views)
             layout.addView(view);
     }
 
+    /* ChatGPT usage: No */
     private void joinNewForum(String forumId) {
         SharedPreferences sharedPreferences = getSharedPreferences("GoogleAccountInfo", MODE_PRIVATE);
         String userId = sharedPreferences.getString("userId", null);

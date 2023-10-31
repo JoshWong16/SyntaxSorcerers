@@ -1,3 +1,4 @@
+/* ChatGPT usage: No */
 export default function manipulateCommentOutput(comments) {
     return comments.map(comment => {
         return {

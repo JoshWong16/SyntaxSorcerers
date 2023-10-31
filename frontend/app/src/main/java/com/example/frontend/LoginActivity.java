@@ -28,6 +28,7 @@ public class LoginActivity extends AppCompatActivity {
     private final int RC_SIGN_IN = 1;
     final static String TAG = "LoginActivity";
 
+    /* ChatGPT usage: No */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -43,11 +44,13 @@ public class LoginActivity extends AppCompatActivity {
         loginButton.setOnClickListener(view -> signIn());
     }
 
+    /* ChatGPT usage: No */
     private void signIn() {
         Intent signInIntent = mGoogleSignInClient.getSignInIntent();
         startActivityForResult(signInIntent, RC_SIGN_IN);
     }
 
+    /* ChatGPT usage: No */
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
@@ -61,6 +64,7 @@ public class LoginActivity extends AppCompatActivity {
         }
     }
 
+    /* ChatGPT usage: No */
     private void handleSignInResult(Task<GoogleSignInAccount> completedTask) {
         try {
             GoogleSignInAccount account = completedTask.getResult(ApiException.class);
@@ -74,6 +78,7 @@ public class LoginActivity extends AppCompatActivity {
         }
     }
 
+    /* ChatGPT usage: Partial */
     private void checkIfUserExists(GoogleSignInAccount account) {
         SharedPreferences sharedPreferences = getSharedPreferences("GoogleAccountInfo", MODE_PRIVATE);
         SharedPreferences.Editor editor = sharedPreferences.edit();
@@ -119,6 +124,7 @@ public class LoginActivity extends AppCompatActivity {
         }
     }
 
+    /* ChatGPT usage: Partial */
     private void putLatestToken(String token, GoogleSignInAccount account) {
         SharedPreferences sharedPreferences = getSharedPreferences("GoogleAccountInfo", MODE_PRIVATE);
         String userId = sharedPreferences.getString("userId", null);
@@ -148,6 +154,7 @@ public class LoginActivity extends AppCompatActivity {
         }
     }
 
+    /* ChatGPT usage: No */
     private void createAccount(GoogleSignInAccount account) {
         Intent intent = new Intent(LoginActivity.this, SignupActivity.class);
         intent.putExtra("email", account.getEmail());

@@ -7,6 +7,8 @@ import {
 
 const router = express.Router();
 
+/* ChatGPT usage: No */
+
 // Get like
 router.get('/:post_id', getLikes);
 

@@ -34,6 +34,7 @@ public class ServerRequest {
     private Retrofit retrofit;
     private ApiService apiService;
 
+    /* ChatGPT usage: Partial */
     public ServerRequest(String userId) {
         OkHttpClient client = new OkHttpClient.Builder().addInterceptor(new Interceptor() {
             @NonNull
@@ -55,26 +56,31 @@ public class ServerRequest {
         apiService = retrofit.create(ApiService.class);
     }
 
+    /* ChatGPT usage: No */
     public void makeGetRequest(String endpoint, final ServerRequest.ApiRequestListener listener) throws UnsupportedEncodingException {
         Call<JsonElement> call = apiService.getData("/prod" + endpoint);
         callHandler(listener, call);
     }
 
+    /* ChatGPT usage: No */
     public void makePostRequest(String endpoint, JsonElement body, final ServerRequest.ApiRequestListener listener) throws UnsupportedEncodingException {
         Call<JsonElement> call = apiService.postData("/prod" + endpoint, body);
         callHandler(listener, call);
     }
 
+    /* ChatGPT usage: Partial */
     public void makePutRequest(String endpoint, JsonElement body, final ServerRequest.ApiRequestListener listener) throws UnsupportedEncodingException {
         Call<JsonElement> call = apiService.putData("/prod" + endpoint, body);
         callHandler(listener, call);
     }
 
+    /* ChatGPT usage: No */
     public void makeDeleteRequest(String endpoint, final ServerRequest.ApiRequestListener listener) throws UnsupportedEncodingException {
         Call<JsonElement> call = apiService.deleteData("/prod" + endpoint);
         callHandler(listener, call);
     }
 
+    /* ChatGPT usage: Partial */
     private static void callHandler(ApiRequestListener listener, Call<JsonElement> call) {
         Log.d(RequestTag, call.request().url().toString());
         call.enqueue(new Callback<JsonElement>() {

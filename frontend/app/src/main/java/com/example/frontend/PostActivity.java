@@ -25,8 +25,8 @@ import java.util.Date;
 import java.util.Locale;
 
 public class PostActivity extends AppCompatActivity {
-    private String commentCount = null;
 
+    /* ChatGPT usage: Partial */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -37,7 +37,7 @@ public class PostActivity extends AppCompatActivity {
         String writtenBy = intent.getStringExtra("writtenBy");
         String content = intent.getStringExtra("content");
         String likesCount = intent.getStringExtra("likesCount");
-        commentCount = intent.getStringExtra("commentCount");
+        String commentCount = intent.getStringExtra("commentCount");
         boolean userLiked = intent.getBooleanExtra("userLiked", false);
         String date = intent.getStringExtra("date");
 
@@ -73,6 +73,7 @@ public class PostActivity extends AppCompatActivity {
         getComments(postId);
     }
 
+    /* ChatGPT usage: Partial */
     private void addLike(String postId) {
         SharedPreferences sharedPreferences = getSharedPreferences("GoogleAccountInfo", MODE_PRIVATE);
         String userId = sharedPreferences.getString("userId", null);
@@ -104,6 +105,7 @@ public class PostActivity extends AppCompatActivity {
         }
     }
 
+    /* ChatGPT usage: Partial */
     private void removeLike(String postId) {
         SharedPreferences sharedPreferences = getSharedPreferences("GoogleAccountInfo", MODE_PRIVATE);
         String userId = sharedPreferences.getString("userId", null);
@@ -133,6 +135,7 @@ public class PostActivity extends AppCompatActivity {
         }
     }
 
+    /* ChatGPT usage: Partial */
     private void addComment(String postId) {
         String comment = (((EditText) findViewById(R.id.commentMessage)).getText()).toString();
         SharedPreferences sharedPreferences = getSharedPreferences("GoogleAccountInfo", MODE_PRIVATE);
@@ -169,6 +172,7 @@ public class PostActivity extends AppCompatActivity {
         }
     }
 
+    /* ChatGPT usage: Partial */
     private void getComment(String commentId) {
         SharedPreferences sharedPreferences = getSharedPreferences("GoogleAccountInfo", MODE_PRIVATE);
         String userId = sharedPreferences.getString("userId", null);
@@ -194,6 +198,7 @@ public class PostActivity extends AppCompatActivity {
         }
     }
 
+    /* ChatGPT usage: Partial */
     private void getComments(String postId) {
         SharedPreferences sharedPreferences = getSharedPreferences("GoogleAccountInfo", MODE_PRIVATE);
         String userId = sharedPreferences.getString("userId", null);
@@ -223,6 +228,7 @@ public class PostActivity extends AppCompatActivity {
         }
     }
 
+    /* ChatGPT usage: Partial */
     private void makeCommentView(JsonObject comment) throws ParseException {
         View commentView = getLayoutInflater().inflate(R.layout.comment_card, null);
         commentView.setTag(comment.get("commentId").getAsString());

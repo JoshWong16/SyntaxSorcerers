@@ -1,5 +1,6 @@
 import Posts from "../models/Posts.js";
 
+/* ChatGPT usage: No */
 async function getAllPosts(req, res) {
     const model = new Posts();
     try {
@@ -10,6 +11,7 @@ async function getAllPosts(req, res) {
     }
 }
 
+/* ChatGPT usage: No */
 async function getPostById(req, res) {
     const model = new Posts();
     try {
@@ -20,6 +22,7 @@ async function getPostById(req, res) {
     }
 }
 
+/* ChatGPT usage: No */
 async function addPost(req, res) {
     const model = new Posts();
     try {
@@ -30,6 +33,7 @@ async function addPost(req, res) {
     }
 }
 
+/* ChatGPT usage: No */
 async function deletePost(req, res) {
     const model = new Posts();
     try {
@@ -40,6 +44,7 @@ async function deletePost(req, res) {
     }
 }
 
+/* ChatGPT usage: No */
 async function editPost(req, res) {
     const model = new Posts();
     try {

@@ -9,6 +9,8 @@ spellCorrector.loadDictionary();
 
 const analyzer = new SentimentAnalyzer("English", PorterStemmer, "afinn");
 
+/* ChatGPT usage: No */
+/* https://github.com/TomDoesTech/Sentiment-Analysis-NodeJS */
 function getSentiment(text) {
     const tokenized = tokenizer.tokenize(text);
     const fixedSpelling = tokenized.map((word) => spellCorrector.correct(word));
@@ -18,6 +20,7 @@ function getSentiment(text) {
     return analyzeSentimentScore(analyzed);
 }
 
+/* ChatGPT usage: No */
 function analyzeSentimentScore(score) { 
    if (score > 0) {
        return "positive";

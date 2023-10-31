@@ -23,6 +23,7 @@ public class SignupActivity extends AppCompatActivity {
 
     private final static String TAG = "SignupActivity";
 
+    /* ChatGPT usage: Partial */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -47,6 +48,7 @@ public class SignupActivity extends AppCompatActivity {
         });
     }
 
+    /* ChatGPT usage: Partial */
     private void handleTokenRetrival() {
         FirebaseMessaging.getInstance().getToken()
                 .addOnCompleteListener(task -> {
@@ -62,6 +64,7 @@ public class SignupActivity extends AppCompatActivity {
                 });
     }
 
+    /* ChatGPT usage: Partial */
     private void handleAccountCreation(String token) {
         Intent intent = getIntent();
         String email = intent.getStringExtra("email");
@@ -72,6 +75,7 @@ public class SignupActivity extends AppCompatActivity {
         sendAccountCreationRequest(email, userId, name, major, yearLevel, token);
     }
 
+    /* ChatGPT usage: Partial */
     private void sendAccountCreationRequest(String email, String userId, String name, String major, Integer yearLevel, String notification_token) {
         ServerRequest serverRequest = new ServerRequest(userId);
         JsonObject body = new JsonObject();

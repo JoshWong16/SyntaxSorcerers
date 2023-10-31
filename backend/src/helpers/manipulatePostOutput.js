@@ -1,3 +1,4 @@
+/* ChatGPT usage: No */
 export default function manipulatePostOutput(posts) {
     return posts.map(post => {
         return {

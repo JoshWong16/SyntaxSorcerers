@@ -11,6 +11,7 @@ class Posts {
         this.collection = database.collection("posts");
     }
 
+    /* ChatGPT usage: No */
     async getAllPost(forumId, userId) {
         const posts = await this.collection.find({forumId: forumId}).toArray();
         const res = [];
@@ -27,6 +28,7 @@ class Posts {
         return manipulatePostOutput(res);
     }
 
+    /* ChatGPT usage: No */
     async getFilteredPosts(forumId, category, userId) {
         const posts = await this.collection.find({forumId: forumId, category: category}).toArray();
         const res = [];
@@ -43,6 +45,7 @@ class Posts {
         return manipulatePostOutput(res);
     };
 
+    /* ChatGPT usage: No */
     async getPostById(userId, postId) {
         const posts = await this.collection.find({ _id : new ObjectId(postId)}).toArray();
         const likes = new Likes();
@@ -56,11 +59,13 @@ class Posts {
         return manipulatePostOutput([post])[0];
     }
 
+    /* ChatGPT usage: No */
     async addPost(content, userId, forumId) {
         const result = await this.collection.insertOne({ writtenBy: userId, forumId: forumId, dateWritten: new Date(), content: content, category: getSentiment(content) });
         return result.insertedId.toString();
     }
 
+    /* ChatGPT usage: No */
     async editPost(content, postId, userId) {
         const result = await this.collection.updateOne(
             { userId: userId, _id: new ObjectId(postId) },
@@ -69,6 +74,7 @@ class Posts {
         return result.matchedCount > 0;
     }
     
+    /* ChatGPT usage: No */
     async deletePost(postId, userId) {
         try {
             const result = await this.collection.deleteOne({ _id : new ObjectId(postId), writtenBy: userId });

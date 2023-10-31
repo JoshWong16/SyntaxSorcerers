@@ -2,6 +2,7 @@ import User from '../models/User.js';
 import UserCourses from '../models/UserCourses.js';
 import fs from 'fs';
 
+/* ChatGPT usage: No */
 async function getUser(req, res) {
     const model = new User();
     try {
@@ -12,6 +13,7 @@ async function getUser(req, res) {
     }
 }
 
+/* ChatGPT usage: No */
 async function createUser(req, res) {
     const model = new User();
     try {
@@ -30,6 +32,7 @@ async function createUser(req, res) {
     }
 }
 
+/* ChatGPT usage: No */
 async function updateUser(req, res) {
     const model = new User();
     try {
@@ -40,6 +43,7 @@ async function updateUser(req, res) {
     }
 }
 
+/* ChatGPT usage: No */
 async function deleteUser(req, res) {
     const model = new User();
     try {
@@ -50,6 +54,7 @@ async function deleteUser(req, res) {
     }
 }
 
+/* ChatGPT usage: No */
 async function addFavouriteCourse(req, res) {
     const model = new UserCourses();
     try {
@@ -60,6 +65,7 @@ async function addFavouriteCourse(req, res) {
     }
 };
 
+/* ChatGPT usage: No */
 async function getFavouriteCourses(req, res) {
     const model = new UserCourses();
     try {
@@ -70,6 +76,7 @@ async function getFavouriteCourses(req, res) {
     }
 }
 
+/* ChatGPT usage: No */
 async function removeFavouriteCourse(req, res) {
     const model = new UserCourses();
     const course_id = req.params.course_id;
@@ -138,10 +145,6 @@ async function getRecommendedCourses(req, res) {
         
         res.status(400).send("Invalid parameter.")
     }
-
-
-    
-
 }
 
 export { getUser, createUser, updateUser, deleteUser, addFavouriteCourse, getFavouriteCourses, removeFavouriteCourse, getCourseKeywords, getRecommendedCourses };

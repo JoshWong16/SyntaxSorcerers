@@ -5,7 +5,7 @@ import Posts from '../models/Posts.js';
 import pkg from './firebase-config.cjs';
 const { admin } = pkg;
 
-
+/* ChatGPT usage: No */
 async function getComments(req, res) {
     const model = new Comments();
     try {
@@ -16,7 +16,7 @@ async function getComments(req, res) {
     }
 }
 
-
+/* ChatGPT usage: No */
 async function getComment(req, res) {
     const model = new Comments();
     try {
@@ -75,6 +75,7 @@ async function addComment(req, res) {
     } 
 }
 
+/* ChatGPT usage: No */
 async function editComment(req, res) {
     const model = new Comments();
     try {
@@ -85,6 +86,7 @@ async function editComment(req, res) {
     }
 }
 
+/* ChatGPT usage: No */
 async function deleteComment(req, res) {
     const model = new Comments();
     try {

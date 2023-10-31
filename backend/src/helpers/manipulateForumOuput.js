@@ -1,3 +1,4 @@
+/* ChatGPT usage: No */
 export default function manipulateForumOutput(forums) {
     return forums.map(forum => {
         return {

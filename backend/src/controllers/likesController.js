@@ -1,5 +1,6 @@
 import Likes from '../models/Likes.js';
 
+/* ChatGPT usage: No */
 async function getLikes(req, res) {
     const model = new Likes();
     try {
@@ -10,6 +11,7 @@ async function getLikes(req, res) {
     }
 }
 
+/* ChatGPT usage: No */
 async function addLike(req, res) {
     const model = new Likes();
     try {
@@ -20,6 +22,7 @@ async function addLike(req, res) {
     }
 }
 
+/* ChatGPT usage: No */
 async function removeLike(req, res) {
     const model = new Likes();
     try {

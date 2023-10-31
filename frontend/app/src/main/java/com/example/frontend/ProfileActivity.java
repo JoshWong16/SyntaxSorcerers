@@ -23,6 +23,7 @@ public class ProfileActivity extends AppCompatActivity {
     private String major;
     private String yearLevel;
 
+    /* ChatGPT usage: Partial */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -40,6 +41,7 @@ public class ProfileActivity extends AppCompatActivity {
         });
     }
 
+    /* ChatGPT usage: Partial */
     private void getUserInfo() {
         SharedPreferences sharedPreferences = getSharedPreferences("GoogleAccountInfo", MODE_PRIVATE);
         String accountDisplayImage = sharedPreferences.getString("accountDisplayImage", null);
@@ -78,6 +80,7 @@ public class ProfileActivity extends AppCompatActivity {
         }
     }
 
+    /* ChatGPT usage: Partial */
     private void getUserCourses(String userId) {
         ServerRequest serverRequest = new ServerRequest(userId);
         ServerRequest.ApiRequestListener apiRequestListener = new ServerRequest.ApiRequestListener() {

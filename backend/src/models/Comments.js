@@ -8,6 +8,7 @@ class Comments {
         this.collection = database.collection("comments");
     }
 
+    /* ChatGPT usage: No */
     async getAllComments(postId) {
         const comments = await this.collection.find({ postId: postId }).toArray();
         const res = [];
@@ -19,6 +20,7 @@ class Comments {
         return manipulateCommentOutput(res);
     }
 
+    /* ChatGPT usage: No */
     async getCommentById(commentId) {
         const comments = await this.collection.find({ _id : new ObjectId(commentId)}).toArray();
         const user =  new User();
@@ -27,6 +29,7 @@ class Comments {
         return manipulateCommentOutput([comment])[0];
     }
 
+    /* ChatGPT usage: No */
     async addComment(content, postId, userId) {
         const comment = {
             content: content,
@@ -38,6 +41,7 @@ class Comments {
         return result.insertedId;
     }
 
+    /* ChatGPT usage: No */
     async editComment(content, commentId, userId) {
         const result = await this.collection.updateOne(
             { userId: userId, _id: new ObjectId(commentId) },
@@ -46,6 +50,7 @@ class Comments {
         return result.matchedCount > 0;
     }
     
+    /* ChatGPT usage: No */
     async deleteComment(commentId, userId) {
         try {
             const result = await this.collection.deleteOne({ _id : new ObjectId(commentId), writtenBy: userId });

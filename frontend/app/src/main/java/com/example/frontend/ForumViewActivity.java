@@ -28,6 +28,7 @@ import java.util.Locale;
 
 public class ForumViewActivity extends AppCompatActivity {
 
+    /* ChatGPT usage: Partial */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -76,6 +77,7 @@ public class ForumViewActivity extends AppCompatActivity {
         });
     }
 
+    /* ChatGPT usage: Partial */
     private void getFilteredPost(String forumId, String category) {
         SharedPreferences sharedPreferences = getSharedPreferences("GoogleAccountInfo", MODE_PRIVATE);
         String userId = sharedPreferences.getString("userId", null);
@@ -106,6 +108,7 @@ public class ForumViewActivity extends AppCompatActivity {
         }
     }
 
+    /* ChatGPT usage: No */
     private void leaveForum(String forumId) {
         SharedPreferences sharedPreferences = getSharedPreferences("GoogleAccountInfo", MODE_PRIVATE);
         String userId = sharedPreferences.getString("userId", null);
@@ -133,6 +136,7 @@ public class ForumViewActivity extends AppCompatActivity {
         }
     }
 
+    /* ChatGPT usage: Partial */
     private void joinForum(String forumId) {
         SharedPreferences sharedPreferences = getSharedPreferences("GoogleAccountInfo", MODE_PRIVATE);
         String userId = sharedPreferences.getString("userId", null);
@@ -162,6 +166,7 @@ public class ForumViewActivity extends AppCompatActivity {
         }
     }
 
+    /* ChatGPT usage: Partial */
     private void addPost(String forumId) {
         String post = (((EditText) findViewById(R.id.postMessage)).getText()).toString();
         SharedPreferences sharedPreferences = getSharedPreferences("GoogleAccountInfo", MODE_PRIVATE);
@@ -197,6 +202,7 @@ public class ForumViewActivity extends AppCompatActivity {
         }
     }
 
+    /* ChatGPT usage: Partial */
     private void getPost(String postId) {
         SharedPreferences sharedPreferences = getSharedPreferences("GoogleAccountInfo", MODE_PRIVATE);
         String userId = sharedPreferences.getString("userId", null);
@@ -224,6 +230,7 @@ public class ForumViewActivity extends AppCompatActivity {
         }
     }
 
+    /* ChatGPT usage: Partial */
     private void getAllPosts(String forumId) {
         SharedPreferences sharedPreferences = getSharedPreferences("GoogleAccountInfo", MODE_PRIVATE);
         String userId = sharedPreferences.getString("userId", null);
@@ -254,6 +261,7 @@ public class ForumViewActivity extends AppCompatActivity {
         }
     }
 
+    /* ChatGPT usage: Partial */
     private void addLike(String postId, TextView numberOfLikes, ImageButton likeButton) {
         SharedPreferences sharedPreferences = getSharedPreferences("GoogleAccountInfo", MODE_PRIVATE);
         String userId = sharedPreferences.getString("userId", null);
@@ -284,6 +292,7 @@ public class ForumViewActivity extends AppCompatActivity {
         }
     }
 
+    /* ChatGPT usage: Partial */
     private void removeLike(String postId, TextView numberOfLikes, ImageButton likeButton) {
         SharedPreferences sharedPreferences = getSharedPreferences("GoogleAccountInfo", MODE_PRIVATE);
         String userId = sharedPreferences.getString("userId", null);
@@ -312,6 +321,7 @@ public class ForumViewActivity extends AppCompatActivity {
         }
     }
 
+    /* ChatGPT usage: Partial */
     private void makePostView(JsonObject post) throws ParseException {
         View postView = getLayoutInflater().inflate(R.layout.post_card, null);
         postView.setTag(post.get("postId").getAsString());
@@ -357,6 +367,7 @@ public class ForumViewActivity extends AppCompatActivity {
         ((LinearLayout) findViewById(R.id.postsLayoutAll)).addView(postView, 0);
     }
 
+    /* ChatGPT usage: No */
     private void goToPostPage(JsonObject post, String date) {
         Intent intent = new Intent(ForumViewActivity.this, PostActivity.class);
         intent.putExtra("postId", post.get("postId").getAsString());

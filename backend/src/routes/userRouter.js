@@ -14,6 +14,7 @@ import {
 
 const router = express.Router();
 
+/* ChatGPT usage: No */
 
 // Get user by ID
 router.get('/', getUser);
