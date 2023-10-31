@@ -39,6 +39,7 @@
             android:layout_height="match_parent"
             android:layout_marginLeft="5dp"
             android:layout_weight="1"
+            android:backgroundTint="#4CAF50"
             android:text="Positive"
             android:textSize="10sp" />
 
@@ -49,6 +50,7 @@
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
             android:layout_weight="1"
+            android:backgroundTint="#3F51B5"
             android:text="Neutral"
             android:textSize="10sp" />
 
@@ -58,6 +60,7 @@
             android:layout_height="match_parent"
             android:layout_marginRight="10dp"
             android:layout_weight="1"
+            android:backgroundTint="#F44336"
             android:text="Negative"
             android:textSize="10sp" />
 
@@ -67,6 +70,7 @@
             android:layout_height="match_parent"
             android:layout_marginRight="5dp"
             android:layout_weight="1"
+            android:backgroundTint="#000000"
             android:text="All"
             android:textSize="10sp" />
     </LinearLayout>
