@@ -1,12 +1,10 @@
 import requests
 import openai
 from tqdm import tqdm
-# import nltk
 
-# Set your API key
+# ChatGPT usage: Partial
 openai.api_key = "API_KEY"
 
-# Define the URL of the API you want to call
 api_url = 'https://ubcgrades.com/api/v3/subjects/UBCV'
 response = requests.get(api_url)
 
@@ -17,7 +15,6 @@ if response.status_code == 200:
     for d in data:
         subjects.append(d['subject'])
 
-    
     res_texts = []
     
     for subject in tqdm(subjects, desc="Getting courses for each subject"):
@@ -32,21 +29,17 @@ if response.status_code == 200:
             for obj in data:
                 courses.append((subject, obj["course"], obj["course_title"]))
 
-            # Construct the course list as a formatted string
             course_list_str = "\n".join([f"{subject}{course} - {course_title}" for subject, course, course_title in courses])
 
-            # Define a conversation with user and assistant messages
             conversation = [
                 {"role": "user", "content": f"Categorize these courses into several specific groups based on their titles, content, and potential themes: {course_list_str}"}
             ]
 
-            # Make an API request to the chat-based endpoint
             response = openai.ChatCompletion.create(
                 model="gpt-3.5-turbo",
                 messages=conversation
             )
 
-            # Get the response text from the assistant's message
             response_text = response['choices'][0]['message']['content']
             res_texts.append(response_text)
             with open('courses.txt', 'a') as f:
