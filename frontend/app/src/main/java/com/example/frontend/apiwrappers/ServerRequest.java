@@ -92,7 +92,7 @@ public class ServerRequest {
                     try {
                         listener.onApiRequestComplete(jsonResponse);
                     } catch (ParseException e) {
-                        throw new InternalError(e);
+                        throw new RuntimeException(e);
                     }
                 } else {
                     listener.onApiRequestError("Error response: " + response.code());

@@ -7,13 +7,11 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.ArrayAdapter;
-import android.widget.Button;
-import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.frontend.apiWrappers.ServerRequest;
+import com.example.frontend.apiwrappers.ServerRequest;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 

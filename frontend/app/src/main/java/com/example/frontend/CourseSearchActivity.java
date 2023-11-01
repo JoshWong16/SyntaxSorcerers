@@ -2,23 +2,20 @@ package com.example.frontend;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.os.Bundle;
-import android.text.SpannableStringBuilder;
 import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
-import android.widget.Button;
 import android.widget.CompoundButton;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.frontend.apiWrappers.ServerRequest;
-import com.example.frontend.apiWrappers.UBCGradesRequest;
+import com.example.frontend.apiwrappers.ServerRequest;
+import com.example.frontend.apiwrappers.UBCGradesRequest;
 import com.example.frontend.models.CourseGradesModel;
 import com.example.frontend.models.Deserializer;
 import com.github.mikephil.charting.charts.BarChart;
@@ -31,15 +28,10 @@ import com.github.mikephil.charting.data.Entry;
 import com.github.mikephil.charting.formatter.IndexAxisValueFormatter;
 import com.github.mikephil.charting.highlight.Highlight;
 import com.github.mikephil.charting.listener.OnChartValueSelectedListener;
-import com.google.android.material.materialswitch.MaterialSwitch;
 import com.google.android.material.switchmaterial.SwitchMaterial;
-import com.google.gson.Gson;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
-
-import org.json.JSONException;
-import org.json.JSONObject;
 
 import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
@@ -56,7 +48,6 @@ public class CourseSearchActivity extends AppCompatActivity {
     private String[] spinnerURIs = {"subjects", "courses", "sections", "grades"};
     private String[] spinnerItems = new String[4];
 
-    private Spinner[] spinners = new Spinner[NUM_SPINNERS];
     private int[] spinnerIds = {R.id.yearSession, R.id.subject, R.id.course, R.id.section};
     private ArrayAdapter<String>[] adapters = new ArrayAdapter[NUM_SPINNERS];
 
@@ -78,6 +69,7 @@ public class CourseSearchActivity extends AppCompatActivity {
         setContentView(R.layout.activity_course_search);
         BottomNavMenu.createBottomNavMenu(this, findViewById(R.id.bottom_navigation), R.id.action_home);
 
+        Spinner[] spinners = new Spinner[NUM_SPINNERS];
         courseName = findViewById(R.id.courseName);
         average = findViewById(R.id.average);
         stats = findViewById(R.id.stats);
