@@ -17,6 +17,7 @@ async function createDatabase() {
         await database.createCollection("likes");
         await database.createCollection("userForums");
         await database.createCollection("userCourses");
+        await database.createCollection("userInterests");
 
         // insert sample user
         const users = database.collection("users");

@@ -147,4 +147,38 @@ async function getRecommendedCourses(req, res) {
     }
 }
 
-export { getUser, createUser, updateUser, deleteUser, addFavouriteCourse, getFavouriteCourses, removeFavouriteCourse, getCourseKeywords, getRecommendedCourses };
+/* ChatGPT usage: No */
+async function getUserInterests(req, res) {
+    const model = new UserInterests();
+    try {
+        const interests = await model.getUserInterests(req.userID);
+        return res.json(interests)
+    } catch (error) {
+        return res.status(500).json({message: error.message});
+    }
+}
+
+/* ChatGPT usage: No */
+async function addUserInterests(req, res) {
+    const model = new getUserInterests();
+    try {
+        const interests = await model.addUserInterest(req.userID, req.body.interests);
+        return res.json({message: 'Interests added'})
+    } catch (error) {
+        return res.status(500).json({message: error.message});
+    }
+}
+
+/* ChatGPT usage: No */
+async function removeUserInterests(req, res) {
+    const model = new getUserInterests();
+    const interests = req.params.interests;
+    try {
+        await model.removeUserInterests(req.userID, interests);
+        return res.json({message: 'Interests removed'})
+    } catch (error) {
+        return res.status(500).json({message: error.message});
+    }
+}
+
+export { getUser, createUser, updateUser, deleteUser, addFavouriteCourse, getFavouriteCourses, removeFavouriteCourse, getCourseKeywords, getRecommendedCourses, getUserInterests, addUserInterests, removeUserInterests };

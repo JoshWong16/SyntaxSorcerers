@@ -9,7 +9,10 @@ import {
     getFavouriteCourses,
     removeFavouriteCourse,
     getCourseKeywords,
-    getRecommendedCourses
+    getRecommendedCourses,
+    getUserInterests,
+    addUserInterests,
+    removeUserInterests
 } from '../controllers/userController.js';
 
 const router = express.Router();
@@ -42,5 +45,14 @@ router.get('/courseKeywords', getCourseKeywords);
 
 /* req must contain a json body of keywords like {"keywords" : ["power", "wires"]} */
 router.get('/recommendedCourses', getRecommendedCourses);
+
+// Get user interests
+router.get('/interests', getUserInterests);
+
+// Post user interest(s)
+router.post('/interests', addUserInterests);
+
+// Remove user interest
+router.delete('/interests/:interest', removeUserInterests);
 
 export default router;
