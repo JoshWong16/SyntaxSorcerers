@@ -14,8 +14,8 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.frontend.apiWrappers.ServerRequest;
-import com.example.frontend.apiWrappers.UBCGradesRequest;
+import com.example.frontend.apiwrappers.ServerRequest;
+import com.example.frontend.apiwrappers.UBCGradesRequest;
 import com.example.frontend.models.CourseGradesModel;
 import com.example.frontend.models.Deserializer;
 import com.github.mikephil.charting.charts.BarChart;

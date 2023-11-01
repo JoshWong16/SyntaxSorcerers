@@ -10,7 +10,7 @@ import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.Toast;
 
-import com.example.frontend.apiWrappers.ServerRequest;
+import com.example.frontend.apiwrappers.ServerRequest;
 import com.google.firebase.messaging.FirebaseMessaging;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;

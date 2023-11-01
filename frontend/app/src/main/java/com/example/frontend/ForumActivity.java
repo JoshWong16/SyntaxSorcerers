@@ -19,8 +19,8 @@ import android.widget.TabHost;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.frontend.apiWrappers.ServerRequest;
-import com.example.frontend.apiWrappers.UBCGradesRequest;
+import com.example.frontend.apiwrappers.ServerRequest;
+import com.example.frontend.apiwrappers.UBCGradesRequest;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;

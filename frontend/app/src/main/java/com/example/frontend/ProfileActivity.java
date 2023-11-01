@@ -10,7 +10,7 @@ import android.util.Log;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.example.frontend.apiWrappers.ServerRequest;
+import com.example.frontend.apiwrappers.ServerRequest;
 import com.google.gson.JsonElement;
 import com.squareup.picasso.Picasso;
 

@@ -16,7 +16,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.frontend.apiWrappers.ServerRequest;
+import com.example.frontend.apiwrappers.ServerRequest;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 

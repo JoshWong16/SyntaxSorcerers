@@ -12,7 +12,7 @@ import android.widget.ListView;
 import android.widget.Toast;
 
 import com.example.frontend.adapters.CheckBoxAdapter;
-import com.example.frontend.apiWrappers.ServerRequest;
+import com.example.frontend.apiwrappers.ServerRequest;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;
 
