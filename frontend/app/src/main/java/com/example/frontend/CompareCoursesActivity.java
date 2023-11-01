@@ -351,7 +351,7 @@ public class CompareCoursesActivity extends AppCompatActivity {
                     try {
                         displayGraph();
                     } catch (JSONException e) {
-                        throw new RuntimeException(e);
+                        throw new InternalError(e);;
                     }
                 }
             }

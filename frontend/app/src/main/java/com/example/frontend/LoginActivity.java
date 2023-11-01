@@ -149,7 +149,7 @@ public class LoginActivity extends AppCompatActivity {
         try {
             serverRequest.makePutRequest("/users", body, apiRequestListener);
         } catch (UnsupportedEncodingException e) {
-            throw new RuntimeException(e);
+            throw new InternalError(e);;
         }
     }
 

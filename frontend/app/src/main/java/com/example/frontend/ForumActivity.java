@@ -231,7 +231,7 @@ public class ForumActivity extends AppCompatActivity {
         try {
             serverRequest.makeGetRequest("/forums/user", apiRequestListener);
         } catch (UnsupportedEncodingException e) {
-            throw new RuntimeException(e);
+            throw new InternalError(e);;
         }
     }
 
@@ -284,7 +284,7 @@ public class ForumActivity extends AppCompatActivity {
         try {
             serverRequest.makeGetRequest("/forums", apiRequestListener);
         } catch (UnsupportedEncodingException e) {
-            throw new RuntimeException(e);
+            throw new InternalError(e);;
         }
     }
 
@@ -327,7 +327,7 @@ public class ForumActivity extends AppCompatActivity {
             body.addProperty("forumId", forumId);
             serverRequest.makePostRequest("/forums/user", body, apiRequestListener);
         } catch (UnsupportedEncodingException e) {
-            throw new RuntimeException(e);
+            throw new InternalError(e);;
         }
     }
 }

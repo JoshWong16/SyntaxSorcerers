@@ -142,7 +142,7 @@ public class ForumViewActivity extends AppCompatActivity {
         try {
             serverRequest.makeDeleteRequest("/forums/user/" + forumId, apiRequestListener);
         } catch (UnsupportedEncodingException e) {
-            throw new RuntimeException(e);
+            throw new InternalError(e);;
         }
     }
 
@@ -172,7 +172,7 @@ public class ForumViewActivity extends AppCompatActivity {
         try {
             serverRequest.makePostRequest("/forums/user", body, apiRequestListener);
         } catch (UnsupportedEncodingException e) {
-            throw new RuntimeException(e);
+            throw new InternalError(e);;
         }
     }
 
@@ -208,7 +208,7 @@ public class ForumViewActivity extends AppCompatActivity {
         try {
             serverRequest.makePostRequest("/posts", body, apiRequestListener);
         } catch (UnsupportedEncodingException e) {
-            throw new RuntimeException(e);
+            throw new InternalError(e);;
         }
     }
 
@@ -236,7 +236,7 @@ public class ForumViewActivity extends AppCompatActivity {
         try {
             serverRequest.makeGetRequest("/posts/post/" + postId, apiRequestListener);
         } catch (UnsupportedEncodingException e) {
-            throw new RuntimeException(e);
+            throw new InternalError(e);;
         }
     }
 
@@ -267,7 +267,7 @@ public class ForumViewActivity extends AppCompatActivity {
         try {
             serverRequest.makeGetRequest("/posts/" + forumId, apiRequestListener);
         } catch (UnsupportedEncodingException e) {
-            throw new RuntimeException(e);
+            throw new InternalError(e);;
         }
     }
 
@@ -298,7 +298,7 @@ public class ForumViewActivity extends AppCompatActivity {
         try {
             serverRequest.makePostRequest("/likes", body, apiRequestListener);
         } catch (UnsupportedEncodingException e) {
-            throw new RuntimeException(e);
+            throw new InternalError(e);;
         }
     }
 
@@ -327,7 +327,7 @@ public class ForumViewActivity extends AppCompatActivity {
         try {
             serverRequest.makeDeleteRequest("/likes/" + postId, apiRequestListener);
         } catch (UnsupportedEncodingException e) {
-            throw new RuntimeException(e);
+            throw new InternalError(e);;
         }
     }
 

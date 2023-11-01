@@ -107,7 +107,7 @@ public class ProfileActivity extends AppCompatActivity {
         try {
             serverRequest.makeGetRequest("/users/favourite", apiRequestListener);
         } catch (UnsupportedEncodingException e) {
-            throw new RuntimeException(e);
+            throw new InternalError(e);;
         }
     }
 }

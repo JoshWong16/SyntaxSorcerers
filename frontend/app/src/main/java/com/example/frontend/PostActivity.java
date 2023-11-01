@@ -141,7 +141,7 @@ public class PostActivity extends AppCompatActivity {
         try {
             serverRequest.makeDeleteRequest("/likes/" + postId, apiRequestListener);
         } catch (UnsupportedEncodingException e) {
-            throw new RuntimeException(e);
+            throw new InternalError(e);;
         }
     }
 
@@ -178,7 +178,7 @@ public class PostActivity extends AppCompatActivity {
         try {
             serverRequest.makePostRequest("/comments", body, apiRequestListener);
         } catch (UnsupportedEncodingException e) {
-            throw new RuntimeException(e);
+            throw new InternalError(e);;
         }
     }
 
@@ -204,7 +204,7 @@ public class PostActivity extends AppCompatActivity {
         try {
             serverRequest.makeGetRequest("/comments/comment/" + commentId, apiRequestListener);
         } catch (UnsupportedEncodingException e) {
-            throw new RuntimeException(e);
+            throw new InternalError(e);;
         }
     }
 
@@ -234,7 +234,7 @@ public class PostActivity extends AppCompatActivity {
         try {
             serverRequest.makeGetRequest("/comments/" + postId, apiRequestListener);
         } catch (UnsupportedEncodingException e) {
-            throw new RuntimeException(e);
+            throw new InternalError(e);;
         }
     }
 
