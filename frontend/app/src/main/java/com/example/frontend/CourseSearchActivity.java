@@ -48,7 +48,6 @@ public class CourseSearchActivity extends AppCompatActivity {
     private String[] spinnerURIs = {"subjects", "courses", "sections", "grades"};
     private String[] spinnerItems = new String[4];
 
-    private Spinner[] spinners = new Spinner[NUM_SPINNERS];
     private int[] spinnerIds = {R.id.yearSession, R.id.subject, R.id.course, R.id.section};
     private ArrayAdapter<String>[] adapters = new ArrayAdapter[NUM_SPINNERS];
 
@@ -70,6 +69,7 @@ public class CourseSearchActivity extends AppCompatActivity {
         setContentView(R.layout.activity_course_search);
         BottomNavMenu.createBottomNavMenu(this, findViewById(R.id.bottom_navigation), R.id.action_home);
 
+        Spinner[] spinners = new Spinner[NUM_SPINNERS];
         courseName = findViewById(R.id.courseName);
         average = findViewById(R.id.average);
         stats = findViewById(R.id.stats);
