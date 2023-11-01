@@ -3,7 +3,7 @@ import UserCourses from '../models/UserCourses.js';
 import fs from 'fs';
 
 /* ChatGPT usage: No */
-async function getUser(req, res) {
+export async function getUser(req, res) {
     const model = new User();
     try {
         const user = await model.getUser(req.userId);
@@ -14,7 +14,7 @@ async function getUser(req, res) {
 }
 
 /* ChatGPT usage: No */
-async function createUser(req, res) {
+export async function createUser(req, res) {
     const model = new User();
     try {
         const user = {
@@ -33,7 +33,7 @@ async function createUser(req, res) {
 }
 
 /* ChatGPT usage: No */
-async function updateUser(req, res) {
+export async function updateUser(req, res) {
     const model = new User();
     try {
         await model.updateUser(req.userId, req.body);
@@ -44,7 +44,7 @@ async function updateUser(req, res) {
 }
 
 /* ChatGPT usage: No */
-async function deleteUser(req, res) {
+export async function deleteUser(req, res) {
     const model = new User();
     try {
         await model.deleteUser(req.userId);
@@ -55,7 +55,7 @@ async function deleteUser(req, res) {
 }
 
 /* ChatGPT usage: No */
-async function addFavouriteCourse(req, res) {
+export async function addFavouriteCourse(req, res) {
     const model = new UserCourses();
     try {
         const courses = await model.addUserCourse(req.userId, req.body.courseId);
@@ -66,7 +66,7 @@ async function addFavouriteCourse(req, res) {
 };
 
 /* ChatGPT usage: No */
-async function getFavouriteCourses(req, res) {
+export async function getFavouriteCourses(req, res) {
     const model = new UserCourses();
     try {
         const courses = await model.getUserCourses(req.userId);
@@ -77,7 +77,7 @@ async function getFavouriteCourses(req, res) {
 }
 
 /* ChatGPT usage: No */
-async function removeFavouriteCourse(req, res) {
+export async function removeFavouriteCourse(req, res) {
     const model = new UserCourses();
     const course_id = req.params.course_id;
     try {
@@ -89,7 +89,7 @@ async function removeFavouriteCourse(req, res) {
 }
 
 /* ChatGPT usage: Partial */
-async function getCourseKeywords(req, res) {
+export async function getCourseKeywords(req, res) {
 
     /* User will communicate their interests by selecting a bunch of keywords */
 
@@ -112,9 +112,9 @@ async function getCourseKeywords(req, res) {
 }
 
 /* ChatGPT usage: Partial */
-async function getRecommendedCourses(req, res) {
+export async function getRecommendedCourses(req, res) {
 
-    const { userKeywords } = req.query;
+    const userKeywords = req.query.userKeywords;
     
     const userKeywordsArray = userKeywords.split(',');
     var reccomendedCourses = {};
@@ -146,5 +146,3 @@ async function getRecommendedCourses(req, res) {
         res.status(400).send("Invalid parameter.")
     }
 }
-
-export { getUser, createUser, updateUser, deleteUser, addFavouriteCourse, getFavouriteCourses, removeFavouriteCourse, getCourseKeywords, getRecommendedCourses };

@@ -1,7 +1,7 @@
 import Posts from "../models/Posts.js";
 
 /* ChatGPT usage: No */
-async function getAllPosts(req, res) {
+export async function getAllPosts(req, res) {
     const model = new Posts();
     try {
         const posts = req.query.category ? await model.getFilteredPosts(req.params.forumId, req.query.category, req.userId) : await model.getAllPost(req.params.forumId, req.userId);
@@ -12,7 +12,7 @@ async function getAllPosts(req, res) {
 }
 
 /* ChatGPT usage: No */
-async function getPostById(req, res) {
+export async function getPostById(req, res) {
     const model = new Posts();
     try {
         const post = await model.getPostById(req.userId, req.params.postId);
@@ -23,7 +23,7 @@ async function getPostById(req, res) {
 }
 
 /* ChatGPT usage: No */
-async function addPost(req, res) {
+export async function addPost(req, res) {
     const model = new Posts();
     try {
         const postId = await model.addPost(req.body.content, req.userId, req.body.forumId);
@@ -34,7 +34,7 @@ async function addPost(req, res) {
 }
 
 /* ChatGPT usage: No */
-async function deletePost(req, res) {
+export async function deletePost(req, res) {
     const model = new Posts();
     try {
         const result = await model.deletePost(req.params.postId, req.userId);
@@ -45,7 +45,7 @@ async function deletePost(req, res) {
 }
 
 /* ChatGPT usage: No */
-async function editPost(req, res) {
+export async function editPost(req, res) {
     const model = new Posts();
     try {
         const result = await model.editPost(req.body.content, req.params.postId, req.userId);
@@ -54,5 +54,3 @@ async function editPost(req, res) {
         return res.status(500).json({message: error.message});
     }
 }
-
-export { getAllPosts, getPostById, addPost, deletePost, editPost }
