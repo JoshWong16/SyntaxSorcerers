@@ -219,7 +219,7 @@ public class CourseSearchActivity extends AppCompatActivity {
         try {
             ubcGradesRequest.makeGetRequestForJsonObject(apiEndpoint, apiRequestListener);
         } catch (UnsupportedEncodingException e) {
-            throw new RuntimeException(e);
+            throw new InternalError(e);
         }
     }
 

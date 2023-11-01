@@ -111,7 +111,7 @@ public class PostActivity extends AppCompatActivity {
         try {
             serverRequest.makePostRequest("/likes", body, apiRequestListener);
         } catch (UnsupportedEncodingException e) {
-            throw new RuntimeException(e);
+            throw new InternalError(e);
         }
     }
 

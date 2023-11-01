@@ -105,7 +105,7 @@ public class CourseRecommenderActivity extends AppCompatActivity {
             Log.d(TAG, "making GET request");
             serverRequest.makeGetRequest("/users/courseKeywords", apiRequestListener);
         } catch (UnsupportedEncodingException e) {
-            throw new RuntimeException(e);
+            throw new InternalError(e);
         }
 
     }

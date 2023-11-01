@@ -111,7 +111,7 @@ public class SignupActivity extends AppCompatActivity {
             Log.d(TAG, "making POST request");
             serverRequest.makePostRequest("/users", body, apiRequestListener);
         } catch (UnsupportedEncodingException e) {
-            throw new RuntimeException(e);
+            throw new InternalError(e);
         }
     }
 }

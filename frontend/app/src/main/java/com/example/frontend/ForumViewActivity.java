@@ -114,7 +114,7 @@ public class ForumViewActivity extends AppCompatActivity {
         try {
             serverRequest.makeGetRequest("/posts/" + forumId + "?category=" + category, apiRequestListener);
         } catch (UnsupportedEncodingException e) {
-            throw new RuntimeException(e);
+            throw new InternalError(e);
         }
     }
 

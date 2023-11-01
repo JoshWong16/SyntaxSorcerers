@@ -158,7 +158,7 @@ public class ForumActivity extends AppCompatActivity {
         try {
             serverRequest.makePostRequest("/forums", body, apiRequestListener);
         } catch (UnsupportedEncodingException e) {
-            throw new RuntimeException(e);
+            throw new InternalError(e);
         }
     }
 
