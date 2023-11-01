@@ -30,8 +30,6 @@ public class ServerRequest {
     public static final String RequestTag = "Server Requests";
     private static final String BASE_URL = "https://grgq6ss4i9.execute-api.us-east-2.amazonaws.com/"; // Replace with your API base URL
 
-
-    private Retrofit retrofit;
     private ApiService apiService;
 
     /* ChatGPT usage: Partial */
@@ -47,7 +45,7 @@ public class ServerRequest {
             }
         }).build();
 
-        retrofit = new Retrofit.Builder()
+        Retrofit retrofit = new Retrofit.Builder()
                 .client(client)
                 .baseUrl(BASE_URL)
                 .addConverterFactory(GsonConverterFactory.create())
