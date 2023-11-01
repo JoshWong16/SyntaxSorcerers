@@ -22,9 +22,7 @@ public class HomeActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
-
-        Button searchCourseButton = findViewById(R.id.SearchCoursesButton);
-        Button compareCoursesButton = findViewById(R.id.CompareCoursesButton);
+        
         Button courseRecommenderButton = findViewById(R.id.RecommenderButton);
 
         BottomNavMenu.createBottomNavMenu(this, findViewById(R.id.bottom_navigation), R.id.action_home);
