@@ -24,7 +24,6 @@ if response.status_code == 200:
 
         if subject_res.status_code == 200:
             data = subject_res.json()
-            
             courses = []
             for obj in data:
                 courses.append((subject, obj["course"], obj["course_title"]))
