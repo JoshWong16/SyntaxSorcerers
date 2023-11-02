@@ -44,9 +44,7 @@ if response.status_code == 200:
             res_texts.append(response_text)
             with open('courses.txt', 'a') as f:
                 f.write("\n".join(response_text.split("\n")[1:]))
-            
         else:
             print(f"API call failed with status code {subject_res.status_code}")
-
 else:
     print(f"API call failed with status code {response.status_code}")
