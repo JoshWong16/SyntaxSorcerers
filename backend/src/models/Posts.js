@@ -67,10 +67,9 @@ class Posts {
 
     /* ChatGPT usage: No */
     async editPost(content, postId, userId) {
-        const result = await this.collection.updateOne(
-            { userId: userId, _id: new ObjectId(postId) },
-            { $set: { content, dateWritten: new Date() } }
-        );
+        const filter = { userId: userId, _id: new ObjectId(postId) }
+        const update = { $set: { content, dateWritten: new Date() } }
+        const result = await this.collection.updateOne(filter, update);
         return result.matchedCount > 0;
     }
     
