@@ -6,7 +6,7 @@ from tqdm import tqdm
 openai.api_key = "API_KEY"
 
 api_url = 'https://ubcgrades.com/api/v3/subjects/UBCV'
-response = requests.get(api_url, timeout=None)
+response = requests.get(api_url, timeout=10)
 
 if response.status_code == 200:
     data = response.json()
@@ -20,7 +20,7 @@ if response.status_code == 200:
     for subject in tqdm(subjects, desc="Getting courses for each subject"):
         print(f'Getting courses for {subject}')
         subject_url = f'https://ubcgrades.com/api/v3/courses/UBCV/{subject}'
-        subject_res = requests.get(subject_url, timeout=None)
+        subject_res = requests.get(subject_url, timeout=10)
 
         if subject_res.status_code == 200:
             data = subject_res.json()
