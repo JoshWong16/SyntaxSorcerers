@@ -7,10 +7,15 @@ class UserInterests {
 
     /* ChatGPT usage: No */
     async getUserInterests(userId) {
-        const response = await this.collection.find({userId: userId}).toArray();
-        return response.map(interest => {
-            return interest.interest
-        });
+        const userCount = await this.collection.countDocuments({ userId: userId });
+        if (userCount == 0) {
+            return null;
+        } else {
+            const response = await this.collection.find({userId: userId}).toArray();
+            return response.map(interest => {
+                return interest.interest
+            });
+        }
     }
 
     /* ChatGPT usage: No */

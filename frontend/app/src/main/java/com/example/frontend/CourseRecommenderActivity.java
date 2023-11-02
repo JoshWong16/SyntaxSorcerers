@@ -80,7 +80,6 @@ public class CourseRecommenderActivity extends AppCompatActivity {
                         checkboxes.add(checkBox);
                     }
 
-
                     /* Chat-GPT generated code to dynamically add checkboxes to the list view */
 
                     /* Create an CheckBoxAdapter to bind the array to the ListView */
