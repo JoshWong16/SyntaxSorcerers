@@ -52,12 +52,8 @@ class Comments {
     
     /* ChatGPT usage: No */
     async deleteComment(commentId, userId) {
-        try {
-            const result = await this.collection.deleteOne({ _id : new ObjectId(commentId), writtenBy: userId });
-            return result.deletedCount > 0;
-        } catch (error) {
-            throw error;
-        }
+        const result = await this.collection.deleteOne({ _id : new ObjectId(commentId), writtenBy: userId });
+        return result.deletedCount > 0;
     }
 }
 

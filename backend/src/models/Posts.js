@@ -76,12 +76,8 @@ class Posts {
     
     /* ChatGPT usage: No */
     async deletePost(postId, userId) {
-        try {
-            const result = await this.collection.deleteOne({ _id : new ObjectId(postId), writtenBy: userId });
-            return result.deletedCount > 0;
-        } catch (error) {
-            throw error;
-        }
+        const result = await this.collection.deleteOne({ _id : new ObjectId(postId), writtenBy: userId });
+        return result.deletedCount > 0;
     }
 }
 

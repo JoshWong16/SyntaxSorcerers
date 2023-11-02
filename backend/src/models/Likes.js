@@ -29,12 +29,8 @@ class Likes {
     
     /* ChatGPT usage: No */
     async removeLike(postId, userId) {
-        try {
-            const result = await this.collection.deleteOne({ postId: postId, userId: userId });
-            return result.deletedCount > 0;
-        } catch (error) {
-            throw error;
-        }
+        const result = await this.collection.deleteOne({ postId: postId, userId: userId });
+        return result.deletedCount > 0;
     }
 }
 

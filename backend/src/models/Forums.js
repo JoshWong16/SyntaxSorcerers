@@ -27,12 +27,8 @@ class Forums {
     
     /* ChatGPT usage: No */
     async deleteForum(userId, forumId) {
-        try {
-            const result = await this.collection.deleteOne({ createdBy : userId, forumId: forumId });
-            return result.deletedCount > 0;
-        } catch (error) {
-            throw error;
-        }
+        const result = await this.collection.deleteOne({ createdBy : userId, forumId: forumId });
+        return result.deletedCount > 0;
     }
 
     /* ChatGPT usage: No */
