@@ -29,6 +29,8 @@ public class BottomNavMenu {
                     case R.id.action_profile:
                         context.startActivity(new Intent(context, ProfileActivity.class));
                         return true;
+                    default:
+
                 }
                 return false;
             }

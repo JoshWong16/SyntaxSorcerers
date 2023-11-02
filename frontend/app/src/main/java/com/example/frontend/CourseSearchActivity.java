@@ -331,7 +331,7 @@ public class CourseSearchActivity extends AppCompatActivity {
         try {
             serverRequest.makePostRequest("/users/favourite", body, apiRequestListener);
         } catch (UnsupportedEncodingException e) {
-            throw new InternalError(e);;
+            throw new InternalError(e);
         }
     }
 
@@ -359,7 +359,7 @@ public class CourseSearchActivity extends AppCompatActivity {
         try {
             serverRequest.makeDeleteRequest("/users/favourite/" + courseId, apiRequestListener);
         } catch (UnsupportedEncodingException e) {
-            throw new InternalError(e);;
+            throw new InternalError(e);
         }
     }
 
@@ -398,7 +398,7 @@ public class CourseSearchActivity extends AppCompatActivity {
         try {
             serverRequest.makeGetRequest("/users/favourite", apiRequestListener);
         } catch (UnsupportedEncodingException e) {
-            throw new InternalError(e);;
+            throw new InternalError(e);
         }
         return userCourses;
     }
