@@ -16,7 +16,7 @@ if response.status_code == 200:
         subjects.append(d['subject'])
 
     res_texts = []
-    
+
     for subject in tqdm(subjects, desc="Getting courses for each subject"):
         print(f'Getting courses for {subject}')
         subject_url = f'https://ubcgrades.com/api/v3/courses/UBCV/{subject}'
@@ -32,7 +32,8 @@ if response.status_code == 200:
             course_list_str = "\n".join([f"{subject}{course} - {course_title}" for subject, course, course_title in courses])
 
             conversation = [
-                {"role": "user", "content": f"Categorize these courses into several specific groups based on their titles, content, and potential themes: {course_list_str}"}
+                {"role": "user", "content": f"Categorize these courses into several specific groups \
+                    based on their titles, content, and potential themes: {course_list_str}"}
             ]
 
             response = openai.ChatCompletion.create(
