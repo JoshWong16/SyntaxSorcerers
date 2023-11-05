@@ -13,7 +13,7 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.frontend.apiWrappers.UBCGradesRequest;
+import com.example.frontend.apiwrappers.UBCGradesRequest;
 import com.example.frontend.models.CourseGradesModel;
 import com.example.frontend.models.Deserializer;
 import com.github.mikephil.charting.charts.BarChart;
@@ -24,15 +24,11 @@ import com.github.mikephil.charting.components.YAxis;
 import com.github.mikephil.charting.data.BarData;
 import com.github.mikephil.charting.data.BarDataSet;
 import com.github.mikephil.charting.data.BarEntry;
-import com.github.mikephil.charting.data.Entry;
 import com.github.mikephil.charting.formatter.IndexAxisValueFormatter;
-import com.github.mikephil.charting.highlight.Highlight;
-import com.github.mikephil.charting.listener.OnChartValueSelectedListener;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
 
 import org.json.JSONException;
-import org.json.JSONObject;
 
 import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
@@ -79,8 +75,8 @@ public class CompareCoursesActivity extends AppCompatActivity {
 
         barChart = findViewById(R.id.barChart1);
 
-        initializeSpinners(spinners1, spinnerIds1, adapters1, spinner1Items, firstCourseTextViews, 1);
-        initializeSpinners(spinners2, spinnerIds2, adapters2, spinner2Items, secondCourseTextViews, 2);
+        initializeSpinners(spinners1, spinnerIds1, adapters1, spinner1Items,  1);
+        initializeSpinners(spinners2, spinnerIds2, adapters2, spinner2Items,  2);
 
         initializeTextViews(firstCourseTextViews, firstCourseTextViewIds);
         initializeTextViews(secondCourseTextViews, secondCourseTextViewIds);
@@ -101,7 +97,7 @@ public class CompareCoursesActivity extends AppCompatActivity {
     /**
      * ChatGPT Usage: Partial
      */
-    private void initializeSpinners(Spinner[] spinners, int[] spinnerIds, ArrayAdapter<String>[] adapters, String[] spinnerItems, TextView[] textViews, int searchbar) {
+    private void initializeSpinners(Spinner[] spinners, int[] spinnerIds, ArrayAdapter<String>[] adapters, String[] spinnerItems, int searchbar) {
         for (int i=0; i < NUM_SPINNERS; i++) {
             spinners[i] = findViewById(spinnerIds[i]);
             if (i == 0) adapters[i] = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, availableYearSessions);
@@ -115,7 +111,7 @@ public class CompareCoursesActivity extends AppCompatActivity {
                     String selectedItem = adapters[spinnerIndex].getItem(position);
                     if (!selectedItem.equals("")) {
                         updateOtherSpinnersOnChange(selectedItem, spinnerIndex, spinnerItems, adapters);
-                        updateNextSpinnerWithApiData(spinnerIndex, spinnerItems, adapters, textViews, searchbar);
+                        updateNextSpinnerWithApiData(spinnerIndex, spinnerItems, adapters, searchbar);
                     }
                 }
 
@@ -141,11 +137,11 @@ public class CompareCoursesActivity extends AppCompatActivity {
     /**
      * ChatGPT Usage: Partial
      */
-    private void updateNextSpinnerWithApiData(int currentSpinnerIndex, String[] spinnerItems, ArrayAdapter<String>[] adapters, TextView[] textViews, int searchbar) {
+    private void updateNextSpinnerWithApiData(int currentSpinnerIndex, String[] spinnerItems, ArrayAdapter<String>[] adapters, int searchbar) {
         if (currentSpinnerIndex < 4) {
             String apiEndpoint = constructEndpoint(currentSpinnerIndex, spinnerItems);
             if (currentSpinnerIndex < 3) callUBCGradesJsonArray(currentSpinnerIndex, apiEndpoint, adapters);
-            else callUBCGradesJsonObject(apiEndpoint, textViews, searchbar);
+            else callUBCGradesJsonObject(apiEndpoint, searchbar);
         }
     }
 
@@ -185,7 +181,7 @@ public class CompareCoursesActivity extends AppCompatActivity {
     /**
      * ChatGPT Usage: Partial
      */
-    private void callUBCGradesJsonObject(String apiEndpoint, TextView[] textViews, int searchbar) {
+    private void callUBCGradesJsonObject(String apiEndpoint, int searchbar) {
         UBCGradesRequest ubcGradesRequest = new UBCGradesRequest();
         UBCGradesRequest.ApiRequestListener apiRequestListener = new UBCGradesRequest.ApiRequestListener<JsonObject>() {
             @Override
@@ -204,7 +200,7 @@ public class CompareCoursesActivity extends AppCompatActivity {
         try {
             ubcGradesRequest.makeGetRequestForJsonObject(apiEndpoint, apiRequestListener);
         } catch (UnsupportedEncodingException e) {
-            throw new RuntimeException(e);
+            throw new InternalError(e);
         }
     }
 
@@ -355,7 +351,7 @@ public class CompareCoursesActivity extends AppCompatActivity {
                     try {
                         displayGraph();
                     } catch (JSONException e) {
-                        throw new RuntimeException(e);
+                        throw new InternalError(e);
                     }
                 }
             }

@@ -7,45 +7,29 @@ class User {
 
     /* ChatGPT usage: No */
     async getUser(id) {
-        try {
-            const user = await this.collection.findOne({ userId: id });
-            return user;
-        } catch (error) {
-            throw error;
-        }
+        const user = await this.collection.findOne({ userId: id });
+        return user;
     }
 
     /* ChatGPT usage: No */
     async createUser(user) {
-        try {
-            const result = await this.collection.insertOne(user);
-            return result.insertedId;
-        } catch (error) {
-            throw error;
-        }
+        const result = await this.collection.insertOne(user);
+        return result.insertedId;
     }
 
     /* ChatGPT usage: No */
     async updateUser(userId, updateData) {
-        try {
-            const result = await this.collection.updateOne(
-                { userId: userId },
-                { $set: updateData }
-            );
-            return result.matchedCount > 0;
-        } catch (error) {
-            throw error;
-        }
+        const result = await this.collection.updateOne(
+            { userId: userId },
+            { $set: updateData }
+        );
+        return result.matchedCount > 0;
     }
 
     /* ChatGPT usage: No */
     async deleteUser(userId) {
-        try {
-            const result = await this.collection.deleteOne({ userId : userId });
-            return result.deletedCount > 0;
-        } catch (error) {
-            throw error;
-        }
+        const result = await this.collection.deleteOne({ userId : userId });
+        return result.deletedCount > 0;
     }
 }
 

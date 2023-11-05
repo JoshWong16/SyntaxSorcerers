@@ -6,7 +6,7 @@ import pkg from './firebase-config.cjs';
 const { admin } = pkg;
 
 /* ChatGPT usage: No */
-async function getComments(req, res) {
+export async function getComments(req, res) {
     const model = new Comments();
     try {
         const comments = await model.getAllComments(req.params.post_id);
@@ -17,7 +17,7 @@ async function getComments(req, res) {
 }
 
 /* ChatGPT usage: No */
-async function getComment(req, res) {
+export async function getComment(req, res) {
     const model = new Comments();
     try {
         const comments = await model.getCommentById(req.params.comment_id);
@@ -29,7 +29,7 @@ async function getComment(req, res) {
 
 /* https://medium.com/@jullainc/firebase-push-notifications-to-mobile-devices-using-nodejs-7d514e10dd4 */
 /* ChatGPT usage: No */
-async function addComment(req, res) {
+export async function addComment(req, res) {
     const model = new Comments();
     const userModel = new User();
     const postModel = new Posts();
@@ -76,7 +76,7 @@ async function addComment(req, res) {
 }
 
 /* ChatGPT usage: No */
-async function editComment(req, res) {
+export async function editComment(req, res) {
     const model = new Comments();
     try {
         const result = await model.editComment(req.body.content, req.params.commentId, req.userId);
@@ -87,7 +87,7 @@ async function editComment(req, res) {
 }
 
 /* ChatGPT usage: No */
-async function deleteComment(req, res) {
+export async function deleteComment(req, res) {
     const model = new Comments();
     try {
         const result = await model.deleteComment(req.params.commentId, req.userId);
@@ -96,5 +96,3 @@ async function deleteComment(req, res) {
         return res.status(500).json({message: error.message});
     }
 }
-
-export { getComments, getComment, addComment, editComment, deleteComment }

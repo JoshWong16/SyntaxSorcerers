@@ -3,7 +3,6 @@ package com.example.frontend;
 import android.content.Context;
 import android.content.Intent;
 import android.view.MenuItem;
-import android.view.View;
 
 import androidx.annotation.NonNull;
 
@@ -30,6 +29,8 @@ public class BottomNavMenu {
                     case R.id.action_profile:
                         context.startActivity(new Intent(context, ProfileActivity.class));
                         return true;
+                    default:
+
                 }
                 return false;
             }

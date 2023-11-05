@@ -1,7 +1,6 @@
 package com.example.frontend.adapters;
 
 
-import android.content.Context;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
@@ -13,11 +12,9 @@ import java.util.List;
 /* ChatGPT generated code to added checkboxes to a listView for the course recommender use case */
 public class CheckBoxAdapter extends BaseAdapter {
     private List<CheckBox> checkBoxList;
-    private Context context;
 
     /* ChatGPT usage: Yes */
-    public CheckBoxAdapter(Context context, List<CheckBox> checkBoxList) {
-        this.context = context;
+    public CheckBoxAdapter(List<CheckBox> checkBoxList) {
         this.checkBoxList = checkBoxList;
     }
 

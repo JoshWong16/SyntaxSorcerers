@@ -1,7 +1,7 @@
 import Likes from '../models/Likes.js';
 
 /* ChatGPT usage: No */
-async function getLikes(req, res) {
+export async function getLikes(req, res) {
     const model = new Likes();
     try {
         const likes = await model.getAllLikes(req.params.post_id);
@@ -12,7 +12,7 @@ async function getLikes(req, res) {
 }
 
 /* ChatGPT usage: No */
-async function addLike(req, res) {
+export async function addLike(req, res) {
     const model = new Likes();
     try {
         const likeId = await model.addLike(req.body.post_id, req.userId);
@@ -23,7 +23,7 @@ async function addLike(req, res) {
 }
 
 /* ChatGPT usage: No */
-async function removeLike(req, res) {
+export async function removeLike(req, res) {
     const model = new Likes();
     try {
         const result = await model.removeLike(req.params.post_id, req.userId);
@@ -32,5 +32,3 @@ async function removeLike(req, res) {
         return res.status(500).json({message: error.message});
     }
 }
-
-export { getLikes, addLike, removeLike }

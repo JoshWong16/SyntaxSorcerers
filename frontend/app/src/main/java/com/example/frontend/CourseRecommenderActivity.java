@@ -12,7 +12,7 @@ import android.widget.ListView;
 import android.widget.Toast;
 
 import com.example.frontend.adapters.CheckBoxAdapter;
-import com.example.frontend.apiWrappers.ServerRequest;
+import com.example.frontend.apiwrappers.ServerRequest;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;
 
@@ -84,7 +84,7 @@ public class CourseRecommenderActivity extends AppCompatActivity {
                     /* Chat-GPT generated code to dynamically add checkboxes to the list view */
 
                     /* Create an CheckBoxAdapter to bind the array to the ListView */
-                    CheckBoxAdapter adapter = new CheckBoxAdapter(CourseRecommenderActivity.this, checkboxes);
+                    CheckBoxAdapter adapter = new CheckBoxAdapter(checkboxes);
 
                     // Set the adapter to the ListView
                     listView.setAdapter(adapter);
@@ -105,7 +105,7 @@ public class CourseRecommenderActivity extends AppCompatActivity {
             Log.d(TAG, "making GET request");
             serverRequest.makeGetRequest("/users/courseKeywords", apiRequestListener);
         } catch (UnsupportedEncodingException e) {
-            throw new RuntimeException(e);
+            throw new InternalError(e);
         }
 
     }

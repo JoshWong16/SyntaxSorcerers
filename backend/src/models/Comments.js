@@ -43,21 +43,16 @@ class Comments {
 
     /* ChatGPT usage: No */
     async editComment(content, commentId, userId) {
-        const result = await this.collection.updateOne(
-            { userId: userId, _id: new ObjectId(commentId) },
-            { $set: { content, dateWritten: new Date() } }
-        );
+        const filter = { userId: userId, _id: new ObjectId(commentId) };
+        const update = { $set: { content, dateWritten: new Date() } }
+        const result = await this.collection.updateOne(filter, update);
         return result.matchedCount > 0;
     }
     
     /* ChatGPT usage: No */
     async deleteComment(commentId, userId) {
-        try {
-            const result = await this.collection.deleteOne({ _id : new ObjectId(commentId), writtenBy: userId });
-            return result.deletedCount > 0;
-        } catch (error) {
-            throw error;
-        }
+        const result = await this.collection.deleteOne({ _id : new ObjectId(commentId), writtenBy: userId });
+        return result.deletedCount > 0;
     }
 }
 

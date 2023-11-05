@@ -1,18 +1,16 @@
 package com.example.frontend;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.ArrayAdapter;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.Toast;
 
-import com.example.frontend.apiWrappers.ServerRequest;
+import com.example.frontend.apiwrappers.ServerRequest;
 import com.google.firebase.messaging.FirebaseMessaging;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
@@ -111,7 +109,7 @@ public class SignupActivity extends AppCompatActivity {
             Log.d(TAG, "making POST request");
             serverRequest.makePostRequest("/users", body, apiRequestListener);
         } catch (UnsupportedEncodingException e) {
-            throw new RuntimeException(e);
+            throw new InternalError(e);
         }
     }
 }

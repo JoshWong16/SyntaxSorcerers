@@ -2,7 +2,7 @@ import Forum from '../models/Forums.js';
 import UserForums from '../models/UserForums.js';
 
 /* ChatGPT usage: No */
-async function getAllForums(req, res) {
+export async function getAllForums(req, res) {
     const forumModel = new Forum();
     try {
         const forums = req.query.search ? await forumModel.searchForums(req.query.search) : await forumModel.getAllForums();
@@ -13,7 +13,7 @@ async function getAllForums(req, res) {
 };
 
 /* ChatGPT usage: No */
-async function addForum(req, res) {
+export async function addForum(req, res) {
     const forumModel = new Forum();
     const userForumsModel = new UserForums();
     try {
@@ -26,7 +26,7 @@ async function addForum(req, res) {
 };
 
 /* ChatGPT usage: No */
-async function removeForum(req, res) {
+export async function removeForum(req, res) {
     const forumModel = new Forum();
     try {
         const result = await forumModel.deleteForum(req.userId, req.params.forumId);
@@ -37,7 +37,7 @@ async function removeForum(req, res) {
 };
 
 /* ChatGPT usage: No */
-async function getUsersForums(req, res) {
+export async function getUsersForums(req, res) {
     const userForumsModel = new UserForums();
     try {
         const forums = await userForumsModel.getUsersForums(req.userId);
@@ -48,7 +48,7 @@ async function getUsersForums(req, res) {
 };
 
 /* ChatGPT usage: No */
-async function addUsersForum(req, res) {
+export async function addUsersForum(req, res) {
     const userForumsModel = new UserForums();
     try {
         await userForumsModel.addUserForum(req.userId, req.body.forumId);
@@ -59,7 +59,7 @@ async function addUsersForum(req, res) {
 }
 
 /* ChatGPT usage: No */
-async function removeUsersForum(req, res) {
+export async function removeUsersForum(req, res) {
     const userForumsModel = new UserForums();
     try {
         await userForumsModel.removeUserForum(req.userId, req.params.forumId);
@@ -68,5 +68,3 @@ async function removeUsersForum(req, res) {
         return res.status(500).json({message: error.message});
     }
 }
-
-export { getAllForums, addForum, removeForum, getUsersForums, addUsersForum, removeUsersForum };

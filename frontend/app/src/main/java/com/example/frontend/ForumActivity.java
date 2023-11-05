@@ -13,15 +13,14 @@ import android.view.Window;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.Spinner;
 import android.widget.TabHost;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.frontend.apiWrappers.ServerRequest;
-import com.example.frontend.apiWrappers.UBCGradesRequest;
+import com.example.frontend.apiwrappers.ServerRequest;
+import com.example.frontend.apiwrappers.UBCGradesRequest;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
@@ -158,7 +157,7 @@ public class ForumActivity extends AppCompatActivity {
         try {
             serverRequest.makePostRequest("/forums", body, apiRequestListener);
         } catch (UnsupportedEncodingException e) {
-            throw new RuntimeException(e);
+            throw new InternalError(e);
         }
     }
 
@@ -232,7 +231,7 @@ public class ForumActivity extends AppCompatActivity {
         try {
             serverRequest.makeGetRequest("/forums/user", apiRequestListener);
         } catch (UnsupportedEncodingException e) {
-            throw new RuntimeException(e);
+            throw new InternalError(e);
         }
     }
 
@@ -285,7 +284,7 @@ public class ForumActivity extends AppCompatActivity {
         try {
             serverRequest.makeGetRequest("/forums", apiRequestListener);
         } catch (UnsupportedEncodingException e) {
-            throw new RuntimeException(e);
+            throw new InternalError(e);
         }
     }
 
@@ -328,7 +327,7 @@ public class ForumActivity extends AppCompatActivity {
             body.addProperty("forumId", forumId);
             serverRequest.makePostRequest("/forums/user", body, apiRequestListener);
         } catch (UnsupportedEncodingException e) {
-            throw new RuntimeException(e);
+            throw new InternalError(e);
         }
     }
 }
