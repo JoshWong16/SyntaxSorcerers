@@ -3,6 +3,7 @@ package com.example.frontend;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.Dialog;
+import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
@@ -10,6 +11,8 @@ import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.Window;
+import android.view.WindowManager;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
@@ -27,6 +30,7 @@ import com.google.gson.JsonObject;
 
 import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
+import java.util.Objects;
 
 public class ForumActivity extends AppCompatActivity {
 
@@ -104,12 +108,11 @@ public class ForumActivity extends AppCompatActivity {
                 }
             });
 
-            dialog.findViewById(R.id.create_forum_button).setOnClickListener(a -> {
+            dialog.findViewById(R.id.create_forum_button).setOnClickListener(view -> {
                 String forumName = ((TextView) dialog.findViewById(R.id.new_forum_name)).getText().toString();
                 String subject = courseName.getSelectedItem().toString();
                 String course = courseCode.getSelectedItem().toString();
-                createNewForum(forumName, subject, course);
-                dialog.dismiss();
+                createNewForum(view, dialog, forumName, subject, course);
             });
 
             // Show the dialog
@@ -129,7 +132,14 @@ public class ForumActivity extends AppCompatActivity {
     }
 
     /* ChatGPT usage: Partial */
-    private void createNewForum(String forumName, String subject, String course) {
+    private void createNewForum(View view, Dialog dialog, String forumName, String subject, String course) {
+        if (forumName.length() > 30) {
+            InputMethodManager inputMethodManager = (InputMethodManager)getSystemService(INPUT_METHOD_SERVICE);
+            inputMethodManager.hideSoftInputFromWindow(view.getApplicationWindowToken(),0);
+            Toast.makeText(getApplicationContext(), "Forum name must be less than 30 characters", Toast.LENGTH_SHORT).show();
+            return;
+        }
+
         SharedPreferences sharedPreferences = getSharedPreferences("GoogleAccountInfo", MODE_PRIVATE);
         String userId = sharedPreferences.getString("userId", "");
         ServerRequest serverRequest = new ServerRequest(userId);
@@ -137,6 +147,7 @@ public class ForumActivity extends AppCompatActivity {
         ServerRequest.ApiRequestListener apiRequestListener = new ServerRequest.ApiRequestListener() {
             @Override
             public void onApiRequestComplete(JsonElement response) {
+                dialog.dismiss();
                 Toast toast = Toast.makeText(getApplicationContext(), "Forum created", Toast.LENGTH_SHORT);
                 toast.show();
                 generateJoinedForums();

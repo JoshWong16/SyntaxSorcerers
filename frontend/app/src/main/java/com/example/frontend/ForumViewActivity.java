@@ -9,6 +9,7 @@ import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
@@ -57,7 +58,7 @@ public class ForumViewActivity extends AppCompatActivity {
         });
 
         findViewById(R.id.create_forum_button).setOnClickListener(v -> {
-            addPost(forumId);
+            addPost(forumId, v);
         });
 
         findViewById(R.id.positiveButton).setOnClickListener(v -> {
@@ -177,8 +178,20 @@ public class ForumViewActivity extends AppCompatActivity {
     }
 
     /* ChatGPT usage: Partial */
-    private void addPost(String forumId) {
+    private void addPost(String forumId, View view) {
         String post = (((EditText) findViewById(R.id.postMessage)).getText()).toString();
+        if (post.trim().equals("")) {
+            InputMethodManager inputMethodManager = (InputMethodManager)getSystemService(INPUT_METHOD_SERVICE);
+            inputMethodManager.hideSoftInputFromWindow(view.getApplicationWindowToken(),0);
+            Toast.makeText(ForumViewActivity.this, "Please enter a post", Toast.LENGTH_SHORT).show();
+            return;
+        } else if (post.length() > 20000) {
+            InputMethodManager inputMethodManager = (InputMethodManager)getSystemService(INPUT_METHOD_SERVICE);
+            inputMethodManager.hideSoftInputFromWindow(view.getApplicationWindowToken(),0);
+            Toast.makeText(ForumViewActivity.this, "Post is too long, needs to be less than 20,000 characters", Toast.LENGTH_SHORT).show();
+            return;
+        }
+
         SharedPreferences sharedPreferences = getSharedPreferences("GoogleAccountInfo", MODE_PRIVATE);
         String userId = sharedPreferences.getString("userId", null);
         ServerRequest serverRequest = new ServerRequest(userId);

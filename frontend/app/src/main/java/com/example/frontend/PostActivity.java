@@ -9,10 +9,12 @@ import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.frontend.apiwrappers.ServerRequest;
 import com.google.gson.JsonElement;
@@ -67,7 +69,7 @@ public class PostActivity extends AppCompatActivity {
         });
 
         findViewById(R.id.create_forum_button).setOnClickListener(v -> {
-            addComment(postId);
+            addComment(postId, v);
         });
 
         getComments(postId);
@@ -146,8 +148,20 @@ public class PostActivity extends AppCompatActivity {
     }
 
     /* ChatGPT usage: Partial */
-    private void addComment(String postId) {
+    private void addComment(String postId, View view) {
         String comment = (((EditText) findViewById(R.id.commentMessage)).getText()).toString();
+        if (comment.trim().equals("")) {
+            InputMethodManager inputMethodManager = (InputMethodManager)getSystemService(INPUT_METHOD_SERVICE);
+            inputMethodManager.hideSoftInputFromWindow(view.getApplicationWindowToken(),0);
+            Toast.makeText(PostActivity.this, "Please enter a post", Toast.LENGTH_SHORT).show();
+            return;
+        } else if (comment.length() > 20000) {
+            InputMethodManager inputMethodManager = (InputMethodManager)getSystemService(INPUT_METHOD_SERVICE);
+            inputMethodManager.hideSoftInputFromWindow(view.getApplicationWindowToken(),0);
+            Toast.makeText(PostActivity.this, "Post is too long, needs to be less than 20,000 characters", Toast.LENGTH_SHORT).show();
+            return;
+        }
+
         SharedPreferences sharedPreferences = getSharedPreferences("GoogleAccountInfo", MODE_PRIVATE);
         String userId = sharedPreferences.getString("userId", null);
         ServerRequest serverRequest = new ServerRequest(userId);

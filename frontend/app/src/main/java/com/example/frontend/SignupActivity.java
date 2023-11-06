@@ -68,9 +68,21 @@ public class SignupActivity extends AppCompatActivity {
         String email = intent.getStringExtra("email");
         String userId = intent.getStringExtra("userId");
         String name = ((EditText) findViewById(R.id.name_input)).getText().toString();
+        if (!name.matches("[a-zA-Z]+")) {
+            Toast.makeText(this, "Please enter a valid name", Toast.LENGTH_SHORT).show();
+            return;
+        }
         String major = ((Spinner) findViewById(R.id.major_spinner)).getSelectedItem().toString();
-        Integer yearLevel = Integer.parseInt(((EditText) findViewById(R.id.year_level_input)).getText().toString());
-        sendAccountCreationRequest(email, userId, name, major, yearLevel, token);
+        try {
+            int yearLevel = Integer.parseInt(((EditText) findViewById(R.id.year_level_input)).getText().toString());
+            if (yearLevel < 1 || yearLevel > 8) {
+                Toast.makeText(this, "Please enter a valid year level", Toast.LENGTH_SHORT).show();
+                return;
+            }
+            sendAccountCreationRequest(email, userId, name, major, yearLevel, token);
+        } catch (NumberFormatException e) {
+            Toast.makeText(this, "Please enter a valid year level", Toast.LENGTH_SHORT).show();
+        }
     }
 
     /* ChatGPT usage: Partial */
