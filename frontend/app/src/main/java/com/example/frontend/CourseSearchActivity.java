@@ -111,8 +111,8 @@ public class CourseSearchActivity extends AppCompatActivity {
     private void updateNextSpinnerWithApiData(int currentSpinnerIndex) {
         if (currentSpinnerIndex < 4) {
             String apiEndpoint = constructEndpoint(currentSpinnerIndex);
-            if (currentSpinnerIndex < 3) callUBCGradesJsonArray(currentSpinnerIndex, apiEndpoint);
-            else callUBCGradesJsonObject(apiEndpoint);
+            if (currentSpinnerIndex < 3) callUBCGrades(currentSpinnerIndex, apiEndpoint);
+            else callUBCGradesCourseData(apiEndpoint);
         }
     }
 
@@ -168,12 +168,12 @@ public class CourseSearchActivity extends AppCompatActivity {
     /**
      * ChatGPT Usage: Partial
      */
-    private void callUBCGradesJsonArray(int currentSpinnerIndex, String apiEndpoint) {
+    private void callUBCGrades(int currentSpinnerIndex, String apiEndpoint) {
         UBCGradesRequest ubcGradesRequest = new UBCGradesRequest();
-        UBCGradesRequest.ApiRequestListener apiRequestListener = new UBCGradesRequest.ApiRequestListener<JsonArray>() {
+        UBCGradesRequest.ApiRequestListener apiRequestListener = new UBCGradesRequest.ApiRequestListener() {
             @Override
-            public void onApiRequestComplete(JsonArray response) {
-                updateSpinnerWithData(response, currentSpinnerIndex + 1);
+            public void onApiRequestComplete(JsonElement response) {
+                updateSpinnerWithData(response.getAsJsonArray(), currentSpinnerIndex + 1);
             }
 
             @Override
@@ -182,20 +182,20 @@ public class CourseSearchActivity extends AppCompatActivity {
                 Log.d(UBCGradesRequest.RequestTag, error);
             }
         };
-        ubcGradesRequest.makeGetRequestForJsonArray(apiEndpoint, apiRequestListener);
+        ubcGradesRequest.makeUBCGradesGetRequest(apiEndpoint, apiRequestListener);
     }
 
     /**
      * ChatGPT Usage: Partial
      */
-    private void callUBCGradesJsonObject(String apiEndpoint) {
+    private void callUBCGradesCourseData(String apiEndpoint) {
         UBCGradesRequest ubcGradesRequest = new UBCGradesRequest();
-        UBCGradesRequest.ApiRequestListener apiRequestListener = new UBCGradesRequest.ApiRequestListener<JsonObject>() {
+        UBCGradesRequest.ApiRequestListener apiRequestListener = new UBCGradesRequest.ApiRequestListener() {
             @Override
-            public void onApiRequestComplete(JsonObject response) {
+            public void onApiRequestComplete(JsonElement response) {
                 Log.d(UBCGradesRequest.RequestTag, "Course grade request success");
                 Deserializer deserializer = new Deserializer();
-                courseGradesModel = deserializer.courseGradesModelDeserialize(response);
+                courseGradesModel = deserializer.courseGradesModelDeserialize(response.getAsJsonObject());
                 setSwitchState();
                 favouriteSwitch.setVisibility(View.VISIBLE);
 
@@ -208,11 +208,7 @@ public class CourseSearchActivity extends AppCompatActivity {
                 Log.d(UBCGradesRequest.RequestTag, error);
             }
         };
-        try {
-            ubcGradesRequest.makeGetRequestForJsonObject(apiEndpoint, apiRequestListener);
-        } catch (UnsupportedEncodingException e) {
-            throw new InternalError(e);
-        }
+        ubcGradesRequest.makeUBCGradesGetRequest(apiEndpoint, apiRequestListener);
     }
 
     /**

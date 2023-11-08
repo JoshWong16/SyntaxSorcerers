@@ -172,14 +172,15 @@ public class ForumActivity extends AppCompatActivity {
     /* ChatGPT usage: Partial */
     private void populateSpinner(String endpoint, ArrayAdapter<String> adapter) {
         UBCGradesRequest ubcGradesRequest = new UBCGradesRequest();
-        UBCGradesRequest.ApiRequestListener<JsonArray> apiRequestListener = new UBCGradesRequest.ApiRequestListener<JsonArray>() {
+        UBCGradesRequest.ApiRequestListener apiRequestListener = new UBCGradesRequest.ApiRequestListener() {
             @Override
-            public void onApiRequestComplete(JsonArray response) {
-                for (int i = 0; i < response.size(); i++) {
+            public void onApiRequestComplete(JsonElement response) {
+                JsonArray response_array = response.getAsJsonArray();
+                for (int i = 0; i < response_array.size(); i++) {
                     if (endpoint.equals("api/v3/subjects/UBCV")) {
-                        adapter.add(response.get(i).getAsJsonObject().get("subject").getAsString());
+                        adapter.add(response_array.get(i).getAsJsonObject().get("subject").getAsString());
                     } else {
-                        adapter.add(response.get(i).getAsJsonObject().get("course").getAsString());
+                        adapter.add(response_array.get(i).getAsJsonObject().get("course").getAsString());
                     }
                 }
             }
@@ -191,7 +192,7 @@ public class ForumActivity extends AppCompatActivity {
             }
         };
 
-        ubcGradesRequest.makeGetRequestForJsonArray(endpoint, apiRequestListener);
+        ubcGradesRequest.makeUBCGradesGetRequest(endpoint, apiRequestListener);
     }
 
     /* ChatGPT usage: Partial */
