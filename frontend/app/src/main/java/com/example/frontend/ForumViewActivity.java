@@ -3,6 +3,8 @@ package com.example.frontend;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.drawable.Drawable;
@@ -387,6 +389,12 @@ public class ForumViewActivity extends AppCompatActivity {
             }
         });
 
+        postView.findViewById(R.id.report_button).setOnClickListener(v -> {
+            showReportPostsDialog();
+        });
+
+
+
         ((LinearLayout) findViewById(R.id.postsLayoutAll)).addView(postView, 0);
     }
 
@@ -401,5 +409,34 @@ public class ForumViewActivity extends AppCompatActivity {
         intent.putExtra("userLiked", post.get("userLiked").getAsBoolean());
         intent.putExtra("date", date);
         startActivity(intent);
+    }
+
+    /* ChatGPT usage: No */
+    /* https://www.geeksforgeeks.org/how-to-create-an-alert-dialog-box-in-android/ */
+    private void showReportPostsDialog() {
+        AlertDialog.Builder builder = new AlertDialog.Builder(ForumViewActivity.this);
+
+        builder.setTitle("Report Post");
+        builder.setMessage("Are you sure you want to report this post?");
+
+        builder.setCancelable(false);
+
+        builder.setPositiveButton("Yes", (DialogInterface.OnClickListener) (dialog, which) -> {
+            /* https request to report the post here */
+
+            /* dialog closes */
+            dialog.cancel();
+        });
+
+        builder.setNegativeButton("Cancel", (DialogInterface.OnClickListener) (dialog, which) -> {
+
+            /* dialog closes */
+            dialog.cancel();
+        });
+
+        AlertDialog alertDialog = builder.create();
+
+        alertDialog.show();
+
     }
 }

@@ -104,6 +104,13 @@
                     android:layout_weight="1"
                     android:text="TextView"
                     android:textColor="@android:color/darker_gray" />
+
+                <ImageButton
+                    android:id="@+id/report_button"
+                    android:layout_width="2dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:src="@drawable/baseline_report_gmailerrorred_24" />
             </LinearLayout>
         </LinearLayout>
 
