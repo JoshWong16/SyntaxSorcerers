@@ -28,9 +28,11 @@ import retrofit2.http.Url;
 public class ServerRequest {
 
     public static final String RequestTag = "Server Requests";
-    private static final String BASE_URL = "https://grgq6ss4i9.execute-api.us-east-2.amazonaws.com/"; // Replace with your API base URL
+    private static final String BASE_URL = "https://grgq6ss4i9.execute-api.us-east-2.amazonaws.com/";
 
     private ApiService apiService;
+
+    public ServerRequest(){}
 
     /* ChatGPT usage: Partial */
     public ServerRequest(String userId) {
@@ -79,7 +81,7 @@ public class ServerRequest {
     }
 
     /* ChatGPT usage: Partial */
-    private static void callHandler(ApiRequestListener listener, Call<JsonElement> call) {
+    protected static void callHandler(ApiRequestListener listener, Call<JsonElement> call) {
         Log.d(RequestTag, call.request().url().toString());
         call.enqueue(new Callback<JsonElement>() {
             @Override
@@ -109,7 +111,7 @@ public class ServerRequest {
         void onApiRequestError(String error);
     }
 
-    private interface ApiService {
+    protected interface ApiService {
         @GET
         Call<JsonElement> getData(@Url String endpoint);
         @POST

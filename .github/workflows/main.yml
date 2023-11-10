@@ -1,0 +1,17 @@
+name: Running Backend Tests
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    - name: install modules
+      run: cd backend && npm install
+    - name: run tests
+      run: cd backend && npm test

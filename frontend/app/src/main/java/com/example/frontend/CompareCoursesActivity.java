@@ -26,11 +26,10 @@ import com.github.mikephil.charting.data.BarDataSet;
 import com.github.mikephil.charting.data.BarEntry;
 import com.github.mikephil.charting.formatter.IndexAxisValueFormatter;
 import com.google.gson.JsonArray;
-import com.google.gson.JsonObject;
+import com.google.gson.JsonElement;
 
 import org.json.JSONException;
 
-import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
 import java.util.Map;
 
@@ -163,10 +162,10 @@ public class CompareCoursesActivity extends AppCompatActivity {
      */
     private void callUBCGradesJsonArray(int currentSpinnerIndex, String apiEndpoint, ArrayAdapter<String>[] adapters) {
         UBCGradesRequest ubcGradesRequest = new UBCGradesRequest();
-        UBCGradesRequest.ApiRequestListener apiRequestListener = new UBCGradesRequest.ApiRequestListener<JsonArray>() {
+        UBCGradesRequest.ApiRequestListener apiRequestListener = new UBCGradesRequest.ApiRequestListener() {
             @Override
-            public void onApiRequestComplete(JsonArray response) {
-                updateSpinnerWithData(response, currentSpinnerIndex + 1, adapters);
+            public void onApiRequestComplete(JsonElement response) {
+                updateSpinnerWithData(response.getAsJsonArray(), currentSpinnerIndex + 1, adapters);
             }
 
             @Override
@@ -175,7 +174,7 @@ public class CompareCoursesActivity extends AppCompatActivity {
                 Log.d(UBCGradesRequest.RequestTag, error);
             }
         };
-        ubcGradesRequest.makeGetRequestForJsonArray(apiEndpoint, apiRequestListener);
+        ubcGradesRequest.makeUBCGradesGetRequest(apiEndpoint, apiRequestListener);
     }
 
     /**
@@ -183,13 +182,13 @@ public class CompareCoursesActivity extends AppCompatActivity {
      */
     private void callUBCGradesJsonObject(String apiEndpoint, int searchbar) {
         UBCGradesRequest ubcGradesRequest = new UBCGradesRequest();
-        UBCGradesRequest.ApiRequestListener apiRequestListener = new UBCGradesRequest.ApiRequestListener<JsonObject>() {
+        UBCGradesRequest.ApiRequestListener apiRequestListener = new UBCGradesRequest.ApiRequestListener() {
             @Override
-            public void onApiRequestComplete(JsonObject response) {
+            public void onApiRequestComplete(JsonElement response) {
                 Log.d(UBCGradesRequest.RequestTag, "Course grade request success");
                 Deserializer deserializer = new Deserializer();
-                if (searchbar == 1) course1GradesModel = deserializer.courseGradesModelDeserialize(response);
-                else if (searchbar == 2) course2GradesModel = deserializer.courseGradesModelDeserialize(response);
+                if (searchbar == 1) course1GradesModel = deserializer.courseGradesModelDeserialize(response.getAsJsonObject());
+                else if (searchbar == 2) course2GradesModel = deserializer.courseGradesModelDeserialize(response.getAsJsonObject());
             }
             @Override
             public void onApiRequestError(String error) {
@@ -197,11 +196,7 @@ public class CompareCoursesActivity extends AppCompatActivity {
                 Log.d(UBCGradesRequest.RequestTag, error);
             }
         };
-        try {
-            ubcGradesRequest.makeGetRequestForJsonObject(apiEndpoint, apiRequestListener);
-        } catch (UnsupportedEncodingException e) {
-            throw new InternalError(e);
-        }
+        ubcGradesRequest.makeUBCGradesGetRequest(apiEndpoint, apiRequestListener);
     }
 
     /**
