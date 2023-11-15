@@ -6,6 +6,7 @@ export default function manipulateCommentOutput(comments) {
             postId: comment.postId,
             content: comment.content,
             writtenBy: comment.username,
+            userId: comment.writtenBy,
             dateWritten: comment.dateWritten
         };
     });
