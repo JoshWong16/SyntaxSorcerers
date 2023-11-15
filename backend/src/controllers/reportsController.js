@@ -26,7 +26,7 @@ export async function getUserReports(req, res) {
 export async function addReport(req, res) {
     const model = new Reports();
     try {
-        const reportId = await model.addReport(req.userId, req.commentId || null, req.postId || null);
+        const reportId = await model.addReport(req.userId, req.body.commentId || null, req.body.postId || null);
         return res.json({reportId});
     } catch (error) {
         return res.status(500).json({message: error.message});
