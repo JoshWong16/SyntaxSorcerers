@@ -37,6 +37,7 @@ public class PostActivity extends AppCompatActivity {
         setContentView(R.layout.activity_post);
 
         Intent intent = getIntent();
+        String userId = intent.getStringExtra("userId");
         String postId = intent.getStringExtra("postId");
         String writtenBy = intent.getStringExtra("writtenBy");
         String content = intent.getStringExtra("content");
@@ -75,7 +76,7 @@ public class PostActivity extends AppCompatActivity {
         });
 
         findViewById(R.id.report_button).setOnClickListener(v -> {
-            showReportPostsDialog();
+            showReportPostsDialog(postId, userId);
         });
 
         getComments(postId);
@@ -276,13 +277,14 @@ public class PostActivity extends AppCompatActivity {
         ((LinearLayout) findViewById(R.id.commentLayout)).addView(commentView, 0);
 
         commentView.findViewById(R.id.report_button).setOnClickListener(v -> {
-            showReportCommentsDialog();
+
+            showReportCommentsDialog(comment.get("commentId").getAsString(), comment.get("userId").getAsString());
         });
     }
 
     /* ChatGPT usage: No */
     /* https://www.geeksforgeeks.org/how-to-create-an-alert-dialog-box-in-android/ */
-    private void showReportPostsDialog() {
+    private void showReportPostsDialog(String postId, String userId) {
         AlertDialog.Builder builder = new AlertDialog.Builder(PostActivity.this);
 
         builder.setTitle("Report Post");
@@ -292,9 +294,38 @@ public class PostActivity extends AppCompatActivity {
 
         builder.setPositiveButton("Yes", (DialogInterface.OnClickListener) (dialog, which) -> {
             /* https request to report the post here */
+            SharedPreferences sharedPreferences = getSharedPreferences("GoogleAccountInfo", MODE_PRIVATE);
+            String userIdReporter = sharedPreferences.getString("userId", null);
+            ServerRequest serverRequest = new ServerRequest(userIdReporter);
+            ServerRequest.ApiRequestListener apiRequestListener = new ServerRequest.ApiRequestListener() {
+                @Override
+                public void onApiRequestComplete(JsonElement response) {
+                    Log.d(ServerRequest.RequestTag, "Success");
 
-            /* dialog closes */
-            dialog.cancel();
+                    /* dialog closes */
+                    dialog.cancel();
+
+                    Toast.makeText(PostActivity.this, "Post has been reported.", Toast.LENGTH_SHORT).show();
+
+                }
+
+                @Override
+                public void onApiRequestError(String error) {
+                    Log.d(ServerRequest.RequestTag, "Failure");
+                    Log.d(ServerRequest.RequestTag, error);
+                }
+            };
+
+            JsonObject body = new JsonObject();
+            body.addProperty("postId", postId);
+            body.addProperty("userId", userId);
+            Log.d("PostActivity", postId);
+
+            try {
+                serverRequest.makePostRequest("/reports/", body, apiRequestListener);
+            } catch (UnsupportedEncodingException e) {
+                throw new InternalError(e);
+            }
         });
 
         builder.setNegativeButton("Cancel", (DialogInterface.OnClickListener) (dialog, which) -> {
@@ -311,7 +342,7 @@ public class PostActivity extends AppCompatActivity {
 
     /* ChatGPT usage: No */
     /* https://www.geeksforgeeks.org/how-to-create-an-alert-dialog-box-in-android/ */
-    private void showReportCommentsDialog() {
+    private void showReportCommentsDialog(String commentId, String userId) {
         AlertDialog.Builder builder = new AlertDialog.Builder(PostActivity.this);
 
         builder.setTitle("Report Comment");
@@ -321,9 +352,38 @@ public class PostActivity extends AppCompatActivity {
 
         builder.setPositiveButton("Yes", (DialogInterface.OnClickListener) (dialog, which) -> {
             /* https request to report the post here */
+            SharedPreferences sharedPreferences = getSharedPreferences("GoogleAccountInfo", MODE_PRIVATE);
+            String userIdReporter = sharedPreferences.getString("userId", null);
+            ServerRequest serverRequest = new ServerRequest(userIdReporter);
+            ServerRequest.ApiRequestListener apiRequestListener = new ServerRequest.ApiRequestListener() {
+                @Override
+                public void onApiRequestComplete(JsonElement response) {
+                    Log.d(ServerRequest.RequestTag, "Success");
 
-            /* dialog closes */
-            dialog.cancel();
+                    /* dialog closes */
+                    dialog.cancel();
+
+                    Toast.makeText(PostActivity.this, "Comment has been reported.", Toast.LENGTH_SHORT).show();
+
+                }
+
+                @Override
+                public void onApiRequestError(String error) {
+                    Log.d(ServerRequest.RequestTag, "Failure");
+                    Log.d(ServerRequest.RequestTag, error);
+                }
+            };
+
+            JsonObject body = new JsonObject();
+            body.addProperty("commentId", commentId);
+            body.addProperty("userId", userId);
+            Log.d("PostActivity", commentId);
+
+            try {
+                serverRequest.makePostRequest("/reports/", body, apiRequestListener);
+            } catch (UnsupportedEncodingException e) {
+                throw new InternalError(e);
+            }
         });
 
         builder.setNegativeButton("Cancel", (DialogInterface.OnClickListener) (dialog, which) -> {

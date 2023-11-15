@@ -39,6 +39,11 @@ public class ProfileActivity extends AppCompatActivity {
             intent.putExtra("yearLevel", yearLevel);
             startActivity(intent);
         });
+
+        findViewById(R.id.admin_button).setOnClickListener(view -> {
+            Intent intent = new Intent(this, ReportedUsersActivity.class);
+            startActivity(intent);
+        });
     }
 
     /* ChatGPT usage: Partial */
