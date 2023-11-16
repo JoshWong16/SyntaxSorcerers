@@ -6,7 +6,7 @@
   "type": "module",
   "scripts": {
     "start": "nodemon server.js",
-    "test": "jest ./src/tests/user.test.js --force-exit",
+    "test": "jest --force-exit",
     "make-db": "node ./src/db/createDatabase.js"
   },
   "author": "",
