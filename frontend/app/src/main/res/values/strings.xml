@@ -154,4 +154,8 @@
     <string name="title_activity_forum_view">ForumViewActivity</string>
     <string name="forum_name">Forum Name</string>
     <string name="leave_button">Leave</string>
+    <string name="admin_button">Admin View</string>
+    <string name="report_users_name">Users That Have Been Reported:</string>
+    <string name="ban_user_button">Ban User </string>
+    <string name="report_posts_comments">The Reported Posts and Comments for</string>
 </resources>

@@ -12,6 +12,8 @@ import forumRouter from './routes/forumRouter.js';
 import postRouter from './routes/postRouter.js';
 import likesRouter from './routes/likesRouter.js';
 import commentsRouter from './routes/commentsRouter.js';
+import reportsRouter from './routes/reportsRouter.js';
+import bannedRouter from './routes/bannedRouter.js';
 
 // App setup
 const app = express();
@@ -23,6 +25,8 @@ app.use('/forums', getUserId, forumRouter);
 app.use('/posts', getUserId, postRouter);
 app.use('/comments', getUserId, commentsRouter);
 app.use('/likes', getUserId, likesRouter);
+app.use('/reports', getUserId, reportsRouter);
+app.use('/banned', getUserId, bannedRouter);
 
 // Ping route
 app.get('/ping', (_, res) => {
