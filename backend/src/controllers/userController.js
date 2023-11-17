@@ -17,13 +17,16 @@ export async function getUser(req, res) {
 export async function createUser(req, res) {
     const model = new User();
     try {
+        if (req.body.email == null || req.body.year_level == null || req.body.major == null || req.body.name == null) {
+            return res.status(400).json({message: 'Missing required fields, can not create user'});
+        }
         const user = {
             userId: req.userId,
-            email: req.body.email || "",
-            year_level : req.body.year_level || "",
-            major : req.body.major || "",
-            name : req.body.name || "",
-            notification_token : req.body.notification_token || ""
+            email: req.body.email,
+            year_level : req.body.year_level,
+            major : req.body.major,
+            name : req.body.name,
+            notification_token : req.body.notification_token || null
         };
         await model.createUser(user);
         return res.json(user);
@@ -35,9 +38,16 @@ export async function createUser(req, res) {
 /* ChatGPT usage: No */
 export async function updateUser(req, res) {
     const model = new User();
+    if (req.body == null || Object.keys(req.body).length === 0) {
+        return res.status(400).json({message: 'Body is empty, can not update user'});
+    }
     try {
-        await model.updateUser(req.userId, req.body);
-        res.json({message: 'User updated'});
+        const foundUser = await model.updateUser(req.userId, req.body)
+        if(!foundUser) {
+            return res.status(404).json({message: 'User does not exist'});
+        };
+        
+        return res.json({message: 'User updated'});
     } catch (error) {  
         return res.status(500).json({message: error.message});
     }
@@ -47,7 +57,10 @@ export async function updateUser(req, res) {
 export async function deleteUser(req, res) {
     const model = new User();
     try {
-        await model.deleteUser(req.userId);
+        const isUserDeleted = await model.deleteUser(req.userId);
+        if(!isUserDeleted) {
+            return res.status(404).json({message: 'User does not exist'});
+        };
         res.json({message:'User deleted'});
     } catch (error) {
         return res.status(500).json({message: error.message});
@@ -58,7 +71,7 @@ export async function deleteUser(req, res) {
 export async function addFavouriteCourse(req, res) {
     const model = new UserCourses();
     try {
-        const courses = await model.addUserCourse(req.userId, req.body.courseId);
+        await model.addUserCourse(req.userId, req.body.courseId);
         return res.json({message:'Course added'});
     } catch (error) {
         return res.status(500).json({message: error.message});
