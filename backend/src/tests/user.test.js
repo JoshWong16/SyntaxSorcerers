@@ -3,6 +3,7 @@ import app from '../app.js';
 import Banned from '../models/Banned.js';
 import User from '../models/User.js';
 import UserCourses from '../models/UserCourses.js';
+import fs from 'fs';
 
 // Mock the models
 jest.mock('../models/User.js');
@@ -208,11 +209,10 @@ describe('Testing All User Interfaces:', () => {
                 name: 'John Smith', 
                 email: "test@gmail.com", 
                 major: "LFS", 
-                year_level: "3", 
-                notification_token: "1234" 
+                year_level: "3"
             };
 
-            const returnData = { userId: "123", ...data };
+            const returnData = { userId: "123", ...data, notification_token: null };
     
             jest.spyOn(User.prototype, 'createUser').mockRejectedValue(new Error('Some error'));;
     
@@ -296,7 +296,7 @@ describe('Testing All User Interfaces:', () => {
         // Expected output: error message saying some error
         test("when user is not successfully updated", async () => {
             const body = {
-                name: 'John Smith', 
+                name: 'John Smith',
             };
     
             jest.spyOn(User.prototype, 'updateUser').mockRejectedValue(new Error('Some error'));;
@@ -401,14 +401,224 @@ describe('Testing All User Interfaces:', () => {
     });
 
     // Interface POST /users/favourite
-    describe('POST /users/favourite', () => {});
+    describe('POST /users/favourite', () => {
+        // Input: valid userId and valid courseId
+        // Expected status code: 200
+        // Expected behavior: user's favourite course is added to db
+        // Expected output: message saying "Course added"
+        test("when user id and course id are valid", async () => {
+            const courseId = "CPEN 321";
+    
+            jest.spyOn(UserCourses.prototype, 'addUserCourse').mockReturnValue(true);
+    
+            const response = await request(app)
+                                    .post('/users/favourite')
+                                    .set('Authorization', 'Bearer 123')
+                                    .send({ courseId });
+                             
+            expect(response.status).toBe(200);
+            expect(UserCourses.prototype.addUserCourse).toHaveBeenCalledWith("123", courseId);
+            expect(response.body).toEqual({ message: 'Course added' });
+        });
+
+        // Input: valid userId and does not pass courseId
+        // Expected status code: 400
+        // Expected behavior: nothing happens
+        // Expected output: message saying "Missing required fields, can not add course to favourites"
+        test("when user id is valid and course id is missing", async () => {
+            jest.spyOn(UserCourses.prototype, 'addUserCourse').mockReturnValue(true);
+    
+            const response = await request(app)
+                                    .post('/users/favourite')
+                                    .set('Authorization', 'Bearer 123')
+                                    .send({});
+                             
+            expect(response.status).toBe(400);
+            expect(UserCourses.prototype.addUserCourse).not.toHaveBeenCalled();
+            expect(response.body).toEqual({ message: 'Missing required fields, can not add course to favourites' });
+        });
+
+        // Input: valid userId and valid courseId, however database can not add course
+        // Expected status code: 500
+        // Expected behavior: throws error message
+        // Expected output: error message saying some error
+        test("when db throws and error adding course", async () => {
+            const courseId = "CPEN 321";
+    
+            jest.spyOn(UserCourses.prototype, 'addUserCourse').mockRejectedValue(new Error('Some error'));
+    
+            const response = await request(app)
+                                    .post('/users/favourite')
+                                    .set('Authorization', 'Bearer 123')
+                                    .send({ courseId });
+                             
+            expect(response.status).toBe(500);
+            expect(UserCourses.prototype.addUserCourse).toHaveBeenCalledWith("123", courseId);
+            expect(response.body).toEqual({ message: 'Some error' });
+        });
+    });
 
     // Interface DELETE /users/favourite/:courseId
-    describe('DELETE /users/favourite/:courseId', () => {});
+    describe('DELETE /users/favourite/:courseId', () => {
+        // Input: valid userId and valid courseId
+        // Expected status code: 200
+        // Expected behavior: user's favourite course is removed from db
+        // Expected output: message saying "Course removed"
+        test("when user id and course id are valid", async () => {
+            const courseId = "CPEN 321";
+    
+            jest.spyOn(UserCourses.prototype, 'removeUserCourse').mockReturnValue(true);
+    
+            const response = await request(app)
+                                    .delete(`/users/favourite/${courseId}`)
+                                    .set('Authorization', 'Bearer 123');
+                             
+            expect(response.status).toBe(200);
+            expect(UserCourses.prototype.removeUserCourse).toHaveBeenCalledWith("123", courseId);
+            expect(response.body).toEqual({ message: 'Course removed' });
+        });
+
+        // Input: valid userId and does not pass courseId
+        // Expected status code: 400
+        // Expected behavior: nothing happens
+        // Expected output: message saying "Missing required fields, can not remove course from favourites"
+        test("when user id is valid and course id is missing", async () => {
+            jest.spyOn(UserCourses.prototype, 'removeUserCourse').mockReturnValue(true);
+    
+            const response = await request(app)
+                                    .delete('/users/favourite/')
+                                    .set('Authorization', 'Bearer 123');
+                             
+            expect(response.status).toBe(404);
+            expect(UserCourses.prototype.removeUserCourse).not.toHaveBeenCalled();
+            expect(response.error.message).toEqual('cannot DELETE /users/favourite/ (404)');
+        });
+
+        // Input: valid userId but the course is not favourited for the user
+        // Expected status code: 404
+        // Expected behavior: nothing happens
+        // Expected output: message saying "Course was not favourited for user"
+        test("when user id is valid but course is not favourited", async () => {
+            const courseId = "CPEN 321";
+    
+            jest.spyOn(UserCourses.prototype, 'removeUserCourse').mockReturnValue(false);
+    
+            const response = await request(app)
+                                    .delete(`/users/favourite/${courseId}`)
+                                    .set('Authorization', 'Bearer 123');
+                             
+            expect(response.status).toBe(404);
+            expect(UserCourses.prototype.removeUserCourse).toHaveBeenCalledWith("123", courseId);
+            expect(response.body).toEqual({ message: 'Course was not favourited for user' });
+        });
+
+        // Input: valid userId and valid courseId, however database can not remove course
+        // Expected status code: 500
+        // Expected behavior: throws error message
+        // Expected output: error message saying some error
+        test("when db throws and error removing course", async () => {
+            const courseId = "CPEN 321";
+    
+            jest.spyOn(UserCourses.prototype, 'removeUserCourse').mockRejectedValue(new Error('Some error'));
+    
+            const response = await request(app)
+                                    .delete(`/users/favourite/${courseId}`)
+                                    .set('Authorization', 'Bearer 123');
+                             
+            expect(response.status).toBe(500);
+            expect(UserCourses.prototype.removeUserCourse).toHaveBeenCalledWith("123", courseId);
+            expect(response.body).toEqual({ message: 'Some error' });
+        });
+    });
 
     // Interface GET /users/courseKeywords
-    describe('GET /users/courseKeywords', () => {});
+    describe('GET /users/courseKeywords', () => {
+        // Input: valid userId
+        // Expected status code: 200
+        // Expected behavior: user's course keywords are retrieved from db
+        // Expected output: user's course keywords
+        test("when user id is valid", async () => {
+            const response = await request(app)
+                                    .get('/users/courseKeywords')
+                                    .set('Authorization', 'Bearer 123');
+                             
+            expect(response.status).toBe(200);
+            expect(response.body.length).toEqual(280);
+        });
 
-    // Interface POST /users/recommendCourses
-    describe('POST /users/recommendCourses', () => {});
-  });
+        // Input: valid userId, but readFile fails
+        // Expected status code: 500
+        // Expected behavior: throws error message
+        // Expected output: error message saying some error
+        test("when readFile fails", async () => {
+            // Set up the error you want to simulate
+            const expectedError = new Error('File not found');
+            
+            // Mock fs.readFile using jest.spyOn
+            const spy = jest.spyOn(fs, 'readFile').mockImplementation((path, encoding, callback) => {;
+                callback(expectedError, null);
+            });
+
+            const response = await request(app)
+                                    .get('/users/courseKeywords')
+                                    .set('Authorization', 'Bearer 123');
+     
+            expect(response.status).toBe(500);
+
+            spy.mockRestore();
+        });
+    });
+
+    // Interface GET /users/recommendCourses
+    describe('GET /users/recommendCourses', () => {
+        // Input: valid userId and valid keywords
+        // Expected status code: 200
+        // Expected behavior: user's recommended courses are retrieved from db
+        // Expected output: user's recommended courses
+        test("when user id and keywords are valid", async () => {
+            const keywords = ["Art", "Linear Algebra", "TEST"];
+            const response = await request(app)
+                                    .get(`/users/recommendedCourses?userKeywords=${keywords.join(',')}`)
+                                    .set('Authorization', 'Bearer 123');
+                             
+            expect(response.status).toBe(200);
+            expect(response.body['Art'].length).toEqual(17);
+            expect(response.body['Linear Algebra'].length).toEqual(11);
+        });
+
+        // Input: blank keywords
+        // Expected status code: 400
+        // Expected behavior: nothing happens
+        // Expected output: message saying "Missing required keywords"
+        test("when keywords are blank", async () => {
+            const response = await request(app)
+                                    .get(`/users/recommendedCourses`)
+                                    .set('Authorization', 'Bearer 123');
+                             
+            expect(response.status).toBe(400);
+            expect(response.body).toEqual({ message: 'Missing required keywords' });
+        });
+
+        // Input: valid userId, but readFile fails
+        // Expected status code: 500
+        // Expected behavior: throws error message
+        // Expected output: error message saying some error
+        test("when readFile fails", async () => {
+            const keywords = ["Art", "Linear Algebra"];
+            // Set up the error you want to simulate
+            const expectedError = new Error('File not found');
+            
+            const spy = jest.spyOn(fs, 'readFile').mockImplementation((path, encoding, callback) => {;
+                callback(expectedError, null);
+            });
+
+            const response = await request(app)
+                                    .get(`/users/recommendedCourses?userKeywords=${keywords.join(',')}`)
+                                    .set('Authorization', 'Bearer 123');
+     
+            expect(response.status).toBe(500);
+
+            spy.mockRestore();
+        });
+    });
+});
