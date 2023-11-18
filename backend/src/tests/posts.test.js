@@ -10,6 +10,10 @@ describe('Testing All Posts Interfaces:', () => {
         jest.spyOn(Banned.prototype, 'getBannedUser').mockReturnValue(false);
     });
 
+    afterEach(() => {    
+        jest.clearAllMocks();
+    });
+
     // Interface GET /posts/:forumId
     describe('GET /posts/:forumId', () => {});
 
