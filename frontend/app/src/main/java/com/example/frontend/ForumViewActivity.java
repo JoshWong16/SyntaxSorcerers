@@ -115,7 +115,7 @@ public class ForumViewActivity extends AppCompatActivity {
         };
 
         try {
-            serverRequest.makeGetRequest("/posts/" + forumId + "?category=" + category, apiRequestListener);
+            serverRequest.makeGetRequest("/posts/forum/" + forumId + "?category=" + category, apiRequestListener);
         } catch (UnsupportedEncodingException e) {
             throw new InternalError(e);
         }
@@ -280,7 +280,7 @@ public class ForumViewActivity extends AppCompatActivity {
         };
 
         try {
-            serverRequest.makeGetRequest("/posts/" + forumId, apiRequestListener);
+            serverRequest.makeGetRequest("/posts/forum/" + forumId, apiRequestListener);
         } catch (UnsupportedEncodingException e) {
             throw new InternalError(e);
         }
