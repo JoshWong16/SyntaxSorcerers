@@ -1,11 +1,23 @@
 import request  from 'supertest';
-import app from '../app.js';
-import Banned from '../models/Banned.js';
-import Post from '../models/Posts.js';
+import app from '../../app.js';
+import Banned from '../../models/Banned.js';
+import Post from '../../models/Posts.js';
+import Likes from '../../models/Likes.js';
+import Comments from '../../models/Comments.js';
+import User from '../../models/User.js';
+import { ObjectId } from 'mongodb';
+import db from '../../db/db.js'; 
 
 // Mock the models
-jest.mock('../models/Banned.js');
-jest.mock('../models/Posts.js');
+jest.mock('../../models/Banned.js');
+jest.mock('../../db/db.js', () => ({
+    database: {
+        collection: jest.fn(),
+    },
+}));
+jest.mock('stopword', () => ({
+    removeStopwords: jest.fn().mockReturnValue([]),
+}));
 
 describe('Testing All Posts Interfaces:', () => {
     beforeAll(() => {
@@ -26,7 +38,7 @@ describe('Testing All Posts Interfaces:', () => {
             const forumId = 'validForumId';
             const posts = [
                 {
-                    postId: 'validPostId',
+                    postId: '6348acd2e1a47ca32e79f46f',
                     forumId: forumId,
                     writtenBy: 'validUserId',
                     userId: 'validUserId',
@@ -37,7 +49,7 @@ describe('Testing All Posts Interfaces:', () => {
                     userLiked: false
                 },
                 {
-                    postId: 'validPostId2',
+                    postId: '6348acd2e1a47ca32e79f46e',
                     forumId: forumId,
                     writtenBy: 'validUserId',
                     userId: 'validUserId',
@@ -48,7 +60,7 @@ describe('Testing All Posts Interfaces:', () => {
                     userLiked: false
                 },
                 {
-                    postId: 'validPostId3',
+                    postId: '6348acd2e1a47ca32e79f46d',
                     forumId: forumId,
                     writtenBy: 'validUserId',
                     userId: 'validUserId',
@@ -60,7 +72,43 @@ describe('Testing All Posts Interfaces:', () => {
                 }
             ];
 
-            jest.spyOn(Post.prototype, 'getAllPost').mockResolvedValue(posts);
+            const allPosts = [
+                {
+                    _id: new ObjectId('6348acd2e1a47ca32e79f46f'),
+                    forumId: forumId,
+                    writtenBy: 'validUserId',
+                    dateWritten: 'validDate',
+                    content: 'validContent',
+                },
+                {
+                    _id: new ObjectId('6348acd2e1a47ca32e79f46e'),
+                    forumId: forumId,
+                    writtenBy: 'validUserId',
+                    dateWritten: 'validDate',
+                    content: 'validContent',
+                },
+                {
+                    _id: new ObjectId('6348acd2e1a47ca32e79f46d'),
+                    forumId: forumId,
+                    writtenBy: 'validUserId',
+                    dateWritten: 'validDate',
+                    content: 'validContent',
+                }
+            ]
+
+            const spy = jest.spyOn(db.database, 'collection');
+            const findSpy = spy.mockReturnValue({
+                find: jest.fn(),
+            });
+            findSpy().find.mockReturnValue({
+                toArray: jest.fn().mockResolvedValue(allPosts),
+            });
+
+            jest.spyOn(Likes.prototype, 'getAllLikes').mockResolvedValue([]);
+            jest.spyOn(Likes.prototype, 'userLikedPost').mockResolvedValue(false);
+            jest.spyOn(Comments.prototype, 'getAllComments').mockResolvedValue([]);
+            jest.spyOn(User.prototype, 'getUser').mockResolvedValue({name: 'validUserId'});
+            jest.spyOn(Post.prototype, 'getAllPost');
 
             const response = await request(app)
                                     .get(`/posts/forum/${forumId}`)
@@ -80,7 +128,7 @@ describe('Testing All Posts Interfaces:', () => {
             const category = 'positive';
             const posts = [
                 {
-                    postId: 'validPostId',
+                    postId: '6348acd2e1a47ca32e79f46f',
                     forumId: forumId,
                     writtenBy: 'validUserId',
                     userId: 'validUserId',
@@ -91,9 +139,30 @@ describe('Testing All Posts Interfaces:', () => {
                     userLiked: false
                 }
             ];
+            
+            const allPosts = [
+                {
+                    _id: new ObjectId('6348acd2e1a47ca32e79f46f'),
+                    forumId: forumId,
+                    writtenBy: 'validUserId',
+                    dateWritten: 'validDate',
+                    content: 'validContent',
+                }
+            ]
 
-            jest.spyOn(Post.prototype, 'getFilteredPosts').mockResolvedValue(posts);
+            const spy = jest.spyOn(db.database, 'collection');
+            const findSpy = spy.mockReturnValue({
+                find: jest.fn(),
+            });
+            findSpy().find.mockReturnValue({
+                toArray: jest.fn().mockResolvedValue(allPosts),
+            });
 
+            jest.spyOn(Likes.prototype, 'getAllLikes').mockResolvedValue([]);
+            jest.spyOn(Likes.prototype, 'userLikedPost').mockResolvedValue(false);
+            jest.spyOn(Comments.prototype, 'getAllComments').mockResolvedValue([]);
+            jest.spyOn(User.prototype, 'getUser').mockResolvedValue({name: 'validUserId'});
+            jest.spyOn(Post.prototype, 'getFilteredPosts');
             const response = await request(app)
                                     .get(`/posts/forum/${forumId}?category=${category}`)
                                     .set('Authorization', 'Bearer 123');;
@@ -110,21 +179,8 @@ describe('Testing All Posts Interfaces:', () => {
         test('valid forumId with invalid category query', async () => {
             const forumId = 'validForumId';
             const category = 'invalidCategory';
-            const posts = [
-                {
-                    postId: 'validPostId',
-                    forumId: forumId,
-                    writtenBy: 'validUserId',
-                    userId: 'validUserId',
-                    dateWritten: 'validDate',
-                    content: 'validContent',
-                    likesCount: 0,
-                    commentCount: 0,
-                    userLiked: false
-                }
-            ];
 
-            jest.spyOn(Post.prototype, 'getFilteredPosts').mockResolvedValue(posts);
+            jest.spyOn(Post.prototype, 'getFilteredPosts')
 
             const response = await request(app)
                                     .get(`/posts/forum/${forumId}?category=${category}`)
@@ -156,9 +212,15 @@ describe('Testing All Posts Interfaces:', () => {
         test('valid userId and valid forumId, but database throws error', async () => {
             const forumId = 'validForumId';
 
-            jest.spyOn(Post.prototype, 'getAllPost').mockImplementation(() => {
-                throw new Error('Database error');
+            const spy = jest.spyOn(db.database, 'collection');
+            const findSpy = spy.mockReturnValue({
+                find: jest.fn(),
             });
+            findSpy().find.mockReturnValue({
+                toArray: jest.fn().mockRejectedValue(new Error('Database error')),
+            });
+
+            jest.spyOn(Post.prototype, 'getAllPost');
 
             const response = await request(app)
                                     .get(`/posts/forum/${forumId}`)
@@ -177,9 +239,8 @@ describe('Testing All Posts Interfaces:', () => {
         // Expected behavior: retrieve post in db
         // Expected output: post
         test('valid postId', async () => {
-            const postId = 'validPostId';
             const post = {
-                postId: postId,
+                postId: '6348acd2e1a47ca32e79f46f',
                 forumId: 'validForumId',
                 writtenBy: 'validUserId',
                 userId: 'validUserId',
@@ -190,14 +251,37 @@ describe('Testing All Posts Interfaces:', () => {
                 userLiked: false
             };
 
-            jest.spyOn(Post.prototype, 'getPostById').mockResolvedValue(post);
+            const allPosts = [
+                {
+                    _id: new ObjectId('6348acd2e1a47ca32e79f46f'),
+                    forumId: "validForumId",
+                    writtenBy: 'validUserId',
+                    dateWritten: 'validDate',
+                    content: 'validContent',
+                }
+            ]
+
+            const spy = jest.spyOn(db.database, 'collection');
+            const findSpy = spy.mockReturnValue({
+                find: jest.fn(),
+            });
+            findSpy().find.mockReturnValue({
+                toArray: jest.fn().mockResolvedValue(allPosts),
+            });
+
+            jest.spyOn(Likes.prototype, 'getAllLikes').mockResolvedValue([]);
+            jest.spyOn(Likes.prototype, 'userLikedPost').mockResolvedValue(false);
+            jest.spyOn(Comments.prototype, 'getAllComments').mockResolvedValue([]);
+            jest.spyOn(User.prototype, 'getUser').mockResolvedValue({name: 'validUserId'});
+            jest.spyOn(Post.prototype, 'getFilteredPosts');
+            jest.spyOn(Post.prototype, 'getPostById');
 
             const response = await request(app)
-                                    .get(`/posts/post/${postId}`)
+                                    .get(`/posts/post/6348acd2e1a47ca32e79f46f`)
                                     .set('Authorization', 'Bearer 123');;
 
             expect(response.statusCode).toBe(200);
-            expect(Post.prototype.getPostById).toHaveBeenCalledWith("123", postId);
+            expect(Post.prototype.getPostById).toHaveBeenCalledWith("123", "6348acd2e1a47ca32e79f46f");
             expect(response.body).toEqual(post);
         });
 
@@ -247,7 +331,12 @@ describe('Testing All Posts Interfaces:', () => {
             const forumId = 'validForumId';
             const postId = 'validPostId';
 
-            jest.spyOn(Post.prototype, 'addPost').mockResolvedValue(postId);
+            const spy = jest.spyOn(db.database, 'collection');
+            spy.mockReturnValue({
+                insertOne: jest.fn().mockResolvedValue({ insertedId: postId }),
+            });
+
+            jest.spyOn(Post.prototype, 'addPost');
 
             const response = await request(app)
                                     .post('/posts/')
@@ -301,9 +390,11 @@ describe('Testing All Posts Interfaces:', () => {
             const content = 'validContent';
             const forumId = 'validForumId';
 
-            jest.spyOn(Post.prototype, 'addPost').mockImplementation(() => {
-                throw new Error('Database error');
+            const spy = jest.spyOn(db.database, 'collection');
+            spy.mockReturnValue({
+                insertOne: jest.fn().mockRejectedValue(new Error('Database error')),
             });
+            jest.spyOn(Post.prototype, 'addPost')
 
             const response = await request(app)
                                     .post('/posts/')
@@ -323,9 +414,13 @@ describe('Testing All Posts Interfaces:', () => {
         // Expected behavior: delete post in db
         // Expected output: message saying "deleted post"
         test('valid postId', async () => {
-            const postId = 'validPostId';
+            const postId = '6348acd2e1a47ca32e79f46f';
 
-            jest.spyOn(Post.prototype, 'deletePost').mockResolvedValue(true);
+            const spy = jest.spyOn(db.database, 'collection');
+            spy.mockReturnValue({
+                deleteOne: jest.fn().mockResolvedValue({ deletedCount: 1 }),
+            });
+            jest.spyOn(Post.prototype, 'deletePost');
 
             const response = await request(app)
                                     .delete(`/posts/${postId}`)
@@ -341,9 +436,13 @@ describe('Testing All Posts Interfaces:', () => {
         // Expected behavior: nothing happens
         // Expected output: message saying "post does not exist"
         test('valid userId and but a postId that does not exist', async () => {
-            const postId = 'notValidPostId';
+            const postId = '6348acd2e1a47ca32e79f46f';
 
-            jest.spyOn(Post.prototype, 'deletePost').mockResolvedValue(false);
+            const spy = jest.spyOn(db.database, 'collection');
+            spy.mockReturnValue({
+                deleteOne: jest.fn().mockResolvedValue({ deletedCount: 0 }),
+            });
+            jest.spyOn(Post.prototype, 'deletePost');
 
             const response = await request(app)
                                     .delete(`/posts/${postId}`)
@@ -373,11 +472,14 @@ describe('Testing All Posts Interfaces:', () => {
         // Expected behavior: return error message
         // Expected output: error message
         test('valid postId, but database throws error', async () => {
-            const postId = 'validPostId';
+            const postId = '6348acd2e1a47ca32e79f46f';
 
-            jest.spyOn(Post.prototype, 'deletePost').mockImplementation(() => {
-                throw new Error('Database error');
+            const spy = jest.spyOn(db.database, 'collection');
+            spy.mockReturnValue({
+                deleteOne: jest.fn().mockRejectedValue(new Error('Database error')),
             });
+
+            jest.spyOn(Post.prototype, 'deletePost');
 
             const response = await request(app)
                                     .delete(`/posts/${postId}`)
@@ -397,9 +499,14 @@ describe('Testing All Posts Interfaces:', () => {
         // Expected output: message saying "post edited"
         test('valid content and postId', async () => {
             const content = 'validContent';
-            const postId = 'validPostId';
+            const postId = '6348acd2e1a47ca32e79f46f';
 
-            jest.spyOn(Post.prototype, 'editPost').mockResolvedValue(true);
+            const spy = jest.spyOn(db.database, 'collection');
+            spy.mockReturnValue({
+                updateOne: jest.fn().mockResolvedValue({ matchedCount: 1 }),
+            });
+
+            jest.spyOn(Post.prototype, 'editPost');
 
             const response = await request(app)
                                     .put(`/posts/${postId}`)
@@ -418,6 +525,8 @@ describe('Testing All Posts Interfaces:', () => {
         test('valid postId and missing valid content', async () => {
             const postId = 'validPostId';
 
+            jest.spyOn(Post.prototype, 'editPost');
+
             const response = await request(app)
                                     .put(`/posts/${postId}`)
                                     .set('Authorization', 'Bearer 123')
@@ -435,6 +544,11 @@ describe('Testing All Posts Interfaces:', () => {
         test('valid content but put a postId that does not exist', async () => {
             const content = 'validContent';
             const postId = 'notValidPostId';
+
+            const spy = jest.spyOn(db.database, 'collection');
+            spy.mockReturnValue({
+                updateOne: jest.fn().mockResolvedValue({ matchedCount: 0 }),
+            });
 
             jest.spyOn(Post.prototype, 'editPost').mockResolvedValue(false);
 
@@ -457,8 +571,10 @@ describe('Testing All Posts Interfaces:', () => {
                                     .put(`/posts/`)
                                     .set('Authorization', 'Bearer 123');
             
+            jest.spyOn(Post.prototype, 'editPost');
+
             expect(response.status).toBe(404);
-            expect(Post.prototype.deletePost).not.toHaveBeenCalled();
+            expect(Post.prototype.editPost).not.toHaveBeenCalled();
             expect(response.error.message).toEqual('cannot PUT /posts/ (404)');
         });
 
@@ -469,11 +585,9 @@ describe('Testing All Posts Interfaces:', () => {
         // Expected output: error message
         test('valid postId, but database throws error', async () => {
             const content = 'validContent';
-            const postId = 'validPostId';
+            const postId = '6348acd2e1a47ca32e79f46f';
 
-            jest.spyOn(Post.prototype, 'editPost').mockImplementation(() => {
-                throw new Error('Database error');
-            });
+            jest.spyOn(Post.prototype, 'editPost').mockRejectedValue(new Error('Database error'));
 
             const response = await request(app)
                                     .put(`/posts/${postId}`)

@@ -1,14 +1,18 @@
 import request  from 'supertest';
-import app from '../app.js';
-import Banned from '../models/Banned.js';
-import User from '../models/User.js';
-import UserCourses from '../models/UserCourses.js';
+import app from '../../app.js';
+import Banned from '../../models/Banned.js';
+import User from '../../models/User.js';
+import UserCourses from '../../models/UserCourses.js';
 import fs from 'fs';
+import db from '../../db/db.js';
 
 // Mock the models
-jest.mock('../models/User.js');
-jest.mock('../models/UserCourses.js');
-jest.mock('../models/Banned.js');
+jest.mock('../../db/db.js', () => ({
+    database: {
+        collection: jest.fn(),
+    },
+}));
+jest.mock('../../models/Banned.js');
 
 describe('Testing All User Interfaces:', () => {
 
@@ -35,16 +39,20 @@ describe('Testing All User Interfaces:', () => {
                 year_level: "3", 
                 notification_token: "1234" 
             };
-    
-            
-            jest.spyOn(User.prototype, 'getUser').mockReturnValue(data);
+
+            const spy = jest.spyOn(db.database, 'collection');
+            spy.mockReturnValue({
+                findOne: jest.fn().mockResolvedValue(data),
+            });
+
+            jest.spyOn(User.prototype, 'getUser');
     
             const response = await request(app)
                                     .get('/users/')
                                     .set('Authorization', 'Bearer 123');
                              
             expect(response.status).toBe(200);
-            expect(User.prototype.getUser).toHaveBeenCalledWith('123');
+            expect(User.prototype.getUser).toHaveBeenCalledWith("123");
             expect(response.body).toEqual(data);
         });
 
@@ -53,15 +61,19 @@ describe('Testing All User Interfaces:', () => {
         // Expected behavior: user info is null
         // Expected output: null
         test('when user does not exist', async () => {
-            
-            jest.spyOn(User.prototype, 'getUser').mockReturnValue(null);
+            const spy = jest.spyOn(db.database, 'collection');
+            spy.mockReturnValue({
+                findOne: jest.fn().mockResolvedValue(null),
+            });
+
+            jest.spyOn(User.prototype, 'getUser');
     
             const response = await request(app)
                                     .get('/users/')
                                     .set('Authorization', 'Bearer 124');
                              
             expect(response.status).toBe(200);
-            expect(User.prototype.getUser).toHaveBeenCalledWith('124');
+            expect(User.prototype.getUser).toHaveBeenCalledWith("124");
             expect(response.body).toEqual(null);
         });
 
@@ -71,14 +83,19 @@ describe('Testing All User Interfaces:', () => {
         // Expected output: error message
         test('when is it not a valid userId type', async () => {
             
-            jest.spyOn(User.prototype, 'getUser').mockRejectedValue(new Error('Some error'));;
+            const spy = jest.spyOn(db.database, 'collection');
+            spy.mockReturnValue({
+                findOne: jest.fn().mockRejectedValue(new Error('Some error')),
+            });
+
+            jest.spyOn(User.prototype, 'getUser');
     
             const response = await request(app)
                                     .get('/users/')
                                     .set('Authorization', 'Bearer notvalid');
                              
             expect(response.status).toBe(500);
-            expect(User.prototype.getUser).toHaveBeenCalledWith('notvalid');
+            expect(User.prototype.getUser).toHaveBeenCalledWith("notvalid");
             expect(response.body).toEqual({ message: 'Some error' });
         });
     });
@@ -100,7 +117,12 @@ describe('Testing All User Interfaces:', () => {
 
             const returnData = { userId: "123", ...data };
     
-            jest.spyOn(User.prototype, 'createUser').mockReturnValue("1234");
+            const spy = jest.spyOn(db.database, 'collection');
+            spy.mockReturnValue({
+                insertOne: jest.fn().mockResolvedValue("1234"),
+            });
+
+            jest.spyOn(User.prototype, 'createUser')
     
             const response = await request(app)
                                     .post('/users/')
@@ -123,6 +145,8 @@ describe('Testing All User Interfaces:', () => {
                 year_level: "3", 
                 notification_token: "1234" 
             };
+
+            jest.spyOn(User.prototype, "createUser");
     
             const response = await request(app)
                                     .post('/users/')
@@ -145,6 +169,8 @@ describe('Testing All User Interfaces:', () => {
                 major: "LFS", 
                 notification_token: "1234" 
             };
+
+            jest.spyOn(User.prototype, "createUser");
     
             const response = await request(app)
                                     .post('/users/')
@@ -167,6 +193,8 @@ describe('Testing All User Interfaces:', () => {
                 year_level: "3", 
                 notification_token: "1234" 
             };
+
+            jest.spyOn(User.prototype, "createUser");
     
             const response = await request(app)
                                     .post('/users/')
@@ -189,6 +217,8 @@ describe('Testing All User Interfaces:', () => {
                 year_level: "3", 
                 notification_token: "1234" 
             };
+
+            jest.spyOn(User.prototype, "createUser");
     
             const response = await request(app)
                                     .post('/users/')
@@ -214,14 +244,17 @@ describe('Testing All User Interfaces:', () => {
 
             const returnData = { userId: "123", ...data, notification_token: null };
     
-            jest.spyOn(User.prototype, 'createUser').mockRejectedValue(new Error('Some error'));;
-    
+            const spy = jest.spyOn(db.database, 'collection');
+            spy.mockReturnValue({
+                insertOne: jest.fn().mockRejectedValue(new Error('Some error')),
+            });
+
+            jest.spyOn(User.prototype, 'createUser')
+
             const response = await request(app)
                                     .post('/users/')
                                     .set('Authorization', 'Bearer 123')
                                     .send(data);
-                             
-
                              
             expect(response.status).toBe(500);
             expect(User.prototype.createUser).toHaveBeenCalledWith(returnData);
@@ -240,8 +273,13 @@ describe('Testing All User Interfaces:', () => {
                 name: 'John Smith', 
             };
     
-            jest.spyOn(User.prototype, 'updateUser').mockReturnValue(true);
-    
+            const spy = jest.spyOn(db.database, 'collection');
+            spy.mockReturnValue({
+                updateOne: jest.fn().mockResolvedValue({ matchedCount: 1 }),
+            });
+
+            jest.spyOn(User.prototype, 'updateUser')
+
             const response = await request(app)
                                     .put('/users/')
                                     .set('Authorization', 'Bearer 123')
@@ -257,8 +295,13 @@ describe('Testing All User Interfaces:', () => {
         // Expected behavior: nothing happens
         // Expected output: message saying "Body is empty, can not update user"
         test("when user exists and body is empty", async () => {    
-            jest.spyOn(User.prototype, 'updateUser').mockReturnValue(true);
-    
+            const spy = jest.spyOn(db.database, 'collection');
+            spy.mockReturnValue({
+                updateOne: jest.fn().mockResolvedValue({ matchedCount: 1 }),
+            });
+
+            jest.spyOn(User.prototype, 'updateUser')
+
             const response = await request(app)
                                     .put('/users/')
                                     .set('Authorization', 'Bearer 123')
@@ -278,8 +321,13 @@ describe('Testing All User Interfaces:', () => {
                 name: 'John Smith', 
             };
 
-            jest.spyOn(User.prototype, 'updateUser').mockReturnValue(false);
-    
+            const spy = jest.spyOn(db.database, 'collection');
+            spy.mockReturnValue({
+                updateOne: jest.fn().mockResolvedValue({ matchedCount: 0 }),
+            });
+
+            jest.spyOn(User.prototype, 'updateUser')
+
             const response = await request(app)
                                     .put('/users/')
                                     .set('Authorization', 'Bearer 145')
@@ -299,8 +347,13 @@ describe('Testing All User Interfaces:', () => {
                 name: 'John Smith',
             };
     
-            jest.spyOn(User.prototype, 'updateUser').mockRejectedValue(new Error('Some error'));;
-    
+            const spy = jest.spyOn(db.database, 'collection');
+            spy.mockReturnValue({
+                updateOne: jest.fn().mockRejectedValue(new Error('Some error')),
+            });
+
+            jest.spyOn(User.prototype, 'updateUser');
+
             const response = await request(app)
                                     .put('/users/')
                                     .set('Authorization', 'Bearer 123')
@@ -319,8 +372,13 @@ describe('Testing All User Interfaces:', () => {
         // Expected behavior: user info is updated
         // Expected output: message saying "User updated"
         test("when user exists and body is non-empty", async () => {
-            jest.spyOn(User.prototype, 'deleteUser').mockReturnValue(true);
-    
+            const spy = jest.spyOn(db.database, 'collection');
+            spy.mockReturnValue({
+                deleteOne: jest.fn().mockResolvedValue({ deletedCount: 1 }),
+            });
+
+            jest.spyOn(User.prototype, 'deleteUser');
+
             const response = await request(app)
                                     .delete('/users/')
                                     .set('Authorization', 'Bearer 123');
@@ -335,8 +393,13 @@ describe('Testing All User Interfaces:', () => {
         // Expected behavior: nothing happens
         // Expected output: message saying "User does not exist"
         test("when user exists and body is non-empty", async () => {
-            jest.spyOn(User.prototype, 'deleteUser').mockReturnValue(false);
-    
+            const spy = jest.spyOn(db.database, 'collection');
+            spy.mockReturnValue({
+                deleteOne: jest.fn().mockResolvedValue({ deletedCount: 0 }),
+            });
+
+            jest.spyOn(User.prototype, 'deleteUser');
+
             const response = await request(app)
                                     .delete('/users/')
                                     .set('Authorization', 'Bearer 145');

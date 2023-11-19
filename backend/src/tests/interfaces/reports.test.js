@@ -1,11 +1,18 @@
 import request  from 'supertest';
-import app from '../app.js';
-import Banned from '../models/Banned.js';
-import Reports from '../models/Reports.js';
+import app from '../../app.js';
+import Banned from '../../models/Banned.js';
+import Reports from '../../models/Reports.js';
+import db from '../../db/db.js';
+import Comments from '../../models/Comments.js';
+import Posts from '../../models/Posts.js';
 
 // Mock the models
-jest.mock('../models/Banned.js');
-jest.mock('../models/Reports.js');
+jest.mock('../../models/Banned.js');
+jest.mock('../../db/db.js', () => ({
+    database: {
+        collection: jest.fn(),
+    },
+}));
 
 describe('Testing All Reports Interfaces:', () => {
     beforeAll(() => {
@@ -23,34 +30,61 @@ describe('Testing All Reports Interfaces:', () => {
         // Expected behavior: retrieve all reported posts and comments from db
         // Expected output: reported posts and comments
         test('Valid userId', async () => {
-            const data = {
-                '123': {
-                    userInfo: {
+            const user = {
                         userId: '123',
                         name: 'test',
                         email: 'test@gmail.com'
-                    },
-                    reportCount: 1
+                    };
+                    
+            const reports = [
+                {
+                    userId: '123',
                 },
-                '456': {
-                    userInfo: {
-                        userId: '456',
-                        name: 'test2',
-                        email: 'test2@gmail.com'
-                    },
-                    reportCount: 2
+                {
+                    userId: '456',
+                },
+                {
+                    userId: '456',
                 }
-            };
+            ]
 
-            jest.spyOn(Reports.prototype, 'getAllReports').mockReturnValue(data);
+            const spy = jest.spyOn(db.database, 'collection');
+            const findSpy = spy.mockReturnValue({
+                find: jest.fn(),
+                findOne: jest.fn().mockResolvedValue(user),
+            });
+            findSpy().find.mockReturnValue({
+                toArray: jest.fn().mockResolvedValue(reports),
+            });
+
+            jest.spyOn(Reports.prototype, 'getAllReports');
     
             const response = await request(app)
                                     .get('/reports/all-users')
                                     .set('Authorization', 'Bearer 123');
 
+            const returnData = {
+                "123": {
+                    "reportCount": 1,
+                    "userInfo": {
+                        "email": "test@gmail.com",
+                        "name": "test",
+                        "userId": "123",
+                    },
+                },
+                "456": {
+                    "reportCount": 2,
+                    "userInfo": {
+                        "email": "test@gmail.com",
+                        "name": "test",
+                        "userId": "123",
+                    },
+                },
+            };
+            
             expect(response.statusCode).toBe(200);
             expect(Reports.prototype.getAllReports).toHaveBeenCalledTimes(1);
-            expect(response.body).toEqual(data);
+            expect(response.body).toEqual(returnData);
         });
 
         // Input: valid userId, but database throws error
@@ -58,9 +92,15 @@ describe('Testing All Reports Interfaces:', () => {
         // Expected behavior: return error message
         // Expected output: error message
         test('Valid userId, but database throws error', async () => {
-            jest.spyOn(Reports.prototype, 'getAllReports').mockImplementation(() => {
-                throw new Error('Database error');
+            const spy = jest.spyOn(db.database, 'collection');
+            const findSpy = spy.mockReturnValue({
+                find: jest.fn(),
             });
+            findSpy().find.mockReturnValue({
+                toArray: jest.fn().mockRejectedValue(new Error('Database error')),
+            });
+
+            jest.spyOn(Reports.prototype, 'getAllReports');
     
             const response = await request(app)
                                     .get('/reports/all-users')
@@ -101,7 +141,28 @@ describe('Testing All Reports Interfaces:', () => {
                 }
             ];
 
-            jest.spyOn(Reports.prototype, 'getUserReports').mockReturnValue(data);
+            const usersReports = [
+                {
+                    commentId: '123',
+                    userId: '123',
+                },
+                {
+                    userId: '123',
+                    postId: '456'
+                }
+            ]
+
+            const spy = jest.spyOn(db.database, 'collection');
+            const findSpy = spy.mockReturnValue({
+                find: jest.fn(),
+            });
+            findSpy().find.mockReturnValue({
+                toArray: jest.fn().mockResolvedValue(usersReports),
+            });
+
+            jest.spyOn(Reports.prototype, 'getUserReports')
+            jest.spyOn(Comments.prototype, 'getCommentById').mockResolvedValue(data[0]);
+            jest.spyOn(Posts.prototype, 'getPostById').mockResolvedValue(data[1]);
     
             const response = await request(app)
                                     .get('/reports/user/123')
@@ -117,9 +178,15 @@ describe('Testing All Reports Interfaces:', () => {
         // Expected behavior: return error message
         // Expected output: error message
         test('Valid userId for the report retrieval, but database throws error', async () => {
-            jest.spyOn(Reports.prototype, 'getUserReports').mockImplementation(() => {
-                throw new Error('Database error');
+            const spy = jest.spyOn(db.database, 'collection');
+            const findSpy = spy.mockReturnValue({
+                find: jest.fn(),
             });
+            findSpy().find.mockReturnValue({
+                toArray: jest.fn().mockRejectedValue(new Error('Database error')),
+            });
+            
+            jest.spyOn(Reports.prototype, 'getUserReports');
     
             const response = await request(app)
                                     .get('/reports/user/123')
@@ -138,8 +205,13 @@ describe('Testing All Reports Interfaces:', () => {
         // Expected behavior: add reported comment to db
         // Expected output: reported comment id
         test('Valid userId and reporting a comment', async () => {
-            jest.spyOn(Reports.prototype, 'addReport').mockReturnValue('123');
-    
+            const spy = jest.spyOn(db.database, 'collection');
+            spy.mockReturnValue({
+                insertOne: jest.fn().mockResolvedValue({insertedId: '123'}),
+            });
+            
+            jest.spyOn(Reports.prototype, 'addReport');
+
             const response = await request(app)
                                     .post('/reports/')
                                     .set('Authorization', 'Bearer 123')
@@ -158,7 +230,12 @@ describe('Testing All Reports Interfaces:', () => {
         // Expected behavior: add reported post to db
         // Expected output: reported post id
         test('Valid userId and reporting a post', async () => {
-            jest.spyOn(Reports.prototype, 'addReport').mockReturnValue('123');
+            const spy = jest.spyOn(db.database, 'collection');
+            spy.mockReturnValue({
+                insertOne: jest.fn().mockResolvedValue({insertedId: '123'}),
+            });
+            
+            jest.spyOn(Reports.prototype, 'addReport');
     
             const response = await request(app)
                                     .post('/reports/')
@@ -178,7 +255,7 @@ describe('Testing All Reports Interfaces:', () => {
         // Expected behavior: return error message
         // Expected output: error message
         test('Missing valid userId and reporting a comment', async () => {
-            jest.spyOn(Reports.prototype, 'addReport').mockReturnValue('123');
+            jest.spyOn(Reports.prototype, 'addReport');
     
             const response = await request(app)
                                     .post('/reports/')
@@ -198,7 +275,7 @@ describe('Testing All Reports Interfaces:', () => {
         // Expected behavior: return error message
         // Expected output: error message
         test('Valid userId and missing commentId and postId', async () => {
-            jest.spyOn(Reports.prototype, 'addReport').mockReturnValue('123');
+            jest.spyOn(Reports.prototype, 'addReport');
     
             const response = await request(app)
                                     .post('/reports/')
@@ -217,9 +294,12 @@ describe('Testing All Reports Interfaces:', () => {
         // Expected behavior: return error message
         // Expected output: error message
         test('Valid userId and reporting a comment, but database throws error', async () => {
-            jest.spyOn(Reports.prototype, 'addReport').mockImplementation(() => {
-                throw new Error('Database error');
+            const spy = jest.spyOn(db.database, 'collection');
+            spy.mockReturnValue({
+                insertOne: jest.fn().mockRejectedValue(new Error('Database error')),
             });
+            
+            jest.spyOn(Reports.prototype, 'addReport');
     
             const response = await request(app)
                                     .post('/reports/')

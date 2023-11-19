@@ -1,11 +1,16 @@
 import request  from 'supertest';
-import app from '../app.js';
-import Banned from '../models/Banned.js';
-import Likes from '../models/Likes.js';
+import app from '../../app.js';
+import Banned from '../../models/Banned.js';
+import Likes from '../../models/Likes.js';
+import db from '../../db/db.js'; 
 
 // Mock the models
-jest.mock('../models/Banned.js');
-jest.mock('../models/Likes.js');
+jest.mock('../../models/Banned.js');
+jest.mock('../../db/db.js', () => ({
+    database: {
+        collection: jest.fn(),
+    },
+}));
 
 describe('Testing All Posts Interfaces:', () => {
     beforeAll(() => {
@@ -28,7 +33,15 @@ describe('Testing All Posts Interfaces:', () => {
                 {postId: '123', userId: '789'}
             ]
 
-            jest.spyOn(Likes.prototype, 'getAllLikes').mockResolvedValue(likes);
+            const spy = jest.spyOn(db.database, 'collection');
+            const findSpy = spy.mockReturnValue({
+                find: jest.fn(),
+            });
+            findSpy().find.mockReturnValue({
+                toArray: jest.fn().mockResolvedValue(likes),
+            });
+
+            jest.spyOn(Likes.prototype, 'getAllLikes');
 
             const response = await request(app)
                                     .get('/likes/123')
@@ -47,7 +60,9 @@ describe('Testing All Posts Interfaces:', () => {
             const response = await request(app)
                                     .get('/likes/')
                                     .set('Authorization', 'Bearer 123');
-                             
+                 
+            jest.spyOn(Likes.prototype, 'getAllLikes');                        
+            
             expect(response.status).toBe(404);
             expect(Likes.prototype.getAllLikes).not.toHaveBeenCalled();
             expect(response.error.message).toEqual("cannot GET /likes/ (404)");
@@ -58,7 +73,15 @@ describe('Testing All Posts Interfaces:', () => {
         // Expected behavior: return error message
         // Expected output: error message
         test('when valid postId, but database throws error', async () => {
-            jest.spyOn(Likes.prototype, 'getAllLikes').mockRejectedValue(new Error('Database error'));
+            const spy = jest.spyOn(db.database, 'collection');
+            const findSpy = spy.mockReturnValue({
+                find: jest.fn(),
+            });
+            findSpy().find.mockReturnValue({
+                toArray: jest.fn().mockRejectedValue(new Error('Database error')),
+            });
+
+            jest.spyOn(Likes.prototype, 'getAllLikes')
 
             const response = await request(app)
                                     .get('/likes/123')
@@ -77,8 +100,13 @@ describe('Testing All Posts Interfaces:', () => {
         // Expected behavior: add like to db
         // Expected output: like id
         test('when valid postId and userId', async () => {
-            jest.spyOn(Likes.prototype, 'addLike').mockResolvedValue('123');
+            const spy = jest.spyOn(db.database, 'collection');
+            spy.mockReturnValue({
+                insertOne: jest.fn().mockResolvedValue({ insertedId: '123' }),
+            });
 
+            jest.spyOn(Likes.prototype, 'addLike');
+            
             const response = await request(app)
                                     .post('/likes/')
                                     .set('Authorization', 'Bearer 123')
@@ -112,6 +140,11 @@ describe('Testing All Posts Interfaces:', () => {
         // Expected behavior: return error message
         // Expected output: error message
         test('when valid postId, but database throws error', async () => {
+            const spy = jest.spyOn(db.database, 'collection');
+            spy.mockReturnValue({
+                insertOne: jest.fn().mockRejectedValue(new Error('Database error')),
+            });
+
             jest.spyOn(Likes.prototype, 'addLike').mockRejectedValue(new Error('Database error'));
 
             const response = await request(app)
@@ -134,7 +167,12 @@ describe('Testing All Posts Interfaces:', () => {
         // Expected behavior: remove like from db
         // Expected output: message saying "like removed"
         test('when valid postId and userId', async () => {
-            jest.spyOn(Likes.prototype, 'removeLike').mockResolvedValue(true);
+            const spy = jest.spyOn(db.database, 'collection');
+            spy.mockReturnValue({
+                deleteOne: jest.fn().mockResolvedValue({ deletedCount: 1 }),
+            });
+
+            jest.spyOn(Likes.prototype, 'removeLike');
 
             const response = await request(app)
                                     .delete('/likes/123')
@@ -150,7 +188,12 @@ describe('Testing All Posts Interfaces:', () => {
         // Expected behavior: return error message
         // Expected output: message saying "have not liked the message"
         test('when postId does not have any likes', async () => {
-            jest.spyOn(Likes.prototype, 'removeLike').mockResolvedValue(false);
+            const spy = jest.spyOn(db.database, 'collection');
+            spy.mockReturnValue({
+                deleteOne: jest.fn().mockResolvedValue({ deletedCount: 0 }),
+            });
+
+            jest.spyOn(Likes.prototype, 'removeLike');
 
             const response = await request(app)
                                     .delete('/likes/123')
@@ -182,7 +225,12 @@ describe('Testing All Posts Interfaces:', () => {
         // Expected behavior: return error message
         // Expected output: error message
         test('when valid postId, but database throws error', async () => {
-            jest.spyOn(Likes.prototype, 'removeLike').mockRejectedValue(new Error('Database error'));
+            const spy = jest.spyOn(db.database, 'collection');
+            spy.mockReturnValue({
+                deleteOne: jest.fn().mockRejectedValue(new Error('Database error')),
+            });
+
+            jest.spyOn(Likes.prototype, 'removeLike');
 
             const response = await request(app)
                                     .delete('/likes/123')

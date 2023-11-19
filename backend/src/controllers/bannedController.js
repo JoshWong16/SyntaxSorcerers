@@ -27,6 +27,7 @@ export async function getBannedUser(req, res) {
 export async function addBannedUser(req, res) {
     const model = new Banned();
     try {
+        if (!req.body.userId) return res.status(400).json({message: "Invalid request, missing required userId fields"});
         const bannedId = await model.addBannedUser(req.body.userId);
         return res.json(bannedId);
     } catch (error) {

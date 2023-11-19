@@ -17,6 +17,7 @@ export async function addForum(req, res) {
     const forumModel = new Forum();
     const userForumsModel = new UserForums();
     try {
+        if (!req.body.name || !req.body.course) return res.status(400).json({message: "Invalid request, missing required fields"});
         const forumId = await forumModel.addForum(req.body.name, req.userId, req.body.course);
         await userForumsModel.addUserForum(req.userId, forumId);
         return res.json({forumId});
@@ -51,6 +52,7 @@ export async function getUsersForums(req, res) {
 export async function addUsersForum(req, res) {
     const userForumsModel = new UserForums();
     try {
+        if (!req.body.forumId) return res.status(400).json({message: "Invalid request, missing required forumId field"});
         await userForumsModel.addUserForum(req.userId, req.body.forumId);
         return res.json({message:"added user to forum"});
     } catch (error) {
