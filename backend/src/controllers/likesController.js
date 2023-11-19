@@ -15,6 +15,7 @@ export async function getLikes(req, res) {
 export async function addLike(req, res) {
     const model = new Likes();
     try {
+        if (!req.body.post_id) return res.status(400).json({message: "Invalid request, missing required fields"});
         const likeId = await model.addLike(req.body.post_id, req.userId);
         return res.json(likeId);
     } catch (error) {

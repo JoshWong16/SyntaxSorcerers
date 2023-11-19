@@ -11,9 +11,9 @@ import {
 
 const router = express.Router();
 
-router.get('/:forumId', getAllPosts);
-
 router.get('/post/:postId', getPostById);
+
+router.get('/forum/:forumId', getAllPosts);
 
 router.post('/', addPost);
 

@@ -7,7 +7,7 @@ class Likes {
 
     /* ChatGPT usage: No */
     async getAllLikes(postId) {
-        const likes = this.collection.find({ postId: postId }).toArray();
+        const likes = await this.collection.find({ postId: postId }).toArray();
         return likes;
     }
 

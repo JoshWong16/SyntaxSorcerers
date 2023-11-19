@@ -479,7 +479,7 @@ describe('Testing All User Interfaces:', () => {
         });
 
         // Input: valid userId and does not pass courseId
-        // Expected status code: 400
+        // Expected status code: 404
         // Expected behavior: nothing happens
         // Expected output: message saying "Missing required fields, can not remove course from favourites"
         test("when user id is valid and course id is missing", async () => {
