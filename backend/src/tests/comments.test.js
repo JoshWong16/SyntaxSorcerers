@@ -1,18 +1,18 @@
 import request  from 'supertest';
-import app from '../../app.js';
-import Banned from '../../models/Banned.js';
-import Comments from '../../models/Comments.js';
-import User from '../../models/User.js';
-import Posts from '../../models/Posts.js';
-import db from '../../db/db.js'; 
+import app from '../app.js';
+import Banned from '../models/Banned.js';
+import Comments from '../models/Comments.js';
+import User from '../models/User.js';
+import Posts from '../models/Posts.js';
+import db from '../db/db.js'; 
 
-import pkg from '../../controllers/firebase-config.cjs';
+import pkg from '../controllers/firebase-config.cjs';
 import { ObjectId } from 'mongodb';
 const { admin } = pkg;
 
 // Mock the models
-jest.mock('../../models/Banned.js');
-jest.mock('../../db/db.js', () => ({
+jest.mock('../models/Banned.js');
+jest.mock('../db/db.js', () => ({
     database: {
         collection: jest.fn(),
     },

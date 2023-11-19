@@ -1,18 +1,18 @@
 import request  from 'supertest';
-import app from '../../app.js';
-import Banned from '../../models/Banned.js';
-import User from '../../models/User.js';
-import UserCourses from '../../models/UserCourses.js';
+import app from '../app.js';
+import Banned from '../models/Banned.js';
+import User from '../models/User.js';
+import UserCourses from '../models/UserCourses.js';
 import fs from 'fs';
-import db from '../../db/db.js';
+import db from '../db/db.js';
 
 // Mock the models
-jest.mock('../../db/db.js', () => ({
+jest.mock('../db/db.js', () => ({
     database: {
         collection: jest.fn(),
     },
 }));
-jest.mock('../../models/Banned.js');
+jest.mock('../models/Banned.js');
 
 describe('Testing All User Interfaces:', () => {
 
@@ -433,9 +433,17 @@ describe('Testing All User Interfaces:', () => {
         // Expected behavior: user's favourite course are retrieved from db
         // Expected output: user's favourtie courses' ids
         test("when user id is valid", async () => {
-            const data = ["CPEN 321", "CPEN 491"];
+            const data = [{courseId: "CPEN 321"}, {courseId: "CPEN 491"}];
+
+            const spy = jest.spyOn(db.database, 'collection');
+            const findSpy = spy.mockReturnValue({
+                find: jest.fn(),
+            });
+            findSpy().find.mockReturnValue({
+                toArray: jest.fn().mockResolvedValue(data),
+            });
     
-            jest.spyOn(UserCourses.prototype, 'getUserCourses').mockReturnValue(data);
+            jest.spyOn(UserCourses.prototype, 'getUserCourses');
     
             const response = await request(app)
                                     .get('/users/favourite')
@@ -443,7 +451,7 @@ describe('Testing All User Interfaces:', () => {
                              
             expect(response.status).toBe(200);
             expect(UserCourses.prototype.getUserCourses).toHaveBeenCalledWith("123");
-            expect(response.body).toEqual(data);
+            expect(response.body).toEqual(["CPEN 321", "CPEN 491"]);
         });
 
         // Input: valid userId, however database can not retrieve user's favourite courses
@@ -471,8 +479,13 @@ describe('Testing All User Interfaces:', () => {
         // Expected output: message saying "Course added"
         test("when user id and course id are valid", async () => {
             const courseId = "CPEN 321";
+
+            const spy = jest.spyOn(db.database, 'collection');
+            spy.mockReturnValue({
+                updateOne: jest.fn().mockResolvedValue(),
+            });
     
-            jest.spyOn(UserCourses.prototype, 'addUserCourse').mockReturnValue(true);
+            jest.spyOn(UserCourses.prototype, 'addUserCourse');
     
             const response = await request(app)
                                     .post('/users/favourite')
@@ -529,8 +542,13 @@ describe('Testing All User Interfaces:', () => {
         // Expected output: message saying "Course removed"
         test("when user id and course id are valid", async () => {
             const courseId = "CPEN 321";
+
+            const spy = jest.spyOn(db.database, 'collection');
+            spy.mockReturnValue({
+                deleteOne: jest.fn().mockResolvedValue({ deletedCount: 1 }),
+            });
     
-            jest.spyOn(UserCourses.prototype, 'removeUserCourse').mockReturnValue(true);
+            jest.spyOn(UserCourses.prototype, 'removeUserCourse');
     
             const response = await request(app)
                                     .delete(`/users/favourite/${courseId}`)
@@ -546,7 +564,7 @@ describe('Testing All User Interfaces:', () => {
         // Expected behavior: nothing happens
         // Expected output: message saying "Missing required fields, can not remove course from favourites"
         test("when user id is valid and course id is missing", async () => {
-            jest.spyOn(UserCourses.prototype, 'removeUserCourse').mockReturnValue(true);
+            jest.spyOn(UserCourses.prototype, 'removeUserCourse');
     
             const response = await request(app)
                                     .delete('/users/favourite/')
@@ -563,8 +581,13 @@ describe('Testing All User Interfaces:', () => {
         // Expected output: message saying "Course was not favourited for user"
         test("when user id is valid but course is not favourited", async () => {
             const courseId = "CPEN 321";
+
+            const spy = jest.spyOn(db.database, 'collection');
+            spy.mockReturnValue({
+                deleteOne: jest.fn().mockResolvedValue({ deletedCount: 0 }),
+            });
     
-            jest.spyOn(UserCourses.prototype, 'removeUserCourse').mockReturnValue(false);
+            jest.spyOn(UserCourses.prototype, 'removeUserCourse');
     
             const response = await request(app)
                                     .delete(`/users/favourite/${courseId}`)

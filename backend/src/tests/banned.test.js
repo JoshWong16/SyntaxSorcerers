@@ -1,11 +1,11 @@
 import request  from 'supertest';
-import app from '../../app.js';
-import Banned from '../../models/Banned.js';
-import User from '../../models/User.js'
-import db from '../../db/db.js';
+import app from '../app.js';
+import Banned from '../models/Banned.js';
+import User from '../models/User.js'
+import db from '../db/db.js';
 
 // Mock the models
-jest.mock('../../db/db.js', () => ({
+jest.mock('../db/db.js', () => ({
     database: {
         collection: jest.fn(),
     },
@@ -236,5 +236,16 @@ describe('Testing All Posts Interfaces:', () => {
             expect(Banned.prototype.addBannedUser).toHaveBeenCalledWith("123");
             expect(response.body.message).toEqual('test error');
         });
+    });
+
+    test("user sending request is banned", async () => {
+        jest.spyOn(Banned.prototype, 'getBannedUser').mockResolvedValue(true);
+
+        const response = await request(app)
+                                    .get('/users/')
+                                    .set('Authorization', 'Bearer 123');
+        
+        expect(response.status).toBe(401);
+        expect(response.body).toEqual({message: "Unauthorized"});
     });
 });

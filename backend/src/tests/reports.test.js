@@ -1,14 +1,14 @@
 import request  from 'supertest';
-import app from '../../app.js';
-import Banned from '../../models/Banned.js';
-import Reports from '../../models/Reports.js';
-import db from '../../db/db.js';
-import Comments from '../../models/Comments.js';
-import Posts from '../../models/Posts.js';
+import app from '../app.js';
+import Banned from '../models/Banned.js';
+import Reports from '../models/Reports.js';
+import db from '../db/db.js';
+import Comments from '../models/Comments.js';
+import Posts from '../models/Posts.js';
 
 // Mock the models
-jest.mock('../../models/Banned.js');
-jest.mock('../../db/db.js', () => ({
+jest.mock('../models/Banned.js');
+jest.mock('../db/db.js', () => ({
     database: {
         collection: jest.fn(),
     },

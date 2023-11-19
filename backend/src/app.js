@@ -28,9 +28,4 @@ app.use('/likes', getUserId, likesRouter);
 app.use('/reports', getUserId, reportsRouter);
 app.use('/banned', getUserId, bannedRouter);
 
-// Ping route
-app.get('/ping', (_, res) => {
-    res.status(200).send('pong');
-});
-
 export default app;

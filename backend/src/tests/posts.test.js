@@ -1,16 +1,17 @@
 import request  from 'supertest';
-import app from '../../app.js';
-import Banned from '../../models/Banned.js';
-import Post from '../../models/Posts.js';
-import Likes from '../../models/Likes.js';
-import Comments from '../../models/Comments.js';
-import User from '../../models/User.js';
+import app from '../app.js';
+import Banned from '../models/Banned.js';
+import Post from '../models/Posts.js';
+import Likes from '../models/Likes.js';
+import Comments from '../models/Comments.js';
+import User from '../models/User.js';
 import { ObjectId } from 'mongodb';
-import db from '../../db/db.js'; 
+import db from '../db/db.js'; 
+import { analyzeSentimentScore } from '../helpers/sentimentHelper.js';
 
 // Mock the models
-jest.mock('../../models/Banned.js');
-jest.mock('../../db/db.js', () => ({
+jest.mock('../models/Banned.js');
+jest.mock('../db/db.js', () => ({
     database: {
         collection: jest.fn(),
     },
@@ -99,13 +100,13 @@ describe('Testing All Posts Interfaces:', () => {
             const spy = jest.spyOn(db.database, 'collection');
             const findSpy = spy.mockReturnValue({
                 find: jest.fn(),
+                findOne: jest.fn().mockResolvedValue(null),
             });
             findSpy().find.mockReturnValue({
                 toArray: jest.fn().mockResolvedValue(allPosts),
             });
 
             jest.spyOn(Likes.prototype, 'getAllLikes').mockResolvedValue([]);
-            jest.spyOn(Likes.prototype, 'userLikedPost').mockResolvedValue(false);
             jest.spyOn(Comments.prototype, 'getAllComments').mockResolvedValue([]);
             jest.spyOn(User.prototype, 'getUser').mockResolvedValue({name: 'validUserId'});
             jest.spyOn(Post.prototype, 'getAllPost');
@@ -597,6 +598,26 @@ describe('Testing All Posts Interfaces:', () => {
             expect(response.statusCode).toBe(500);
             expect(Post.prototype.editPost).toHaveBeenCalledWith(content, postId, "123");
             expect(response.body).toEqual({message: 'Database error'});
+        });
+    });
+
+    describe('Testing analyzeSentiment', () => {
+        test("when score is greater then 0", () => {
+            const score = 0.5;
+            const sentiment = analyzeSentimentScore(score);
+            expect(sentiment).toBe("positive");
+        });
+
+        test("when score is equal to 0", () => {
+            const score = 0;
+            const sentiment = analyzeSentimentScore(score);
+            expect(sentiment).toBe("neutral");
+        });
+
+        test("when score is less then 0", () => {
+            const score = -0.5;
+            const sentiment = analyzeSentimentScore(score);
+            expect(sentiment).toBe("negative");
         });
     });
 });
