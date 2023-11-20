@@ -35,6 +35,7 @@ export async function addComment(req, res) {
     const postModel = new Posts();
 
     try {
+        if (!req.body.content || !req.body.postId) return res.status(400).json({message: "Invalid request, missing required fields"});
         const commentId = await model.addComment(req.body.content, req.body.postId, req.userId);
 
         const post = await postModel.getPostById(req.userId, req.body.postId);
@@ -62,7 +63,7 @@ export async function addComment(req, res) {
                 return res.json({commentId});
             })
             .catch( error => {
-                console.log(error);
+                return res.status(200).json({message: "notification failed", commentId});
             });
 
         } else {
@@ -79,8 +80,9 @@ export async function addComment(req, res) {
 export async function editComment(req, res) {
     const model = new Comments();
     try {
-        const result = await model.editComment(req.body.content, req.params.commentId, req.userId);
-        return result ? res.json({message: "comment edited"}) : res.status(403).json({message: "not authorized to edit post"});
+        if (!req.body.content) return res.status(400).json({message: "Invalid request, missing required content field"});
+        const result = await model.editComment(req.body.content, req.params.comment_id, req.userId);
+        return result ? res.json({message: "comment edited"}) : res.status(403).json({message: "not authorized to edit comment"});
     } catch (error) {
         return res.status(500).json({message: error.message});
     }
@@ -90,8 +92,8 @@ export async function editComment(req, res) {
 export async function deleteComment(req, res) {
     const model = new Comments();
     try {
-        const result = await model.deleteComment(req.params.commentId, req.userId);
-        return result ? res.json({message: "deleted comment"}) : res.status(403).json({message: "not authorized to delete comment"});
+        const result = await model.deleteComment(req.params.comment_id, req.userId);
+        return result ? res.json({message: "comment deleted"}) : res.status(403).json({message: "not authorized to delete comment"});
     } catch (error) {
         return res.status(500).json({message: error.message});
     }

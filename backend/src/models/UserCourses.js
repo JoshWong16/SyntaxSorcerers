@@ -21,7 +21,8 @@ class UserCourses {
 
     /* ChatGPT usage: No */
     async removeUserCourse(userId, courseId) {
-        await this.collection.deleteOne({userId: userId, courseId: courseId});
+        const result = await this.collection.deleteOne({userId: userId, courseId: courseId});
+        return result.deletedCount > 0;
     }
 }
 

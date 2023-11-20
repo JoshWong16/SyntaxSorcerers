@@ -17,13 +17,16 @@ export async function getUser(req, res) {
 export async function createUser(req, res) {
     const model = new User();
     try {
+        if (req.body.email == null || req.body.year_level == null || req.body.major == null || req.body.name == null) {
+            return res.status(400).json({message: 'Missing required fields, can not create user'});
+        }
         const user = {
             userId: req.userId,
-            email: req.body.email || "",
-            year_level : req.body.year_level || "",
-            major : req.body.major || "",
-            name : req.body.name || "",
-            notification_token : req.body.notification_token || ""
+            email: req.body.email,
+            year_level : req.body.year_level,
+            major : req.body.major,
+            name : req.body.name,
+            notification_token : req.body.notification_token || null
         };
         await model.createUser(user);
         return res.json(user);
@@ -35,9 +38,16 @@ export async function createUser(req, res) {
 /* ChatGPT usage: No */
 export async function updateUser(req, res) {
     const model = new User();
+    if (req.body == null || Object.keys(req.body).length === 0) {
+        return res.status(400).json({message: 'Body is empty, can not update user'});
+    }
     try {
-        await model.updateUser(req.userId, req.body);
-        res.json({message: 'User updated'});
+        const foundUser = await model.updateUser(req.userId, req.body)
+        if(!foundUser) {
+            return res.status(404).json({message: 'User does not exist'});
+        };
+        
+        return res.json({message: 'User updated'});
     } catch (error) {  
         return res.status(500).json({message: error.message});
     }
@@ -47,7 +57,10 @@ export async function updateUser(req, res) {
 export async function deleteUser(req, res) {
     const model = new User();
     try {
-        await model.deleteUser(req.userId);
+        const isUserDeleted = await model.deleteUser(req.userId);
+        if(!isUserDeleted) {
+            return res.status(404).json({message: 'User does not exist'});
+        };
         res.json({message:'User deleted'});
     } catch (error) {
         return res.status(500).json({message: error.message});
@@ -58,7 +71,10 @@ export async function deleteUser(req, res) {
 export async function addFavouriteCourse(req, res) {
     const model = new UserCourses();
     try {
-        const courses = await model.addUserCourse(req.userId, req.body.courseId);
+        if(!req.body.courseId) {
+            return res.status(400).json({message: 'Missing required fields, can not add course to favourites'});
+        }
+        await model.addUserCourse(req.userId, req.body.courseId);
         return res.json({message:'Course added'});
     } catch (error) {
         return res.status(500).json({message: error.message});
@@ -81,7 +97,10 @@ export async function removeFavouriteCourse(req, res) {
     const model = new UserCourses();
     const course_id = req.params.course_id;
     try {
-        await model.removeUserCourse(req.userId, course_id);
+        const courseDeletedExists = await model.removeUserCourse(req.userId, course_id);
+        if(!courseDeletedExists) {
+            return res.status(404).json({message: 'Course was not favourited for user'});
+        }
         return res.json({message: 'Course removed'});;
     } catch (error) {
         return res.status(500).json({message: error.message});
@@ -96,7 +115,7 @@ export async function getCourseKeywords(req, res) {
     fs.readFile('./src/jsonFiles/courseCategories.json', 'utf8', (err, data) => {
         if (err) {
             console.error('Error reading the JSON file: ' + err);
-            return;
+            return res.status(500).json({message: err});
         }
 
         var categories = [];
@@ -113,18 +132,15 @@ export async function getCourseKeywords(req, res) {
 
 /* ChatGPT usage: Partial */
 export async function getRecommendedCourses(req, res) {
-
     const userKeywords = req.query.userKeywords;
-    
-    const userKeywordsArray = userKeywords.split(',');
-    var reccomendedCourses = {};
+    const userKeywordsArray = userKeywords ? userKeywords.split(',') : null;
+    var recommendedCourses = {};
 
     if (Array.isArray(userKeywordsArray)) {
-        
         fs.readFile('./src/jsonFiles/courseCategories.json', 'utf8', (err, data) => {
             if (err) {
                 console.error('Error reading the JSON file: ' + err);
-                return;
+                return res.status(500).json({message: err});
             }
     
             const jsonData = JSON.parse(data);
@@ -132,17 +148,13 @@ export async function getRecommendedCourses(req, res) {
             for (var i = 0; i < userKeywordsArray.length; i++) {
                 var category = userKeywordsArray[i];
                 if (jsonData[category]) {
-                    reccomendedCourses[category] = jsonData[category];
-    
+                    recommendedCourses[category] = jsonData[category];
                 }
             }
     
-            res.json(reccomendedCourses);
-    
+            return res.json(recommendedCourses);
         })
-
     } else {
-        
-        res.status(400).send("Invalid parameter.")
+        return res.status(400).json({message: "Missing required keywords"})
     }
 }

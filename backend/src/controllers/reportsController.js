@@ -26,6 +26,9 @@ export async function getUserReports(req, res) {
 export async function addReport(req, res) {
     const model = new Reports();
     try {
+        if (!req.body.userId || (!req.body.commentId && !req.body.postId)) {
+            return res.status(400).json({message: 'Invalid request, missing required fields'});
+        }
         const reportId = await model.addReport(req.body.userId, req.body.commentId || null, req.body.postId || null);
         return res.json({reportId});
     } catch (error) {

@@ -19,7 +19,7 @@ router.get('/', getAllForums);
 router.post('/', addForum);
 
 // Delete forum
-router.delete('/:forumId', removeForum);
+router.delete('/forum/:forumId', removeForum);
 
 // Get users forums
 router.get('/user', getUsersForums);
