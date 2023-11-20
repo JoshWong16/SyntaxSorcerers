@@ -26,7 +26,7 @@ class Reports {
         for (let res of result) {
             if(res.commentId) {
                 userContent.push(await comments.getCommentById(res.commentId));
-            } else if (res.postId) {
+            } else {
                 userContent.push(await posts.getPostById(res.userId, res.postId));
             }
         }
