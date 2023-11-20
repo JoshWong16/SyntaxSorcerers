@@ -94,11 +94,19 @@ public class ForumViewActivity extends AppCompatActivity {
     private void getFilteredPost(String forumId, String category) {
         SharedPreferences sharedPreferences = getSharedPreferences("GoogleAccountInfo", MODE_PRIVATE);
         String userId = sharedPreferences.getString("userId", null);
+
+        long startTime = System.currentTimeMillis();
+
         ServerRequest serverRequest = new ServerRequest(userId);
         ServerRequest.ApiRequestListener apiRequestListener = new ServerRequest.ApiRequestListener() {
             @Override
             public void onApiRequestComplete(JsonElement response) throws ParseException {
                 Log.d("Posts", response.toString());
+
+                long endTime = System.currentTimeMillis();
+                long elapsedTime = endTime - startTime;
+                Log.d("Timer", "Time taken with to get posts: " + elapsedTime + " milliseconds");
+
                 ((LinearLayout) findViewById(R.id.postsLayoutAll)).removeAllViews();
                 for(int i = 0;  i < response.getAsJsonArray().size(); i++) {
                     JsonObject post = response.getAsJsonArray().get(i).getAsJsonObject();
@@ -109,6 +117,10 @@ public class ForumViewActivity extends AppCompatActivity {
 
             @Override
             public void onApiRequestError(String error) {
+                long endTime = System.currentTimeMillis();
+                long elapsedTime = endTime - startTime;
+                Log.d("Timer", "Time taken with error: " + elapsedTime + " milliseconds");
+
                 Log.d(ServerRequest.RequestTag, "Failure");
                 Log.d(ServerRequest.RequestTag, error);
             }

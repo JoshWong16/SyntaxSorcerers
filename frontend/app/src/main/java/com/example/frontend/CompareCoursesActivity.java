@@ -341,6 +341,8 @@ public class CompareCoursesActivity extends AppCompatActivity {
                 if (course1GradesModel == null || course2GradesModel == null) {
                     Toast.makeText(CompareCoursesActivity.this, "Please fill both search bars", Toast.LENGTH_SHORT).show();
                 } else {
+                    long startTime = System.currentTimeMillis();
+
                     displaySearchResults(course1GradesModel, firstCourseTextViews);
                     displaySearchResults(course2GradesModel, secondCourseTextViews);
                     try {
@@ -348,6 +350,11 @@ public class CompareCoursesActivity extends AppCompatActivity {
                     } catch (JSONException e) {
                         throw new InternalError(e);
                     }
+
+                    // Record the end time
+                    long endTime = System.currentTimeMillis();
+                    long elapsedTime = endTime - startTime;
+                    Log.d("Timer", "Time taken: " + elapsedTime + " milliseconds");
                 }
             }
         });
