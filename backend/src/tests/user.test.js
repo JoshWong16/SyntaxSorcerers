@@ -14,6 +14,7 @@ jest.mock('../db/db.js', () => ({
 }));
 jest.mock('../models/Banned.js');
 
+"ChatGPT usage: Partial"
 describe('Testing All User Interfaces:', () => {
 
     beforeEach(() => {

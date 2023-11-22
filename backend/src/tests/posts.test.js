@@ -20,6 +20,7 @@ jest.mock('stopword', () => ({
     removeStopwords: jest.fn().mockReturnValue([]),
 }));
 
+"ChatGPT usage: Partial"
 describe('Testing All Posts Interfaces:', () => {
     beforeAll(() => {
         jest.spyOn(Banned.prototype, 'getBannedUser').mockReturnValue(false);

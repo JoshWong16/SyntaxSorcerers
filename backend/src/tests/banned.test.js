@@ -11,6 +11,7 @@ jest.mock('../db/db.js', () => ({
     },
 }));
 
+"ChatGPT usage: Partial"
 describe('Testing All Posts Interfaces:', () => {
     afterEach(() => {    
         jest.clearAllMocks();
