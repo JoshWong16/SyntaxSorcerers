@@ -5,32 +5,26 @@ import static androidx.test.espresso.action.ViewActions.click;
 import static androidx.test.espresso.assertion.ViewAssertions.matches;
 import static androidx.test.espresso.matcher.ViewMatchers.withText;
 import static org.hamcrest.CoreMatchers.containsString;
-import static androidx.test.espresso.assertion.ViewAssertions.matches;
-import static androidx.test.espresso.matcher.RootMatchers.withDecorView;
-import static androidx.test.espresso.matcher.ViewMatchers.isDisplayed;
-import static androidx.test.espresso.matcher.ViewMatchers.withText;
 import static com.example.frontend.ToastMatcher.checkToastMessage;
-import static org.hamcrest.Matchers.is;
-import static org.hamcrest.Matchers.not;
-import android.view.View;
 
-import androidx.test.core.app.ActivityScenario;
 import androidx.test.espresso.action.ViewActions;
 import androidx.test.espresso.matcher.ViewMatchers;
 import androidx.test.ext.junit.rules.ActivityScenarioRule;
 
-import org.junit.Before;
 import org.junit.Rule;
 import org.junit.Test;
 
 public class CompareCoursesActivityTests {
-    int SLEEP_TIME = 1000;
+    int SLEEP_TIME = 2000;
+
+    /* ChatGPT usage: Yes */
     @Rule
     public ActivityScenarioRule<CompareCoursesActivity> activityRule =
             new ActivityScenarioRule<>(CompareCoursesActivity.class);
 
+    /* ChatGPT usage: Partial */
     @Test
-    public void firstSeachBar() throws InterruptedException {
+    public void firstSearchBar() throws InterruptedException {
         onView(ViewMatchers.withId(R.id.yearSession1)).perform(click());
         onView(withText("2022W"))
                 .perform(ViewActions.click());
@@ -48,8 +42,9 @@ public class CompareCoursesActivityTests {
                 .perform(ViewActions.click());
     }
 
+    /* ChatGPT usage: Partial */
     @Test
-    public void secondSeachBar() throws InterruptedException {
+    public void secondSearchBar() throws InterruptedException {
         onView(ViewMatchers.withId(R.id.yearSession2)).perform(click());
         onView(withText("2022W"))
                 .perform(ViewActions.click());
@@ -67,6 +62,7 @@ public class CompareCoursesActivityTests {
                 .perform(ViewActions.click());
     }
 
+    /* ChatGPT usage: Partial */
     @Test
     public void compareButton() throws InterruptedException {
         onView(ViewMatchers.withId(R.id.yearSession1)).perform(click());
@@ -127,6 +123,7 @@ public class CompareCoursesActivityTests {
                 .check(matches(withText(containsString("Number of students enrolled: 250"))));
     }
 
+    /* ChatGPT usage: Partial */
     @Test
     public void compareButton_fail() {
         String toastText = "Please fill in both search bars";
