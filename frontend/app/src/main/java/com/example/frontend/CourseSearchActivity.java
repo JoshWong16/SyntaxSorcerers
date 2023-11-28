@@ -215,16 +215,29 @@ public class CourseSearchActivity extends AppCompatActivity {
      * ChatGPT Usage: Partial
      */
     private void displaySearchResults(CourseGradesModel data) {
-        courseName.setText(String.format("%s %s%s %s %s %s",
-                data.getCampus(), data.getYear(), data.getSession(),
-                data.getSubject(), data.getCourse(), data.getSection()));
-        average.setText(String.format("Average: %s", data.getAverage()));
-        stats.setText(String.format("Median: %s, High: %s, Low: %s",
-                data.getMedian(), data.getHigh(), data.getLow()));
-        teachers.setText(String.format("Teaching Team: %s",
-                data.getEducators()));
-        enrolled.setText(String.format("Number of students enrolled: %s",
-                data.getReported()));
+        courseName.setText(buildText( data.getYear(), data.getSession(), " ",
+                data.getSubject(), " ", data.getCourse(), " ", data.getSection()));
+
+        average.setText(buildText("Average: ", String.valueOf(data.getAverage())));
+        stats.setText(buildText("Median: ", String.valueOf(data.getMedian()), ", High: ", String.valueOf(data.getHigh()), ", Low: ", String.valueOf(data.getLow())));
+        teachers.setText(buildText("Teaching Team: ", data.getEducators()));
+        enrolled.setText(buildText("Number of students enrolled: ", String.valueOf(data.getReported())));
+    }
+
+    /**
+     * ChatGPT Usage: Yes
+     */
+    private String buildText(String... parts) {
+        StringBuilder builder = new StringBuilder();
+
+        for (String part : parts) {
+            if (part == null) {
+                return "";
+            }
+            builder.append(part);
+        }
+
+        return builder.toString();
     }
 
     /**
