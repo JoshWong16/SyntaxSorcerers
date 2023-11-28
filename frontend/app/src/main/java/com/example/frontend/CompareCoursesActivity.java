@@ -82,6 +82,14 @@ public class CompareCoursesActivity extends AppCompatActivity {
 
         Button compareCoursesButton = findViewById(R.id.compareButton);
         initializeCompareButton(compareCoursesButton);
+
+        TextView course1Label = findViewById(R.id.course1TextView);
+        TextView course2Label = findViewById(R.id.course2TextView);
+
+        course1Label.setBackgroundColor(Color.BLUE);
+        course1Label.setTextColor(Color.WHITE);
+        course2Label.setBackgroundColor(Color.GRAY);
+        course2Label.setTextColor(Color.WHITE);
     }
 
     /**
@@ -203,16 +211,30 @@ public class CompareCoursesActivity extends AppCompatActivity {
      * ChatGPT Usage: Partial
      */
     private void displaySearchResults(CourseGradesModel data, TextView[] textViews) {
-        textViews[0].setText(String.format("%s %s%s %s %s %s",
-                data.getCampus(), data.getYear(), data.getSession(),
-                data.getSubject(), data.getCourse(), data.getSection()));
-        textViews[1].setText(String.format("Average: %s", data.getAverage()));
-        textViews[2].setText(String.format("Median: %s, High: %s, Low: %s",
-                data.getMedian(), data.getHigh(), data.getLow()));
-        textViews[3].setText(String.format("Teaching Team: %s",
-                data.getEducators()));
-        textViews[4].setText(String.format("Number of students enrolled: %s",
-                data.getReported()));
+        textViews[0].setText(buildText(data.getYear(), data.getSession(), " ",
+                data.getSubject(), " ", data.getCourse(), " ", data.getSection()));
+
+        textViews[1].setText(buildText("Average: ", String.valueOf(data.getAverage())));
+        textViews[2].setText(buildText("Median: ", String.valueOf(data.getMedian()), ", High: ", String.valueOf(data.getHigh()), ", Low: ", String.valueOf(data.getLow())));
+        textViews[3].setText(buildText("Teaching Team: ", data.getEducators()));
+        textViews[4].setText(buildText("Number of students enrolled: ", String.valueOf(data.getReported())));
+
+    }
+
+    /**
+     * ChatGPT Usage: yes
+     */
+    private String buildText(String... parts) {
+        StringBuilder builder = new StringBuilder();
+
+        for (String part : parts) {
+            if (part == null) {
+                return "";
+            }
+            builder.append(part);
+        }
+
+        return builder.toString();
     }
 
     /**
@@ -266,7 +288,6 @@ public class CompareCoursesActivity extends AppCompatActivity {
         Legend legend = barChart.getLegend();
         initializeLegend(legend);
 
-
         barChart.getDescription().setEnabled(false);
         YAxis rightYAxis = barChart.getAxisRight();
         rightYAxis.setEnabled(false);
@@ -295,11 +316,11 @@ public class CompareCoursesActivity extends AppCompatActivity {
         legend.setFormSize(12f);
         legend.setTextColor(Color.BLACK);
         ArrayList<LegendEntry> legendEntries = new ArrayList<>();
-        String course1Label = String.format("%s %s%s %s %s %s",
-                course1GradesModel.getCampus(), course1GradesModel.getYear(), course1GradesModel.getSession(),
+        String course1Label = String.format("%s%s %s %s %s",
+                course1GradesModel.getYear(), course1GradesModel.getSession(),
                 course1GradesModel.getSubject(), course1GradesModel.getCourse(), course1GradesModel.getSection());
-        String course2Label = String.format("%s %s%s %s %s %s",
-                course2GradesModel.getCampus(), course2GradesModel.getYear(), course2GradesModel.getSession(),
+        String course2Label = String.format("%s%s %s %s %s",
+                course2GradesModel.getYear(), course2GradesModel.getSession(),
                 course2GradesModel.getSubject(), course2GradesModel.getCourse(), course2GradesModel.getSection());
         LegendEntry entry1 = new LegendEntry(course1Label, Legend.LegendForm.SQUARE, 12f, 0f, null, Color.BLUE);
         LegendEntry entry2 = new LegendEntry(course2Label, Legend.LegendForm.SQUARE, 12f, 0f, null, Color.GRAY);
