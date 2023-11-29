@@ -1,5 +1,6 @@
 package com.example.frontend;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -12,6 +13,11 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.frontend.apiwrappers.ServerRequest;
+import com.google.android.gms.auth.api.signin.GoogleSignIn;
+import com.google.android.gms.auth.api.signin.GoogleSignInClient;
+import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 
@@ -20,10 +26,21 @@ import java.text.ParseException;
 
 public class ReportedUsersActivity extends AppCompatActivity {
 
+    private GoogleSignInClient mGoogleSignInClient;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_reported_users);
+
+        GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
+                .requestEmail()
+                .build();
+        mGoogleSignInClient = GoogleSignIn.getClient(this, gso);
+
+        findViewById(R.id.sign_out_button).setOnClickListener(view -> {
+            signOut();
+        });
 
         getAllReportedUsers();
     }
@@ -122,6 +139,18 @@ public class ReportedUsersActivity extends AppCompatActivity {
         } catch (UnsupportedEncodingException e) {
             throw new InternalError(e);
         }
+    }
+
+    /* ChatGPT usage: None */
+    private void signOut() {
+        mGoogleSignInClient.signOut()
+                .addOnCompleteListener(this, new OnCompleteListener<Void>() {
+                    @Override
+                    public void onComplete(@NonNull Task<Void> task) {
+                        Intent intent = new Intent(ReportedUsersActivity.this, LoginActivity.class);
+                        startActivity(intent);
+                    }
+                });
     }
 
 

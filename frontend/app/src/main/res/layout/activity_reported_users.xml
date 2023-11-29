@@ -21,7 +21,7 @@
     <ScrollView
         android:id="@+id/allReportedUsers"
         android:layout_width="match_parent"
-        android:layout_height="525dp"
+        android:layout_height="452dp"
         android:layout_gravity="top"
         android:layout_marginTop="10dp">
 
@@ -34,6 +34,19 @@
         </LinearLayout>
     </ScrollView>
 
+    <Button
+        android:id="@+id/sign_out_button"
+        android:layout_width="115dp"
+        android:layout_height="60dp"
+        android:layout_gravity="center"
+        android:text="@string/signout"
+        app:cornerRadius="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.947"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.122" />
 
 
 </LinearLayout>

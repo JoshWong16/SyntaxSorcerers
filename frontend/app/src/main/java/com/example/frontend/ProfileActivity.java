@@ -127,6 +127,7 @@ public class ProfileActivity extends AppCompatActivity {
         }
     }
 
+    /* ChatGPT usage: None */
     private void signOut() {
         mGoogleSignInClient.signOut()
                 .addOnCompleteListener(this, new OnCompleteListener<Void>() {
