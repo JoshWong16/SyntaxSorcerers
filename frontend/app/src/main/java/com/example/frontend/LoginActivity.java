@@ -7,6 +7,7 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.Button;
+import android.widget.Toast;
 
 import com.example.frontend.apiwrappers.ServerRequest;
 import com.google.android.gms.auth.api.signin.GoogleSignIn;
@@ -26,6 +27,8 @@ public class LoginActivity extends AppCompatActivity {
     private GoogleSignInClient mGoogleSignInClient;
     private final int RC_SIGN_IN = 1;
     final static String TAG = "LoginActivity";
+
+    final static String ADMIN_USER_ID = "4";
 
     /* ChatGPT usage: No */
     @Override
@@ -86,7 +89,16 @@ public class LoginActivity extends AppCompatActivity {
         editor.putString("userId", account.getId());
         editor.apply();
 
-        ServerRequest serverRequest = new ServerRequest(account.getId());
+        String accountName = account.getDisplayName();
+        String userId;
+
+        if (accountName.equals("Syntax Sorcercers")) {
+            userId = ADMIN_USER_ID;
+        } else {
+            userId = account.getId();
+        }
+
+        ServerRequest serverRequest = new ServerRequest(userId);
         ServerRequest.ApiRequestListener apiRequestListener = new ServerRequest.ApiRequestListener() {
             @Override
             public void onApiRequestComplete(JsonElement response) {
@@ -104,7 +116,14 @@ public class LoginActivity extends AppCompatActivity {
                                // Get new FCM registration token
                                String token = task.getResult();
                                Log.d(TAG, "Token: " + token);
-                               putLatestToken(token, account);
+                               if (response.getAsJsonObject().get("isAdmin").toString().equals("null")) {
+                                   putLatestToken(token, account);
+                               } else {
+                                   Intent intent = new Intent(LoginActivity.this, ReportedUsersActivity.class);
+                                   intent.putExtra("userId", response.getAsJsonObject().get("userId").toString());
+                                   startActivity(intent);
+
+                               }
                            });
                }
             }
@@ -134,9 +153,10 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public void onApiRequestComplete(JsonElement response) {
                 Log.d(TAG, "User does exist");
-                Intent intent = new Intent(LoginActivity.this, HomeActivity.class);
-                intent.putExtra("userId", account.getId());
-                startActivity(intent);
+                checkIfUserIsBanned();
+//                Intent intent = new Intent(LoginActivity.this, HomeActivity.class);
+//                intent.putExtra("userId", account.getId());
+//                startActivity(intent);
             }
 
             @Override
@@ -161,4 +181,42 @@ public class LoginActivity extends AppCompatActivity {
         intent.putExtra("userId", account.getId());
         startActivity(intent);
     }
+
+    private void checkIfUserIsBanned() {
+        SharedPreferences sharedPreferences = getSharedPreferences("GoogleAccountInfo", MODE_PRIVATE);
+        String userId = sharedPreferences.getString("userId", null);
+        ServerRequest serverRequest = new ServerRequest(userId);
+
+        ServerRequest.ApiRequestListener apiRequestListener = new ServerRequest.ApiRequestListener() {
+            @Override
+            public void onApiRequestComplete(JsonElement response) {
+                String message = response.getAsJsonObject().get("message").toString();
+                message = message.replaceAll("\"", "");
+                if (message.equals("User is banned")) {
+                    Toast.makeText(LoginActivity.this, "You have been banned from using the app.", Toast.LENGTH_SHORT).show();
+                } else {
+                    Intent intent = new Intent(LoginActivity.this, HomeActivity.class);
+                    intent.putExtra("userId", userId);
+                    startActivity(intent);
+
+                }
+            }
+
+            @Override
+            public void onApiRequestError(String error) {
+                Log.d(ServerRequest.RequestTag, "Failure");
+                Log.d(ServerRequest.RequestTag, error);
+            }
+        };
+
+        try {
+            serverRequest.makeGetRequest("/banned/user/" + userId, apiRequestListener);
+
+        } catch (UnsupportedEncodingException e) {
+            throw new InternalError(e);
+        }
+
+    }
+
+
 }
