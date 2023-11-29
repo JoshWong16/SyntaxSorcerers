@@ -28,6 +28,7 @@ async function createDatabase() {
         year_level: "1",
         major: "Computer Engineering",
         name: "Bobby Joe",
+        isAdmin: null,
     });
 
     await users.insertOne({
@@ -36,6 +37,7 @@ async function createDatabase() {
         year_level: "4",
         major: "LFS",
         name: "John Smith",
+        isAdmin: null,
     });
 
     await users.insertOne({
@@ -44,6 +46,16 @@ async function createDatabase() {
         year_level: "5",
         major: "MATH",
         name: "Billy Bob",
+        isAdmin: null,
+    });
+
+    await users.insertOne({
+        userId: "4",
+        email: "syntaxsorcercers@gmail.com",
+        year_level: null,
+        major: null,
+        name: "Admin",
+        isAdmin: true,
     });
 
     // insert sample forums
