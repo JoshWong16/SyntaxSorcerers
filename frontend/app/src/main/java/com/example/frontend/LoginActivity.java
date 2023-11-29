@@ -154,9 +154,6 @@ public class LoginActivity extends AppCompatActivity {
             public void onApiRequestComplete(JsonElement response) {
                 Log.d(TAG, "User does exist");
                 checkIfUserIsBanned();
-//                Intent intent = new Intent(LoginActivity.this, HomeActivity.class);
-//                intent.putExtra("userId", account.getId());
-//                startActivity(intent);
             }
 
             @Override
@@ -182,6 +179,7 @@ public class LoginActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+    /* ChatGPT usage: Partial */
     private void checkIfUserIsBanned() {
         SharedPreferences sharedPreferences = getSharedPreferences("GoogleAccountInfo", MODE_PRIVATE);
         String userId = sharedPreferences.getString("userId", null);
