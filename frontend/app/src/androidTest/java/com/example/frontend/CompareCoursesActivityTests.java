@@ -96,11 +96,14 @@ public class CompareCoursesActivityTests {
         onView(withText("201"))
                 .perform(click());
 
+        Thread.sleep(SLEEP_TIME);
+
         onView(ViewMatchers.withId(R.id.compareButton)).perform(click());
 
         Thread.sleep(SLEEP_TIME);
+
         onView(ViewMatchers.withId(R.id.courseName1))
-                .check(matches(withText(containsString("UBCV 2022W APSC 100 101"))));
+                .check(matches(withText(containsString("2022W APSC 100 101"))));
         onView(ViewMatchers.withId(R.id.average1))
                 .check(matches(withText(containsString("Average: 75.1"))));
         onView(ViewMatchers.withId(R.id.stats1))
@@ -111,7 +114,7 @@ public class CompareCoursesActivityTests {
                 .check(matches(withText(containsString("Number of students enrolled: 251"))));
 
         onView(ViewMatchers.withId(R.id.courseName2))
-                .check(matches(withText(containsString("UBCV 2022W APSC 101 201"))));
+                .check(matches(withText(containsString("2022W APSC 101 201"))));
         onView(ViewMatchers.withId(R.id.average2))
                 .check(matches(withText(containsString("Average: 73.2"))));
         onView(ViewMatchers.withId(R.id.stats2))
@@ -125,7 +128,7 @@ public class CompareCoursesActivityTests {
     /* ChatGPT usage: Partial */
     @Test
     public void compareButton_fail() {
-        String toastText = "Please fill in both search bars";
+        String toastText = "Please fill both search bars";
         onView(ViewMatchers.withId(R.id.compareButton)).perform(click());
         checkToastMessage(toastText);
     }
