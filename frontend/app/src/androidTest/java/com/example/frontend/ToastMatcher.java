@@ -10,7 +10,6 @@ import android.view.WindowManager;
 import androidx.test.espresso.Root;
 import androidx.test.espresso.assertion.ViewAssertions;
 import androidx.test.espresso.matcher.RootMatchers;
-import androidx.test.espresso.matcher.ViewMatchers;
 
 import org.hamcrest.Description;
 import org.hamcrest.TypeSafeMatcher;
