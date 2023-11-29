@@ -26,7 +26,8 @@ export async function createUser(req, res) {
             year_level : req.body.year_level,
             major : req.body.major,
             name : req.body.name,
-            notification_token : req.body.notification_token || null
+            notification_token : req.body.notification_token || null,
+            isAdmin: null
         };
         await model.createUser(user);
         return res.json(user);
