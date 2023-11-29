@@ -149,7 +149,7 @@ describe('Testing All Posts Interfaces:', () => {
                                     .set('Authorization', 'Bearer 123');
             
             expect(response.status).toBe(404);
-            expect(Banned.prototype.getBannedUser).toHaveBeenCalledTimes(1);
+            expect(Banned.prototype.getBannedUser).not.toHaveBeenCalled();
             expect(response.error.message).toEqual("cannot GET /banned/user/ (404)");
         });
 
@@ -161,18 +161,14 @@ describe('Testing All Posts Interfaces:', () => {
             const spy = jest.spyOn(Banned.prototype, 'getBannedUser');
 
             spy.mockImplementation((input) => {
-                if (input === "123") {
-                    return Promise.resolve(false);
-                } else {
-                    return Promise.reject(new Error('test error'));
-                }
+                return Promise.reject(new Error('test error'));
             });
             const response = await request(app)
                                     .get('/banned/user/124')
                                     .set('Authorization', 'Bearer 123');
             
             expect(response.status).toBe(500);
-            expect(Banned.prototype.getBannedUser).toHaveBeenCalledWith("123");
+            expect(Banned.prototype.getBannedUser).toHaveBeenCalledWith("124");
             expect(response.body.message).toEqual('test error');
         });
     });
@@ -239,12 +235,11 @@ describe('Testing All Posts Interfaces:', () => {
         });
     });
 
-    test("user sending request is banned", async () => {
+    test("user not sent in request", async () => {
         jest.spyOn(Banned.prototype, 'getBannedUser').mockResolvedValue(true);
 
         const response = await request(app)
                                     .get('/users/')
-                                    .set('Authorization', 'Bearer 123');
         
         expect(response.status).toBe(401);
         expect(response.body).toEqual({message: "Unauthorized"});

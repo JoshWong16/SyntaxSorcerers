@@ -16,11 +16,6 @@ jest.mock('../models/Banned.js');
 
 "ChatGPT usage: Partial"
 describe('Testing All User Interfaces:', () => {
-
-    beforeEach(() => {
-        jest.spyOn(Banned.prototype, 'getBannedUser').mockReturnValue(false);
-    });
-
     afterEach(() => {    
         jest.clearAllMocks();
     });
@@ -110,7 +105,8 @@ describe('Testing All User Interfaces:', () => {
         test("when user data is correct", async () => {
             const data = { 
                 name: 'John Smith', 
-                email: "test@gmail.com", 
+                email: "test@gmail.com",
+                isAdmin: null, 
                 major: "LFS", 
                 year_level: "3", 
                 notification_token: "1234" 
@@ -237,7 +233,8 @@ describe('Testing All User Interfaces:', () => {
         // Expected output: error message saying some error
         test("when user is not successfully created", async () => {
             const data = { 
-                name: 'John Smith', 
+                name: 'John Smith',
+                isAdmin: null,
                 email: "test@gmail.com", 
                 major: "LFS", 
                 year_level: "3"
