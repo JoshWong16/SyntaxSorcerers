@@ -158,4 +158,5 @@
     <string name="report_users_name">Users That Have Been Reported:</string>
     <string name="ban_user_button">Ban User </string>
     <string name="report_posts_comments">The Reported Posts and Comments for</string>
+    <string name="signout">Sign Out</string>
 </resources>

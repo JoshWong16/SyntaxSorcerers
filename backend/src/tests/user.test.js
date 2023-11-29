@@ -106,7 +106,7 @@ describe('Testing All User Interfaces:', () => {
             const data = { 
                 name: 'John Smith', 
                 email: "test@gmail.com",
-                isAdmin: null, 
+                isAdmin: false, 
                 major: "LFS", 
                 year_level: "3", 
                 notification_token: "1234" 
@@ -234,7 +234,7 @@ describe('Testing All User Interfaces:', () => {
         test("when user is not successfully created", async () => {
             const data = { 
                 name: 'John Smith',
-                isAdmin: null,
+                isAdmin: false,
                 email: "test@gmail.com", 
                 major: "LFS", 
                 year_level: "3"

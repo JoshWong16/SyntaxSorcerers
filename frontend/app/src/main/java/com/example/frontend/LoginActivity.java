@@ -116,13 +116,12 @@ public class LoginActivity extends AppCompatActivity {
                                // Get new FCM registration token
                                String token = task.getResult();
                                Log.d(TAG, "Token: " + token);
-                               if (response.getAsJsonObject().get("isAdmin").toString().equals("null")) {
+                               if (!response.getAsJsonObject().get("isAdmin").getAsBoolean()) {
                                    putLatestToken(token, account);
                                } else {
                                    Intent intent = new Intent(LoginActivity.this, ReportedUsersActivity.class);
                                    intent.putExtra("userId", response.getAsJsonObject().get("userId").toString());
                                    startActivity(intent);
-
                                }
                            });
                }

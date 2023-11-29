@@ -272,9 +272,11 @@ public class ForumActivity extends AppCompatActivity {
 
 
                     addForumsView.setOnClickListener(v -> {
+                        boolean hasJoined = ((Button) addForumsView.findViewById(R.id.join_button)).getText().equals("Joined");
+                        Log.d("ForumActivity", "hasJoined: " + hasJoined);
                         Intent intent = new Intent(ForumActivity.this, ForumViewActivity.class);
                         intent.putExtra("forumId", (String) v.getTag());
-                        intent.putExtra("isJoined", isJoined);
+                        intent.putExtra("isJoined", hasJoined);
                         intent.putExtra("forumName", forum.get("name").getAsString());
                         startActivity(intent);
                     });
@@ -321,6 +323,15 @@ public class ForumActivity extends AppCompatActivity {
                 ((TextView) joinedForumsView.findViewById(R.id.course_name)).setText(((TextView) view.findViewById(R.id.course_name)).getText().toString());
                 ((Button) joinedForumsView.findViewById(R.id.join_button)).setText(R.string.joined_button);
                 joinedForumsView.findViewById(R.id.join_button).setEnabled(false);
+
+                joinedForumsView.setOnClickListener(v -> {
+                    Intent intent = new Intent(ForumActivity.this, ForumViewActivity.class);
+                    intent.putExtra("forumId", (String) joinedForumsView.getTag());
+                    intent.putExtra("isJoined", true);
+                    intent.putExtra("forumName", ((TextView) joinedForumsView.findViewById(R.id.forum_name)).getText());
+                    startActivity(intent);
+                });
+
                 joinedForumsViews.add(joinedForumsView);
             }
 

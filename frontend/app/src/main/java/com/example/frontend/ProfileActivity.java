@@ -1,5 +1,6 @@
 package com.example.frontend;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -11,6 +12,11 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.frontend.apiwrappers.ServerRequest;
+import com.google.android.gms.auth.api.signin.GoogleSignIn;
+import com.google.android.gms.auth.api.signin.GoogleSignInClient;
+import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
 import com.google.gson.JsonElement;
 import com.squareup.picasso.Picasso;
 
@@ -22,6 +28,7 @@ public class ProfileActivity extends AppCompatActivity {
     private String name;
     private String major;
     private String yearLevel;
+    private GoogleSignInClient mGoogleSignInClient;
 
     /* ChatGPT usage: Partial */
     @Override
@@ -32,6 +39,11 @@ public class ProfileActivity extends AppCompatActivity {
 
         getUserInfo();
 
+        GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
+                .requestEmail()
+                .build();
+        mGoogleSignInClient = GoogleSignIn.getClient(this, gso);
+
         findViewById(R.id.edit_button).setOnClickListener(view -> {
             Intent intent = new Intent(this, EditProfileActivity.class);
             intent.putExtra("name", name);
@@ -40,6 +52,9 @@ public class ProfileActivity extends AppCompatActivity {
             startActivity(intent);
         });
 
+        findViewById(R.id.sign_out_button).setOnClickListener(view -> {
+            signOut();
+        });
     }
 
     /* ChatGPT usage: Partial */
@@ -110,5 +125,16 @@ public class ProfileActivity extends AppCompatActivity {
         } catch (UnsupportedEncodingException e) {
             throw new InternalError(e);
         }
+    }
+
+    private void signOut() {
+        mGoogleSignInClient.signOut()
+                .addOnCompleteListener(this, new OnCompleteListener<Void>() {
+                    @Override
+                    public void onComplete(@NonNull Task<Void> task) {
+                        Intent intent = new Intent(ProfileActivity.this, LoginActivity.class);
+                        startActivity(intent);
+                    }
+                });
     }
 }

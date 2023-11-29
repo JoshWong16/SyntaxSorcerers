@@ -37,8 +37,8 @@ public class SignupActivity extends AppCompatActivity {
         spinner.setAdapter(adapter);
 
         findViewById(R.id.submit_button).setOnClickListener(view -> {
-            String major = ((Spinner) findViewById(R.id.major_spinner)).getSelectedItem().toString();
-            if (major.equals("Select a major")) {
+            String major = spinner.getSelectedItem().toString();
+            if (major.equals("Select a Major")) {
                 Toast.makeText(this, "Please select a major", Toast.LENGTH_SHORT).show();
                 return;
             }
@@ -68,7 +68,7 @@ public class SignupActivity extends AppCompatActivity {
         String email = intent.getStringExtra("email");
         String userId = intent.getStringExtra("userId");
         String name = ((EditText) findViewById(R.id.name_input)).getText().toString();
-        if (!name.matches("[a-zA-Z]+")) {
+        if (!name.matches("^[a-zA-z ]*$") || name.length() < 1) {
             Toast.makeText(this, "Please enter a valid name", Toast.LENGTH_SHORT).show();
             return;
         }

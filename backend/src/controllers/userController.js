@@ -27,7 +27,7 @@ export async function createUser(req, res) {
             major : req.body.major,
             name : req.body.name,
             notification_token : req.body.notification_token || null,
-            isAdmin: null
+            isAdmin: false
         };
         await model.createUser(user);
         return res.json(user);

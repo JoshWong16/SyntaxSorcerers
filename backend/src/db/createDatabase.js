@@ -28,7 +28,7 @@ async function createDatabase() {
         year_level: "1",
         major: "Computer Engineering",
         name: "Bobby Joe",
-        isAdmin: null,
+        isAdmin: false,
     });
 
     await users.insertOne({
@@ -37,7 +37,7 @@ async function createDatabase() {
         year_level: "4",
         major: "LFS",
         name: "John Smith",
-        isAdmin: null,
+        isAdmin: false,
     });
 
     await users.insertOne({
@@ -46,7 +46,7 @@ async function createDatabase() {
         year_level: "5",
         major: "MATH",
         name: "Billy Bob",
-        isAdmin: null,
+        isAdmin: false,
     });
 
     await users.insertOne({
