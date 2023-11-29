@@ -39,7 +39,7 @@ public class ToastMatcher extends TypeSafeMatcher<Root> {
     /* ChatGPT usage: Yes */
     public static void checkToastMessage(String message) {
         onView(withText(message))
-                .inRoot(RootMatchers.withDecorView(ViewMatchers.isDisplayed()))
+                .inRoot(RootMatchers.withDecorView(isDisplayed()))
                 .check(ViewAssertions.matches(isDisplayed()));
     }
 }

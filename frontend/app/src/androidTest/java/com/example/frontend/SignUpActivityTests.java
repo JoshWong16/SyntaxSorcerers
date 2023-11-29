@@ -10,8 +10,6 @@ import static androidx.test.espresso.matcher.ViewMatchers.withText;
 import static com.example.frontend.ToastMatcher.checkToastMessage;
 
 import androidx.test.core.app.ActivityScenario;
-import androidx.test.espresso.Espresso;
-import androidx.test.espresso.action.ViewActions;
 import androidx.test.espresso.assertion.ViewAssertions;
 import androidx.test.espresso.matcher.ViewMatchers;
 import androidx.test.ext.junit.rules.ActivityScenarioRule;
@@ -31,33 +29,33 @@ public class SignUpActivityTests {
         onView(withId(R.id.name_input))
                 .perform(typeText("John Doe"), closeSoftKeyboard());
 
-        onView(ViewMatchers.withId(R.id.major_spinner)).perform(click());
+        onView(withId(R.id.major_spinner)).perform(click());
         onView(withText("Anthropology"))
-                .perform(ViewActions.click());
+                .perform(click());
 
         onView(withId(R.id.year_level_input))
                 .perform(typeText("4"), closeSoftKeyboard());
 
-        Espresso.onView(ViewMatchers.withId(R.id.submit_button)).perform(ViewActions.click());
+        onView(withId(R.id.submit_button)).perform(click());
 
         ActivityScenario.launch(HomeActivity.class);
 
-        Espresso.onView(ViewMatchers.withId(R.id.SearchCoursesButton))
+        onView(withId(R.id.SearchCoursesButton))
                 .check(ViewAssertions.matches(ViewMatchers.isDisplayed()));
     }
 
     /* ChatGPT usage: Partial */
     @Test
     public void invalid_name() {
-        onView(ViewMatchers.withId(R.id.major_spinner)).perform(click());
+        onView(withId(R.id.major_spinner)).perform(click());
         onView(withText("Anthropology"))
-                .perform(ViewActions.click());
+                .perform(click());
 
         onView(withId(R.id.year_level_input))
                 .perform(typeText("4"), closeSoftKeyboard());
 
         String toastText = "Please enter a valid name";
-        onView(ViewMatchers.withId(R.id.submit_button)).perform(click());
+        onView(withId(R.id.submit_button)).perform(click());
         checkToastMessage(toastText);
     }
 
@@ -71,7 +69,7 @@ public class SignUpActivityTests {
                 .perform(typeText("4"), closeSoftKeyboard());
 
         String toastText = "Please select a major";
-        onView(ViewMatchers.withId(R.id.submit_button)).perform(click());
+        onView(withId(R.id.submit_button)).perform(click());
         checkToastMessage(toastText);
     }
 
@@ -81,15 +79,15 @@ public class SignUpActivityTests {
         onView(withId(R.id.name_input))
                 .perform(typeText("John Doe"), closeSoftKeyboard());
 
-        onView(ViewMatchers.withId(R.id.major_spinner)).perform(click());
+        onView(withId(R.id.major_spinner)).perform(click());
         onView(withText("Anthropology"))
-                .perform(ViewActions.click());
+                .perform(click());
 
         onView(withId(R.id.year_level_input))
                 .perform(typeText("word"), closeSoftKeyboard());
 
         String toastText = "Please enter a valid year level";
-        onView(ViewMatchers.withId(R.id.submit_button)).perform(click());
+        onView(withId(R.id.submit_button)).perform(click());
         checkToastMessage(toastText);
     }
 }

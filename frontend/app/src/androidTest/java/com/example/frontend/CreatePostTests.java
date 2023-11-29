@@ -34,7 +34,7 @@ public class CreatePostTests {
 
         Espresso.onView(Matchers.allOf(ViewMatchers.withId(R.id.forum_name), withText("CPEN 321 Forum")))
                 .check(ViewAssertions.matches(isDisplayed()))
-                .perform(ViewActions.click());
+                .perform(click());
 
     }
 
@@ -44,7 +44,7 @@ public class CreatePostTests {
 
         Espresso.onView(Matchers.allOf(ViewMatchers.withId(R.id.forum_name), withText("CPEN 321 Forum")))
                 .check(ViewAssertions.matches(isDisplayed()))
-                .perform(ViewActions.click());
+                .perform(click());
 
         Espresso.onView(Matchers.allOf(ViewMatchers.withId(R.id.post_user), withText("Billy Bob")))
                 .check(ViewAssertions.matches(isDisplayed()));
@@ -80,7 +80,7 @@ public class CreatePostTests {
         Espresso.onView(ViewMatchers.withId(R.id.postMessage))
                 .perform(ViewActions.clearText())
                 .perform(ViewActions.typeText(""))
-                .check(ViewAssertions.matches(ViewMatchers.withText("")))
+                .check(ViewAssertions.matches(withText("")))
                 .check(ViewAssertions.matches(isDisplayed()));
 
     }
@@ -96,11 +96,11 @@ public class CreatePostTests {
         Espresso.onView(ViewMatchers.withId(R.id.postMessage))
                 .perform(ViewActions.clearText())
                 .perform(ViewActions.typeText("This course is superb"))
-                .check(ViewAssertions.matches(ViewMatchers.withText("This course is superb")))
+                .check(ViewAssertions.matches(withText("This course is superb")))
                 .check(ViewAssertions.matches(isDisplayed()));
 
         Espresso.onView(ViewMatchers.withId(R.id.create_forum_button))
-                .perform(ViewActions.click());
+                .perform(click());
 
         Thread.sleep(1000);
 

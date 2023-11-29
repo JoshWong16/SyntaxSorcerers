@@ -27,19 +27,19 @@ public class CompareCoursesActivityTests {
     public void firstSearchBar() throws InterruptedException {
         onView(ViewMatchers.withId(R.id.yearSession1)).perform(click());
         onView(withText("2022W"))
-                .perform(ViewActions.click());
+                .perform(click());
         Thread.sleep(SLEEP_TIME);
         onView(ViewMatchers.withId(R.id.subject1)).perform(click());
         onView(withText("APSC"))
-                .perform(ViewActions.click());
+                .perform(click());
         Thread.sleep(SLEEP_TIME);
         onView(ViewMatchers.withId(R.id.course1)).perform(click());
         onView(withText("100"))
-                .perform(ViewActions.click());
+                .perform(click());
         Thread.sleep(SLEEP_TIME);
         onView(ViewMatchers.withId(R.id.section1)).perform(click());
         onView(withText("101"))
-                .perform(ViewActions.click());
+                .perform(click());
     }
 
     /* ChatGPT usage: Partial */
@@ -47,19 +47,19 @@ public class CompareCoursesActivityTests {
     public void secondSearchBar() throws InterruptedException {
         onView(ViewMatchers.withId(R.id.yearSession2)).perform(click());
         onView(withText("2022W"))
-                .perform(ViewActions.click());
+                .perform(click());
         Thread.sleep(SLEEP_TIME);
         onView(ViewMatchers.withId(R.id.subject2)).perform(click());
         onView(withText("APSC"))
-                .perform(ViewActions.click());
+                .perform(click());
         Thread.sleep(SLEEP_TIME);
         onView(ViewMatchers.withId(R.id.course2)).perform(click());
         onView(withText("101"))
-                .perform(ViewActions.click());
+                .perform(click());
         Thread.sleep(SLEEP_TIME);
         onView(ViewMatchers.withId(R.id.section2)).perform(click());
         onView(withText("201"))
-                .perform(ViewActions.click());
+                .perform(click());
     }
 
     /* ChatGPT usage: Partial */
@@ -67,37 +67,37 @@ public class CompareCoursesActivityTests {
     public void compareButton() throws InterruptedException {
         onView(ViewMatchers.withId(R.id.yearSession1)).perform(click());
         onView(withText("2022W"))
-                .perform(ViewActions.click());
+                .perform(click());
         Thread.sleep(SLEEP_TIME);
         onView(ViewMatchers.withId(R.id.subject1)).perform(click());
         onView(withText("APSC"))
-                .perform(ViewActions.click());
+                .perform(click());
         Thread.sleep(SLEEP_TIME);
         onView(ViewMatchers.withId(R.id.course1)).perform(click());
         onView(withText("100"))
-                .perform(ViewActions.click());
+                .perform(click());
         Thread.sleep(SLEEP_TIME);
         onView(ViewMatchers.withId(R.id.section1)).perform(click());
         onView(withText("101"))
-                .perform(ViewActions.click());
+                .perform(click());
 
         onView(ViewMatchers.withId(R.id.yearSession2)).perform(click());
         onView(withText("2022W"))
-                .perform(ViewActions.click());
+                .perform(click());
         Thread.sleep(SLEEP_TIME);
         onView(ViewMatchers.withId(R.id.subject2)).perform(click());
         onView(withText("APSC"))
-                .perform(ViewActions.click());
+                .perform(click());
         Thread.sleep(SLEEP_TIME);
         onView(ViewMatchers.withId(R.id.course2)).perform(click());
         onView(withText("101"))
-                .perform(ViewActions.click());
+                .perform(click());
         Thread.sleep(SLEEP_TIME);
         onView(ViewMatchers.withId(R.id.section2)).perform(click());
         onView(withText("201"))
-                .perform(ViewActions.click());
+                .perform(click());
 
-        onView(ViewMatchers.withId(R.id.compareButton)).perform(ViewActions.click());
+        onView(ViewMatchers.withId(R.id.compareButton)).perform(click());
 
         Thread.sleep(SLEEP_TIME);
         onView(ViewMatchers.withId(R.id.courseName1))
