@@ -21,8 +21,7 @@ public class LoginActivityTests {
     public void click_login_button() {
         Espresso.onView(ViewMatchers.withId(R.id.login_button)).perform(ViewActions.click());
 
-        ActivityScenario<SignupActivity> secondActivityScenario =
-                ActivityScenario.launch(SignupActivity.class);
+        ActivityScenario.launch(SignupActivity.class);
 
         Espresso.onView(ViewMatchers.withId(R.id.name_input))
                 .check(ViewAssertions.matches(ViewMatchers.isDisplayed()));

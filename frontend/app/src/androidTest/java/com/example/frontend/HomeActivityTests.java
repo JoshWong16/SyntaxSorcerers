@@ -23,8 +23,7 @@ public class HomeActivityTests {
     public void clickButton_startsCompareCoursesActivity() {
         Espresso.onView(ViewMatchers.withId(R.id.CompareCoursesButton)).perform(ViewActions.click());
 
-        ActivityScenario<CompareCoursesActivity> secondActivityScenario =
-                ActivityScenario.launch(CompareCoursesActivity.class);
+        ActivityScenario.launch(CompareCoursesActivity.class);
 
         Espresso.onView(ViewMatchers.withId(R.id.yearSession1))
                 .check(ViewAssertions.matches(ViewMatchers.isDisplayed()));

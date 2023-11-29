@@ -1,6 +1,7 @@
 package com.example.frontend;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
 import android.app.Dialog;
 import android.content.Intent;
@@ -33,8 +34,9 @@ public class ForumActivity extends AppCompatActivity {
 
     ArrayList<View> joinedForumsViews;
     ArrayList<View> allForumsViews;
-
     JsonArray joinedForums = new JsonArray();
+    private SwipeRefreshLayout joinedSwipeRefreshLayout;
+    private SwipeRefreshLayout allSwipeRefreshLayout;
 
     /* ChatGPT usage: Partial */
     @Override
@@ -115,6 +117,24 @@ public class ForumActivity extends AppCompatActivity {
             // Show the dialog
             dialog.show();
             populateSpinner("api/v3/subjects/UBCV", courseNameAdapter);
+        });
+
+        joinedSwipeRefreshLayout = findViewById(R.id.joined_forums_refresh);
+        joinedSwipeRefreshLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
+            @Override
+            public void onRefresh() {
+                Log.d("ForumActivity", "Refreshing");
+                joinedSwipeRefreshLayout.setRefreshing(false);
+            }
+        });
+
+        allSwipeRefreshLayout = findViewById(R.id.all_forums_refresh);
+        allSwipeRefreshLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
+            @Override
+            public void onRefresh() {
+                Log.d("ForumActivity", "Refreshing");
+                allSwipeRefreshLayout.setRefreshing(false);
+            }
         });
     }
 

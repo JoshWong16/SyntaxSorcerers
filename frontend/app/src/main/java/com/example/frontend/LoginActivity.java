@@ -117,7 +117,7 @@ public class LoginActivity extends AppCompatActivity {
                                String token = task.getResult();
                                Log.d(TAG, "Token: " + token);
                                if (!response.getAsJsonObject().get("isAdmin").getAsBoolean()) {
-                                   putLatestToken(token, account);
+                                   putLatestToken(token);
                                } else {
                                    Intent intent = new Intent(LoginActivity.this, ReportedUsersActivity.class);
                                    intent.putExtra("userId", response.getAsJsonObject().get("userId").toString());
@@ -142,7 +142,7 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     /* ChatGPT usage: Partial */
-    private void putLatestToken(String token, GoogleSignInAccount account) {
+    private void putLatestToken(String token) {
         SharedPreferences sharedPreferences = getSharedPreferences("GoogleAccountInfo", MODE_PRIVATE);
         String userId = sharedPreferences.getString("userId", null);
         ServerRequest serverRequest = new ServerRequest(userId);

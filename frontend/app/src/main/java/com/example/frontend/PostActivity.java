@@ -1,6 +1,7 @@
 package com.example.frontend;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
 import android.annotation.SuppressLint;
 import android.app.AlertDialog;
@@ -30,6 +31,7 @@ import java.util.Locale;
 
 public class PostActivity extends AppCompatActivity {
 
+    private SwipeRefreshLayout swipeRefreshLayout;
     /* ChatGPT usage: Partial */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -77,6 +79,15 @@ public class PostActivity extends AppCompatActivity {
 
         findViewById(R.id.report_button).setOnClickListener(v -> {
             showReportPostsDialog(postId, userId);
+        });
+
+        swipeRefreshLayout = findViewById(R.id.comments_refresh_layout);
+        swipeRefreshLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
+            @Override
+            public void onRefresh() {
+                Log.d("PostActivity", "Refreshing");
+                swipeRefreshLayout.setRefreshing(false);
+            }
         });
 
         getComments(postId);

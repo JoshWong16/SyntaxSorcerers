@@ -40,8 +40,7 @@ public class SignUpActivityTests {
 
         Espresso.onView(ViewMatchers.withId(R.id.submit_button)).perform(ViewActions.click());
 
-        ActivityScenario<HomeActivity> secondActivityScenario =
-                ActivityScenario.launch(HomeActivity.class);
+        ActivityScenario.launch(HomeActivity.class);
 
         Espresso.onView(ViewMatchers.withId(R.id.SearchCoursesButton))
                 .check(ViewAssertions.matches(ViewMatchers.isDisplayed()));

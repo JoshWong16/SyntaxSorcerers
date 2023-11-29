@@ -17,7 +17,6 @@ import com.google.gson.JsonObject;
 
 import java.io.UnsupportedEncodingException;
 import java.text.ParseException;
-import java.util.Set;
 
 public class ReportedUsersActivity extends AppCompatActivity {
 

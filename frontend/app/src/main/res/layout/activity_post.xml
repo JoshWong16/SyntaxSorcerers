@@ -142,19 +142,24 @@
             android:text="Submit" />
     </LinearLayout>
 
-    <ScrollView
-        android:id="@+id/allComments"
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/comments_refresh_layout"
         android:layout_width="match_parent"
-        android:layout_height="430dp"
-        android:layout_marginTop="10dp"
-        android:foregroundGravity="bottom">
-
-        <LinearLayout
-            android:id="@+id/commentLayout"
+        android:layout_height="wrap_content">
+        <ScrollView
+            android:id="@+id/allComments"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical" />
-    </ScrollView>
+            android:layout_height="430dp"
+            android:layout_marginTop="10dp"
+            android:foregroundGravity="bottom">
+
+            <LinearLayout
+                android:id="@+id/commentLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" />
+        </ScrollView>
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
 
 
 </LinearLayout>

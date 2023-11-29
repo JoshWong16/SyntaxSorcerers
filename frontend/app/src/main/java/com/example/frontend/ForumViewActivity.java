@@ -18,6 +18,7 @@ import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
 import com.example.frontend.apiwrappers.ServerRequest;
 import com.google.gson.JsonElement;
@@ -31,6 +32,7 @@ import java.util.Locale;
 
 public class ForumViewActivity extends AppCompatActivity {
 
+    private SwipeRefreshLayout swipeRefreshLayout;
     /* ChatGPT usage: Partial */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -77,6 +79,16 @@ public class ForumViewActivity extends AppCompatActivity {
 
         findViewById(R.id.allButton).setOnClickListener(v -> {
             getAllPosts(forumId);
+        });
+
+
+        swipeRefreshLayout = findViewById(R.id.posts_refresh_layout);
+        swipeRefreshLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
+            @Override
+            public void onRefresh() {
+                Log.d("ForumViewActivity", "Refreshing");
+                swipeRefreshLayout.setRefreshing(false);
+            }
         });
     }
 
