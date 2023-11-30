@@ -2,7 +2,7 @@ import User from '../models/User.js';
 import UserCourses from '../models/UserCourses.js';
 import fs from 'fs';
 import natural from 'natural';
-import coursesData from '../jsonFiles/courses.json' assert { type: 'json' };
+import courseData from '../jsonFiles/courses.js';
 
 /* ChatGPT usage: No */
 export async function getUser(req, res) {
@@ -167,7 +167,7 @@ export async function getRecommendedCourses(req, res) {
 export async function getRecommendedCoursesCustomKeywords(req, res) {
     const userKeywords = req.query.userKeywords;
     const userKeywordsArray = userKeywords ? userKeywords.split(',') : null;
-    const courses = coursesData.courses;
+    const courses = courseData.courses;
     var recommendedCourses = {'courses': []}
 
     if (Array.isArray(userKeywordsArray)) {
