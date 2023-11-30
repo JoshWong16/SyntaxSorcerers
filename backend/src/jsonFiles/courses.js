@@ -1,4 +1,4 @@
-{
+const courseData = {
     "courses": [
         "ANTH220 : Contemporary Indigenous Issues in British Columbia",
         "ANTH329 : Contemporary Indigenous Issues in a Global Perspective (A)",
@@ -1942,3 +1942,5 @@
         "DES330 : Structural Systems and Supports"
     ]
 }
+
+export default courseData;
