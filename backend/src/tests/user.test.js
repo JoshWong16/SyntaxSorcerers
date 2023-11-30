@@ -705,4 +705,68 @@ describe('Testing All User Interfaces:', () => {
             spy.mockRestore();
         });
     });
+
+    // Interface GET /users/recommendCoursesCustomKeywords
+    describe('GET /users/recommendedCoursesCustomKeywords', () => {
+        // Input: valid userId and valid keywords
+        // Expected status code: 200
+        // Expected behavior: user's recommended courses are retrieved from db
+        // Expected output: user's recommended courses
+        test("when user id and keywords are valid", async () => {
+            const expectedData = {
+                "courses": [
+                    "CPSC340: Machine Learning and Data Mining", 
+                    "CPSC330: Applied Machine Learning", 
+                    "CPSC440: Advanced Machine Learning", 
+                    "PSYC363 : Neuroscience of Simple Learning", 
+                    "BIOF520 : Problem-Based Learning In Bioinformatics", 
+                    "WOOD356 : Machine Components", 
+                    "LLED421 : Gramligne: Learning and Teaching Grammar in Text for the Second Language Classroom"
+                ]
+            }
+            const response = await request(app)
+                                    .get(`/users/recommendedCoursesCustomKeywords?userKeywords=Machine Learning`)
+                                    .set('Authorization', 'Bearer 123');
+                             
+            expect(response.status).toBe(200);
+            expect(response.body).toEqual(expectedData);
+        });
+
+        // Input: valid userId and valid keywords
+        // Expected status code: 200
+        // Expected behavior: user's recommended courses are retrieved from db
+        // Expected output: user's recommended courses
+        test("when user id and keywords are valid but passes same keyword twice", async () => {
+            const expectedData = {
+                "courses": [
+                    "CPSC340: Machine Learning and Data Mining", 
+                    "CPSC330: Applied Machine Learning", 
+                    "CPSC440: Advanced Machine Learning", 
+                    "PSYC363 : Neuroscience of Simple Learning", 
+                    "BIOF520 : Problem-Based Learning In Bioinformatics", 
+                    "WOOD356 : Machine Components", 
+                    "LLED421 : Gramligne: Learning and Teaching Grammar in Text for the Second Language Classroom"
+                ]
+            }
+            const response = await request(app)
+                                    .get(`/users/recommendedCoursesCustomKeywords?userKeywords=Machine Learning,Machine Learning`)
+                                    .set('Authorization', 'Bearer 123');
+                             
+            expect(response.status).toBe(200);
+            expect(response.body).toEqual(expectedData);
+        });
+
+        // Input: blank keywords
+        // Expected status code: 400
+        // Expected behavior: nothing happens
+        // Expected output: message saying "Missing required keywords"
+        test("when keywords are blank", async () => {
+            const response = await request(app)
+                                    .get(`/users/recommendedCoursesCustomKeywords`)
+                                    .set('Authorization', 'Bearer 123');
+                             
+            expect(response.status).toBe(400);
+            expect(response.body).toEqual({ message: 'Missing required keywords' });
+        });
+    });
 });
