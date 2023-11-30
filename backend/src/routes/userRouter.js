@@ -9,7 +9,8 @@ import {
     getFavouriteCourses,
     removeFavouriteCourse,
     getCourseKeywords,
-    getRecommendedCourses
+    getRecommendedCourses,
+    getRecommendedCoursesCustomKeywords
 } from '../controllers/userController.js';
 
 const router = express.Router();
@@ -42,5 +43,8 @@ router.get('/courseKeywords', getCourseKeywords);
 
 // `Get recommended courses
 router.get('/recommendedCourses', getRecommendedCourses);
+
+// Get recommended courses with custom keywords
+router.get('/recommendedCoursesCustomKeywords', getRecommendedCoursesCustomKeywords);
 
 export default router;
