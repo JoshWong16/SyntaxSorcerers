@@ -7,16 +7,12 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
-import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.ListView;
-
 import java.util.ArrayList;
-import java.util.List;
 
 public class SearchInterestsActivity extends AppCompatActivity {
-    private final static String TAG = "SelectInterestsActivity";
-
+    
     private final ArrayList<String> keywords = new ArrayList<String>();
 
     /* ChatGPT usage: Partial */

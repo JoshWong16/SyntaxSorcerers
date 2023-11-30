@@ -4,22 +4,8 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
-import android.widget.CheckBox;
-import android.widget.ListView;
-import android.widget.Toast;
-
-import com.example.frontend.adapters.CheckBoxAdapter;
-import com.example.frontend.apiwrappers.ServerRequest;
-import com.google.gson.JsonArray;
-import com.google.gson.JsonElement;
-
-
-import java.io.UnsupportedEncodingException;
-import java.util.ArrayList;
-import java.util.List;
 
 public class CourseRecommenderActivity extends AppCompatActivity {
     /**
