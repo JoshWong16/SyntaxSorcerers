@@ -1,6 +1,8 @@
 import User from '../models/User.js';
 import UserCourses from '../models/UserCourses.js';
 import fs from 'fs';
+import natural from 'natural';
+import coursesData from '../jsonFiles/courses.json' assert { type: 'json' };
 
 /* ChatGPT usage: No */
 export async function getUser(req, res) {
@@ -155,6 +157,42 @@ export async function getRecommendedCourses(req, res) {
     
             return res.json(recommendedCourses);
         })
+    } else {
+        return res.status(400).json({message: "Missing required keywords"})
+    }
+}
+
+/* ChatGPT usage: Partial */
+export async function getRecommendedCoursesCustomKeywords(req, res) {
+    const userKeywords = req.query.userKeywords;
+    const userKeywordsArray = userKeywords ? userKeywords.split(',') : null;
+    const courses = coursesData.courses;
+    var recommendedCourses = {}
+
+    if (Array.isArray(userKeywordsArray)) {
+
+        function processKeywords(keyword) {
+            const tokenizer = new natural.WordTokenizer();
+            const stemmedKeywords = natural.PorterStemmer.tokenizeAndStem(keyword);
+            return stemmedKeywords;
+        }
+
+        function searchCourses(keyword) {
+            const processedKeywords = processKeywords(keyword);
+
+            const matchingCourses = courses.filter(course => {
+                const courseKeywords = processKeywords(course);
+                return courseKeywords.some(keyword => processedKeywords.includes(keyword));
+            });
+
+            return matchingCourses;
+        }
+
+        searchCourses(userKeywords).forEach(course => {
+            recommendedCourses[course] = coursesData[course];
+        })
+
+        return res.json(recommendedCourses);
     } else {
         return res.status(400).json({message: "Missing required keywords"})
     }
