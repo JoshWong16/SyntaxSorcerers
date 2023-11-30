@@ -3,45 +3,36 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    tools:context=".CourseRecommenderActivity">
-
-
-    <TextView
-        android:id="@+id/courseRecommenderTitle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Select your Interests Below:"
-        android:textAlignment="viewStart"
-        android:textSize="24sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintBottom_toTopOf="@id/listView"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <!-- ChatGPT usage: Partial -->
-    <ListView
-        android:id="@+id/listView"
-        android:layout_width="match_parent"
-        android:layout_height="500dp"
-        app:layout_constraintBottom_toTopOf="@id/saveCheckListButton"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/courseRecommenderTitle" />
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
 
     <Button
-        android:id="@+id/saveCheckListButton"
+        android:id="@+id/SelectInterestsButton"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Save Checklist"
-        app:layout_constraintBottom_toTopOf="@id/bottom_nav"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_height="0dp"
+        android:text="Select from our list of interests"
+        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/listView" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.4"
+        android:layout_centerHorizontal="true"
+        android:onClick="searchCourses"
+        />
+
+    <Button
+        android:id="@+id/SearchInterestsButton"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:text="Enter your own interests"
+        app:layout_constraintTop_toBottomOf="@+id/SelectInterestsButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.4"
+        />
 
     <include
         layout="@layout/bottom_navigation_menu"
-        android:id="@+id/bottom_nav"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"

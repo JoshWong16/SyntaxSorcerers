@@ -34,14 +34,14 @@ public class DisplayCourseRecommenderActivity extends AppCompatActivity {
         Intent intent = getIntent();
         ArrayList<String> userInterests = intent.getStringArrayListExtra("userInterests");
         String userId = intent.getStringExtra("userId");
+        Boolean defaultInterests = intent.getBooleanExtra("default", false);
 
-        displayRecommendedCourses(userInterests, userId, listView);
-
+        displayRecommendedCourses(userInterests, userId, listView, defaultInterests);
 
     }
 
     /* ChatGPT usage: Partial */
-    void displayRecommendedCourses(ArrayList<String> userInterests, String userId, ListView listView) {
+    void displayRecommendedCourses(ArrayList<String> userInterests, String userId, ListView listView, Boolean defaultInterests) {
         ServerRequest serverRequest = new ServerRequest(userId);
         ServerRequest.ApiRequestListener apiRequestListener = new ServerRequest.ApiRequestListener() {
             @Override
@@ -51,17 +51,23 @@ public class DisplayCourseRecommenderActivity extends AppCompatActivity {
                     JsonObject recommendedCourses = response.getAsJsonObject();
                     ArrayList<String> items = new ArrayList<String>();
 
-                    /* ChatGPT generated to parse JSON Object */
-                    for (int i = 0; i < userInterests.size(); i++) {
-                        JsonArray courseList = recommendedCourses.getAsJsonArray(userInterests.get(i));
-                        for (int j = 0; j < courseList.size(); j++) {
-                            items.add(courseList.get(j).getAsString());
+                    if (defaultInterests) {
+                        /* ChatGPT generated to parse JSON Object */
+                        for (int i = 0; i < userInterests.size(); i++) {
+                            JsonArray courseList = recommendedCourses.getAsJsonArray(userInterests.get(i));
+                            for (int j = 0; j < courseList.size(); j++) {
+                                items.add(courseList.get(j).getAsString());
+                            }
                         }
+                    } else {
+                        JsonArray coursesArray = recommendedCourses.getAsJsonArray("courses");
 
+                        for (int i = 0; i < coursesArray.size(); i++) {
+                            items.add(coursesArray.get(i).getAsString());
+                        }
                     }
 
                     ArrayAdapter<String> adapter = new ArrayAdapter<>(DisplayCourseRecommenderActivity.this, android.R.layout.simple_list_item_1, items);
-
 
                     // Set the adapter to the ListView
                     listView.setAdapter(adapter);
@@ -80,8 +86,13 @@ public class DisplayCourseRecommenderActivity extends AppCompatActivity {
 
         try {
             Log.d(TAG, "making GET request");
+            String endpoint = "";
 
-            String endpoint = "/users/recommendedCourses?userKeywords=";
+            if (defaultInterests) {
+                endpoint = "/users/recommendedCourses?userKeywords=";
+            } else {
+                endpoint = "/users/recommendedCoursesCustomKeywords?userKeywords=";
+            }
             for (int i = 0; i < userInterests.size(); i++) {
                 endpoint += userInterests.get(i);
                 if (i != userInterests.size() - 1) {
