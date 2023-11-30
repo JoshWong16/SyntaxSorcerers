@@ -33,6 +33,7 @@ import java.util.Locale;
 public class ForumViewActivity extends AppCompatActivity {
 
     private SwipeRefreshLayout swipeRefreshLayout;
+    private String viewType;
     /* ChatGPT usage: Partial */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,6 +43,8 @@ public class ForumViewActivity extends AppCompatActivity {
         String forumId = getIntent().getStringExtra("forumId");
         boolean isJoined = getIntent().getBooleanExtra("isJoined", false);
         String forumName = getIntent().getStringExtra("forumName");
+
+        viewType = "all";
 
         getAllPosts(forumId);
 
@@ -66,18 +69,22 @@ public class ForumViewActivity extends AppCompatActivity {
         });
 
         findViewById(R.id.positiveButton).setOnClickListener(v -> {
+            viewType = "positive";
             getFilteredPost(forumId, "positive");
         });
 
         findViewById(R.id.negativeButton).setOnClickListener(v -> {
+            viewType = "negative";
             getFilteredPost(forumId, "negative");
         });
 
         findViewById(R.id.neutralButton).setOnClickListener(v -> {
+            viewType = "neutral";
             getFilteredPost(forumId, "neutral");
         });
 
         findViewById(R.id.allButton).setOnClickListener(v -> {
+            viewType = "all";
             getAllPosts(forumId);
         });
 
@@ -86,7 +93,11 @@ public class ForumViewActivity extends AppCompatActivity {
         swipeRefreshLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
             @Override
             public void onRefresh() {
-                Log.d("ForumViewActivity", "Refreshing");
+                if (viewType.equals("all")) {
+                    getAllPosts(forumId);
+                } else {
+                    getFilteredPost(forumId, viewType);
+                }
                 swipeRefreshLayout.setRefreshing(false);
             }
         });

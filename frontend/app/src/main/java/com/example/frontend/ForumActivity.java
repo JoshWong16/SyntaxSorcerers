@@ -16,6 +16,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.LinearLayout;
+import android.widget.ScrollView;
 import android.widget.Spinner;
 import android.widget.TabHost;
 import android.widget.TextView;
@@ -36,8 +37,7 @@ public class ForumActivity extends AppCompatActivity {
     ArrayList<View> joinedForumsViews;
     ArrayList<View> allForumsViews;
     JsonArray joinedForums = new JsonArray();
-    private SwipeRefreshLayout joinedSwipeRefreshLayout;
-    private SwipeRefreshLayout allSwipeRefreshLayout;
+    private SwipeRefreshLayout swipeRefreshLayout;
 
     /* ChatGPT usage: Partial */
     @Override
@@ -56,7 +56,7 @@ public class ForumActivity extends AppCompatActivity {
 
         TabHost.TabSpec tabSpec2 = tabHost.newTabSpec("All");
         tabSpec2.setIndicator("All");
-        tabSpec2.setContent(R.id.allComments);
+        tabSpec2.setContent(R.id.allForums);
         tabHost.addTab(tabSpec1);
         tabHost.addTab(tabSpec2);
 
@@ -120,32 +120,28 @@ public class ForumActivity extends AppCompatActivity {
             populateSpinner("api/v3/subjects/UBCV", courseNameAdapter);
         });
 
-        joinedSwipeRefreshLayout = findViewById(R.id.joined_forums_refresh);
-        joinedSwipeRefreshLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
+
+        swipeRefreshLayout = findViewById(R.id.forums_refresh);
+
+        ScrollView joinedForumsScrollView = findViewById(R.id.joinedForums);
+        joinedForumsScrollView.setOnScrollChangeListener((v, scrollX, scrollY, oldScrollX, oldScrollY) -> swipeRefreshLayout.setEnabled(scrollY == 0));
+
+        ScrollView allForumsScrollView = findViewById(R.id.allForums);
+        allForumsScrollView.setOnScrollChangeListener((v, scrollX, scrollY, oldScrollX, oldScrollY) -> swipeRefreshLayout.setEnabled(scrollY == 0));
+
+        swipeRefreshLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
             @Override
             public void onRefresh() {
-                refreshForums(tabHost);
+                if (Objects.equals(tabHost.getCurrentTabTag(), "Joined")) {
+                    joinedForumsViews.clear();
+                    generateJoinedForums();
+                } else {
+                    allForumsViews.clear();
+                    generateAllForums(true);
+                }
+                swipeRefreshLayout.setRefreshing(false);
             }
         });
-
-        allSwipeRefreshLayout = findViewById(R.id.all_forums_refresh);
-        allSwipeRefreshLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
-            @Override
-            public void onRefresh() {
-                refreshForums(tabHost);
-            }
-        });
-    }
-
-    private void refreshForums(TabHost tabHost) {
-        if (Objects.equals(tabHost.getCurrentTabTag(), "Joined")) {
-            joinedForumsViews.clear();
-            generateJoinedForums();
-        } else {
-            allForumsViews.clear();
-            generateAllForums(true);
-        }
-        allSwipeRefreshLayout.setRefreshing(false);
     }
 
     /* ChatGPT usage: No */
@@ -246,6 +242,7 @@ public class ForumActivity extends AppCompatActivity {
                     joinedForumsView.findViewById(R.id.join_button).setEnabled(false);
 
                     joinedForumsView.setOnClickListener(v -> {
+                        Log.d("TEST", "Clicked");
                         Intent intent = new Intent(ForumActivity.this, ForumViewActivity.class);
                         intent.putExtra("forumId", (String) joinedForumsView.getTag());
                         intent.putExtra("isJoined", true);

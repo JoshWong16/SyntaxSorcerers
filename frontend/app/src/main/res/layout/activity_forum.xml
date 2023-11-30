@@ -20,54 +20,62 @@
             android:orientation="horizontal" />
 
         <!-- FrameLayout for tab content -->
-        <FrameLayout
-            android:id="@android:id/tabcontent"
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:id="@+id/forums_refresh"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="wrap_content"
+            android:layout_marginTop="75dp">
 
-            <!-- Tab 1 Content -->
-            <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
-                android:id="@+id/joined_forums_refresh"
+            <FrameLayout
+                android:id="@android:id/tabcontent"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="75dp">
-                <ScrollView
-                    android:id="@+id/joinedForums"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:foregroundGravity="bottom">
+                android:layout_height="match_parent">
 
-                    <LinearLayout
-                        android:id="@+id/forum_layout_joined"
-                        android:layout_width="match_parent"
-                        android:layout_height="430dp"
-                        android:orientation="vertical" />
-                </ScrollView>
-            </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+                <!-- Tab 1 Content -->
+    <!--            <androidx.swiperefreshlayout.widget.SwipeRefreshLayout-->
+    <!--                android:id="@+id/joined_forums_refresh"-->
+    <!--                android:layout_width="match_parent"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:layout_marginTop="75dp">-->
 
-            <!-- Tab 2 Content -->
-            <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
-                android:id="@+id/all_forums_refresh"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="75dp">
-                <ScrollView
-                    android:id="@+id/allComments"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:foregroundGravity="bottom">
-
-                    <LinearLayout
-                        android:id="@+id/forum_layout_all"
+                    <ScrollView
+                        android:id="@+id/joinedForums"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:orientation="vertical" />
-                </ScrollView>
-            </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+                        android:foregroundGravity="bottom">
 
-            <!-- Add more FrameLayout containers for additional tabs -->
+                        <LinearLayout
+                            android:id="@+id/forum_layout_joined"
+                            android:layout_width="match_parent"
+                            android:layout_height="430dp"
+                            android:orientation="vertical" />
+                    </ScrollView>
+    <!--            </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>-->
 
-        </FrameLayout>
+                <!-- Tab 2 Content -->
+    <!--            <androidx.swiperefreshlayout.widget.SwipeRefreshLayout-->
+    <!--                android:id="@+id/all_forums_refresh"-->
+    <!--                android:layout_width="match_parent"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:layout_marginTop="75dp">-->
+                    <ScrollView
+                        android:id="@+id/allForums"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:foregroundGravity="bottom">
+
+                        <LinearLayout
+                            android:id="@+id/forum_layout_all"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical" />
+                    </ScrollView>
+    <!--            </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>-->
+
+                <!-- Add more FrameLayout containers for additional tabs -->
+
+            </FrameLayout>
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
     </TabHost>
 
     <LinearLayout
