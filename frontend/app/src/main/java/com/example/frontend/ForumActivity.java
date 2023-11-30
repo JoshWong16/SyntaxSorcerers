@@ -29,6 +29,7 @@ import com.google.gson.JsonObject;
 
 import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
+import java.util.Objects;
 
 public class ForumActivity extends AppCompatActivity {
 
@@ -49,11 +50,11 @@ public class ForumActivity extends AppCompatActivity {
         TabHost tabHost = findViewById(R.id.forumTabHost);
         tabHost.setup();
 
-        TabHost.TabSpec tabSpec1 = tabHost.newTabSpec("Tab1");
+        TabHost.TabSpec tabSpec1 = tabHost.newTabSpec("Joined");
         tabSpec1.setIndicator("Joined");
         tabSpec1.setContent(R.id.joinedForums);
 
-        TabHost.TabSpec tabSpec2 = tabHost.newTabSpec("Tab2");
+        TabHost.TabSpec tabSpec2 = tabHost.newTabSpec("All");
         tabSpec2.setIndicator("All");
         tabSpec2.setContent(R.id.allComments);
         tabHost.addTab(tabSpec1);
@@ -64,7 +65,7 @@ public class ForumActivity extends AppCompatActivity {
         generateJoinedForums();
 
         tabHost.setOnTabChangedListener(tabId -> {
-            if (tabId.equals("Tab1")) {
+            if (tabId.equals("Joined")) {
                 resetAndAddView(findViewById(R.id.forum_layout_joined), joinedForumsViews);
             } else {
                 resetAndAddView(findViewById(R.id.forum_layout_all), allForumsViews);
@@ -123,8 +124,7 @@ public class ForumActivity extends AppCompatActivity {
         joinedSwipeRefreshLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
             @Override
             public void onRefresh() {
-                Log.d("ForumActivity", "Refreshing");
-                joinedSwipeRefreshLayout.setRefreshing(false);
+                refreshForums(tabHost);
             }
         });
 
@@ -132,10 +132,20 @@ public class ForumActivity extends AppCompatActivity {
         allSwipeRefreshLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
             @Override
             public void onRefresh() {
-                Log.d("ForumActivity", "Refreshing");
-                allSwipeRefreshLayout.setRefreshing(false);
+                refreshForums(tabHost);
             }
         });
+    }
+
+    private void refreshForums(TabHost tabHost) {
+        if (Objects.equals(tabHost.getCurrentTabTag(), "Joined")) {
+            joinedForumsViews.clear();
+            generateJoinedForums();
+        } else {
+            allForumsViews.clear();
+            generateAllForums(true);
+        }
+        allSwipeRefreshLayout.setRefreshing(false);
     }
 
     /* ChatGPT usage: No */
@@ -246,7 +256,7 @@ public class ForumActivity extends AppCompatActivity {
                     joinedForumsViews.add(joinedForumsView);
                 }
 
-                generateAllForums();
+                generateAllForums(false);
                 resetAndAddView(findViewById(R.id.forum_layout_joined), joinedForumsViews);
             }
 
@@ -265,7 +275,7 @@ public class ForumActivity extends AppCompatActivity {
     }
 
     /* ChatGPT usage: Partial */
-    private void generateAllForums() {
+    private void generateAllForums(Boolean resetView) {
         SharedPreferences sharedPreferences = getSharedPreferences("GoogleAccountInfo", MODE_PRIVATE);
         String userId = sharedPreferences.getString("userId", null);
         ServerRequest serverRequest = new ServerRequest(userId);
@@ -302,6 +312,12 @@ public class ForumActivity extends AppCompatActivity {
                     });
 
                     allForumsViews.add(addForumsView);
+                }
+
+                Log.d("ForumActivity", String.valueOf(resetView));
+                Log.d("ForumActivity", String.valueOf(allForumsViews));
+                if (resetView) {
+                    resetAndAddView(findViewById(R.id.forum_layout_all), allForumsViews);
                 }
             }
 

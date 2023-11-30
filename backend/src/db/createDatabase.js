@@ -64,21 +64,21 @@ async function createDatabase() {
     const forum1 = await forums.insertOne({
         name: "CPEN 321 Forum",
         createdBy: "1",
-        createdAt: new Date(),
+        dateCreated: new Date(),
         course: "CPEN 321",
     });
 
     const forum2 = await forums.insertOne({
         name: "CPEN 311 Forum",
         createdBy: "2",
-        createdAt: new Date(),
+        dateCreated: new Date(),
         course: "CPEN 311",
     });
 
     const forum3 = await forums.insertOne({
         name: "Math 100 Forum",
         createdBy: "2",
-        createdAt: new Date(),
+        dateCreated: new Date(),
         course: "MATH 100",
     });
 
