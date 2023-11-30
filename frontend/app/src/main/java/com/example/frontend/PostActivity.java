@@ -85,7 +85,7 @@ public class PostActivity extends AppCompatActivity {
         swipeRefreshLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
             @Override
             public void onRefresh() {
-                Log.d("PostActivity", "Refreshing");
+                getComments(postId);
                 swipeRefreshLayout.setRefreshing(false);
             }
         });
