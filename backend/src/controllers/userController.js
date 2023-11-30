@@ -136,6 +136,7 @@ export async function getCourseKeywords(req, res) {
 /* ChatGPT usage: Partial */
 export async function getRecommendedCourses(req, res) {
     const userKeywords = req.query.userKeywords;
+    console.log(userKeywords);
     const userKeywordsArray = userKeywords ? userKeywords.split(',') : null;
     var recommendedCourses = {};
 
@@ -167,7 +168,7 @@ export async function getRecommendedCoursesCustomKeywords(req, res) {
     const userKeywords = req.query.userKeywords;
     const userKeywordsArray = userKeywords ? userKeywords.split(',') : null;
     const courses = coursesData.courses;
-    var recommendedCourses = {}
+    var recommendedCourses = {'courses': []}
 
     if (Array.isArray(userKeywordsArray)) {
 
@@ -187,11 +188,15 @@ export async function getRecommendedCoursesCustomKeywords(req, res) {
 
             return matchingCourses;
         }
+        for (const keyword of userKeywordsArray) {
+            var matchedCourses = searchCourses(keyword);
 
-        searchCourses(userKeywords).forEach(course => {
-            recommendedCourses[course] = coursesData[course];
-        })
-
+            for (const course of matchedCourses) {
+                if (!recommendedCourses['courses'].includes(course)) {
+                    recommendedCourses['courses'].push(course);
+                }
+            }
+        }
         return res.json(recommendedCourses);
     } else {
         return res.status(400).json({message: "Missing required keywords"})
