@@ -188,6 +188,7 @@ export async function getRecommendedCoursesCustomKeywords(req, res) {
 
             return matchingCourses;
         }
+        
         for (const keyword of userKeywordsArray) {
             var matchedCourses = searchCourses(keyword);
 
